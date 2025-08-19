@@ -13,6 +13,9 @@ h1, h2, p {
     margin-right: auto;
     padding: 20px;
 }
+h1, h2 {
+    font-family: Impact;
+}
 .item p {
     display: inline-block;
 }
