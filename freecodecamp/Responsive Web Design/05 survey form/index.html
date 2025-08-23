@@ -9,9 +9,22 @@
 <h1 id="title">Survey Form</h1>
 <p id="description">Thank you for taking the time to help us improve the platform</p>
 <form id="survey-form">
-    <label id="name-label">You are required to enter your name<input id="name" type="text" name="Name" required placeholder="Name" /></label>
-    <label id="email-label">you are required to enter your email<input id="email" type="email" name="JohnSmith@gmail.com" required placeholder="JohnSmith@gmail.com" /></label>
+    <label id="name-label">your name<input id="name" type="text" name="name" required placeholder="Name" /></label>
+    <label id="email-label">your email<input id="email" type="email" name="JohnSmith@gmail.com" required placeholder="JohnSmith@gmail.com" /></label>
     <label id="number-label">Age<input id="number" type="number" min="10" max="100" placeholder="Age" /></label>
+    <label>
+        <select id="dropdown">
+            <option></option>
+            <option></option>
+            <option><input type="radio" name="1" value="1" /></option>
+            <option><input type="radio" name="1" value="2" /></option>
+            <option><input type="radio" name="2" value="3" /></option>
+            <option><input type="radio" name="2" value="4" /></option>
+            <option><input type="checkbox" value="5"  /></option>
+            <option><input type="checkbox" value="6"  /></option>
+            <textarea></textarea>
+            <input id="submit" type="submit" />
+     </label>
 </form>
 </body>
 </html>
