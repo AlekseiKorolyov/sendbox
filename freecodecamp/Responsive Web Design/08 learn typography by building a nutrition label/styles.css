@@ -61,6 +61,10 @@ p {
     align-items: flex-end;
 }
 
+.calories-info h2 {
+    margin: 0;
+}
+
 .left-container p {
     margin: -5px -2px;
     font-size: 2em;
@@ -73,6 +77,6 @@ p {
     margin: -7px -2px;
 }
 
-.calories-info h2 {
-    margin: 0;
+.right {
+    justify-content: flex-end;
 }
