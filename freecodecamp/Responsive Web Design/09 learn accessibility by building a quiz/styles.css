@@ -76,7 +76,9 @@ h1, h2 {
 }
 
 h2 {
-    border-bottom: 4px solid #dfdfe2
+    border-bottom: 4px solid #dfdfe2;
+    margin-top: 0;
+    padding-top: 60px;
 }
 
 h3::before {
