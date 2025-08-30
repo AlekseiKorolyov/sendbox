@@ -132,6 +132,11 @@ h3::before {
     padding-bottom: 0;
 }
 
+.answers-list {
+    list-style: none;
+    padding: 0;
+}
+
 .sr-only {
     position: absolute;
     width: 1px;
