@@ -51,6 +51,8 @@ section {
     justify-content: flex-end;
     position: sticky;
     top: 0;
-    color: #fff;
     background: #0a0a23;
+    color: #fff;
+    margin: 0 -2px;
+    padding: 0.5rem calc(1.25rem + 2px) 0.5rem 0;
 }
