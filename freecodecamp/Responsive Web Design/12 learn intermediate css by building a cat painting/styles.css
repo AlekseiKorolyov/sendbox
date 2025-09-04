@@ -7,6 +7,9 @@ body {
 }
 
 .cat-head {
+    position: static;
+    top: 100px;
+    left: 100px;
     width: 205px;
     height: 180px;
     border: 1px solid #000;
