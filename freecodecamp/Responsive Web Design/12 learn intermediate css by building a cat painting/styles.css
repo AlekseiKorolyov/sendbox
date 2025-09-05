@@ -20,11 +20,8 @@ body {
     background: linear-gradient(#5e5e5e 85%, #45454f 100%);
 }
 
-.cat-right-ear {
-    height: 0;
-    width: 0;
+.cat-left-ear {
     border-left: 35px solid transparent;
     border-right: 35px solid transparent;
-    border-top: 35px solid transparent;
-    border-bottom: 35px solid red;
+    border-bottom: 70px solid #5e5e5e;
 }
