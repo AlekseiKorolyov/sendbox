@@ -1,0 +1,45 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+#navbar {
+    position: fixed;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    border-right: solid;
+}
+
+#navbar ul {
+    padding: 0;
+}
+
+#navbar li {
+    display: block;
+    padding: 15% 20px;
+    border-top: 1px solid;
+}
+
+#navbar li:last-of-type {
+    border-bottom: 1px solid;
+}
+
+main {
+    width: 65vw ;
+    position: absolute;
+    right: 0;
+}
+
+main header {
+    font-size: 1.6em;
+    color: #000;
+    margin: 40px 10px;
+}
+
+@media (max-width: 600px){
+    #navbar {
+        position: absolute;
+        left: 0;
+    }
+}
