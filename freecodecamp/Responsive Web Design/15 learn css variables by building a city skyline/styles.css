@@ -39,26 +39,14 @@ body {
 
 .bb1a {
     width:70%;
-    height: 10%;
-    background-color: var(--building-color1);
-    background: linear-gradient(var(--building-color1), var(--window-color1));
-}
-
-.bb1a {
-    width: 70%;
-    background-color: var(--building-color1);
 }
 
 .bb1b {
     width: 80%;
-    height: 10%;
-    background-color: var(--building-color1);
 }
 
 .bb1c {
     width: 90%;
-    height: 10%;
-    background-color: var(--building-color1);
 }
 
 .bb1d {
