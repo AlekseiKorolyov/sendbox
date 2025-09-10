@@ -234,6 +234,8 @@ body {
 }
 
 .fb4b {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
     height: 89%;
     background-color: var(--building-color1);
