@@ -92,6 +92,7 @@ body {
 /*Устанавливает свойство содержимого псевдоэлемента на пустую строку*/
 .penguin-body::before {
     content: "";
+    position: absolute;
 }
 
 .ground {
