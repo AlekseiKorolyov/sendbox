@@ -89,6 +89,11 @@ body {
     left: 23.5%;
 }
 
+/*Устанавливает свойство содержимого псевдоэлемента на пустую строку*/
+.penguin-body::before {
+    content: "";
+}
+
 .ground {
     width: 100vw;
     height: 400px;
