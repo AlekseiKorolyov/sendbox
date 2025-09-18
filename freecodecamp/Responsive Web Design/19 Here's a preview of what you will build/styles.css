@@ -197,7 +197,7 @@ body {
 
 
 .penguin-body::before {
-    content: "";           /*Устанавливает свойство содержимого псевдоэлемента на пустую строку*/
+    content: "";           /* Устанавливает свойство содержимого псевдоэлемента на пустую строку */
     position: absolute;
     width: 50%;
     height: 45%;
@@ -205,7 +205,7 @@ body {
     top: 10%;
     left: 25%;
     border-radius: 0% 0% 100% 100%;
-    opacity: 70%;                            /*прозрачность псевдоэлемента*/
+    opacity: 70%;                            /* прозрачность псевдоэлемента */
 }
 
 .arm {
@@ -221,7 +221,8 @@ body {
 .arm.left {
     top: 35%;
     left: 5%;
-    transform-origin: 0% 0%;         /*change of the origin of the transformation function*/
+    transform-origin: top left;                 /* изменение начала координат функции преобразования */
+    transform: rotate(130deg) scaleX(-1);       /* нвертируем ось x */
 }
 
 .arm.right {
