@@ -233,6 +233,10 @@ body {
     transform: rotate(-45deg);
 }
 
+@keyframes wave {             /* CSS-анимация */
+
+}
+
 .foot {
     width: 15%;
     height: 30%;
