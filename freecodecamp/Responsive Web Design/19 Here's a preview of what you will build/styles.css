@@ -241,10 +241,10 @@ body {
         transform: rotate(130deg) scaleX(-1);
     }
     30% {
-
+        transform: rotate(110deg) scaleX(-1);
     }
     40% {
-
+        transform: rotate(130deg) scaleX(-1);
     }
 }
 
