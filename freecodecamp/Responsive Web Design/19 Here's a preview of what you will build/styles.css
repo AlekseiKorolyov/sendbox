@@ -1,11 +1,11 @@
-:root {
+:root {                                             /* переменная цветов */
     --penguin-face: white;
     --penguin-picorna: orange;
     --penguin-skin: gray;
 }
 
 body {
-    background: linear-gradient(
+    background: linear-gradient(                    /* совмещение цветов фона с направлением */
             45deg,
             rgb(118, 201, 255),
             rgb(247, 255, 222)
@@ -209,15 +209,15 @@ body {
 }
 
 .arm {
-    width: 30%;
+    width: 30%;                                 /* перемещение относительно родительского элемента */
     height: 60%;
     background: linear-gradient(
             90deg,
             var(--penguin-skin),
             rgb(209, 210, 199)
     );
-    border-radius: 30% 30% 30% 120%;
-    z-index: -1;
+    border-radius: 30% 30% 30% 120%;            /* округление углов */
+    z-index: -1;                                /* перемещает на задний план */
 }
 
 .arm.left {
@@ -225,12 +225,16 @@ body {
     left: 5%;
     transform-origin: top left;                 /* изменение начала координат функции преобразования */
     transform: rotate(130deg) scaleX(-1);       /* инвертируем ось x */
+    animation-name: wave;                       /* имя онимации */
+    animation-duration: 3s;                     /* время анимации */
+    animation-iteration-count: infinite;        /* повтор - бесконечный */
+    animation-timing-function: linear;          /* линейная функция времени */
 }
 
 .arm.right {
     top: 0%;
     right: -5%;
-    transform: rotate(-45deg);
+    transform: rotate(-45deg);                  /* вращение элемента */
 }
 
 @keyframes wave {             /* CSS-анимация */
