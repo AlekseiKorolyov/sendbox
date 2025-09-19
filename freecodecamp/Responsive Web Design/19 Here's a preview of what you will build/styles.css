@@ -235,7 +235,7 @@ body {
 
 @keyframes wave {             /* CSS-анимация */
     10% {
-
+        transform: rotate(110deg) scaleX(-1);
     }
     20% {
 
