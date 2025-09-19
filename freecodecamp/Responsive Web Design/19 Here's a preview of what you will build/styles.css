@@ -67,8 +67,9 @@ body {
     position: absolute;
 }
 
-.penguin:active {                   /* Выберает элемент .penguin, когда он активен,
-    transform: scale(1.5);          и увеличивает его размер на 50% в обоих измерениях. */
+.penguin:active {                   /* Выберает элемент .penguin, когда он активен, */
+    transform: scale(1.5);          /* и увеличивает его размер на 50% в обоих измерениях. */
+    cursor: not-allowed;            /* запрещает перетаскивать активный элемент */
 }
 
 .penguin-head {
