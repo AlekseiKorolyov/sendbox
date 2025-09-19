@@ -224,7 +224,7 @@ body {
     top: 35%;
     left: 5%;
     transform-origin: top left;                 /* изменение начала координат функции преобразования */
-    transform: rotate(130deg) scaleX(-1);       /* нвертируем ось x */
+    transform: rotate(130deg) scaleX(-1);       /* инвертируем ось x */
 }
 
 .arm.right {
@@ -234,7 +234,18 @@ body {
 }
 
 @keyframes wave {             /* CSS-анимация */
+    10% {
 
+    }
+    20% {
+
+    }
+    30% {
+
+    }
+    40% {
+
+    }
 }
 
 .foot {
