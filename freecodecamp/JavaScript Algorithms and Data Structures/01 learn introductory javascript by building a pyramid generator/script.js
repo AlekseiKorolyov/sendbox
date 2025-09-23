@@ -9,7 +9,7 @@ for (let i = 0; i < count; i = i + 1) {
 let result = "";
 
 for (const row of rows) {                          /* цикл for...of перебирает каждый элемент итерируемого объекта и временно присваивает его переменной */
-
+    result = row + result;                         /* hello = hello + "World"; добавит строку "World" к существующей строке, хранящейся в переменной hello. Это называется конкатенацией. */
 }
 
 console.log(result);
