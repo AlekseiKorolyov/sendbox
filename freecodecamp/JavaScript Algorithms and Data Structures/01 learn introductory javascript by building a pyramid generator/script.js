@@ -1,10 +1,6 @@
 let character = 'Hello';
 let count = 8;
 let rows = ["Naomi", "Quincy", "CamperChan"];
-let cities = ["London", "New York", "Mumbai"];
-console.log(cities);
-cities[cities.length - 1] = "Mexico City";
-console.log(cities);
 console.log(rows);
 
 
@@ -18,4 +14,4 @@ console.log(rows);
 
 
 // console.log(rows[0]);
-// rows[rows.length - 1] = 10;         /* возвращает количество элементов в массиве вычитая 1 */
+// rows[rows.length - 1] = 10;         /* изменяет последний элемент массива (возвращает количество элементов в массиве вычитая 1) */
