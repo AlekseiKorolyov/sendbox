@@ -1,6 +1,6 @@
-let character = 'Hello';
+let character = "Hello";
 let count = 8;
-let rows = ["Naomi", "Quincy", "CamperChan"];
+let rows = [];
 
 
 
@@ -12,6 +12,7 @@ let rows = ["Naomi", "Quincy", "CamperChan"];
 
 
 
+// let rows = ["Naomi", "Quincy", "CamperChan"];
 // rows.push("freeCodeCamp");          /* метод .push() позволяет «поместить» значение в конец массива */
 // let pushed = rows.push();
 // console.log(pushed);
