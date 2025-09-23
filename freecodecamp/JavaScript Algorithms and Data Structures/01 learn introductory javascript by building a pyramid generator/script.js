@@ -2,10 +2,10 @@ const character = "#";
 const count = 8;
 const rows = [];
 
-function padRow() {                              /* создание функции padRow
+function padRow() {                              /* создание функции padRow */
 
 }
-padRow();                                              /* вызов функцю padRow
+const call = padRow();                           /* вызов функцю padRow */
 
 for (let i = 0; i < count; i = i + 1) {
     // rows.push(i);                                   /* помещает i в массив строк. */
