@@ -3,7 +3,8 @@ const count = 8;
 const rows = [];
 
 for (let i = 0; i < count; i = i + 1) {
-    rows.push(i)                                   /* помещает i в массив строк. */
+    // rows.push(i);                                   /* помещает i в массив строк. */
+    rows.push(character);                              /* помещает переменную в массив строк */
 }
 
 let result = "";
