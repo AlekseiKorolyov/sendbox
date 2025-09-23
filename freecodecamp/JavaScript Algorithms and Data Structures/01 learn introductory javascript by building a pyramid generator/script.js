@@ -2,6 +2,9 @@ const character = "#";
 const count = 8;
 const rows = [];
 
+for ("iterator"; "condition"; "iteration") {
+
+}
 
 
 
@@ -10,7 +13,10 @@ const rows = [];
 
 
 
-
+//for (iterator; condition; iteration) {
+//   logic;
+// }
+// Пример кода for (итератор; условие; итерация) { логика; }
 
 // let rows = ["Naomi", "Quincy", "CamperChan"];
 // rows.push("freeCodeCamp");          /* метод .push() позволяет «поместить» значение в конец массива */
