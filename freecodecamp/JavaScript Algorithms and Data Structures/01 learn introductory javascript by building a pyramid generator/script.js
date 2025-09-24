@@ -3,7 +3,7 @@ const count = 8;
 const rows = [];
 
 function padRow(name) {                              /* создание функции padRow */
-    return name;                                     /*  По умолчанию функции возвращают undefined в качестве своего значения. Чтобы вернуть что-то другое, необходимо использовать ключевое слово return */
+    return character + name;                                     /*  По умолчанию функции возвращают undefined в качестве своего значения. Чтобы вернуть что-то другое, необходимо использовать ключевое слово return */
 }
 const call = padRow("AIK");                           /* вызов функцю padRow */
 console.log(call);
