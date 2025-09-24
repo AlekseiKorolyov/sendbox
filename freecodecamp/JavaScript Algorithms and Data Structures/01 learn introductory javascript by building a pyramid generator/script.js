@@ -3,7 +3,7 @@ const count = 8;
 const rows = [];
 
 function padRow() {                              /* создание функции padRow */
-
+    return "Hello!"                                     /*  По умолчанию функции возвращают undefined в качестве своего значения. Чтобы вернуть что-то другое, необходимо использовать ключевое слово return */
 }
 const call = padRow();                           /* вызов функцю padRow */
 console.log(call);
