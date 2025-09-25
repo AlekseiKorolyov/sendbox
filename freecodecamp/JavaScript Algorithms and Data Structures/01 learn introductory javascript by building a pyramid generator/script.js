@@ -4,7 +4,9 @@ const rows = [];
 
 function padRow(name) {
     const test = "Testing";
+    console.log("This works!");
     return test;
+    console.log("This works!");
 }
 
 const call = padRow("AIK");
@@ -33,7 +35,7 @@ console.log(result);
 // function padRow(name) {                              /* создание функции padRow */
 //     const test = "Testing";           Переменные объявленные внутри функции считаются находящимися в локальной области видимости, или области видимости блока. Переменная, объявленная внутри функции, может использоваться только внутри этой функции.
 //     return name;                                     /*  По умолчанию функции возвращают undefined в качестве своего значения. Чтобы вернуть что-то другое, необходимо использовать ключевое слово return */
-// }
+// }                                                    /* код после return не работает */
 // const call = padRow("AIK");                           /* вызов функцю padRow */
 // console.log(call);
 
