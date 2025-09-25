@@ -3,7 +3,7 @@ const count = 8;
 const rows = [];
 
 function padRow(rowNumber, rowCount) {
-
+    return character.repeat(rowNumber);
 }
 
 for (let i = 0; i < count; i = i + 1) {
@@ -25,6 +25,11 @@ console.log(result);
 
 
 
+// function padRow(rowNumber, rowCount) {          функция padRow возвращает значение символьной переменной, повторяющееся rowNumber раз
+//     return character.repeat(rowNumber);
+// }
+
+
 
 // function padRow(name) {                              /* создание функции padRow */
 //     const test = "Testing";           Переменные объявленные внутри функции считаются находящимися в локальной области видимости, или области видимости блока. Переменная, объявленная внутри функции, может использоваться только внутри этой функции.
@@ -34,7 +39,7 @@ console.log(result);
 // console.log(call);
 
 // for (let i = 0; i < count; i = i + 1) {
-//     // rows.push(i);                                   /* помещает i в массив строк. */
+//     rows.push(i);                                   /* помещает i в массив строк. */
 //     rows.push(character.repeat(i + 1));          /* помещает переменную в массив строк */
 // }                                                      /* .repeat(i) Этот метод принимает число в качестве аргумента, указывающее количество повторений целевой строки переменная i представляет собой текущий номер «строки» в вашем цикле */
 // /* повторение строки ноль раз не приводит к выводу каких-либо данных. Чтобы исправить это, добавьте 1 к значению i в вызове .repeat() */
