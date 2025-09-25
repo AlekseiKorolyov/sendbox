@@ -4,9 +4,9 @@ const rows = [];
 
 function padRow(name) {
     const test = "Testing";
-    return character + name;
+    return test;
 }
-console.log(test);
+
 const call = padRow("AIK");
 console.log(call);
 
