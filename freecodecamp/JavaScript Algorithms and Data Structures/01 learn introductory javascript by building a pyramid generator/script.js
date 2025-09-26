@@ -14,7 +14,7 @@ let done = 0;
 
 while (continueLoop) {
     done++;
-    if (done == count) {
+    if (done === count) {
 
     }
 }
