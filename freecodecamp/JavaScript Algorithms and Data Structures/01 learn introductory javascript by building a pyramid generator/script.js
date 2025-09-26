@@ -12,6 +12,10 @@ function padRow(rowNumber, rowCount) {
 let continueLoop = false;
 let done = 0;
 
+while (continueLoop) {
+
+}
+
 
 let result = "";
 
