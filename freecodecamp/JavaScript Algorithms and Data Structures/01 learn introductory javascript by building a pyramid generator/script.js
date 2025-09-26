@@ -22,7 +22,7 @@ console.log(result);
 
 
 
-
+/* */
 
 // function padRow(rowNumber, rowCount) {                        функция padRow возвращает значение символьной переменной, повторяющееся rowNumber раз
 //     return " " + character.repeat(rowNumber)  + " ";          " " + character + " " добавляет по одному пробелу « » в начало и конец повторяющейся строки символов.
