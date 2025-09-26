@@ -13,7 +13,7 @@ let continueLoop = false;
 let done = 0;
 
 while (continueLoop) {
-
+    done++;
 }
 
 
@@ -32,6 +32,8 @@ console.log(result);
 
 
 
+
+// done++;  используется без пробела
 
 // if ("") {
 //     console.log("Condition is true");
