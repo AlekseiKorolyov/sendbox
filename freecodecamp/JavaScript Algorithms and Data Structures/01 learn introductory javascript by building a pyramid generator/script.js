@@ -10,6 +10,10 @@ for (let i = 1; i <= count; i ++) {
     rows.push(padRow(i, count));
 }
 
+if (true) {
+    console.log("Condition is true");
+}
+
 let result = "";
 
 for (const row of rows) {
@@ -19,6 +23,12 @@ for (const row of rows) {
 console.log(result);
 
 
+
+
+//Создайте оператор if с логическим значением true в качестве условия. В теле оператора выведите строку «Условие истинно».
+// if (true) {
+//     console.log("Condition is true");
+// }
 
 
 
