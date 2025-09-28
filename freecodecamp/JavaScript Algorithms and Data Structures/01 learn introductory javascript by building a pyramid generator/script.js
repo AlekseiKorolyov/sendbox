@@ -13,7 +13,7 @@ let done = 0;
 
 while (rows.length < count) {
     done++;
-    rows.push(padRow(done, count));
+    rows.push(padRow(rows.length + 1, count));
 }
 
 
@@ -28,7 +28,7 @@ console.log(result);
 
 
 
-
+// node script.js
 
 // while (continueLoop) {
 //     done++;
