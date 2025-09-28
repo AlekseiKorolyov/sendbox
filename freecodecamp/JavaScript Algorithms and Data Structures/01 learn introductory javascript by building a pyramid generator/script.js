@@ -13,7 +13,7 @@ function padRow(rowNumber, rowCount) {
     rows.push(padRow(rows.length + 1, count));
 }*/
 
-for (let i = count; false; false) {
+for (let i = count; i > 0; false) {
 }
 
 let result = "";
