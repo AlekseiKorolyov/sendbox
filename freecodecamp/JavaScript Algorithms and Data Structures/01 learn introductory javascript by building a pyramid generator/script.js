@@ -17,12 +17,6 @@ function padRow(rowNumber, rowCount) {
     rows.push(padRow(i, count));
 }*/
 
-const numbers = [1, 2, 3];
-const shifted = numbers.shift();
-console.log(shifted);
-const unshifted = numbers.unshift(5);
-console.log(numbers);
-console.log(unshifted);
 
 let result = "";
 
@@ -47,6 +41,14 @@ console.log(result);
 
 /*
  node script.js
+
+
+const numbers = [1, 2, 3];
+const shifted = numbers.shift();
+console.log(shifted);
+const unshifted = numbers.unshift(5);
+console.log(numbers);
+console.log(unshifted);
 
  У массивов также есть метод .shift(). Он удаляет первый элемент массива, в отличие от .pop(), который удаляет последний элемент. Вот пример использования метода .shift():
 const numbers = [1, 2, 3];
