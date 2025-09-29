@@ -18,6 +18,8 @@ function padRow(rowNumber, rowCount) {
 }*/
 
 const numbers = [1, 2, 3];
+const shifted = numbers.shift();
+console.log(shifted);
 const unshifted = numbers.unshift(5);
 console.log(numbers);
 console.log(unshifted);
@@ -45,6 +47,10 @@ console.log(result);
 
 /*
  node script.js
+
+ У массивов также есть метод .shift(). Он удаляет первый элемент массива, в отличие от .pop(), который удаляет последний элемент. Вот пример использования метода .shift():
+const numbers = [1, 2, 3];
+numbers.shift();
 
  Метод массива .unshift() позволяет добавить значение в начало массива, в отличие от .push(), который добавляет значение в конец массива. .unshift() возвращает новую длину массива, для которого он был вызван.
 const countDown = [2, 1, 0];
