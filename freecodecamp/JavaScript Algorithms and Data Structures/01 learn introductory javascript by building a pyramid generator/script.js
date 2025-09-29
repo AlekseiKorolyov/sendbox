@@ -10,7 +10,7 @@ function padRow(rowNumber, rowCount) {
      if (inverted){
         rows.unshift(padRow(i, count));
      } else {
-
+         rows.push(padRow(i, count));
      }
  }
 
