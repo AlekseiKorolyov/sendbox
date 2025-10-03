@@ -37,7 +37,9 @@ console.log(result);
 
 
 /*
- node script.js
+ node script1.js
+
+for...of
 
 
 for (let i = 1; i <= count; i ++) {
