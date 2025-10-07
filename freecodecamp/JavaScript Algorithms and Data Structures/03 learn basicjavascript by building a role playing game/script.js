@@ -18,6 +18,8 @@ const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
 
 // initialize buttons
+button1.onclick = goStore;
+
 function goStore() {
     console.log("Going to store.");
 }
@@ -29,3 +31,21 @@ function goCave() {
 function fightDragon() {
     console.log("Fighting dragon.");
 }
+
+
+
+
+
+
+
+/*
+Шаг 36
+
+button1 представляет собой ваш первый элемент «кнопка». У этих элементов есть специальное свойство onclick, которое можно использовать для определения действий при нажатии на эту кнопку. В JavaScript есть несколько способов доступа к свойствам. Первый — с помощью точечной нотации. Вот пример использования точечной нотации для присвоения свойству onclick кнопки ссылки на функцию.
+Пример кода
+
+button.onclick = myFunction;
+
+В этом примере button — это элемент «кнопка», а myFunction — ссылка на функцию. При нажатии на кнопку будет вызвана функция myFunction. Используйте точечную нотацию, чтобы присвоить свойству onclick элемента button1 ссылку на функцию goStore. Обратите внимание, что button1 уже объявлен, поэтому вам не нужно использовать let или const.
+
+ */
