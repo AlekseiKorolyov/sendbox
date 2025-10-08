@@ -18,7 +18,8 @@ const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
 const locations = [];
 const cat = {
-    name: "Whiskers"
+    name: "Whiskers",
+    "Number of legs": 4,
 };
 console.log(cat);
 
@@ -168,6 +169,34 @@ const cat = {
 };
 
 
+
+Шаг 50
+
+Если имя свойства (ключа) объекта содержит пробел, необходимо заключить его в одинарные или двойные кавычки. Вот пример объекта, имя свойства которого содержит пробел:
+Пример кода
+
+const spaceObj = {
+ "Space Name": "Kirk",
+ };
+
+ Если попытаться указать ключ без кавычек, возникнет ошибка:
+ Пример кода
+
+ const spaceObj = {
+  // Вызывает ошибку Space Name: "Kirk",
+  };
+  Добавьте новое свойство с ключом "Number of legs" и значением 4 к объекту cat. Откройте консоль, чтобы увидеть вывод.
+
+const cat = {
+  name: "Whiskers",
+};
+
+***
+
+const cat = {
+  name: "Whiskers",
+  "Number of legs": 4,
+};
 
 
  */
