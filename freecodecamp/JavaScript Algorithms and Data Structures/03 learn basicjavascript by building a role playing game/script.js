@@ -19,6 +19,7 @@ const monsterHealthText = document.querySelector("#monsterHealth");
 const locations = [
     {
         name: "town square",
+        "button text": []
     }
 ];
 
@@ -247,6 +248,9 @@ console.log(cat.name);
 ***
 
 console.log(cat["Number of legs"]);
+
+Как и значения массива, свойства объекта разделяются запятой.
+
 
 
 
