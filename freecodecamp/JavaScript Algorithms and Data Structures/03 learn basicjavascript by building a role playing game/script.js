@@ -48,7 +48,7 @@ function update(location) {
 }
 
 function goTown() {
-    update();
+    update(locations);
 }
 
 function goStore() {
@@ -274,6 +274,17 @@ const locations = [
     "button text": ["Go to store", "Go to cave", "Fight dragon"]
   }
 ];
+
+
+Шаг 62
+
+Теперь пора использовать функцию обновления. Передайте массив location в вызов функции обновления. Аргументы передаются в скобках вызова функции.
+Например, вызов myFunction с аргументом arg будет выглядеть так:
+Пример кода
+
+myFunction(arg)
+
+
 
 
 
