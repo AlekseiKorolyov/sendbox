@@ -21,7 +21,7 @@ const cat = {
     name: "Whiskers",
     "Number of legs": 4,
 };
-console.log(cat);
+console.log(cat.name);
 
 // initialize buttons
 button1.onclick = goStore;
@@ -197,6 +197,33 @@ const cat = {
   name: "Whiskers",
   "Number of legs": 4,
 };
+
+
+Шаг 51
+
+Существует два способа доступа к свойствам объекта: точечная нотация (.) и квадратные скобки ([]), аналогичные массиву. Точечная нотация используется, когда имя свойства, к которому вы пытаетесь получить доступ, известно заранее.
+Пример кода
+
+object.property;
+
+Вот пример использования точечной нотации (.) для чтения свойства name объекта developer:
+Пример кода
+
+const developer = {
+ name: "Jessica",
+ } // Вывод:
+ Jessica console.log(developer.name);
+
+ Обновите оператор console для доступа к свойству name объекта cat с помощью точечной нотации. Откройте консоль, чтобы увидеть имя "Whiskers", выведенное на консоль.
+
+console.log(cat)
+
+***
+
+console.log(cat.name);
+
+
+
 
 
  */
