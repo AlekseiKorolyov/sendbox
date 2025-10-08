@@ -17,11 +17,7 @@ const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
 const locations = [];
-const cat = {
-    name: "Whiskers",
-    "Number of legs": 4,
-};
-console.log(cat["Number of legs"]);
+
 
 // initialize buttons
 button1.onclick = goStore;
@@ -79,7 +75,7 @@ function buyWeapon() {
 36      button.onclick = myFunction;
 38      Свойство innerText
 46      Повторение в коде
-48      Объекты
+48 - 53 Объекты
 
 Шаг 36
 
