@@ -17,7 +17,9 @@ const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
 const locations = [];
-const cat = {}
+const cat = {
+    name: "Whiskers"
+};
 console.log(cat);
 
 // initialize buttons
@@ -141,6 +143,31 @@ console.log(param);
 
 const cat = {}
 console.log(cat);
+
+
+
+Шаг 49
+
+Объекты похожи на массивы, за исключением того, что вместо использования индексов для доступа к данным и их изменения доступ к ним осуществляется через свойства. Свойства состоят из ключа и значения. Ключ — это имя свойства, а значение — данные, хранящиеся в свойстве. Вот пример объекта с одним свойством:
+Пример кода
+
+const obj = {
+ name: "Quincy Larson"
+ };
+
+Внутри объекта cat добавьте новое свойство. Ключом должно быть name, а значением — строка "Whiskers". Откройте консоль, чтобы увидеть изменения в объекте.
+
+const cat = {
+
+}
+
+***
+
+const cat = {
+  name: "Whiskers"
+};
+
+
 
 
  */
