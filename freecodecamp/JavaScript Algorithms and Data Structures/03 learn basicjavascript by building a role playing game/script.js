@@ -16,6 +16,7 @@ const goldText = document.querySelector("#goldText");
 const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
+const locations = [];
 
 // initialize buttons
 button1.onclick = goStore;
@@ -72,7 +73,7 @@ function buyWeapon() {
 /*
 36      button.onclick = myFunction;
 38      Свойство innerText
-
+46      Повторение в коде
 
 
 Шаг 36
@@ -109,5 +110,17 @@ const escapedString = "Naomi любит иногда играть в \"Zelda\"."
 
 Заключите текст Store в двойные кавычки внутри строки text.innerText.
 
+
+
+Шаг 46
+
+В функциях goTown и goStore есть повторения. Повторение в коде — признак того, что вам нужна ещё одна функция. В предыдущем проекте вы научились работать с параметрами функции следующим образом:
+Пример кода
+
+function myFunction(param) {
+console.log(param);
+ }
+
+ Параметры функции служат заполнителями для значений, которые вы передаёте функции при её вызове.
 
  */
