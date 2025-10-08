@@ -21,7 +21,7 @@ const cat = {
     name: "Whiskers",
     "Number of legs": 4,
 };
-console.log(cat.name);
+console.log(cat["Number of legs"]);
 
 // initialize buttons
 button1.onclick = goStore;
@@ -222,6 +222,31 @@ console.log(cat)
 
 console.log(cat.name);
 
+
+
+Шаг 52
+
+Второй способ доступа к свойствам объекта — это использование квадратных скобок ([]). Если в имени свойства объекта, к которому вы пытаетесь получить доступ, есть пробел, необходимо использовать квадратные скобки.
+Пример кода
+
+objectName["property name"];
+
+Вот пример использования квадратных скобок для чтения свойства объекта:
+Пример кода
+
+const spaceObj = {
+  "Space Name": "Kirk",
+};
+
+spaceObj["Space Name"]; // "Kirk"
+
+ Обновите консольный оператор, чтобы использовать квадратные скобки для доступа к свойству "Количество ног" объекта cat. Откройте консоль, чтобы увидеть вывод.
+
+console.log(cat.name);
+
+***
+
+console.log(cat["Number of legs"]);
 
 
 
