@@ -29,7 +29,7 @@ function goTown() {
     button1.onclick = goStore;
     button2.onclick = goCave;
     button3.onclick = fightDragon;
-    text.innerText = "You are in the town square. You see a sign that says Store.";
+    text.innerText = "You are in the town square. You see a sign that says \"Store\".";
 }
 
 function goStore() {
@@ -95,6 +95,15 @@ button.onclick = myFunction;
  info.innerText = "Hello World";
 
  В этом примере текст элемента p изменится с "Демо-контент" на "Hello World". Когда игрок нажимает кнопку "Перейти в магазин", нужно изменить кнопки и текст. Удалите код внутри функции goStore и добавьте строку, которая обновляет текст button1 на "Купить 10 здоровья (10 золота)".
+
+Шаг 45
+
+Вам необходимо заключить текст Store в двойные кавычки. Поскольку ваша строка уже заключена в двойные кавычки, вам нужно экранировать кавычки вокруг Store. Вы можете экранировать их с помощью обратной косой черты \. Вот пример:
+Пример кода
+
+const escapedString = "Naomi любит иногда играть в \"Zelda\".";
+
+Заключите текст Store в двойные кавычки внутри строки text.innerText.
 
 
  */
