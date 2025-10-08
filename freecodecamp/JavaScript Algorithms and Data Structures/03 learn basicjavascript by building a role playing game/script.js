@@ -19,7 +19,7 @@ const monsterHealthText = document.querySelector("#monsterHealth");
 const locations = [
     {
         name: "town square",
-        "button text": []
+        "button text": ["Go to store", "Go to cave", "Fight dragon"]
     }
 ];
 
@@ -251,6 +251,27 @@ console.log(cat["Number of legs"]);
 
 Как и значения массива, свойства объекта разделяются запятой.
 
+
+
+Шаг 56
+
+Добавьте в пустой массив текста кнопки три строковых элемента. Используйте три строки, назначенные свойствам innerText кнопки в функции goTown. Помните, что значения массива разделяются запятыми.
+
+const locations = [
+  {
+    name: "town square",
+    "button text": []
+  }
+];
+
+***
+
+const locations = [
+  {
+    name: "town square",
+    "button text": ["Go to store", "Go to cave", "Fight dragon"]
+  }
+];
 
 
 
