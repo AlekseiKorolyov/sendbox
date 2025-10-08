@@ -43,7 +43,7 @@ function update(location) {
     button1.onclick = location["button functions"][0];
     button2.onclick = location["button functions"][1];
     button3.onclick = location["button functions"][2];
-    text.innerText = "You are in the town square. You see a sign that says \"Store\".";
+    text.innerText = location.text;
 }
 
 function goTown() {
@@ -290,6 +290,16 @@ myFunction(arg)
 Массив location содержит два местоположения: «городскую площадь» и «магазин». В данный момент вы передаёте весь этот массив в функцию обновления. Передайте только первый элемент массива location, добавив [0] в конец переменной. Например: myFunction(arg[0]);. Это называется скобочной записью. Доступ к значениям в массиве осуществляется по индексу. Индексы — это числовые значения, начинающиеся с 0 — это называется индексацией с нуля. arg[0] будет первым элементом массива arg.
 
 
+
+Шаг 68
+
+Наконец, обновите назначение text.innerText, чтобы оно совпадало с текстом из объекта location. Однако вместо квадратных скобок используйте точечную нотацию. Вот пример доступа к свойству name объекта person: Пример кода person.name
+
+text.innerText = "You are in the town square. You see a sign that says \"Store\".";
+
+***
+
+text.innerText = location.text;
 
 
 
