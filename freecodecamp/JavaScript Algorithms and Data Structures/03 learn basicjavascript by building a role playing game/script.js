@@ -17,22 +17,10 @@ const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
 const weapons = [
-    {
-        name: "stick",
-        power: 5
-    },
-    {
-        name: "dagger",
-        power: 30
-    },
-    {
-        name: "claw hammer",
-        power: 50
-    },
-    {
-        name: "sword",
-        power: 100
-    }
+    { name: "stick", power: 5 },
+    { name: "dagger", power: 30 },
+    { name: "claw hammer",  power: 50 },
+    { name: "sword",  power: 100 }
 ];
 const locations = [
     {
@@ -102,7 +90,7 @@ function buyWeapon() {
         gold -= 30;
         currentWeaponIndex++;
         goldText.innerText = gold;
-        let newWeapon = weapons[currentWeaponIndex];
+        let newWeapon = weapons[currentWeaponIndex].name;
         text.innerText = "You now have a new weapon."
     }
 }
