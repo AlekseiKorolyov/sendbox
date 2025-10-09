@@ -154,6 +154,7 @@ function fightDragon() {
 function goFight () {
     update(locations[3]);
     monsterHealth = monsters[fighting].health;
+    monsterStats.style.display = "block";
 }
 
 function attack () {
@@ -197,7 +198,7 @@ function dodge () {
 46      Повторение в коде
 48 - 53 Объекты
 77      if
-
+118     обновление css через js
 
 Шаг 36
 
@@ -449,5 +450,24 @@ function buyHealth() {
         healthText.innerText = health;
     }
 }
+
+
+
+Шаг 118
+
+По умолчанию HTML-элемент, отображающий статистику монстра, скрыт с помощью CSS. Когда игрок нажимает кнопку «Сразиться с драконом», статистика монстра должна отображаться. Этого можно добиться, используя свойства style и display элемента monsterStats. Свойство style используется для доступа к встроенному стилю элемента, а свойство display — для настройки видимости элемента. Вот пример обновления отображения элемента абзаца:
+Пример кода
+
+const paragraph = document.querySelector('p');
+paragraph.style.display = 'block';
+
+Отобразите элемент monsterStats, обновив свойство display свойства style на block.
+
+
+monsterStats.style.display = "block";
+
+
+
+
 
  */
