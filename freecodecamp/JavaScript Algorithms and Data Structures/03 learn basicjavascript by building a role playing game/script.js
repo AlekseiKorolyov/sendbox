@@ -130,6 +130,37 @@ function fightDragon() {
     console.log("Fighting dragon.");
 }
 
+function goFight () {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 36      button.onclick = myFunction;
