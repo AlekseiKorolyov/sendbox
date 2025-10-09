@@ -69,10 +69,12 @@ function fightDragon() {
 }
 
 function buyHealth() {
-    gold -= 10;
-    health += 10;
-    goldText.innerText = gold;
-    healthText.innerText = health;
+    if (gold >= 10) {
+        gold -= 10;
+        health += 10;
+        goldText.innerText = gold;
+        healthText.innerText = health;
+    }
 }
 
 function buyWeapon() {
@@ -88,17 +90,13 @@ function fightBeast() {
 }
 
 
-
-
-
-
-
-
 /*
 36      button.onclick = myFunction;
 38      Свойство innerText
 46      Повторение в коде
 48 - 53 Объекты
+77      if
+
 
 Шаг 36
 
@@ -319,5 +317,36 @@ text.innerText = "You are in the town square. You see a sign that says \"Store\"
 text.innerText = location.text;
 
 
+
+Шаг 77
+
+Что делать, если у игрока недостаточно золота для покупки здоровья? Используйте оператор if, чтобы проверить, достаточно ли у игрока золота для покупки здоровья. В предыдущем проекте вы научились работать с операторами if следующим образом:
+Пример кода
+
+const num = 5;
+if (num >= 3) {
+ console.log("Этот код будет выполнен, потому что num больше или равно 3.");
+ }
+
+ Начнем с размещения всего кода функции buyHealth в операторе if. Для условия оператора if проверьте, больше ли или равно ли золото 10.
+
+
+function buyHealth() {
+  gold -= 10;
+  health += 10;
+  goldText.innerText = gold;
+  healthText.innerText = health;
+}
+
+***
+
+function buyHealth() {
+    if (gold >= 10) {
+        gold -= 10;
+        health += 10;
+        goldText.innerText = gold;
+        healthText.innerText = health;
+    }
+}
 
  */
