@@ -163,7 +163,7 @@ function attack () {
     text.innerText = "The " + monsters[fighting].name + " attacks.";
     text.innerText += " You attack it with your " + weapons[currentWeaponIndex].name + ".";
     health -= monsters[fighting].level;
-    monsterHealth -= weapons[currentWeaponIndex].power;
+    monsterHealth -= weapons[currentWeaponIndex].power + Math.floor(Math.random() * xp) + 1;
 }
 
 function dodge () {
@@ -204,6 +204,9 @@ function dodge () {
 48 - 53 Объекты
 77      if
 118     обновление css через js
+124     методы для математических констант и функций
+
+
 
 Шаг 36
 
@@ -472,6 +475,16 @@ paragraph.style.display = 'block';
 monsterStats.style.display = "block";
 
 
+
+Шаг 124
+
+Объект Math в JavaScript содержит статические свойства и методы для математических констант и функций. Один из них — Math.random(), который генерирует случайное число от 0 (включительно) до 1 (не включая). Другой — Math.floor(), который округляет заданное число до ближайшего целого. Используя их, вы можете генерировать случайное число в заданном диапазоне. Например, этот код генерирует случайное число от 1 до 5: Math.floor(Math.random() * 5) + 1;. Следуя этому шаблону, используйте оператор сложения (+), чтобы добавить случайное число от 1 до значения опыта к значению monsterHealth -= weapons[currentWeaponIndex].power.
+
+monsterHealth -= weapons[currentWeaponIndex].power
+
+***
+
+monsterHealth -= weapons[currentWeaponIndex].power + Math.floor(Math.random() * xp) + 1;
 
 
 
