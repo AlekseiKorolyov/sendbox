@@ -91,7 +91,7 @@ function update(location) {
     button1.onclick = location["button functions"][0];
     button2.onclick = location["button functions"][1];
     button3.onclick = location["button functions"][2];
-    text.innerText = location.text;
+    text.text.innerHTML = location.text;
 }
 
 function goTown() {
@@ -540,6 +540,24 @@ monsterHealth -= weapons[currentWeaponIndex].power + Math.floor(Math.random() * 
 Шаг 135
 
 Слово «Arg!» следует заключить в кавычки. Помимо экранирования кавычек, есть и другой способ включения кавычек в строку. Замените двойные кавычки вокруг строки «The monster screams Arg! as it dies. You get experience points and find gold.» на одинарные ', затем добавьте двойные кавычки вокруг «Arg!».
+
+
+
+
+Шаг 141
+
+Для корректного отображения текста смайлика &#x2620; на странице необходимо использовать свойство innerHTML. Свойство innerHTML позволяет получать доступ к содержимому HTML-элемента и изменять его с помощью JavaScript. Вот пример обновления содержимого этого элемента абзаца с помощью свойства innerHTML.
+Пример кода
+
+<p id="demo">Это абзац.</p>
+
+Пример кода
+
+document.querySelector("#demo").innerHTML = "Привет, innerHTML!";
+
+В функции обновления измените text.innerText на text.innerHTML.
+
+
 
 
  */
