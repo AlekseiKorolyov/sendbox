@@ -68,7 +68,7 @@ const locations = [
         name: "kill monster",
         "button text": ["Go to town square", "Go to town square", "Go to town square"],
         "button functions": [goTown, goTown, goTown],
-        text: "The monster screams Arg! as it dies. You gain experience points and find gold."
+        text: 'The monster screams "Arg!" as it dies. You gain experience points and find gold.'
     }
 ];
 
@@ -223,13 +223,14 @@ function lose () {
 
 
 /*
-36      button.onclick = myFunction;
-38      Свойство innerText
-46      Повторение в коде
-48 - 53 Объекты
-77      if
-118     обновление css через js
-124     методы для математических констант и функций
+36          button.onclick = myFunction;
+38          Свойство innerText
+45 , 135    кавычки
+46          Повторение в коде
+48 - 53     Объекты
+77          if
+118         обновление css через js
+124         методы для математических констант и функций
 
 
 
@@ -511,6 +512,11 @@ monsterHealth -= weapons[currentWeaponIndex].power
 
 monsterHealth -= weapons[currentWeaponIndex].power + Math.floor(Math.random() * xp) + 1;
 
+
+
+Шаг 135
+
+Слово «Arg!» следует заключить в кавычки. Помимо экранирования кавычек, есть и другой способ включения кавычек в строку. Замените двойные кавычки вокруг строки «The monster screams Arg! as it dies. You get experience points and find gold.» на одинарные ', затем добавьте двойные кавычки вокруг «Arg!».
 
 
  */
