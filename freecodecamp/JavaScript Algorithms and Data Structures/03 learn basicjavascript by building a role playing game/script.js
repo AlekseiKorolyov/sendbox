@@ -200,7 +200,7 @@ function attack () {
 function getMonsterAttackValue (level) {
     const hit = (level * 5) - (Math.floor(Math.random() * xp));
     console.log(hit);
-    return hit;
+    return hit > 0 ? hit : 0;
 }
 
 function dodge () {
@@ -270,6 +270,9 @@ function restart () {
 77          if
 118         обновление css через js
 124         методы для математических констант и функций
+149         тернарный оператор
+
+
 
 
 
@@ -572,6 +575,34 @@ monsterHealth -= weapons[currentWeaponIndex].power + Math.floor(Math.random() * 
 document.querySelector("#demo").innerHTML = "Привет, innerHTML!";
 
 В функции обновления измените text.innerText на text.innerHTML.
+
+
+
+
+Шаг 149
+
+Если вы играете в текущую версию игры, вы можете заметить ошибку. Если ваш опыт достаточно высок, функция getMonsterAttackValue вернёт отрицательное число, что фактически увеличит ваше общее здоровье в бою с монстром! Вы можете исправить эту проблему, используя тернарный оператор, чтобы исключить возврат отрицательных значений. Тернарный оператор — это условный оператор, который можно использовать как однострочный оператор if-else. Синтаксис: condition ? expressionIfTrue : expressionIfFalse. Вот пример возврата значения с помощью оператора if-else и переработанный пример с использованием тернарного оператора:
+Пример кода
+
+// оператор
+if-else if (score > 0) {
+ return score
+ } else {
+ return default_score
+ }
+ // тернарный оператор return score > 0 ? score : default_score
+
+ В getMonsterAttackValue замените return hit на тернарный оператор, который возвращает hit, если hit больше 0, или 0, если меньше.
+
+ function getMonsterAttackValue(level) {
+  const hit = (level * 5) - (Math.floor(Math.random() * xp));
+  console.log(hit);
+  return hit;
+}
+
+***
+
+return hit > 0 ? hit : 0;
 
 
 
