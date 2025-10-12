@@ -274,6 +274,9 @@ function pick (guess) {
     for (let i = 0; i < 10; i++ ) {
         text.innerText += numbers[i] + "\n";
     }
+    if (numbers.includes(guess)) {
+
+    }
 }
 
 
@@ -317,7 +320,7 @@ function pick (guess) {
 163         цикл while
 166         на новой строке
 167         for теория
-
+169         Метод .includes() определяет, содержит ли массив элемент, и возвращает значение true или false.
 
 
 
@@ -724,5 +727,27 @@ for (let i = 0; i < 5; i++) {
 for (let i = 0; i < 10; i++ ) {
 
   }
+
+
+
+  Шаг 169
+
+  Метод .includes() определяет, содержит ли массив элемент, и возвращает значение true или false. Вот пример синтаксиса .includes():
+  Пример кода
+
+  const numbersArray = [1, 2, 3, 4, 5]
+  const number = 3
+  if (numbersArray.includes(number)) {
+   console.log("Число есть в массиве.")
+   }
+
+   После цикла for добавьте оператор if для проверки наличия предполагаемого числа в массиве numbers. Вы можете использовать метод .includes() для проверки наличия предполагаемого числа в массиве.
+
+if (numbers.includes(guess)) {
+
+  }
+
+
+
 
  */
