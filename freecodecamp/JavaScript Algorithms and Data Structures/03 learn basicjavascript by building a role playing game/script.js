@@ -199,7 +199,7 @@ function attack () {
             defeatMonster();
         }
     }
-    if (Math.random() <= .1) {
+    if (Math.random() <= .1 && inventory.length !== 1) {
         text.innerText += " Your " + inventory.pop() + " breaks.";
         currentWeaponIndex--;
     }
@@ -284,6 +284,7 @@ function restart () {
 124         методы для математических констант и функций
 149         тернарный оператор
 153         ИЛИ ||
+157         логический оператор «И» &&
 
 
 
@@ -628,6 +629,23 @@ return Math.random() > .2;
 
 return Math.random() > .2 || health < 20;
 
+
+
+Шаг 157
+
+Мы не хотим, чтобы единственное оружие игрока сломалось. Логический оператор «И» проверяет истинность двух утверждений. Используйте логический оператор «И» &&, чтобы добавить второе условие к оператору if. Оружие игрока сломается только в том случае, если inventory.length не равен (!==) единице. Вот пример оператора if с двумя условиями:
+Пример кода
+
+if (firstName === "Quincy" && lastName === "Larson") {
+ }
+
+ if (Math.random() <= .1) {
+ }
+
+ ***
+
+ if (Math.random() <= .1 && inventory.length !== 1) {
+ }
 
 
  */
