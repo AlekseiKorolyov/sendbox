@@ -208,7 +208,7 @@ function getMonsterAttackValue (level) {
 }
 
 function isMonsterHit () {
-    return Math.random() > .2;
+    return Math.random() > .2 || health < 20;
 }
 
 function dodge () {
@@ -279,7 +279,7 @@ function restart () {
 118         обновление css через js
 124         методы для математических констант и функций
 149         тернарный оператор
-
+153         ИЛИ ||
 
 
 
@@ -612,6 +612,17 @@ if-else if (score > 0) {
 
 return hit > 0 ? hit : 0;
 
+
+
+Шаг 153
+
+Игрок должен ударить, если Math.random() > 0,2 или здоровье игрока меньше 20. В конце оператора return используйте логический оператор ИЛИ || и проверьте, меньше ли здоровье 20. Логический оператор ИЛИ будет использовать первое значение, если оно истинно, то есть любое, кроме NaN, null, undefined, 0, -0, 0n, "" и false. В противном случае будет использовано второе значение. Например: num < 10 || num > 20.
+
+return Math.random() > .2;
+
+***
+
+return Math.random() > .2 || health < 20;
 
 
 
