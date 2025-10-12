@@ -267,6 +267,9 @@ function pickEight () {
 
 function pick (guess) {
     const numbers = [];
+    while (numbers.length < 10) {
+
+    }
 }
 
 
@@ -307,7 +310,7 @@ function pick (guess) {
 149         тернарный оператор
 153         ИЛИ ||
 157         логический оператор «И» &&
-
+163         цикл while
 
 
 
@@ -668,6 +671,26 @@ if (firstName === "Quincy" && lastName === "Larson") {
 
  if (Math.random() <= .1 && inventory.length !== 1) {
  }
+
+
+
+ Шаг 163
+
+ После массива чисел создайте цикл while, который будет выполняться до тех пор, пока значение numbers.length меньше 10. В предыдущем проекте вы научились работать с циклами while следующим образом:
+ Пример кода
+
+ while (условие) {
+  // код для выполнения
+  }
+
+
+  while (numbers.length < 10) {
+
+  }
+
+
+
+
 
 
  */
