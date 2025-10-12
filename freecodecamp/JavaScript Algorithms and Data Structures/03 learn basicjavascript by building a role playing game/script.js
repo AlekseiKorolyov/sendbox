@@ -270,7 +270,7 @@ function pick (guess) {
     while (numbers.length < 10) {
         numbers.push(Math.floor(Math.random() * 11));
     }
-    text.innerText = "You picked " + guess + ". Here are the random numbers:";
+    text.innerText = "You picked " + guess + ". Here are the random numbers:\n";
 }
 
 
@@ -312,6 +312,9 @@ function pick (guess) {
 153         ИЛИ ||
 157         логический оператор «И» &&
 163         цикл while
+166         на новой строке
+
+
 
 
 
@@ -697,6 +700,11 @@ if (firstName === "Quincy" && lastName === "Larson") {
 
 numbers.push(Math.floor(Math.random() * 11));
 
+
+
+Шаг 166
+
+В конце строки, перед последней кавычкой, вставьте символ перехода на новую строку \n. Это приведёт к тому, что следующая часть, которую вы добавите в text.innerText, появится на новой строке.
 
 
 
