@@ -268,7 +268,7 @@ function pickEight () {
 function pick (guess) {
     const numbers = [];
     while (numbers.length < 10) {
-
+        numbers.push(Math.floor(Math.random() * 11));
     }
 }
 
@@ -689,6 +689,12 @@ if (firstName === "Quincy" && lastName === "Larson") {
   }
 
 
+
+  Шаг 164
+
+  В цикле while добавьте случайное число от 0 до 10 в конец массива чисел. Это случайное число можно создать с помощью Math.floor(Math.random() * 11).
+
+numbers.push(Math.floor(Math.random() * 11));
 
 
 
