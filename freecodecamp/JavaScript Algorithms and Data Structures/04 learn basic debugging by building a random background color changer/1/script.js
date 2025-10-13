@@ -11,7 +11,7 @@ const darkColorsArr = [
     "#800020",
 ];
 function getRandomIndex() {
-    console.log(darkColorsArr.length * Math.random())
+    console.log(Math.floor(darkColorsArr.length * Math.random()));
 }
 getRandomIndex();
 
@@ -66,4 +66,33 @@ getRandomIndex();
 
 
 console.log(darkColorsArr.length * Math.random())
+
+
+
+
+Шаг 3
+
+Теперь, когда ошибка ReferenceError устранена, консоль отображает правильные результаты для случайного числа от 0 до 9. Но CamperBot не ожидал увидеть такие десятичные числа:
+Пример кода
+
+0.015882899879771095
+2.114596286197641
+6.040964780197666
+
+Обновите оператор консоли, чтобы он выводил целое число от 0 до 9. Помните, что вы работали с методом в ролевой игре, который округляет число до ближайшего целого.
+
+function getRandomIndex() {
+  console.log(darkColorsArr.length * Math.random())
+}
+getRandomIndex();
+
+
+***
+
+function getRandomIndex() {
+  console.log(Math.floor(darkColorsArr.length * Math.random()))
+}
+getRandomIndex();
+
+
  */
