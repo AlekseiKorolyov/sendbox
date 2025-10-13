@@ -11,13 +11,14 @@ const darkColorsArr = [
     "#800020",
 ];
 function getRandomIndex() {
-    console.log(Math.floor(darkColorsArr.length * Math.random()));
     const randomIndex = Math.floor(darkColorsArr.length * Math.random());
     return randomIndex;
 }
 
 const body = document.querySelector("body");
+const bgHexCodeSpanElement = document.querySelector("#bg-hex-code");
 
+console.log(bgHexCodeSpanElement);
 
 
 
@@ -119,6 +120,21 @@ const body = document.querySelector("body");
 
 
 
+
+
+Шаг 5
+
+CamperBot создал новую переменную bgHexCodeSpanElement для хранения ссылки на элемент span с идентификатором bg-hex-code. Однако при попытке вывести эту переменную в консоль возвращается значение null. Null — это особое значение в JavaScript, которое обозначает отсутствие значения. Это может произойти при попытке доступа к свойству несуществующего объекта. В этом случае CamperBot передаёт неправильный селектор методу document.querySelector. Исправьте строку document.querySelector("bg-hex-code"), чтобы он правильно выбирал элемент с идентификатором bg-hex-code.
+
+
+const body = document.querySelector("body");
+const bgHexCodeSpanElement = document.querySelector("bg-hex-code");
+
+console.log(bgHexCodeSpanElement);
+
+***
+
+("#bg-hex-code")
 
 
  */
