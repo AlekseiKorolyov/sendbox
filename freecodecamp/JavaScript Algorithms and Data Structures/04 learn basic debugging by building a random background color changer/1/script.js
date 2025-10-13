@@ -26,8 +26,8 @@ function changeBackgroundColor() {
     body.style.backgroundColor = color;
 }
 const btn = document.querySelector("#btn");
-console.log(btn);
 
+btn.onclick = changeBackgroundColor;
 
 
 
@@ -185,6 +185,18 @@ console.log(btn);
 const btn = document.querySelector("#btn");
 
 
+
+
+Шаг 8
+
+CamperBot завершил создание случайного изменения цвета фона. Однако при нажатии кнопки цвет фона не меняется. Похоже, они пытаются использовать свойство onclick, но делают это неправильно. Свойству onclick следует присвоить ссылку на функцию. Исправьте ошибку в строке btn.onclick = changeBackgroundColor();. Вспомните, что вы работали со свойством onclick в проекте ролевой игры. Посмотрите на итоговое решение, чтобы увидеть, как правильно использовалось свойство onclick. Как только вы исправите эту последнюю ошибку, случайный изменение цвета фона будет готов!
+
+
+btn.onclick = changeBackgroundColor();
+
+***
+
+btn.onclick = changeBackgroundColor;
 
 
  */
