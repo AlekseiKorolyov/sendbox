@@ -10,7 +10,10 @@ const darkColorsArr = [
     "#2C3E50",
     "#800020",
 ];
-
+function getRandomIndex() {
+    console.log(darkColorsArr.length * Math.random())
+}
+getRandomIndex();
 
 
 
@@ -44,4 +47,23 @@ const darkColorsArr = [
 
 
 
+Шаг 2
+
+Теперь CamperBot пытается создать функцию, которая будет возвращать случайный индекс из darkColorsArr. Но возникает следующее сообщение об ошибке:
+Пример кода
+
+Uncaught ReferenceError: math is not defined
+
+ReferenceError возникает при ссылке на несуществующую переменную. В этом случае похоже, что CamperBot пытается использовать math, но в JavaScript нет объекта math. Исправьте ошибку CamperBot в строке math.random() и снова откройте консоль.
+
+
+function getRandomIndex() {
+    console.log(darkColorsArr.length * math.random())
+}
+getRandomIndex();
+
+***
+
+
+console.log(darkColorsArr.length * Math.random())
  */
