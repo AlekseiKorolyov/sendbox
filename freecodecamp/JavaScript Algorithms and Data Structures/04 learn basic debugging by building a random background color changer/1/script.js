@@ -10,6 +10,7 @@ const darkColorsArr = [
     "#2C3E50",
     "#800020",
 ];
+
 function getRandomIndex() {
     const randomIndex = Math.floor(darkColorsArr.length * Math.random());
     return randomIndex;
@@ -18,7 +19,13 @@ function getRandomIndex() {
 const body = document.querySelector("body");
 const bgHexCodeSpanElement = document.querySelector("#bg-hex-code");
 
-console.log(bgHexCodeSpanElement);
+function changeBackgroundColor() {
+    const color = darkColorsArr[getRandomIndex()];
+
+    bgHexCodeSpanElement.innerText = color;
+    body.style.backgroundColor = color;
+}
+changeBackgroundColor();
 
 
 
@@ -136,5 +143,31 @@ console.log(bgHexCodeSpanElement);
 
 ("#bg-hex-code")
 
+
+
+
+Шаг 6
+
+CamperBot создал функцию changeBackgroundColor, которая меняет цвет фона страницы на случайный цвет из массива darkColorsArr. Функция также отображает шестнадцатеричный код нового цвета. При попытке протестировать эту функцию они заметили, что цвет фона не меняется, а текст выглядит следующим образом:
+Пример кода
+
+Hex Code: undefined
+
+Здесь отображается undefined, потому что переменная цвета задана неправильно. Исправьте ошибку в строке darkColorsArr[getRandomIndex], чтобы переменная цвета была задана случайным цветом из массива darkColorsArr.
+
+
+
+function changeBackgroundColor() {
+  const color = darkColorsArr[getRandomIndex];
+
+  bgHexCodeSpanElement.innerText = color;
+  body.style.backgroundColor = color;
+}
+changeBackgroundColor();
+
+***
+
+
+const color = darkColorsArr[getRandomIndex()];
 
  */
