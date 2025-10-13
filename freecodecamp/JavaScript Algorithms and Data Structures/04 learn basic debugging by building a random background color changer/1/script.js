@@ -25,8 +25,8 @@ function changeBackgroundColor() {
     bgHexCodeSpanElement.innerText = color;
     body.style.backgroundColor = color;
 }
-changeBackgroundColor();
-
+const btn = document.querySelector("#btn");
+console.log(btn);
 
 
 
@@ -169,5 +169,22 @@ changeBackgroundColor();
 
 
 const color = darkColorsArr[getRandomIndex()];
+
+
+
+Шаг 7
+
+CamperBot пытается создать новую переменную btn для хранения ссылки на элемент кнопки с идентификатором click-btn. Однако при попытке вывести элемент кнопки в консоль он видит, что элемент кнопки имеет значение null. Откройте файл index.html, чтобы увидеть правильный идентификатор этого элемента кнопки. Затем исправьте ошибку в строке document.querySelector("#click-btn");.
+
+
+const btn = document.querySelector("#click-btn");
+console.log(btn);
+
+***
+
+const btn = document.querySelector("#btn");
+
+
+
 
  */
