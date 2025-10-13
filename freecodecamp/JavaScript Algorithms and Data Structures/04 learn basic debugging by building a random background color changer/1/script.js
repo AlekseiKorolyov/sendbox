@@ -12,8 +12,11 @@ const darkColorsArr = [
 ];
 function getRandomIndex() {
     console.log(Math.floor(darkColorsArr.length * Math.random()));
+    const randomIndex = Math.floor(darkColorsArr.length * Math.random());
+    return randomIndex;
 }
-getRandomIndex();
+
+const body = document.querySelector("body");
 
 
 
@@ -93,6 +96,29 @@ function getRandomIndex() {
   console.log(Math.floor(darkColorsArr.length * Math.random()))
 }
 getRandomIndex();
+
+
+
+
+Шаг 4
+
+CamperBot завершил создание функции getRandomIndex, и она работает как надо. Но теперь при попытке создать ссылку на элемент body в DOM возникает следующая проблема:
+Пример кода
+Uncaught TypeError: document.queryselector is not a function
+
+Ошибка TypeError означает, что код пытается выполнить операцию со значением, тип которого отличается от ожидаемого. Исправьте ошибку TypeError, обновив метод document.queryselector на корректное имя метода, который выбирает элемент из DOM.
+
+
+
+const body = document.queryselector("body");
+
+
+***
+
+const body = document.querySelector("body");
+
+
+
 
 
  */
