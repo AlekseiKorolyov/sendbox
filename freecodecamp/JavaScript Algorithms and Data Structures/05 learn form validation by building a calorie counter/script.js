@@ -12,7 +12,7 @@ function cleanInputString(str) {
 }
 
 function isInvalidInput(str) {
-
+    const regex = /e/;
 }
 
 
