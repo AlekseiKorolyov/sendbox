@@ -16,7 +16,7 @@ function isInvalidInput(str) {
     return str.match(regex);
 }
 
-
+console.log(isInvalidInput("1e3"));
 
 
 
@@ -47,7 +47,7 @@ function isInvalidInput(str) {
 30          флаг i, который означает «нечувствительный»
 32          Модификатор + в регулярном выражении
 33          сокращённый класс символов для любой цифры
-
+34          метод .match()
 
 
 
