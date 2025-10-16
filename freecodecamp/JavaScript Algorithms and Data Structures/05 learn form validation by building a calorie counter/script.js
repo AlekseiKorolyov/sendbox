@@ -13,6 +13,7 @@ function cleanInputString(str) {
 
 function isInvalidInput(str) {
     const regex = /\d+e\d+/i;
+    return str.match(regex);
 }
 
 
@@ -162,6 +163,33 @@ const regex = /[0-9]+e[0-9]+/i;
 
 const regex = /[0-9]+e[0-9]+/i;
 const regex = /\d+e\d+/i;
+
+
+Шаг 34
+
+У строк есть метод .match(), принимающий в качестве аргумента регулярное выражение. .match() вернёт массив результатов сопоставления, содержащий либо первое совпадение, либо все совпадения, если используется глобальный флаг.
+Пример кода
+
+const str = 'example string';
+const regex = /example/;
+const result = str.match(regex); // Возвращает ['example']
+
+Вернет результат вызова метода .match() для str и передачи переменной регулярного выражения в качестве аргумента. Этот результат сопоставления понадобится вам позже.
+
+function isInvalidInput(str) {
+  const regex = /\d+e\d+/i;
+
+}
+
+***
+
+function isInvalidInput(str) {
+  const regex = /\d+e\d+/i;
+  return str.match(regex);
+}
+
+
+
 
 
 
