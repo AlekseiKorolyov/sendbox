@@ -19,6 +19,7 @@ function isInvalidInput(str) {
 function addEntry() {
     const targetInputContainer = document.querySelector(`#${entryDropdown.value} .input-container`);
     const entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').length;
+    const HTMLString = ``;
 }
 
 
@@ -239,6 +240,19 @@ const entryNumber = targetInputContainer.querySelectorAll();
 Выполнено Каждая запись будет иметь текстовое поле для ввода названия и числовое поле для калорийности. Чтобы получить количество записей, можно выполнить запрос по текстовым полям. Передайте строку input[type="text"] методу querySelectorAll(). Помните, что если вы используете одинарные кавычки для строки, внутри неё необходимо использовать двойные кавычки (и наоборот). Это вернёт список NodeList всех текстовых полей в форме. Затем вы можете получить количество записей, обратившись к свойству length списка NodeList. Сделайте это в той же строке.
 
 const entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').length;
+
+
+
+
+Шаг 46
+
+Теперь вам нужно создать динамическую HTML-строку для добавления на веб-страницу. Объявите новую переменную HTMLString и присвойте ей пустую строку-шаблон.
+
+
+const HTMLString = ``;
+
+
+
 
 
  */
