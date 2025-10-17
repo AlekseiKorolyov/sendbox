@@ -18,6 +18,7 @@ function isInvalidInput(str) {
 
 function addEntry() {
     const targetInputContainer = document.querySelector(`#${entryDropdown.value} .input-container`);
+    const entryNumber = targetInputContainer.querySelectorAll();
 }
 
 
@@ -51,7 +52,7 @@ function addEntry() {
 33          сокращённый класс символов для любой цифры
 34          метод .match()  Метод match возвращает null, если совпадений не найдено
 42          Шаблонные литералы обозначаются обратными кавычками ``, а не одинарными или двойными кавычками.
-
+44          метод querySelectorAll()
 
 
 
@@ -214,6 +215,24 @@ const targetInputContainer = document.querySelector(targetId + " .input-containe
 ***
 
 const targetInputContainer = document.querySelector(`${targetId} .input-container`);
+
+
+
+
+Шаг 44
+
+Вам потребуется пронумеровать записи, добавляемые пользователем. Чтобы получить все введённые числа, можно использовать метод querySelectorAll(). Метод querySelectorAll() возвращает список NodeList всех элементов, соответствующих селектору. NodeList — это объект, подобный массиву, поэтому доступ к элементам можно получить, используя скобки. Объявите переменную entryNumber и присвойте ей значение targetInputContainer.querySelectorAll(). Передавать аргумент селектору запроса пока не нужно.
+
+function addEntry() {
+  const targetInputContainer = document.querySelector(`#${entryDropdown.value} .input-container`);
+
+}
+
+***
+
+const entryNumber = targetInputContainer.querySelectorAll();
+
+
 
 
 
