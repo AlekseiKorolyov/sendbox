@@ -18,7 +18,7 @@ function isInvalidInput(str) {
 
 function addEntry() {
     const targetId = "#" + entryDropdown.value;
-    const targetInputContainer = document.querySelector(targetId + " .input-container");
+    const targetInputContainer = document.querySelector(`${targetId} .input-container`);
 }
 
 
@@ -51,7 +51,7 @@ function addEntry() {
 32          Модификатор + в регулярном выражении
 33          сокращённый класс символов для любой цифры
 34          метод .match()  Метод match возвращает null, если совпадений не найдено
-
+42          Шаблонные литералы обозначаются обратными кавычками ``, а не одинарными или двойными кавычками.
 
 
 
@@ -200,8 +200,21 @@ function isInvalidInput(str) {
 
 
 
+Шаг 42
 
+В JavaScript есть функция, называемая шаблонными литералами, которая позволяет вставлять переменные непосредственно в строку. Шаблонные литералы обозначаются обратными кавычками ``, а не одинарными или двойными кавычками. Переменные можно передать в шаблонный литерал, заключив переменную в ${} — значение переменной будет вставлено в строку. Например: Пример кода
 
+const name = "Naomi";
+const templateLiteral = `Hello, my name is ${name}~!`;
+console.log(templateLiteral);
+
+В консоли будет отображена строка "Hello, me name is Naomi~!". Замените объединенную строку в querySelector шаблонным литералом, не забыв оставить пробел между переменной targetId и .input-container.
+
+const targetInputContainer = document.querySelector(targetId + " .input-container");
+
+***
+
+const targetInputContainer = document.querySelector(`${targetId} .input-container`);
 
 
 
