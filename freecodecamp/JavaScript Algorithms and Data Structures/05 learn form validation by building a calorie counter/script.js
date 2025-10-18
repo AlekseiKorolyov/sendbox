@@ -20,8 +20,7 @@ function addEntry() {
     const targetInputContainer = document.querySelector(`#${entryDropdown.value} .input-container`);
     const entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').length;
     const HTMLString = `
-    <label>Entry ${entryNumber} Name</label>
-    `;
+    <label for="${entryDropdown.value}-${entryNumber}-name">Entry ${entryNumber} Name</label>`;
 }
 
 
@@ -261,6 +260,20 @@ const HTMLString = ``;
 Внутри шаблонного литерала создайте элемент label и присвойте ему текст Entry # Name. Используя синтаксис шаблонного литерала, замените # на значение entryNumber.
 
 `<label>Entry ${entryNumber} Name</label>`
+
+
+
+
+
+Шаг 48
+
+Добавьте к элементу label атрибут for со значением X-#-name, где X — значение элемента entryDropdown, а # — значение entryNumber. Помните, что атрибуты HTML должны быть заключены в двойные кавычки.
+
+`<label>Entry ${entryNumber} Name</label>`
+
+***
+
+<label for="${entryDropdown.value}-${entryNumber}-name">Entry ${entryNumber} Name</label>`;
 
 
 
