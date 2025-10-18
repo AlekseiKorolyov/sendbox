@@ -19,7 +19,9 @@ function isInvalidInput(str) {
 function addEntry() {
     const targetInputContainer = document.querySelector(`#${entryDropdown.value} .input-container`);
     const entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').length;
-    const HTMLString = ``;
+    const HTMLString = `
+    <label>Entry ${entryNumber} Name</label>
+    `;
 }
 
 
@@ -252,6 +254,13 @@ const entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').
 const HTMLString = ``;
 
 
+
+
+Шаг 47
+
+Внутри шаблонного литерала создайте элемент label и присвойте ему текст Entry # Name. Используя синтаксис шаблонного литерала, замените # на значение entryNumber.
+
+`<label>Entry ${entryNumber} Name</label>`
 
 
 
