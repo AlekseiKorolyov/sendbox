@@ -24,6 +24,7 @@ function addEntry() {
     <input type="text" placeholder="Name" id="${entryDropdown.value}-${entryNumber}-name" />
     <label for="${entryDropdown.value}-${entryNumber}-calories">Entry ${entryNumber} Calories</label>
     <input type="number" min="0" placeholder="Calories" id="${entryDropdown.value}-${entryNumber}-calories" />`;
+    targetInputContainer.innerHTML += HTMLString;
 }
 
 
@@ -58,7 +59,7 @@ function addEntry() {
 34          метод .match()  Метод match возвращает null, если совпадений не найдено
 42          Шаблонные литералы обозначаются обратными кавычками ``, а не одинарными или двойными кавычками.
 44          метод querySelectorAll()
-
+52          Свойство innerHTML
 
 
 
@@ -248,6 +249,9 @@ const entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').
 
 
 
+
+
+
 Шаг 46
 
 Теперь вам нужно создать динамическую HTML-строку для добавления на веб-страницу. Объявите новую переменную HTMLString и присвойте ей пустую строку-шаблон.
@@ -277,6 +281,36 @@ const HTMLString = ``;
 ***
 
 <label for="${entryDropdown.value}-${entryNumber}-name">Entry ${entryNumber} Name</label>`;
+
+
+
+
+
+
+Шаг 52
+
+Чтобы увидеть новое HTML-содержимое для targetInputContainer, необходимо использовать свойство innerHTML. Свойство innerHTML задаёт или возвращает HTML-содержимое внутри элемента. Вот элемент формы с вложенными в него меткой и элементом ввода.
+Пример кода
+
+<form id="form">
+    <label for="first-name">Имя</label>
+    <input id="first-name" type="text">
+</form>
+
+ Если вы хотите добавить ещё одну метку и элемент ввода внутрь формы, используйте свойство innerHTML, как показано ниже:
+ Пример кода
+
+ const formElement = document.getElementById("form");
+ const formContent = `
+    <label for="last-name">Фамилия</label>
+    <input id="last-name" type="text">
+ `;
+ formElement.innerHTML += formContent;
+
+ Используйте оператор присваивания сложения +=, чтобы добавить переменную HTMLString к targetInputContainer.innerHTML.
+
+
+ targetInputContainer.innerHTML += HTMLString;
 
 
 
