@@ -24,7 +24,7 @@ function addEntry() {
     <input type="text" placeholder="Name" id="${entryDropdown.value}-${entryNumber}-name" />
     <label for="${entryDropdown.value}-${entryNumber}-calories">Entry ${entryNumber} Calories</label>
     <input type="number" min="0" placeholder="Calories" id="${entryDropdown.value}-${entryNumber}-calories" />`;
-    targetInputContainer.insertAdjacentHTML();
+    targetInputContainer.insertAdjacentHTML("beforeend", HTMLString);
 }
 
 addEntryButton.addEventListener("click", addEntry);
@@ -63,7 +63,7 @@ addEntryButton.addEventListener("click", addEntry);
 44          метод querySelectorAll()
 52          Свойство innerHTML
 53          метод addEventListener
-55          .insertAdjacentHTML();
+55 - 56     .insertAdjacentHTML();
 
 
 
@@ -354,5 +354,15 @@ const HTMLString = ``;
 
 
 targetInputContainer.insertAdjacentHTML();
+
+
+
+
+Шаг 56
+
+Метод insertAdjacentHtml принимает два аргумента. Первый аргумент — строка, указывающая позицию вставляемого элемента. Второй аргумент — строка, содержащая HTML-код для вставки. В качестве первого аргумента передайте строку "beforeend", чтобы вставить новый элемент как последний дочерний элемент targetInputContainer. В качестве второго аргумента передайте переменную HTMLString.
+
+
+targetInputContainer.insertAdjacentHTML("beforeend", HTMLString);
 
  */
