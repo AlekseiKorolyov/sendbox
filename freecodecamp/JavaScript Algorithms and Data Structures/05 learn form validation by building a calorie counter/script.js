@@ -42,6 +42,7 @@ function calculateCalories(e) {
     const dinnerCalories = getCaloriesFromInputs(dinnerNumberInputs);
     const snacksCalories = getCaloriesFromInputs(snacksNumberInputs);
     const exerciseCalories = getCaloriesFromInputs(exerciseNumberInputs);
+    const budgetCalories = getCaloriesFromInputs([budgetNumberInput]);
 }
 
 function getCaloriesFromInputs(list) {
@@ -479,6 +480,12 @@ calories += Number(currVal);
 
 Эту функцию нужно прикрепить к событию отправки формы. Событие отправки срабатывает при отправке формы. Действие по умолчанию для события отправки — перезагрузка страницы. Вам необходимо предотвратить это действие по умолчанию с помощью метода preventDefault() параметра e. Добавьте в функцию calculateCalories строку, которая вызывает метод preventDefault() параметра e. Затем сбросьте глобальный флаг ошибки isError до false.
 
+
+
+
+Шаг 76
+
+Вам также необходимо получить значение вашего входного параметра #budget. Вы уже запросили его в начале кода и присвоили его переменной budgetNumberInput. Однако вы использовали getElementById, которая возвращает Element, а не NodeList. NodeList — это объект, подобный массиву, что означает возможность итерации по нему, и он использует некоторые общие методы с массивом. Для функции getCaloriesFromInputs массив будет работать в качестве аргумента так же, как и NodeList. Объявите переменную budgetCalories и присвойте ей результат вызова getCaloriesFromInputs, передав в качестве аргумента массив, содержащий ваш budgetNumberInput.
 
 
 
