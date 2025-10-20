@@ -24,7 +24,7 @@ function addEntry() {
     <input type="text" placeholder="Name" id="${entryDropdown.value}-${entryNumber}-name" />
     <label for="${entryDropdown.value}-${entryNumber}-calories">Entry ${entryNumber} Calories</label>
     <input type="number" min="0" placeholder="Calories" id="${entryDropdown.value}-${entryNumber}-calories" />`;
-    targetInputContainer.innerHTML += HTMLString;
+    targetInputContainer.insertAdjacentHTML();
 }
 
 addEntryButton.addEventListener("click", addEntry);
@@ -63,7 +63,7 @@ addEntryButton.addEventListener("click", addEntry);
 44          метод querySelectorAll()
 52          Свойство innerHTML
 53          метод addEventListener
-
+55          .insertAdjacentHTML();
 
 
 
@@ -345,5 +345,14 @@ const HTMLString = ``;
 
 Попробуйте добавить несколько записей в категорию «Завтрак», и вы можете заметить некоторые ошибки! Первое, что нам нужно исправить, — это количество записей: у первой записи оно должно быть равно 1, а не 0. Эта ошибка возникает, потому что вы запрашиваете элементы input[type="text"] перед добавлением новой записи на страницу. Чтобы исправить это, обновите переменную entryNumber, указав значение длины запроса плюс 1. Добавьте это значение в строку объявления, а не в строки шаблона.
 
+
+
+
+Шаг 55
+
+Другая ошибка возникает, если вы добавляете запись «Завтрак», заполняете её, а затем добавляете вторую запись «Завтрак». Вы увидите, что добавленные вами значения исчезли. Это происходит потому, что вы обновляете innerHTML напрямую, что не сохраняет содержимое входных данных. Измените назначение innerHTML так, чтобы вместо этого использовался метод insertAdjacentHTML() объекта targetInputContainer. Пока не передавайте аргументы.
+
+
+targetInputContainer.insertAdjacentHTML();
 
  */
