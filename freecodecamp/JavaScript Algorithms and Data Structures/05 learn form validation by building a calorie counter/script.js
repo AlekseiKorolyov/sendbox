@@ -51,7 +51,9 @@ function calculateCalories(e) {
     const consumedCalories = breakfastCalories + lunchCalories + dinnerCalories + snacksCalories;
     const remainingCalories = budgetCalories - consumedCalories + exerciseCalories;
     const surplusOrDeficit = (remainingCalories < 0) ? "Surplus" : "Deficit";
-    output.innerHTML = `<span class="${surplusOrDeficit.toLowerCase()}"></span>`;
+    output.innerHTML = `
+    <span class="${surplusOrDeficit.toLowerCase()}">${remainingCalories} Calorie ${surplusOrDeficit}</span>
+    `;
 }
 
 function getCaloriesFromInputs(list) {
@@ -527,6 +529,13 @@ output.innerHTML = `
   <span class="${surplusOrDeficit.toLowerCase()}"></span>`;
 
 
+
+Шаг 83
+
+Введите в поле «Оставшиеся калории» текст «Избыток калорий или дефицит», заменив «Оставшиеся калории» и «Избыток калорий или дефицит» соответствующими переменными с помощью интерполяции.
+
+
+${remainingCalories} Calorie ${surplusOrDeficit}
 
 
 
