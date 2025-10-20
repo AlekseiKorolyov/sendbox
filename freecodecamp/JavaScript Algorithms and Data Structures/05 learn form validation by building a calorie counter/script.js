@@ -51,7 +51,7 @@ function calculateCalories(e) {
     const consumedCalories = breakfastCalories + lunchCalories + dinnerCalories + snacksCalories;
     const remainingCalories = budgetCalories - consumedCalories + exerciseCalories;
     const surplusOrDeficit = (remainingCalories < 0) ? "Surplus" : "Deficit";
-    output.innerHTML = ``;
+    output.innerHTML = `<span class="${surplusOrDeficit.toLowerCase()}"></span>`;
 }
 
 function getCaloriesFromInputs(list) {
@@ -110,6 +110,7 @@ addEntryButton.addEventListener("click", addEntry);
 53          метод addEventListener
 55 - 56     .insertAdjacentHTML();
 59          for...of
+82          метод toLowerCase() 'JESSICA'; console.log(firstName.toLowerCase()); // Вывод: jessica
 
 
 
@@ -507,6 +508,25 @@ calories += Number(currVal);
 
 
 const surplusOrDeficit = (remainingCalories < 0) ? "Surplus" : "Deficit";
+
+
+
+
+Шаг 82
+
+Если вам нужно преобразовать строку в строчные буквы, можно использовать метод toLowerCase(). Этот метод возвращает вызывающее строковое значение, преобразованное в строчные.
+Пример кода
+
+const firstName = 'JESSICA';
+console.log(firstName.toLowerCase()); // Вывод: jessica
+
+Для вашей строки output.innerHTML потребуется элемент span. Создайте его и присвойте ему атрибут class, равный переменной surplusOrDeficit. Переменную surplusOrDeficit следует преобразовать в строчные буквы с помощью метода toLowerCase(). Пока не добавляйте текст в элемент span.
+
+
+output.innerHTML = `
+  <span class="${surplusOrDeficit.toLowerCase()}"></span>`;
+
+
 
 
 
