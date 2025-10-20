@@ -35,7 +35,7 @@ function getCaloriesFromInputs(list) {
             const currVal = cleanInputString(item.value);
             const invalidInputMatch = isInvalidInput(currVal);
             if (invalidInputMatch) {
-
+                alert(`Invalid Input: ${invalidInputMatch[0]}`)
             }
         }
     }
@@ -428,6 +428,16 @@ if (invalidInputMatch) {
 
     }
 
+
+
+    Шаг 64
+
+    В браузерах есть встроенная функция alert(), которую можно использовать для отображения всплывающего сообщения пользователю. Отображаемое сообщение передаётся в качестве аргумента функции alert(). Используя шаблонный литерал, в блоке if вызовите функцию alert(), чтобы сообщить пользователю «Недопустимый ввод:», а затем укажите первое значение из массива invalidInputMatch.
+
+
+if (invalidInputMatch) {
+      alert(`Invalid Input: ${invalidInputMatch[0]}`)
+    }
 
 
 
