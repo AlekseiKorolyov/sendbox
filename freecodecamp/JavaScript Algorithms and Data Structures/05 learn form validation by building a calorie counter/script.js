@@ -28,7 +28,8 @@ function addEntry() {
 }
 
 function calculateCalories(e) {
-
+    e.preventDefault();
+    isError = false;
 }
 
 function getCaloriesFromInputs(list) {
@@ -459,6 +460,13 @@ Number('abc'); // возвращает NaN
 
 
 calories += Number(currVal);
+
+
+
+Шаг 69
+
+Эту функцию нужно прикрепить к событию отправки формы. Событие отправки срабатывает при отправке формы. Действие по умолчанию для события отправки — перезагрузка страницы. Вам необходимо предотвратить это действие по умолчанию с помощью метода preventDefault() параметра e. Добавьте в функцию calculateCalories строку, которая вызывает метод preventDefault() параметра e. Затем сбросьте глобальный флаг ошибки isError до false.
+
 
 
 
