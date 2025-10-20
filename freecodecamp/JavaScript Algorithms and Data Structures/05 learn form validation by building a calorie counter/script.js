@@ -29,6 +29,12 @@ function addEntry() {
 
 function getCaloriesFromInputs(list) {
     let calories = 0;
+    function getCaloriesFromInputs(list) {
+        let calories = 0;
+        for (const item of list) {
+
+        }
+    }
 }
 
 addEntryButton.addEventListener("click", addEntry);
@@ -68,7 +74,7 @@ addEntryButton.addEventListener("click", addEntry);
 52          Свойство innerHTML
 53          метод addEventListener
 55 - 56     .insertAdjacentHTML();
-
+59          for...of
 
 
 
@@ -368,5 +374,33 @@ targetInputContainer.insertAdjacentHTML();
 
 
 targetInputContainer.insertAdjacentHTML("beforeend", HTMLString);
+
+
+
+Шаг 59
+
+Параметр list будет результатом селектора запроса, который вернет NodeList. NodeList — это список элементов, подобный массиву. Он содержит элементы, соответствующие селектору запроса. Вам нужно будет выполнить цикл по этим
+элементам в списке. На предыдущих шагах вы узнали, как перебирать массив с помощью цикла for. Вы также можете использовать цикл for...of для перебора массива и NodeList. Цикл for...of используется для перебора элементов итерируемого объекта, например массива. Переменная, объявленная в цикле, представляет текущий элемент, по которому выполняется итерация.
+Пример кода
+
+for (const element of elementArray) {
+ console.log(element);
+ }
+
+ Создайте цикл for...of, который перебирает список. В качестве имени переменной цикла используйте const для объявления переменной с именем item.
+
+
+ function getCaloriesFromInputs(list) {
+  let calories = 0;
+  for (const item of list) {
+
+  }
+}
+
+
+
+
+
+
 
  */
