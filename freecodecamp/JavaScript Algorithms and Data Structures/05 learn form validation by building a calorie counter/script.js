@@ -27,6 +27,8 @@ function addEntry() {
     targetInputContainer.innerHTML += HTMLString;
 }
 
+addEntryButton.addEventListener("click", addEntry);
+
 
 
 
@@ -60,7 +62,7 @@ function addEntry() {
 42          Шаблонные литералы обозначаются обратными кавычками ``, а не одинарными или двойными кавычками.
 44          метод querySelectorAll()
 52          Свойство innerHTML
-
+53          метод addEventListener
 
 
 
@@ -311,6 +313,30 @@ const HTMLString = ``;
 
 
  targetInputContainer.innerHTML += HTMLString;
+
+
+
+
+ Шаг 53
+
+ В проекте «Ролевая игра» вы узнали, как настроить поведение кнопки, отредактировав её свойство onclick. Вы также можете изменить поведение элемента, добавив прослушиватель событий. В следующем примере метод addEventListener используется для добавления события click к кнопке. При нажатии кнопки вызывается функция printName.
+ Пример кода
+
+ <button class="btn">Print name</button>
+
+ Пример кода
+
+ const button = document.querySelector('.btn');
+ function printName() {
+  console.log("Jessica");
+  }
+  button.addEventListener('click', printName);
+
+
+  Метод addEventListener принимает два аргумента. Первый — это событие, которое нужно отследить (например, 'click'). Второй — это функция обратного вызова, или функция, которая запускается при срабатывании события. Вызовите метод .addEventListener() для addEntryButton. Передайте строку «click» в качестве первого аргумента и функцию addEntry в качестве второго аргумента. Обратите внимание, что не следует вызывать addEntry, а следует передавать переменную (или ссылку на функцию) напрямую.
+
+
+  addEntryButton.addEventListener("click", addEntry);
 
 
 
