@@ -34,6 +34,9 @@ function getCaloriesFromInputs(list) {
         for (const item of list) {
             const currVal = cleanInputString(item.value);
             const invalidInputMatch = isInvalidInput(currVal);
+            if (invalidInputMatch) {
+
+            }
         }
     }
 }
@@ -406,6 +409,24 @@ for (const element of elementArray) {
 
 const currVal = item.value;
 
+
+
+
+Шаг 63
+
+Помните, что функция isInvalidInput возвращает String.match, представляющий собой массив совпадений, или null, если совпадений не найдено. В JavaScript значения могут быть либо истинными, либо ложными. Значение истинно, если при преобразовании в логическое значение оно становится истинным. Значение ложно, если при преобразовании в логическое значение оно становится ложным. NULL — пример ложного значения. Вам необходимо проверить истинность invalidInputMatch. Это можно сделать, передав переменную непосредственно в условие if (без оператора сравнения). Вот пример проверки истинности helloWorld.
+Пример кода
+
+if (helloWorld) {
+
+}
+
+Добавьте оператор if, который проверяет истинность invalidInputMatch.
+
+
+if (invalidInputMatch) {
+
+    }
 
 
 
