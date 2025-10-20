@@ -18,7 +18,7 @@ function isInvalidInput(str) {
 
 function addEntry() {
     const targetInputContainer = document.querySelector(`#${entryDropdown.value} .input-container`);
-    const entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').length;
+    const entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').length + 1;
     const HTMLString = `
     <label for="${entryDropdown.value}-${entryNumber}-name">Entry ${entryNumber} Name</label>
     <input type="text" placeholder="Name" id="${entryDropdown.value}-${entryNumber}-name" />
@@ -338,6 +338,12 @@ const HTMLString = ``;
 
   addEntryButton.addEventListener("click", addEntry);
 
+
+
+
+Шаг 54
+
+Попробуйте добавить несколько записей в категорию «Завтрак», и вы можете заметить некоторые ошибки! Первое, что нам нужно исправить, — это количество записей: у первой записи оно должно быть равно 1, а не 0. Эта ошибка возникает, потому что вы запрашиваете элементы input[type="text"] перед добавлением новой записи на страницу. Чтобы исправить это, обновите переменную entryNumber, указав значение длины запроса плюс 1. Добавьте это значение в строку объявления, а не в строки шаблона.
 
 
  */
