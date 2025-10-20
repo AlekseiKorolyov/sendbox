@@ -50,6 +50,7 @@ function calculateCalories(e) {
 
     const consumedCalories = breakfastCalories + lunchCalories + dinnerCalories + snacksCalories;
     const remainingCalories = budgetCalories - consumedCalories + exerciseCalories;
+    const surplusOrDeficit = (remainingCalories < 0) ? "Surplus" : "Deficit";
 }
 
 function getCaloriesFromInputs(list) {
@@ -494,6 +495,17 @@ calories += Number(currVal);
 
 Вам также необходимо получить значение вашего входного параметра #budget. Вы уже запросили его в начале кода и присвоили его переменной budgetNumberInput. Однако вы использовали getElementById, которая возвращает Element, а не NodeList. NodeList — это объект, подобный массиву, что означает возможность итерации по нему, и он использует некоторые общие методы с массивом. Для функции getCaloriesFromInputs массив будет работать в качестве аргумента так же, как и NodeList. Объявите переменную budgetCalories и присвойте ей результат вызова getCaloriesFromInputs, передав в качестве аргумента массив, содержащий ваш budgetNumberInput.
 
+
+
+
+
+
+Шаг 80
+
+Вам необходимо узнать, находится ли пользователь в состоянии избытка или дефицита калорий. Избыток калорий — это когда вы потребляете больше калорий, чем сжигаете, а дефицит калорий — когда вы сжигаете больше калорий, чем потребляете. Сжигание такого же количества калорий, как и потребляемые, называется поддержанием и может рассматриваться как нулевой избыток или нулевой дефицит, в зависимости от ваших целей. Объявите переменную surplusOrDeficit. Затем используйте тернарный оператор, чтобы присвоить surplusOrDeficit строку «Surplus» или «Deficit» в зависимости от того, меньше ли значение remainCalories 0. Если оно меньше 0, то surplusOrDeficit должно быть «Surplus». В противном случае — «Deficit».
+
+
+const surplusOrDeficit = (remainingCalories < 0) ? "Surplus" : "Deficit";
 
 
 
