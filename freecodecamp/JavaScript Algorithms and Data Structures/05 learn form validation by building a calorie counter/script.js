@@ -32,7 +32,7 @@ function getCaloriesFromInputs(list) {
     function getCaloriesFromInputs(list) {
         let calories = 0;
         for (const item of list) {
-
+            const currVal = item.value;
         }
     }
 }
@@ -396,6 +396,14 @@ for (const element of elementArray) {
 
   }
 }
+
+
+
+Шаг 60
+
+Значения NodeList, которые вы передадите в list, будут состоять из элементов ввода. Поэтому вам нужно будет проверить атрибут value каждого элемента. Присвойте item.value константной переменной currVal.
+
+const currVal = item.value;
 
 
 
