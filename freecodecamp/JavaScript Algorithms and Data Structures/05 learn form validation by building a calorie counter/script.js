@@ -81,7 +81,7 @@ function getCaloriesFromInputs(list) {
 }
 
 function clearForm() {
-
+    const inputContainers = document.querySelectorAll(".input-container");
 }
 
 addEntryButton.addEventListener("click", addEntry);
@@ -585,6 +585,15 @@ output.classList.remove("hide");
 Если вы нажмёте кнопку «Рассчитать оставшиеся калории», вы увидите, что ничего не происходит. Вам всё равно нужно подключить прослушиватель событий. Добавьте прослушиватель событий к элементу calorieCounter. Тип события должен быть «submit», а функция обратного вызова — «calculateCalories».
 
 calorieCounter.addEventListener("submit", calculateCalories);
+
+
+
+Шаг 91
+
+Вам необходимо получить все контейнеры ввода. Объявите переменную inputContainers и присвойте ей значение запроса всех элементов документа с классом input-container.
+
+const inputContainers = document.querySelectorAll(".input-container");
+
 
 
 
