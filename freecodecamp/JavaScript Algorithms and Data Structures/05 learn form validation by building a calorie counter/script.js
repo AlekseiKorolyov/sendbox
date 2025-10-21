@@ -52,7 +52,7 @@ function calculateCalories(e) {
     const remainingCalories = budgetCalories - consumedCalories + exerciseCalories;
     const surplusOrDeficit = (remainingCalories < 0) ? "Surplus" : "Deficit";
     output.innerHTML = `
-    <span class="${surplusOrDeficit.toLowerCase()}">${remainingCalories} Calorie ${surplusOrDeficit}</span>
+    <span class="${surplusOrDeficit.toLowerCase()}">${Math.abs(remainingCalories)} Calorie ${surplusOrDeficit}</span>
     `;
 }
 
@@ -113,7 +113,7 @@ addEntryButton.addEventListener("click", addEntry);
 55 - 56     .insertAdjacentHTML();
 59          for...of
 82          метод toLowerCase() 'JESSICA'; console.log(firstName.toLowerCase()); // Вывод: jessica
-
+84          Math.abs() возвращает абсолютное значение числа.
 
 
 
@@ -536,6 +536,26 @@ output.innerHTML = `
 
 
 ${remainingCalories} Calorie ${surplusOrDeficit}
+
+
+
+
+Шаг 84
+
+Если у пользователя избыток калорий, значение remainCalories будет отрицательным. Отображение отрицательного числа в строке результата нежелательно. Math.abs() — это встроенный метод JavaScript, который возвращает абсолютное значение числа.
+Пример кода
+
+const num = -5;
+Math.abs(num); // 5
+
+В тексте span заключите ссылку remainCalories в Math.abs(), чтобы гарантировать положительное значение.
+
+${Math.abs(remainingCalories)}
+
+
+
+
+
 
 
 
