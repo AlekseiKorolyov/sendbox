@@ -58,6 +58,8 @@ function calculateCalories(e) {
     <p>${consumedCalories} Calories Consumed</p>
     <p>${exerciseCalories} Calories Burned</p>
     `;
+
+    output.classList.remove("hide");
 }
 
 function getCaloriesFromInputs(list) {
@@ -119,7 +121,7 @@ addEntryButton.addEventListener("click", addEntry);
 82          метод toLowerCase() 'JESSICA'; console.log(firstName.toLowerCase()); // Вывод: jessica
 84          Math.abs() возвращает абсолютное значение числа.
 85          <hr/>  чтобы создать горизонтальную линию
-
+88          метод .remove(), который принимает строку, представляющую класс, который нужно удалить из элемента
 
 Шаг 17
 
@@ -557,6 +559,18 @@ Math.abs(num); // 5
 ${Math.abs(remainingCalories)}
 
 
+
+Шаг 88
+
+Наконец, вам нужно сделать элемент #output видимым, чтобы пользователь мог видеть ваш текст. Ваша выходная переменная — это Element со свойством classList. У этого свойства есть метод .remove(), который принимает строку, представляющую класс, который нужно удалить из элемента.
+Пример кода
+
+const paragraphElement = document.getElementById('paragraph');
+paragraphElement.classList.remove('hide');
+
+Используйте метод .remove() свойства classList выходной переменной, чтобы удалить класс скрытия. Не забудьте заключить слово hide в кавычки.
+
+output.classList.remove("hide");
 
 
 
