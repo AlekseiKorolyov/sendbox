@@ -86,6 +86,7 @@ function clearForm() {
         container.innerHTML = "";
     }
     budgetNumberInput.value = "";
+    output.innerText = "";
 }
 
 addEntryButton.addEventListener("click", addEntry);
@@ -132,7 +133,7 @@ calorieCounter.addEventListener("submit", calculateCalories);
 85          <hr/>  чтобы создать горизонтальную линию
 88          метод .remove(), который принимает строку, представляющую класс, который нужно удалить из элемента
 92          метод .from(), который принимает значения, подобные массиву, и возвращает массив
-
+95          innerText
 
 
 
@@ -623,6 +624,13 @@ const listItemsArray = Array.from(document.querySelectorAll('li'));
 console.log(listItemsArray); //Вывод: (3) [li, li, li]
 
 Оберните селектор запроса inputContainers в Array.from(). Сделайте это в той же строке, что и ваше заявление.
+
+
+
+
+Шаг 95
+
+Также необходимо очистить текст выходного элемента. Это можно сделать, установив свойство innerText в пустую строку. Разница между innerText и innerHTML заключается в том, что innerText не отображает HTML-элементы, а отображает теги и содержимое в виде необработанного текста.
 
 
 
