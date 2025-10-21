@@ -81,6 +81,7 @@ function getCaloriesFromInputs(list) {
 }
 
 addEntryButton.addEventListener("click", addEntry);
+calorieCounter.addEventListener("submit", calculateCalories);
 
 
 
@@ -573,6 +574,13 @@ paragraphElement.classList.remove('hide');
 output.classList.remove("hide");
 
 
+
+
+Шаг 89
+
+Если вы нажмёте кнопку «Рассчитать оставшиеся калории», вы увидите, что ничего не происходит. Вам всё равно нужно подключить прослушиватель событий. Добавьте прослушиватель событий к элементу calorieCounter. Тип события должен быть «submit», а функция обратного вызова — «calculateCalories».
+
+calorieCounter.addEventListener("submit", calculateCalories);
 
 
 
