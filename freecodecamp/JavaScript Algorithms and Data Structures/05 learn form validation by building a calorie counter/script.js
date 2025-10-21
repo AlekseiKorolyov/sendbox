@@ -81,7 +81,7 @@ function getCaloriesFromInputs(list) {
 }
 
 function clearForm() {
-    const inputContainers = document.querySelectorAll(".input-container");
+    const inputContainers = Array.from(document.querySelectorAll('.input-container'));
 }
 
 addEntryButton.addEventListener("click", addEntry);
@@ -127,6 +127,13 @@ calorieCounter.addEventListener("submit", calculateCalories);
 84          Math.abs() возвращает абсолютное значение числа.
 85          <hr/>  чтобы создать горизонтальную линию
 88          метод .remove(), который принимает строку, представляющую класс, который нужно удалить из элемента
+92          метод .from(), который принимает значения, подобные массиву, и возвращает массив
+
+
+
+
+
+
 
 Шаг 17
 
@@ -593,6 +600,26 @@ calorieCounter.addEventListener("submit", calculateCalories);
 Вам необходимо получить все контейнеры ввода. Объявите переменную inputContainers и присвойте ей значение запроса всех элементов документа с классом input-container.
 
 const inputContainers = document.querySelectorAll(".input-container");
+
+
+
+Шаг 92
+
+Помните, что document.querySelectorAll возвращает NodeList, который подобен массиву, но не является им. Однако у объекта Array есть метод .from(), который принимает значения, подобные массиву, и возвращает массив. Это полезно, когда вам нужен доступ к более надёжным методам работы с массивами, о которых вы узнаете в будущем проекте. В следующем примере NodeList из элементов li преобразуется в массив элементов li:
+Пример кода
+<ul>
+<li>Список 1</li>
+<li>Список 2</li>
+<li>Список 3</li>
+</ul>
+
+Пример кода
+
+const listItemsArray = Array.from(document.querySelectorAll('li'));
+console.log(listItemsArray); //Вывод: (3) [li, li, li]
+
+Оберните селектор запроса inputContainers в Array.from(). Сделайте это в той же строке, что и ваше заявление.
+
 
 
 
