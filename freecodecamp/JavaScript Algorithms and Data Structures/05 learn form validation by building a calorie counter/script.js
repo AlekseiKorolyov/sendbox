@@ -53,6 +53,7 @@ function calculateCalories(e) {
     const surplusOrDeficit = (remainingCalories < 0) ? "Surplus" : "Deficit";
     output.innerHTML = `
     <span class="${surplusOrDeficit.toLowerCase()}">${Math.abs(remainingCalories)} Calorie ${surplusOrDeficit}</span>
+    <hr>
     `;
 }
 
@@ -114,7 +115,7 @@ addEntryButton.addEventListener("click", addEntry);
 59          for...of
 82          метод toLowerCase() 'JESSICA'; console.log(firstName.toLowerCase()); // Вывод: jessica
 84          Math.abs() возвращает абсолютное значение числа.
-
+85          <hr/>  чтобы создать горизонтальную линию
 
 
 Шаг 17
