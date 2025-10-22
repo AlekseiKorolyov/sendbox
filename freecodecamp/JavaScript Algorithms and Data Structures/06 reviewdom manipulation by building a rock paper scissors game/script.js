@@ -1,6 +1,7 @@
 function getRandomComputerResult() {
     const options = ["Rock", "Paper", "Scissors"];
-
+    const randomIndex = Math.floor(Math.random() * options.length);
+    return options[randomIndex];
 }
 console.log(getRandomComputerResult());
 
@@ -34,7 +35,8 @@ function getRandomComputerResult() {
 
 function getRandomComputerResult() {
   const options = ["Rock", "Paper", "Scissors"];
-return options[Math.floor(Math.random() * options.length)];
+  const randomIndex = Math.floor(Math.random() * options.length);
+  return options[randomIndex];
 }
 
 
