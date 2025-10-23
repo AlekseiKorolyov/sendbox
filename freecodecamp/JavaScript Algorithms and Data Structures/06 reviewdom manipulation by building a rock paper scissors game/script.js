@@ -5,15 +5,11 @@ function getRandomComputerResult() {
 }
 
 function hasPlayerWonTheRound(player, computer) {
-    if (player === "Rock" && computer === "Scissors") {
-        return true;
-    } else if (player === "Scissors" && computer === "Paper") {
-        return true;
-    } else if (player === "Paper" && computer === "Rock") {
-        return true;
-    } else {
-        return false;
-    }
+    return (
+        (player === "Rock" && computer === "Scissors") ||
+        (player === "Scissors" && computer === "Paper") ||
+        (player === "Paper" && computer === "Rock")
+    );
 }
 
 console.log(hasPlayerWonTheRound("Rock", "Scissors"));
@@ -35,6 +31,12 @@ console.log(hasPlayerWonTheRound("Scissors", "Rock"));
 
 
 /*
+1           Math.random() и Math.floor()
+2           логические операторы && (И) и || (ИЛИ) внутри условного оператора if
+
+
+
+
 Шаг 1
 
 Первым шагом является создание функции, которая будет генерировать случайный выбор для компьютера. Функция getRandomComputerResult будет использоваться для получения выбора компьютера. Внутри этой функции вы должны увидеть массив вариантов с «Камнем», «Бумагой» и «Ножницами». Ваша задача — дополнить функцию getRandomComputerResult так, чтобы она возвращала случайный вариант из массива вариантов. Советы Вы можете использовать функции Math.random() и Math.floor() для получения случайного целого числа. Это будет индекс массива вариантов. Вы можете использовать случайный индекс для доступа к варианту из массива вариантов.
@@ -90,8 +92,16 @@ function hasPlayerWonTheRound(player, computer) {
 console.log(hasPlayerWonTheRound("Rock", "Scissors"));
 console.log(hasPlayerWonTheRound("Scissors", "Rock"));
 
+***
 
 
+function hasPlayerWonTheRound(player, computer) {
+  return (
+    (player === "Rock" && computer === "Scissors") ||
+    (player === "Scissors" && computer === "Paper") ||
+    (player === "Paper" && computer === "Rock")
+  );
+}
 
 
 
