@@ -3,7 +3,21 @@ function getRandomComputerResult() {
     const randomIndex = Math.floor(Math.random() * options.length);
     return options[randomIndex];
 }
-console.log(getRandomComputerResult());
+
+function hasPlayerWonTheRound(player, computer) {
+    if (player === "Rock" && computer === "Scissors") {
+        return true;
+    } else if (player === "Scissors" && computer === "Paper") {
+        return true;
+    } else if (player === "Paper" && computer === "Rock") {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(hasPlayerWonTheRound("Rock", "Scissors"));
+console.log(hasPlayerWonTheRound("Scissors", "Rock"));
 
 
 
@@ -41,8 +55,40 @@ function getRandomComputerResult() {
 
 
 
+Шаг 2
 
+В игре будет несколько раундов. Первый, кто наберёт три очка, побеждает. На этом этапе вам нужно определить, выиграл ли игрок раунд. Завершите функцию hasPlayerWonTheRound. Эта функция имеет два параметра: player и computer. Функция должна возвращать true, если игрок выиграл раунд, и false, если игрок проиграл или сыграл вничью.
+Вот критерии победы игрока в раунде:
 
+Если игрок выбирает «Камень», а компьютер выбирает «Ножницы». 
+Если игрок выбирает «Ножницы», а компьютер выбирает «Бумагу».
+Если игрок выбирает «Бумагу», а компьютер выбирает «Камень».
+
+Предоставлено несколько вызовов функций для тестирования вашей функции.
+
+function hasPlayerWonTheRound(player, computer) {
+
+}
+
+console.log(hasPlayerWonTheRound("Rock", "Scissors"));
+console.log(hasPlayerWonTheRound("Scissors", "Rock"));
+
+***
+
+function hasPlayerWonTheRound(player, computer) {
+  if (player === "Rock" && computer === "Scissors") {
+    return true;
+  } else if (player === "Scissors" && computer === "Paper") {
+    return true;
+  } else if (player === "Paper" && computer === "Rock") {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(hasPlayerWonTheRound("Rock", "Scissors"));
+console.log(hasPlayerWonTheRound("Scissors", "Rock"));
 
 
 
