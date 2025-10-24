@@ -4,12 +4,14 @@ function getRandomComputerResult() {
     return options[randomIndex];
 }
 
-function hasPlayerWonTheRound(player, computer) {
-    return (
-        (player === "Rock" && computer === "Scissors") ||
-        (player === "Scissors" && computer === "Paper") ||
-        (player === "Paper" && computer === "Rock")
-    );
+function getRoundResults(userOption) {
+    const computerResult = getRandomComputerResult();
+    if (hasPlayerWonTheRound(userOption, computerResult) == true) {
+        playerScore += 1;
+    } else {
+        computerScore += 1;
+    }
+    return `Player Score: ${playerScore} Computer Score: ${computerScore}`;
 }
 
 console.log(hasPlayerWonTheRound("Rock", "Scissors"));
@@ -102,6 +104,39 @@ function hasPlayerWonTheRound(player, computer) {
     (player === "Paper" && computer === "Rock")
   );
 }
+
+
+
+
+Шаг 3
+
+Теперь нужно получить результаты раунда. Завершите функцию getRoundResults. Если игрок выигрывает раунд, обновите playerScore на 1 и верните сообщение «Игрок выигрывает! [выбор игрока] выигрывает [выбор компьютера]». Если компьютер и игрок выбрали один и тот же вариант, верните сообщение «Ничья! Оба выбрали [выбор игрока]». Если компьютер выигрывает раунд, обновите computerScore на 1 и верните сообщение «Компьютер выигрывает! [выбор компьютера] выигрывает [выбор игрока]». [выбор компьютера] следует заменить на computerResult, а [выбор игрока] — на userOption. Советы Помните, что вы можете использовать функцию hasPlayerWonTheRound для проверки победы игрока в раунде. Для построения сообщения можно использовать шаблонные литералы или обычную конкатенацию строк.
+
+function getRoundResults(userOption) {
+  const computerResult = getRandomComputerResult();
+
+}
+
+console.log(getRoundResults("Rock"));
+console.log("Player Score: ", playerScore, "Computer Score: ", computerScore);
+
+***
+
+function getRoundResults(userOption) {
+  const computerResult = getRandomComputerResult();
+  if (hasPlayerWonTheRound(userOption, computerResult) == true) {
+    playerScore += 1;
+  } else {
+    computerScore += 1;
+  }
+  return `Player Score: ${playerScore} Computer Score: ${computerScore}`;
+}
+
+
+
+
+
+
 
 
 
