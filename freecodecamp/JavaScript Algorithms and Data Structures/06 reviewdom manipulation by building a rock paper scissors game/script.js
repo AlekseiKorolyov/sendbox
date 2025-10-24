@@ -18,8 +18,19 @@ function getRoundResults(userOption) {
     }
 }
 
-console.log(hasPlayerWonTheRound("Rock", "Scissors"));
-console.log(hasPlayerWonTheRound("Scissors", "Rock"));
+const playerScoreSpanElement = document.getElementById("player-score");
+const computerScoreSpanElement = document.getElementById("computer-score");
+const roundResultsMsg = document.getElementById("results-msg");
+
+function showResults(userOption) {
+    roundResultsMsg.innerText = getRoundResults(userOption);
+    computerScoreSpanElement.innerText = computerScore;
+    playerScoreSpanElement.innerText = playerScore;
+};
+
+showResults("Rock");
+
+
 
 
 
@@ -151,6 +162,36 @@ function getRoundResults(userOption) {
     return `Computer wins! ${computerResult} beats ${userOption}`;
   }
 }
+
+
+
+
+
+Шаг 4
+
+Теперь пора обновить счёт и сообщение о результатах раунда. Завершите функцию showResults. Элементы playerScoreSpanElement и computerScoreSpanElement должны быть обновлены, чтобы отображать обновлённые счёт игрока и компьютера. В элемент roundResultsMsg также должен быть добавлен результат раунда. Советы Помните, что вы узнали, как работать со свойством innerText для обновления текстового содержимого элемента. Вы можете использовать функцию getRoundResults для получения результата раунда.
+
+
+const playerScoreSpanElement = document.getElementById("player-score");
+const computerScoreSpanElement = document.getElementById("computer-score");
+const roundResultsMsg = document.getElementById("results-msg");
+
+function showResults(userOption) {
+
+};
+
+showResults("Rock");
+
+***
+
+function showResults(userOption) {
+  roundResultsMsg.innerText = getRoundResults(userOption);
+  computerScoreSpanElement.innerText = computerScore;
+  playerScoreSpanElement.innerText = playerScore;
+};
+
+showResults("Rock");
+
 
 
 
