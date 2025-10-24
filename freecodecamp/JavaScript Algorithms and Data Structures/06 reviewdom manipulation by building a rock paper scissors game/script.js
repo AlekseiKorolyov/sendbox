@@ -6,12 +6,16 @@ function getRandomComputerResult() {
 
 function getRoundResults(userOption) {
     const computerResult = getRandomComputerResult();
-    if (hasPlayerWonTheRound(userOption, computerResult) == true) {
-        playerScore += 1;
+
+    if (hasPlayerWonTheRound(userOption, computerResult)) {
+        playerScore++;
+        return `Player wins! ${userOption} beats ${computerResult}`;
+    } else if (computerResult === userOption) {
+        return `It's a tie! Both chose ${userOption}`;
     } else {
-        computerScore += 1;
+        computerScore++;
+        return `Computer wins! ${computerResult} beats ${userOption}`;
     }
-    return `Player Score: ${playerScore} Computer Score: ${computerScore}`;
 }
 
 console.log(hasPlayerWonTheRound("Rock", "Scissors"));
@@ -132,7 +136,21 @@ function getRoundResults(userOption) {
   return `Player Score: ${playerScore} Computer Score: ${computerScore}`;
 }
 
+***
 
+function getRoundResults(userOption) {
+  const computerResult = getRandomComputerResult();
+
+  if (hasPlayerWonTheRound(userOption, computerResult)) {
+    playerScore++;
+    return `Player wins! ${userOption} beats ${computerResult}`;
+  } else if (computerResult === userOption) {
+    return `It's a tie! Both chose ${userOption}`;
+  } else {
+    computerScore++;
+    return `Computer wins! ${computerResult} beats ${userOption}`;
+  }
+}
 
 
 
