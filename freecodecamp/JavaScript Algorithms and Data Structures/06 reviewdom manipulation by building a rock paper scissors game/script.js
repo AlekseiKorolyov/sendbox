@@ -4,6 +4,17 @@ function getRandomComputerResult() {
     return options[randomIndex];
 }
 
+function hasPlayerWonTheRound(player, computer) {
+    return (
+        (player === "Rock" && computer === "Scissors") ||
+        (player === "Scissors" && computer === "Paper") ||
+        (player === "Paper" && computer === "Rock")
+    );
+}
+
+let playerScore = 0;
+let computerScore = 0;
+
 function getRoundResults(userOption) {
     const computerResult = getRandomComputerResult();
 
@@ -21,19 +32,38 @@ function getRoundResults(userOption) {
 const playerScoreSpanElement = document.getElementById("player-score");
 const computerScoreSpanElement = document.getElementById("computer-score");
 const roundResultsMsg = document.getElementById("results-msg");
+const winnerMsgElement = document.getElementById("winner-msg");
+const optionsContainer = document.querySelector(".options-container");
+const resetGameBtn = document.getElementById("reset-game-btn");
 
 function showResults(userOption) {
     roundResultsMsg.innerText = getRoundResults(userOption);
     computerScoreSpanElement.innerText = computerScore;
     playerScoreSpanElement.innerText = playerScore;
-    if (computerScore === 3) {
-        winnerMsgElement.innerText = "Computer has won the game!";
-    } else if (playerScore === 3) {
-        winnerMsgElement.innerText = "Player has won the game!";
+
+    if (playerScore === 3 || computerScore === 3) {
+        winnerMsgElement.innerText = `${
+            playerScore === 3 ? "Player" : "Computer"
+        } has won the game!`;
+
+        resetGameBtn.style.display = "block";
+        optionsContainer.style.display = "none";
     }
-    resetGameBtn.style.display = "block";
-    optionsContainer.style.display = "none";
-};
+
+}
+
+function resetGame() {
+    playerScore = 0;
+    computerScore = 0;
+    playerScoreSpanElement.innerText = playerScore;
+    computerScoreSpanElement.innerText = computerScore;
+    resetGameBtn.style.display = "none";
+    optionsContainer.style.display = "block";
+    winnerMsgElement.innerText = "";
+    roundResultsMsg.innerText = "";
+}
+
+resetGameBtn.addEventListener("click", resetGame);
 
 const rockBtn = document.getElementById("rock-btn");
 const paperBtn = document.getElementById("paper-btn");
@@ -50,9 +80,6 @@ paperBtn.addEventListener("click", function () {
 scissorsBtn.addEventListener("click", function () {
     showResults("Scissors");
 });
-
-
-
 
 
 
@@ -254,6 +281,24 @@ if (playerScore === 3 || computerScore === 3) {
       playerScore === 3 ? "Player" : "Computer"
     } has won the game!`;
 
+
+
+
+Шаг 6
+
+Если игрок или компьютер выиграл игру, должна быть возможность сбросить игру и начать заново. Завершите функцию resetGame, которая выполняет следующие действия: Сбрасывает счёт игрока и компьютера до 0. Обновляет элементы playerScoreSpanElement и computerScoreSpanElement для отображения новых счётов. Скрывает кнопку resetGameBtn. Отображает optionsContainer, чтобы игрок мог продолжить игру. Очищает содержимое элементов winnerMsgElement и roundResultsMsg. Советы Вы можете использовать свойство innerText для обновления содержимого элемента. Чтобы очистить содержимое элемента, установите свойство innerText в пустую строку. Применив эти изменения, вы завершите игру «Камень, ножницы, бумага»!
+
+
+function resetGame() {
+  playerScore = 0;
+  computerScore = 0;
+  playerScoreSpanElement.innerText = playerScore;
+  computerScoreSpanElement.innerText = computerScore;
+  resetGameBtn.style.display = "none";
+  optionsContainer.style.display = "block";
+  winnerMsgElement.innerText = "";
+  roundResultsMsg.innerText = "";
+};
 
 
  */
