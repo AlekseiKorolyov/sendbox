@@ -5,7 +5,15 @@ const nextButton = document.getElementById("next");
 const previousButton = document.getElementById("previous");
 const shuffleButton = document.getElementById("shuffle");
 
-let allSongs = [];
+let allSongs = [
+    {
+        id: 0,
+        title: "Scratching The Surface",
+        artist: "Quincy Larson",
+        duration: "4:25",
+        src: "https://cdn.freecodecamp.org/curriculum/js-music-player/scratching-the-surface.mp3",
+    }
+];
 
 
 
@@ -37,6 +45,27 @@ const shuffleButton = document.getElementById("shuffle");
 
 let allSongs = [];
 
+
+
+Шаг 4
+
+В массиве allSongs создайте объект со следующими свойствами и значениями:
+Пример кода
+
+id: 0,
+title: "Scratching The Surface",
+artist: "Quincy Larson",
+duration: "4:25",
+src: "https://cdn.freecodecamp.org/curriculum/js-music-player/scratching-the-surface.mp3",
+
+
+{
+  id: 0,
+  title: "Scratching The Surface",
+  artist: "Quincy Larson",
+  duration: "4:25",
+  src: "https://cdn.freecodecamp.org/curriculum/js-music-player/scratching-the-surface.mp3",
+}
 
 
  */
