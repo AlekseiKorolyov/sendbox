@@ -26,9 +26,30 @@ function showResults(userOption) {
     roundResultsMsg.innerText = getRoundResults(userOption);
     computerScoreSpanElement.innerText = computerScore;
     playerScoreSpanElement.innerText = playerScore;
+    if (computerScore === 3) {
+        winnerMsgElement.innerText = "Computer has won the game!";
+    } else if (playerScore === 3) {
+        winnerMsgElement.innerText = "Player has won the game!";
+    }
+    resetGameBtn.style.display = "block";
+    optionsContainer.style.display = "none";
 };
 
-showResults("Rock");
+const rockBtn = document.getElementById("rock-btn");
+const paperBtn = document.getElementById("paper-btn");
+const scissorsBtn = document.getElementById("scissors-btn");
+
+rockBtn.addEventListener("click", function () {
+    showResults("Rock");
+});
+
+paperBtn.addEventListener("click", function () {
+    showResults("Paper");
+});
+
+scissorsBtn.addEventListener("click", function () {
+    showResults("Scissors");
+});
 
 
 
@@ -194,8 +215,37 @@ showResults("Rock");
 
 
 
+Шаг 5
+
+Если вы попробуете сыграть в игру, вы увидите, что играть можно бесконечное количество раундов. Но правила гласят, что побеждает тот, кто первым наберёт от одного до трёх очков. В функции showResults вам нужно проверить, набрал ли игрок или компьютер три очка. Если кто-то из них набрал три очка, вы должны вывести сообщение о победителе. Например, если игрок выиграл игру, то значение параметра winnerMsgElement должно быть обновлено до «Игрок выиграл игру!». Если компьютер выиграл игру, то значение параметра winnerMsgElement должно быть обновлено до «Компьютер выиграл игру!». Если есть победитель, нужно отобразить кнопку resetGameBtn и скрыть optionsContainer, чтобы игрок мог продолжить игру. Советы Используйте свойство style.display элемента со значением «block» или «none», чтобы отобразить или скрыть элемент.
 
 
+const playerScoreSpanElement = document.getElementById("player-score");
+const computerScoreSpanElement = document.getElementById("computer-score");
+const roundResultsMsg = document.getElementById("results-msg");
+const winnerMsgElement = document.getElementById("winner-msg");
+const optionsContainer = document.querySelector(".options-container");
+const resetGameBtn = document.getElementById("reset-game-btn");
+
+function showResults(userOption) {
+  roundResultsMsg.innerText = getRoundResults(userOption);
+  computerScoreSpanElement.innerText = computerScore;
+  playerScoreSpanElement.innerText = playerScore;
+
+
+};
+
+
+***
+
+
+if (computerScore === 3) {
+    winnerMsgElement.innerText = "Computer has won the game!";
+  } else if (playerScore === 3) {
+    winnerMsgElement.innerText = "Player has won the game!";
+  }
+  resetGameBtn.style.display = "block";
+  optionsContainer.style.display = "none";
 
 
 
