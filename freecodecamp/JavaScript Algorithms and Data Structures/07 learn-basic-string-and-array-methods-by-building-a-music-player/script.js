@@ -91,7 +91,10 @@ const printGreeting = () => {
 }
 printGreeting();
 
-
+const printMessage = org => {
+    console.log(`${org} is awesome!`);
+}
+printMessage("freeCodeCamp");
 
 
 
@@ -263,6 +266,29 @@ exampleArrowFunction();
 
 Вызовите функцию под определением функции printGreeting. Откройте консоль, чтобы увидеть вывод.
 
+
+
+Шаг 13
+
+Как и обычные функции, стрелочные функции могут принимать несколько параметров. Вот пример именованной стрелочной функции с одним параметром:
+Пример кода
+
+const greet = (name) => {
+ console.log(`Hello, ${name}!`);
+ };
+
+ Если у функции только один параметр, вы можете опустить скобки вокруг списка параметров, например:
+ Пример кода
+ const greet = name => {
+  console.log(`Hello, ${name}!`);
+  };
+
+  Создайте новую именованную стрелочную функцию с именем printMessage и одним параметром с именем org. В тело этой функции добавьте оператор console. Внутри этого оператора console добавьте шаблонный литерал ${org} is awesome!. Под функцией printMessage вызовите функцию и передайте ей строку "freeCodeCamp" в качестве аргумента. Откройте консоль, чтобы увидеть результат.
+
+  const printMessage = org => {
+  console.log(`${org} is awesome!`);
+  }
+  printMessage("freeCodeCamp");
 
 
 
