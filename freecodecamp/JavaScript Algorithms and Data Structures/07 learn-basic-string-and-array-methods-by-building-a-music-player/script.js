@@ -86,6 +86,7 @@ let userData = {
     songCurrentTime: 0,
 };
 
+const renderSongs = array => {}
 
 
 
@@ -323,6 +324,14 @@ const getTax = (price) => {
 
 const addTwoNumbers = (num1, num2) => num1 + num2;
 
+
+
+Шаг 17
+
+Чтобы отобразить песни в пользовательском интерфейсе (UI), вам потребуется создать функцию. Используйте синтаксис стрелочных функций для создания функции renderSongs, принимающей массив в качестве параметра.
+
+
+const renderSongs = array => {}
 
 
 
