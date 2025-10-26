@@ -96,6 +96,11 @@ const printMessage = org => {
 }
 printMessage("freeCodeCamp");
 
+const addTwoNumbers = (num1, num2) => {
+    return num1 + num2;
+}
+console.log(addTwoNumbers(3, 4));
+
 
 
 
@@ -291,6 +296,24 @@ const greet = (name) => {
   printMessage("freeCodeCamp");
 
 
+
+Шаг 14
+
+Как и обычные функции, стрелочные функции могут возвращать значения. Вот пример стрелочной функции, возвращающей результат умножения двух чисел:
+Пример кода
+
+const multiplyTwoNumbers = (num1, num2) => {
+ return num1 * num2;
+ }
+  // Вывод: 12
+  console.log(multiplyTwoNumbers(3, 4));
+
+  Создайте новую переменную addTwoNumbers и присвойте ей стрелочную функцию. Эта стрелочная функция должна принимать два параметра: num1 и num2. Внутри тела функции верните выражение сложения num1 и num2. Под функцией addTwoNumbers добавьте консольный оператор. Внутри этого консольного оператора вызовите функцию addTwoNumbers и передайте ей числа 3 и 4 в качестве аргументов. Откройте консоль, чтобы увидеть вывод.
+
+const addTwoNumbers = (num1, num2) => {
+return num1 + num2;
+}
+console.log(addTwoNumbers(3, 4));
 
 
 
