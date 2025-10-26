@@ -96,9 +96,7 @@ const printMessage = org => {
 }
 printMessage("freeCodeCamp");
 
-const addTwoNumbers = (num1, num2) => {
-    return num1 + num2;
-}
+const addTwoNumbers = (num1, num2) => num1 + num2;
 console.log(addTwoNumbers(3, 4));
 
 
@@ -316,6 +314,26 @@ return num1 + num2;
 console.log(addTwoNumbers(3, 4));
 
 
+
+Шаг 15
+
+Если стрелочная функция возвращает простое выражение, можно опустить ключевое слово return и фигурные скобки {}. Это называется неявным возвратом.
+Пример кода
+
+const multiplyTwoNumbers = (num1, num2) => num1 * num2;
+
+Если ваша стрелочная функция содержит несколько строк кода, необходимо использовать ключевое слово return и фигурные скобки {}.
+Пример кода
+
+const getTax = (price) => {
+ const taxRate = 0.08;
+ const tax = price * taxRate; return tax;
+ };
+
+ Рефакторинг или обновление функции addTwoNumbers: удалите ключевое слово return и фигурные скобки {}. Вместо этого функция addTwoNumbers должна использовать неявный возврат. Откройте консоль, чтобы убедиться, что вывод по-прежнему корректен.
+
+
+const addTwoNumbers = (num1, num2) => num1 + num2;
 
 
 
