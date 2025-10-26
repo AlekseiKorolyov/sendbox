@@ -86,7 +86,9 @@ let userData = {
     songCurrentTime: 0,
 };
 
-const renderSongs = array => {}
+const renderSongs = array => {
+    const songsHTML = array.map();
+}
 
 
 
@@ -332,6 +334,15 @@ const addTwoNumbers = (num1, num2) => num1 + num2;
 
 
 const renderSongs = array => {}
+
+
+
+Шаг 18
+
+Когда песни отображаются на странице, на ней должны отображаться название, исполнитель, длительность каждой песни и кнопка удаления. В следующих нескольких шагах вы узнаете, как добавить новый HTML-код для каждой песни с помощью метода map(). Этот метод будет подробно описан в следующем шаге. Начнем с объявления переменной songsHTML с помощью const и присвоения ей array.map().
+
+const songsHTML = array.map();
+
 
 
 
