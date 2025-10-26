@@ -89,7 +89,7 @@ let userData = {
 const printGreeting = () => {
     console.log("Hello there!");
 }
-
+printGreeting();
 
 
 
@@ -253,6 +253,15 @@ const printGreeting = () => {
   console.log("Hello there!");
 }
 
+
+Шаг 12
+
+Чтобы вызвать выражение именованной стрелочной функции, можно обратиться к функции по её имени.
+Пример кода
+
+exampleArrowFunction();
+
+Вызовите функцию под определением функции printGreeting. Откройте консоль, чтобы увидеть вывод.
 
 
 
