@@ -82,6 +82,8 @@ const audio = new Audio();
 
 let userData = {
     songs: [...allSongs],
+    currentSong: null,
+    songCurrentTime: 0,
 };
 
 
@@ -212,6 +214,18 @@ let userData = {
   songs: [...allSongs],
 };
 
+
+
+Шаг 10
+
+Для обработки информации о текущей песне и отслеживания времени её воспроизведения создайте свойства currentSong и songCurrentTime. Задайте для них значения null и 0 соответственно.
+
+
+let userData = {
+  songs: [...allSongs],
+  currentSong: null,
+  songCurrentTime: 0,
+};
 
 
 
