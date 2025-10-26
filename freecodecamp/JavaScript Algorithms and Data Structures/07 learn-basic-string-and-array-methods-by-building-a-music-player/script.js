@@ -87,7 +87,9 @@ let userData = {
 };
 
 const renderSongs = array => {
-    const songsHTML = array.map((song) => {});
+    const songsHTML = array.map((song) => {
+        return `<li id="song-${song.id}" class="playlist-song"></li>`;
+    });
 }
 
 
@@ -359,6 +361,13 @@ const doubledNumbers = numbers.map((number) => number * 2);
 
 const songsHTML = array.map((song) => {});
 
+
+
+Шаг 20
+
+Внутри функции map() добавьте оператор return с обратными кавычками, в который будут вставлены все элементы, отвечающие за отображение информации о песне. Внутри обратных кавычек создайте элемент li с атрибутом id song-${song.id} и атрибутом class playlist-song.
+
+return `<li id="song-${song.id}" class="playlist-song"></li>`;
 
 
 
