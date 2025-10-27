@@ -86,7 +86,9 @@ let userData = {
     songCurrentTime: 0,
 };
 
-const playSong = id => {};
+const playSong = (id) => {
+    const song = userData?.songs.find((song) => song.id === id);
+};
 
 const renderSongs = array => {
     const songsHTML = array.map((song) => {
@@ -643,5 +645,25 @@ renderSongs(userData?.songs);
  Пришло время приступить к реализации функции воспроизведения отображаемых песен. Определите функцию playSong, используя ключевое слово const. Функция должна принимать параметр id, представляющий собой уникальный идентификатор песни, которую вы хотите воспроизвести.
 
  const playSong = id => {};
+
+
+
+ Шаг 36
+
+ Метод find() извлекает первый элемент массива, удовлетворяющий условиям, указанным в предоставленной функции
+ обратного вызова. Если ни один элемент не удовлетворяет условию, метод возвращает undefined. В примере ниже метод find() используется для поиска первого числа, большего 25:
+ Пример кода
+
+ const numbers = [10, 20, 30, 40, 50];
+
+ // Находим первое число, большее 25
+ const foundNumber = numbers.find((number) => number > 25);
+ console.log(foundNumber); // Вывод: 30
+
+ Используйте const для создания переменной с именем song и присвойте ей результат вызова метода find() массива userData?.songs. Используйте song в качестве параметра функции обратного вызова find() и проверьте, что song.id строго равен id. Это позволит перебрать массив userData?.songs и найти песню, соответствующую идентификатору, переданному в функцию playSong.
+
+ const playSong = (id) => {
+  const song = userData?.songs.find((song) => song.id === id);
+};
 
  */
