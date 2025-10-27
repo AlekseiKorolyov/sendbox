@@ -88,7 +88,11 @@ let userData = {
 
 const renderSongs = array => {
     const songsHTML = array.map((song) => {
-        return `<li id="song-${song.id}" class="playlist-song"></li>`;
+        return `<li id="song-${song.id}" class="playlist-song"></li>
+            <button class="playlist-song-info">
+                <span class="playlist-song-title">${song.title}</span>
+            </button>
+        `;
     });
 }
 
@@ -369,6 +373,15 @@ const songsHTML = array.map((song) => {});
 
 return `<li id="song-${song.id}" class="playlist-song"></li>`;
 
+
+
+Шаг 21
+
+Создайте элемент «кнопка» с классом playlist-song-info. Внутри кнопки добавьте элемент span с классом playlist-song-title, а затем добавьте текст song.title.
+
+    <button class="playlist-song-info">
+    <span class="playlist-song-title">${song.title}</span>
+    </button>
 
 
 
