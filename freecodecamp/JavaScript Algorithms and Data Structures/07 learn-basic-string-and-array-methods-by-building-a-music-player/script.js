@@ -88,6 +88,8 @@ let userData = {
 
 const playSong = (id) => {
     const song = userData?.songs.find((song) => song.id === id);
+    audio.src = song.src;
+    audio.title = song.title;
 };
 
 const renderSongs = array => {
@@ -664,6 +666,17 @@ renderSongs(userData?.songs);
 
  const playSong = (id) => {
   const song = userData?.songs.find((song) => song.id === id);
+};
+
+
+Шаг 37
+
+В функции playSong установите свойство audio.src равным song.src. Это сообщит элементу audio, где найти аудиоданные выбранной песни. Также установите свойство audio.title равным song.title. Это сообщит элементу audio, что отображать в качестве названия песни.
+
+const playSong = (id) => {
+  const song = userData?.songs.find((song) => song.id === id);
+  audio.src = song.src;
+  audio.title = song.title;
 };
 
  */
