@@ -107,7 +107,7 @@ const renderSongs = array => {
 };
 
 const sortSongs = () => {
-    userData?.songs.sort();
+    userData?.songs.sort((a, b) => {});
 };
 
 renderSongs(userData?.songs);
@@ -507,4 +507,28 @@ names.sort() // ["Jessica", "Naomi", "Quincy", "Tom"]
 
 userData?.songs.sort();
 
+
+
+Шаг 29
+
+Чтобы отсортировать песни в алфавитном порядке по названию, вам нужно передать функцию обратного вызова для сравнения в метод sort(). Вот пример сортировки списка фруктов по названию.
+Пример кода
+
+const fruits = [
+ { name: "Apples", price: 0.99 },
+ { name: "Blueberries", price: 1.49 },
+ { name: "Grapes", price: 2.99 },
+  ];
+  fruits.sort((a, b) => {
+   if (a.name < b.name) {
+    return -1;
+   }
+   if (a.name > b.name) {
+    return 1;
+   } return 0;
+   });
+
+ На следующих нескольких шагах вы узнаете, что делает каждый из этих операторов if внутри этой функции обратного вызова. А пока добавьте пустую функцию обратного вызова в метод sort() и используйте a и b для имён параметров.
+
+userData?.songs.sort((a, b) => {});
  */
