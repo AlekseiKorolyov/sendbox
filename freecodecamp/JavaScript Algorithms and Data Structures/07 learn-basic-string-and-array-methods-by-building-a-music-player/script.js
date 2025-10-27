@@ -106,7 +106,9 @@ const renderSongs = array => {
     playlistSongs.innerHTML = songsHTML;
 };
 
-const sortSongs = () => {};
+const sortSongs = () => {
+    userData?.songs.sort();
+};
 
 renderSongs(userData?.songs);
 
@@ -490,5 +492,19 @@ renderSongs(userData?.songs);
 Теперь, когда список песен отображается на экране, неплохо было бы отсортировать их в алфавитном порядке по названию. Начнем с создания стрелочной функции с именем sortSongs.
 
 const sortSongs = () => {};
+
+
+
+Шаг 28
+
+Теперь, когда список песен отображается на экране, было бы неплохо отсортировать их в алфавитном порядке по названию. Вы можете вручную обновить массив allSongs, но в JavaScript есть метод sort(), который вы можете использовать. Метод sort() преобразует элементы массива в строки и сортирует их по месту на основе их значений в кодировке UTF-16.
+Пример кода
+
+const names = ["Tom", "Jessica", "Quincy", "Naomi"];
+names.sort() // ["Jessica", "Naomi", "Quincy", "Tom"]
+
+Внутри функции sortSongs добавьте метод sort() к userData?.songs.
+
+userData?.songs.sort();
 
  */
