@@ -91,6 +91,8 @@ const renderSongs = array => {
         return `<li id="song-${song.id}" class="playlist-song"></li>
             <button class="playlist-song-info">
                 <span class="playlist-song-title">${song.title}</span>
+                 <span class="playlist-song-artist">${song.artist}</span>
+                 <span class="playlist-song-duration">${song.duration}</span>
             </button>
         `;
     });
@@ -385,9 +387,15 @@ return `<li id="song-${song.id}" class="playlist-song"></li>`;
 
 
 
+Шаг 22
 
+Внутри элемента button создайте ещё два элемента span. Первый элемент span должен иметь класс playlist-song-artist. Между тегами span добавьте ${song.artist}. Второй элемент span должен иметь класс playlist-song-duration. Между тегами span добавьте ${song.duration}.
 
-
+<button class="playlist-song-info">
+          <span class="playlist-song-title">${song.title}</span>
+          <span class="playlist-song-artist">${song.artist}</span>
+          <span class="playlist-song-duration">${song.duration}</span>
+      </button>
 
 
 
