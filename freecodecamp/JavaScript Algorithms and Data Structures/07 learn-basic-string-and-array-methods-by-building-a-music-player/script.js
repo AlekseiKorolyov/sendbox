@@ -111,6 +111,9 @@ const sortSongs = () => {
         if (a.title < b.title) {
             return -1;
         }
+        if (a.title > b.title) {
+            return 1;
+        }
     });
 };
 
@@ -563,5 +566,27 @@ const fruits = [
       return -1;
     }
   });
+
+
+
+  Шаг 31
+
+  Второе условие в этом примере проверяет, что a.name > b.name. Если да, функция возвращает 1, что помещает первый фрукт после второго.
+  Пример кода
+
+  const fruits = [
+   { name: "Яблоки", price: 0.99 },
+   { name: "Черника", price: 1.49 },
+   { name: "Виноград", price: 2.99 },
+   ];
+   fruits.sort((a, b) => {
+    if (a.name < b.name) {
+     return -1;
+     } if (a.name > b.name) {
+      return 1;
+      } return 0;
+      });
+
+      Внутри функции обратного вызова добавьте ещё один оператор if для проверки, больше ли a.title, чем b.title. Если да, верните число 1.
 
  */
