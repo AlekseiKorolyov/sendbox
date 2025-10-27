@@ -106,6 +106,8 @@ const renderSongs = array => {
     playlistSongs.innerHTML = songsHTML;
 };
 
+const sortSongs = () => {};
+
 renderSongs(userData?.songs);
 
 
@@ -482,5 +484,11 @@ const zipCode = user.address?.zipCode; // Возвращает undefined вме�
 
 renderSongs(userData?.songs);
 
+
+Шаг 27
+
+Теперь, когда список песен отображается на экране, неплохо было бы отсортировать их в алфавитном порядке по названию. Начнем с создания стрелочной функции с именем sortSongs.
+
+const sortSongs = () => {};
 
  */
