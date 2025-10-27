@@ -86,6 +86,8 @@ let userData = {
     songCurrentTime: 0,
 };
 
+const playSong = id => {};
+
 const renderSongs = array => {
     const songsHTML = array.map((song) => {
         return `<li id="song-${song.id}" class="playlist-song"></li>
@@ -633,5 +635,13 @@ renderSongs(userData?.songs);
 ***
 
  renderSongs(sortSongs());
+
+
+
+ Шаг 35
+
+ Пришло время приступить к реализации функции воспроизведения отображаемых песен. Определите функцию playSong, используя ключевое слово const. Функция должна принимать параметр id, представляющий собой уникальный идентификатор песни, которую вы хотите воспроизвести.
+
+ const playSong = id => {};
 
  */
