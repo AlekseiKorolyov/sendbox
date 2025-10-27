@@ -119,7 +119,8 @@ const sortSongs = () => {
     return userData?.songs;
 };
 
-renderSongs(userData?.songs);
+renderSongs(sortSongs());
+
 
 
 
@@ -620,5 +621,17 @@ fruits.sort((a, b) => {
  Последний шаг функции sortSongs — возврат userData?.songs.
 
  return userData?.songs;
+
+
+ Шаг 34
+
+ На данный момент порядок песен не изменился. Это связано с тем, что обновления, сделанные с помощью метода sort, не произойдут до вызова функции sortSongs. Измените функцию renderSongs так, чтобы она вызывала функцию sortSongs. Теперь вы должны видеть песни в алфавитном порядке.
+
+
+renderSongs(userData?.songs);
+
+***
+
+ renderSongs(sortSongs());
 
  */
