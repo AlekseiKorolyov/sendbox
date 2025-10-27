@@ -116,6 +116,7 @@ const sortSongs = () => {
         }
         return 0;
     });
+    return userData?.songs;
 };
 
 renderSongs(userData?.songs);
@@ -612,5 +613,12 @@ fruits.sort((a, b) => {
  });
 
  Под операторами if верните число 0, чтобы сохранить порядок двух элементов неизменным.
+
+
+ Шаг 33
+
+ Последний шаг функции sortSongs — возврат userData?.songs.
+
+ return userData?.songs;
 
  */
