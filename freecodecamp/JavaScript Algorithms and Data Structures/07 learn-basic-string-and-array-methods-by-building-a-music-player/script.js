@@ -106,6 +106,8 @@ const renderSongs = array => {
     playlistSongs.innerHTML = songsHTML;
 };
 
+renderSongs(userData?.songs);
+
 
 
 
@@ -454,6 +456,31 @@ const renderSongs = (array) => {
 
 playlistSongs.innerHTML = songsHTML;
 
+
+
+Шаг 26
+
+Теперь нужно вызвать функцию renderSongs и передать userData?.songs, чтобы отобразить песни в пользовательском интерфейсе. Необязательное связывание (?.) помогает предотвратить ошибки при доступе к вложенным свойствам, которые могут быть пустыми или неопределёнными. Например:
+Пример кода
+
+const user = {
+ name: "Quincy",
+ address: {
+  city: "San Francisco",
+  state: "CA",
+  country: "USA",
+ },
+};
+
+// Доступ к вложенным свойствам без необязательного связывания
+const state = user.address.state;// CA
+
+// Доступ к несуществующему вложенному свойству с необязательным связыванием
+const zipCode = user.address?.zipCode; // Возвращает undefined вместо ошибки
+
+Вызовите функцию renderSongs со свойством songs объекта userData. Это отобразит песни в плейлисте.
+
+renderSongs(userData?.songs);
 
 
  */
