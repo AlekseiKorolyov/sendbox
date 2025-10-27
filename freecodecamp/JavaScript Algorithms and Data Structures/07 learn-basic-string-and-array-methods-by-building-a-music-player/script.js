@@ -102,7 +102,9 @@ const renderSongs = array => {
             </button>
         `;
     }).join("");
-}
+
+    playlistSongs.innerHTML = songsHTML;
+};
 
 
 
@@ -446,6 +448,11 @@ const renderSongs = (array) => {
 
 
 
+Шаг 25
+
+Далее вам нужно обновить плейлист в HTML-документе, чтобы отобразить песни. Присвойте songsHTML свойству innerHTML элемента playlistSongs. Это вставит только что созданный вами элемент li в элемент ul в уже предоставленном HTML-файле.
+
+playlistSongs.innerHTML = songsHTML;
 
 
 
