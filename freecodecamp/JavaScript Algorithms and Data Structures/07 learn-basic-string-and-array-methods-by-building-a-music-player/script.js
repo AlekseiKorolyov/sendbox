@@ -95,6 +95,7 @@ const playSong = (id) => {
     }  else {
         audio.currentTime = userData?.songCurrentTime;
     }
+    userData.currentSong = song;
 };
 
 const renderSongs = array => {
@@ -700,5 +701,17 @@ if (userData?.currentSong === null || userData?.currentSong.id !== song.id) {
  else {
     audio.currentTime = userData?.songCurrentTime;
   }
+
+
+
+  Шаг 40 Вам необходимо обновить текущую воспроизводимую песню, а также внешний вид элемента playButton. Назначьте song свойству currentSong объекта userData. Примечание: на этом шаге не следует использовать необязательный оператор цепочки ?., поскольку на этом этапе userData.currentSong не будет иметь значение null или undefined.
+
+
+  userData.currentSong = song;
+
+
+
+
+
 
  */
