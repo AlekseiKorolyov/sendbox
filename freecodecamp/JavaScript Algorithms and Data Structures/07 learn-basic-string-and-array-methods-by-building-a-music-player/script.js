@@ -102,6 +102,8 @@ const playSong = (id) => {
 
 const pauseSong = () => {
     userData.songCurrentTime = audio.currentTime;
+    playButton.classList.remove("playing");
+    audio.pause();
 };
 
 const renderSongs = array => {
@@ -777,6 +779,13 @@ const pauseSong = () => {};
 userData.songCurrentTime = audio.currentTime;
 
 
+
+
+Шаг 48 Используйте classList и метод remove(), чтобы удалить класс воспроизведения из кнопки playButton, поскольку в этот момент воспроизведение песни будет приостановлено. Чтобы окончательно приостановить воспроизведение песни, используйте метод pause() переменной audio. pause() — это метод API веб-аудио для приостановки музыкальных файлов.
+
+
+  playButton.classList.remove("playing");
+  audio.pause();
 
 
 
