@@ -123,6 +123,8 @@ const renderSongs = array => {
 playButton.addEventListener("click", () => {
     if (userData?.currentSong === null) {
         playSong(userData?.songs[0].id);
+    } else {
+        playSong(userData?.currentSong.id);
     }
 });
 
@@ -740,6 +742,23 @@ playButton.addEventListener("click", () => {});
 if (userData?.currentSong === null) {
   playSong(userData?.songs[0].id);
 }
+
+
+
+
+Шаг 44 Добавьте блок else. Внутри него вызовите функцию playSong, передав в качестве аргумента идентификатор текущей воспроизводимой песни. Это гарантирует, что текущая песня продолжит воспроизводиться при нажатии кнопки воспроизведения.
+
+ else {
+    playSong(userData?.currentSong.id);
+  }
+
+
+
+
+
+
+
+
 
 
  */
