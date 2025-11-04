@@ -126,7 +126,9 @@ const renderSongs = array => {
     playlistSongs.innerHTML = songsHTML;
 };
 
-const getCurrentSongIndex = () => {};
+const getCurrentSongIndex = () => {
+    return userData?.songs.indexOf(userData?.currentSong);
+};
 
 playButton.addEventListener("click", () => {
     if (userData?.currentSong === null) {
@@ -802,6 +804,19 @@ pauseButton.addEventListener("click", pauseSong);
 Шаг 50 Прежде чем начать воспроизведение следующей и предыдущей песни, необходимо получить индекс каждой песни в свойстве songs объекта userData. Начнем с создания стрелочной функции getCurrentSongIndex.
 
 const getCurrentSongIndex = () => {};
+
+
+
+Шаг 51 Чтобы получить индекс текущей песни, можно использовать метод indexOf(). Метод массива indexOf() возвращает первый индекс, по которому находится заданный элемент в массиве, или -1, если элемент отсутствует.
+Пример кода
+
+const animals = ["dog", "cat", "horse"];
+animal.indexOf("cat") // 1
+
+Внутри функции getCurrentSongIndex верните userData?.songs.indexOf(). Аргумент indexOf() установите равным userData?.currentSong.
+
+return userData?.songs.indexOf(userData?.currentSong);
+
 
 
  */
