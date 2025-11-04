@@ -92,6 +92,8 @@ const playSong = (id) => {
     audio.title = song.title;
     if (userData?.currentSong === null || userData?.currentSong.id !== song.id) {
         audio.currentTime = 0;
+    }  else {
+        audio.currentTime = userData?.songCurrentTime;
     }
 };
 
@@ -689,5 +691,14 @@ const playSong = (id) => {
 if (userData?.currentSong === null || userData?.currentSong.id !== song.id) {
   audio.currentTime = 0;
 };
+
+
+
+Шаг 39 Добавьте блок else для управления текущим временем воспроизведения песни. Это позволит возобновить воспроизведение песни с того места, где она была остановлена. В блоке else установите для свойства currentTime аудиообъекта значение, хранящееся в userData?.songCurrentTime.
+
+
+ else {
+    audio.currentTime = userData?.songCurrentTime;
+  }
 
  */
