@@ -106,6 +106,8 @@ const pauseSong = () => {
     audio.pause();
 };
 
+const playNextSong = () => {};
+
 const renderSongs = array => {
     const songsHTML = array.map((song) => {
         return `<li id="song-${song.id}" class="playlist-song"></li>
@@ -817,6 +819,11 @@ animal.indexOf("cat") // 1
 
 return userData?.songs.indexOf(userData?.currentSong);
 
+
+
+Шаг 52 Вам нужно поработать над воспроизведением следующей и предыдущей песен. Для этого вам понадобятся функции playNextSong и playPreviousSong. Используйте синтаксис const и стрелок, чтобы создать пустую функцию playNextSong.
+
+const playNextSong = () => {};
 
 
  */
