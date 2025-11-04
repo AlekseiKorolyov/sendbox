@@ -90,6 +90,9 @@ const playSong = (id) => {
     const song = userData?.songs.find((song) => song.id === id);
     audio.src = song.src;
     audio.title = song.title;
+    if (userData?.currentSong === null || userData?.currentSong.id !== song.id) {
+        audio.currentTime = 0;
+    }
 };
 
 const renderSongs = array => {
@@ -677,6 +680,14 @@ const playSong = (id) => {
   const song = userData?.songs.find((song) => song.id === id);
   audio.src = song.src;
   audio.title = song.title;
+};
+
+
+
+Шаг 38 Перед воспроизведением песни необходимо убедиться, что она начинается с начала. Этого можно добиться, используя свойство currentTime аудиообъекта. Добавьте оператор if, чтобы проверить, является ли значение userData?.currentSong ложным ИЛИ userData?.currentSong.id строго не равен song.id. Это условие проверит, воспроизводится ли текущая песня или отличается ли она от той, которая будет воспроизводиться. В блоке if установите свойство currentTime аудиообъекта равным 0.
+
+if (userData?.currentSong === null || userData?.currentSong.id !== song.id) {
+  audio.currentTime = 0;
 };
 
  */
