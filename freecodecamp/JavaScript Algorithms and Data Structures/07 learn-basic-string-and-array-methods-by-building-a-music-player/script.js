@@ -96,6 +96,8 @@ const playSong = (id) => {
         audio.currentTime = userData?.songCurrentTime;
     }
     userData.currentSong = song;
+    playButton.classList.add("playing");
+    audio.play();
 };
 
 const renderSongs = array => {
@@ -711,6 +713,11 @@ if (userData?.currentSong === null || userData?.currentSong.id !== song.id) {
 
 
 
+
+Шаг 41 Далее используйте свойство classList и метод add(), чтобы добавить класс «playing» к элементу playButton. Это позволит найти класс «playing» в CSS-файле и добавить его к элементу playButton. Чтобы воспроизвести песню, используйте метод play() переменной audio. play() — это метод API веб-аудио для воспроизведения mp3-файлов.
+
+playButton.classList.add("playing");
+audio.play();
 
 
 
