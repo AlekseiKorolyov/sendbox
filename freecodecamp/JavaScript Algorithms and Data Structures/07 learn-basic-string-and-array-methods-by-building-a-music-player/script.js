@@ -134,6 +134,8 @@ playButton.addEventListener("click", () => {
     }
 });
 
+pauseButton.addEventListener("click", pauseSong);
+
 const sortSongs = () => {
     userData?.songs.sort((a,b) => {
         if (a.title < b.title) {
@@ -786,6 +788,12 @@ userData.songCurrentTime = audio.currentTime;
 
   playButton.classList.remove("playing");
   audio.pause();
+
+
+
+Шаг 49 Теперь пора протестировать кнопку паузы. Добавьте обработчик событий click к элементу pauseButton, затем передайте pauseSong в качестве второго аргумента обработчика событий. Это функция, которую будет выполнять обработчик событий. Протестируйте своё приложение, сначала нажав кнопку воспроизведения, а затем кнопку паузы. Вы должны убедиться, что всё работает как надо.
+
+pauseButton.addEventListener("click", pauseSong);
 
 
 
