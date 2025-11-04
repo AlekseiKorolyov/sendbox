@@ -100,6 +100,8 @@ const playSong = (id) => {
     audio.play();
 };
 
+const pauseSong = () => {};
+
 const renderSongs = array => {
     const songsHTML = array.map((song) => {
         return `<li id="song-${song.id}" class="playlist-song"></li>
@@ -760,6 +762,11 @@ if (userData?.currentSong === null) {
 <button class="playlist-song-info" onclick="playSong(${song.id})">
 
 
+
+
+Шаг 46 Теперь нужно поработать над паузой воспроизведения текущей песни. Определите функцию pauseSong, используя ключевое слово const и синтаксис стрелочных функций. Функция не должна принимать параметров.
+
+const pauseSong = () => {};
 
 
 
