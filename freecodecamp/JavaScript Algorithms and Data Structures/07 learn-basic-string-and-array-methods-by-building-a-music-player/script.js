@@ -100,7 +100,9 @@ const playSong = (id) => {
     audio.play();
 };
 
-const pauseSong = () => {};
+const pauseSong = () => {
+    userData.songCurrentTime = audio.currentTime;
+};
 
 const renderSongs = array => {
     const songsHTML = array.map((song) => {
@@ -768,6 +770,11 @@ if (userData?.currentSong === null) {
 
 const pauseSong = () => {};
 
+
+
+Шаг 47 Чтобы сохранить текущее время песни, когда она поставлена на паузу, установите songCurrentTime объекта userData равным currentTime переменной audio. Примечание: Не следует использовать необязательную цепочку на этом этапе, поскольку на этом этапе userData.songCurrentTime не будет иметь значение null или undefined.
+
+userData.songCurrentTime = audio.currentTime;
 
 
 
