@@ -126,6 +126,8 @@ const renderSongs = array => {
     playlistSongs.innerHTML = songsHTML;
 };
 
+const getCurrentSongIndex = () => {};
+
 playButton.addEventListener("click", () => {
     if (userData?.currentSong === null) {
         playSong(userData?.songs[0].id);
@@ -795,6 +797,11 @@ userData.songCurrentTime = audio.currentTime;
 
 pauseButton.addEventListener("click", pauseSong);
 
+
+
+Шаг 50 Прежде чем начать воспроизведение следующей и предыдущей песни, необходимо получить индекс каждой песни в свойстве songs объекта userData. Начнем с создания стрелочной функции getCurrentSongIndex.
+
+const getCurrentSongIndex = () => {};
 
 
  */
