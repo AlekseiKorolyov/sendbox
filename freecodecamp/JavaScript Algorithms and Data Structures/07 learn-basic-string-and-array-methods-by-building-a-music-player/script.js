@@ -120,7 +120,11 @@ const renderSongs = array => {
     playlistSongs.innerHTML = songsHTML;
 };
 
-playButton.addEventListener("click", () => {});
+playButton.addEventListener("click", () => {
+    if (userData?.currentSong === null) {
+        playSong(userData?.songs[0].id);
+    }
+});
 
 const sortSongs = () => {
     userData?.songs.sort((a,b) => {
@@ -727,6 +731,15 @@ audio.play();
 Шаг 42 На предыдущих шагах вы создали функционал для воспроизведения песни. Теперь вам нужно добавить функционал к кнопке воспроизведения, чтобы она воспроизводила текущую песню при нажатии на неё. Используйте метод addEventListener() и передайте событие «click» в качестве первого аргумента и пустую функцию обратного вызова со стрелочным синтаксисом в качестве второго аргумента, например, () => {}.
 
 playButton.addEventListener("click", () => {});
+
+
+
+
+Шаг 43 В стрелочную функцию прослушивателя событий добавьте оператор if для проверки значения userData?.currentSong на null. В блоке if вызовите функцию playSong() с идентификатором первой песни из массива userData?.songs. Это обеспечит воспроизведение первой песни в плейлисте.
+
+if (userData?.currentSong === null) {
+  playSong(userData?.songs[0].id);
+}
 
 
  */
