@@ -103,7 +103,7 @@ const playSong = (id) => {
 const renderSongs = array => {
     const songsHTML = array.map((song) => {
         return `<li id="song-${song.id}" class="playlist-song"></li>
-            <button class="playlist-song-info">
+            <button class="playlist-song-info" onclick="playSong(${song.id})">
                 <span class="playlist-song-title">${song.title}</span>
                  <span class="playlist-song-artist">${song.artist}</span>
                  <span class="playlist-song-duration">${song.duration}</span>
@@ -753,6 +753,11 @@ if (userData?.currentSong === null) {
   }
 
 
+
+
+Шаг 45 Чтобы песня воспроизводилась каждый раз, когда пользователь нажимает на неё, добавьте атрибут onclick к первому элементу кнопки. Внутри атрибута onclick вызовите функцию playSong с song.id. Не забудьте, что здесь нужно интерполировать знак доллара.
+
+<button class="playlist-song-info" onclick="playSong(${song.id})">
 
 
 
