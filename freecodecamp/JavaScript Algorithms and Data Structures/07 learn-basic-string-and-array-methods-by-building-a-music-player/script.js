@@ -97,6 +97,7 @@ const playSong = (id) => {
     }
     userData.currentSong = song;
     playButton.classList.add("playing");
+    highlightCurrentSong();
     audio.play();
 };
 
@@ -1015,9 +1016,20 @@ songEl.removeAttribute("aria-current");
 
 Теперь нужно добавить атрибут обратно к текущей воспроизводимой песне. Создайте оператор if с условием songToHighlight. Для этого используйте setAttribute для songToHighlight, чтобы передать «aria-current» и «true» в качестве первого и второго аргументов.
 
+
 if (songToHighlight) {
   songToHighlight.setAttribute("aria-current", "true");
 }
+
+
+
+
+Шаг 66
+
+Внутри функции playSong вызовите функцию highlightCurrentSong. После этого поэкспериментируйте с кнопками управления, чтобы увидеть, как работает функция highlightCurrentSong.
+
+
+highlightCurrentSong();
 
 
 
