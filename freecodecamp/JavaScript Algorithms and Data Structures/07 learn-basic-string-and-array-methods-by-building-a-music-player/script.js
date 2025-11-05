@@ -128,6 +128,7 @@ const playPreviousSong = () => {
 
 const highlightCurrentSong = () => {
     const playlistSongElements = document.querySelectorAll(".playlist-song");
+    const songToHighlight = document.getElementById(`song-${userData?.currentSong?.id}`);
 };
 
 const renderSongs = array => {
@@ -963,6 +964,14 @@ previousButton.addEventListener("click", playPreviousSong);
 const highlightCurrentSong = () => {
   const playlistSongElements = document.querySelectorAll(".playlist-song");
 };
+
+
+
+Шаг 62
+
+Вам необходимо получить идентификатор текущей воспроизводимой песни. Для этого можно использовать метод userData?.currentSong?.id. Используйте метод getElementById() для получения идентификатора текущей воспроизводимой песни, а затем добавьте к нему префикс song- с помощью шаблонных литералов. Присвойте его константе songToHighlight.
+
+const songToHighlight = document.getElementById(`song-${userData?.currentSong?.id}`);
 
 
  */
