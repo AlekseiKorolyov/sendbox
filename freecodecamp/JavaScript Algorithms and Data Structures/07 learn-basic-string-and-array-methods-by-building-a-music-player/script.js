@@ -109,6 +109,8 @@ const pauseSong = () => {
 const playNextSong = () => {
     if (userData?.currentSong === null) {
         playSong(userData?.songs[0].id);
+    } else {
+        const currentSongIndex = getCurrentSongIndex();
     }
 };
 
@@ -835,6 +837,13 @@ const playNextSong = () => {};
 
 if (userData?.currentSong === null) {
     playSong(userData?.songs[0].id);
+  }
+
+
+  Шаг 54 Добавьте блок else к оператору if. Внутри блока else вызовите функцию getCurrentSongIndex() и присвойте её константе с именем currentSongIndex.
+
+   else {
+    const currentSongIndex = getCurrentSongIndex();
   }
 
 
