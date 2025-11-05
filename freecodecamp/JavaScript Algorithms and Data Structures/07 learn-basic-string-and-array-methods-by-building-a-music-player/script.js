@@ -111,6 +111,8 @@ const playNextSong = () => {
         playSong(userData?.songs[0].id);
     } else {
         const currentSongIndex = getCurrentSongIndex();
+        const nextSong = userData?.songs[currentSongIndex + 1];
+        playSong(nextSong.id);
     }
 };
 
@@ -846,6 +848,12 @@ if (userData?.currentSong === null) {
     const currentSongIndex = getCurrentSongIndex();
   }
 
+
+
+Шаг 55 Далее вам нужно получить следующую песню в плейлисте. Для этого вам нужно получить индекс текущей песни и прибавить к нему 1. Создайте константу nextSong и присвойте ей userData?.songs[currentSongIndex + 1]. Наконец, вызовите функцию playSong и передайте nextSong.id в качестве аргумента.
+
+const nextSong = userData?.songs[currentSongIndex + 1];
+    playSong(nextSong.id);
 
 
 
