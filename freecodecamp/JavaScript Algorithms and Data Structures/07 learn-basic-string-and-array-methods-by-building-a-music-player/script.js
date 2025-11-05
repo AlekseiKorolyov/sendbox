@@ -131,9 +131,14 @@ const highlightCurrentSong = () => {
     const songToHighlight = document.getElementById(
         `song-${userData?.currentSong?.id}`
     );
+
     playlistSongElements.forEach((songEl) => {
         songEl.removeAttribute("aria-current");
     });
+
+    if (songToHighlight) {
+        songToHighlight.setAttribute("aria-current", "true");
+    }
 };
 
 const renderSongs = array => {
@@ -1003,6 +1008,17 @@ numbers.forEach((number) => {
 В функции обратного вызова используйте метод removeAttribute() для удаления атрибута «aria-current». Это удалит атрибут для каждой песни.
 
 songEl.removeAttribute("aria-current");
+
+
+
+Шаг 65
+
+Теперь нужно добавить атрибут обратно к текущей воспроизводимой песне. Создайте оператор if с условием songToHighlight. Для этого используйте setAttribute для songToHighlight, чтобы передать «aria-current» и «true» в качестве первого и второго аргументов.
+
+if (songToHighlight) {
+  songToHighlight.setAttribute("aria-current", "true");
+}
+
 
 
  */
