@@ -116,6 +116,8 @@ const playNextSong = () => {
     }
 };
 
+const playPreviousSong = () => {};
+
 const renderSongs = array => {
     const songsHTML = array.map((song) => {
         return `<li id="song-${song.id}" class="playlist-song"></li>
@@ -862,6 +864,11 @@ const nextSong = userData?.songs[currentSongIndex + 1];
 
 nextButton.addEventListener("click", playNextSong);
 
+
+
+Шаг 57 Используйте синтаксис const и стрелок для создания пустой функции playPreviousSong.
+
+const playPreviousSong = () => {};
 
 
 
