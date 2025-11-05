@@ -126,6 +126,10 @@ const playPreviousSong = () => {
     }
 };
 
+const highlightCurrentSong = () => {
+    const playlistSongElements = document.querySelectorAll(".playlist-song");
+};
+
 const renderSongs = array => {
     const songsHTML = array.map((song) => {
         return `<li id="song-${song.id}" class="playlist-song"></li>
@@ -947,6 +951,18 @@ playSong(previousSong.id);
 Добавьте прослушиватель события «click» к элементу previousButton, затем передайте playPreviousSong в качестве второго аргумента.
 
 previousButton.addEventListener("click", playPreviousSong);
+
+
+
+
+Шаг 61
+
+Если внимательно присмотреться, то можно увидеть, что текущая песня не выделена в плейлисте, поэтому вы не знаете, какая именно песня воспроизводится. Это можно исправить, создав функцию для выделения любой воспроизводимой песни. Используя синтаксис стрелок, создайте функцию highlightCurrentSong. Внутри функции используйте querySelectorAll для получения элемента .playlist-song и присвойте его константе playlistSongElements.
+
+
+const highlightCurrentSong = () => {
+  const playlistSongElements = document.querySelectorAll(".playlist-song");
+};
 
 
  */
