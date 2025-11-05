@@ -116,7 +116,13 @@ const playNextSong = () => {
     }
 };
 
-const playPreviousSong = () => {};
+const playPreviousSong = () => {
+    if (userData?.currentSong === null) {
+        return;
+    } else {
+        const currentSongIndex = getCurrentSongIndex();
+    }
+};
 
 const renderSongs = array => {
     const songsHTML = array.map((song) => {
@@ -869,6 +875,16 @@ nextButton.addEventListener("click", playNextSong);
 Шаг 57 Используйте синтаксис const и стрелок для создания пустой функции playPreviousSong.
 
 const playPreviousSong = () => {};
+
+
+
+Шаг 58 В функцию playPreviousSong добавьте оператор if с условием userData?.currentSong === null. Это проверит, воспроизводится ли в данный момент песня. Если нет, выйдите из функции, используя return. В блоке else создайте константу с именем currentSongIndex и присвойте ей функцию getCurrentSongIndex().
+
+if (userData?.currentSong === null) {
+    return;
+  } else {
+    const currentSongIndex = getCurrentSongIndex();
+  }
 
 
 
