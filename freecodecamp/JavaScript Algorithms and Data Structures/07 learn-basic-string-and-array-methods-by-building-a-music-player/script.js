@@ -149,6 +149,7 @@ playButton.addEventListener("click", () => {
 });
 
 pauseButton.addEventListener("click", pauseSong);
+nextButton.addEventListener("click", playNextSong);
 
 const sortSongs = () => {
     userData?.songs.sort((a,b) => {
@@ -855,6 +856,11 @@ if (userData?.currentSong === null) {
 const nextSong = userData?.songs[currentSongIndex + 1];
     playSong(nextSong.id);
 
+
+
+Шаг 56 Теперь пора протестировать функцию playNextSong. Добавьте обработчик событий click к элементу nextButton, затем передайте playNextSong в качестве второго аргумента обработчика событий. Это функция, которую обработчик событий запустит. Протестируйте приложение, сначала нажав кнопку воспроизведения, а затем кнопку «Далее». Вы должны убедиться, что всё работает как надо.
+
+nextButton.addEventListener("click", playNextSong);
 
 
 
