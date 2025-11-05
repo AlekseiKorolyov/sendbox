@@ -160,6 +160,7 @@ playButton.addEventListener("click", () => {
 
 pauseButton.addEventListener("click", pauseSong);
 nextButton.addEventListener("click", playNextSong);
+previousButton.addEventListener("click", playPreviousSong);
 
 const sortSongs = () => {
     userData?.songs.sort((a,b) => {
@@ -938,6 +939,14 @@ if (userData?.currentSong === null) {
 const previousSong = userData?.songs[currentSongIndex - 1];
 playSong(previousSong.id);
 
+
+
+
+Шаг 60
+
+Добавьте прослушиватель события «click» к элементу previousButton, затем передайте playPreviousSong в качестве второго аргумента.
+
+previousButton.addEventListener("click", playPreviousSong);
 
 
  */
