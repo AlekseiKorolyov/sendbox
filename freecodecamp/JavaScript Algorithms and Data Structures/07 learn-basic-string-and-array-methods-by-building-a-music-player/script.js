@@ -106,7 +106,11 @@ const pauseSong = () => {
     audio.pause();
 };
 
-const playNextSong = () => {};
+const playNextSong = () => {
+    if (userData?.currentSong === null) {
+        playSong(userData?.songs[0].id);
+    }
+};
 
 const renderSongs = array => {
     const songsHTML = array.map((song) => {
@@ -824,6 +828,20 @@ return userData?.songs.indexOf(userData?.currentSong);
 Шаг 52 Вам нужно поработать над воспроизведением следующей и предыдущей песен. Для этого вам понадобятся функции playNextSong и playPreviousSong. Используйте синтаксис const и стрелок, чтобы создать пустую функцию playNextSong.
 
 const playNextSong = () => {};
+
+
+
+Шаг 53 Внутри функции playNextSong создайте оператор if для проверки того, что currentSong объекта userData строго равен нулю. Это проверит, нет ли текущей песни, воспроизводимой в объекте userData. Если условие истинно, вызовите функцию playSong, передав в качестве аргумента идентификатор первой песни из массива userData?.songs.
+
+if (userData?.currentSong === null) {
+    playSong(userData?.songs[0].id);
+  }
+
+
+
+
+
+
 
 
  */
