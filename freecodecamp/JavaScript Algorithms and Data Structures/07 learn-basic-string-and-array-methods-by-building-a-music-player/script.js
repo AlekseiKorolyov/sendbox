@@ -127,6 +127,8 @@ const playPreviousSong = () => {
     }
 };
 
+const setPlayerDisplay = () => {};
+
 const highlightCurrentSong = () => {
     const playlistSongElements = document.querySelectorAll(".playlist-song");
     const songToHighlight = document.getElementById(
@@ -1031,6 +1033,15 @@ if (songToHighlight) {
 
 highlightCurrentSong();
 
+
+
+
+Шаг 67
+
+Далее необходимо отобразить название и исполнителя текущей песни в плеере. Используйте синтаксис const и стрелки для создания пустой функции setPlayerDisplay.
+
+
+const setPlayerDisplay = () => {};
 
 
  */
