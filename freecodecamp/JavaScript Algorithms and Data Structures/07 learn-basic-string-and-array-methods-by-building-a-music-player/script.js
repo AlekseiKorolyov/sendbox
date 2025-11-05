@@ -131,7 +131,9 @@ const highlightCurrentSong = () => {
     const songToHighlight = document.getElementById(
         `song-${userData?.currentSong?.id}`
     );
-    playlistSongElements.forEach((songEl) => {});
+    playlistSongElements.forEach((songEl) => {
+        songEl.removeAttribute("aria-current");
+    });
 };
 
 const renderSongs = array => {
@@ -993,6 +995,14 @@ numbers.forEach((number) => {
  Используем метод forEach для playlistSongElements. Передайте songEl в качестве параметра и используйте стрелочный синтаксис для добавления пустой функции обратного вызова.
 
  playlistSongElements.forEach((songEl) => {});
+
+
+
+Шаг 64
+
+В функции обратного вызова используйте метод removeAttribute() для удаления атрибута «aria-current». Это удалит атрибут для каждой песни.
+
+songEl.removeAttribute("aria-current");
 
 
  */
