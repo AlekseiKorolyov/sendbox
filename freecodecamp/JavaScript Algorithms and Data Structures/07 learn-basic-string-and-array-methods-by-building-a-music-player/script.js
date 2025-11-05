@@ -128,7 +128,10 @@ const playPreviousSong = () => {
 
 const highlightCurrentSong = () => {
     const playlistSongElements = document.querySelectorAll(".playlist-song");
-    const songToHighlight = document.getElementById(`song-${userData?.currentSong?.id}`);
+    const songToHighlight = document.getElementById(
+        `song-${userData?.currentSong?.id}`
+    );
+    playlistSongElements.forEach((songEl) => {});
 };
 
 const renderSongs = array => {
@@ -972,6 +975,24 @@ const highlightCurrentSong = () => {
 Вам необходимо получить идентификатор текущей воспроизводимой песни. Для этого можно использовать метод userData?.currentSong?.id. Используйте метод getElementById() для получения идентификатора текущей воспроизводимой песни, а затем добавьте к нему префикс song- с помощью шаблонных литералов. Присвойте его константе songToHighlight.
 
 const songToHighlight = document.getElementById(`song-${userData?.currentSong?.id}`);
+
+
+
+Шаг 63
+
+Пройдитесь циклом по элементам playlistSongElements с помощью метода forEach. Метод forEach используется для прохода по массиву и выполнения функции над каждым элементом массива. Например, предположим, что у вас есть массив чисел, и вы хотите вывести каждое число на консоль.
+Пример кода
+
+const numbers = [1, 2, 3, 4, 5];
+
+// Использование forEach для итерации по массиву
+numbers.forEach((number) => {
+ console.log(number); // 1, 2, 3, 4, 5
+ });
+
+ Используем метод forEach для playlistSongElements. Передайте songEl в качестве параметра и используйте стрелочный синтаксис для добавления пустой функции обратного вызова.
+
+ playlistSongElements.forEach((songEl) => {});
 
 
  */
