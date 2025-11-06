@@ -132,6 +132,8 @@ const setPlayerDisplay = () => {
     const songArtist = document.getElementById("player-song-artist");
     const currentTitle = userData?.currentSong?.title;
     const currentArtist = userData?.currentSong?.artist;
+    playingSong.textContent = currentTitle ? currentTitle : "";
+    songArtist.textContent = currentArtist ? currentArtist : "";
 };
 
 const highlightCurrentSong = () => {
@@ -1072,6 +1074,31 @@ const playingSong = document.getElementById("player-song-title");
   const currentTitle = userData?.currentSong?.title;
   const currentArtist = userData?.currentSong?.artist;
 
+
+
+
+Шаг 70
+
+textContent задаёт текст узла и позволяет задать или получить текстовое содержимое HTML-элемента.
+Пример кода
+
+<div id="example">Это текстовое содержимое</div>
+
+Пример кода
+
+const element = document.getElementById('example');
+console.log(element.textContent); // Вывод: Это текстовое содержимое
+
+Вы можете использовать тернарный оператор для условного задания значения текстового содержимого. Вот пример присвоения результата тернарного оператора переменной:
+Пример кода
+
+const example = condition ? "I'm true" : "I'm false";
+
+Используйте тернарный оператор, чтобы проверить, является ли currentTitle истинным значением. Если это так, установите playingSong.textContent равным currentTitle. В противном случае установите его в пустую строку. Затем ниже используйте тернарный оператор, чтобы проверить, является ли currentArtist истинным значением. Если да, установите songArtist.textContent в значение currentArtist. В противном случае установите пустую строку.
+
+
+  playingSong.textContent = currentTitle ? currentTitle : "";
+  songArtist.textContent = currentArtist ? currentArtist : "";
 
 
 
