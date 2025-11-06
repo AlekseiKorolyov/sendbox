@@ -98,6 +98,7 @@ const playSong = (id) => {
     userData.currentSong = song;
     playButton.classList.add("playing");
     highlightCurrentSong();
+    setPlayerDisplay();
     audio.play();
 };
 
@@ -1099,6 +1100,16 @@ const example = condition ? "I'm true" : "I'm false";
 
   playingSong.textContent = currentTitle ? currentTitle : "";
   songArtist.textContent = currentArtist ? currentArtist : "";
+
+
+
+
+Шаг 71
+
+Чтобы обеспечить обновление экрана плеера при начале воспроизведения новой песни, вызовите функцию setPlayerDisplay() внутри функции playSong(). Теперь на экране должны отображаться название песни и имя исполнителя.
+
+setPlayerDisplay();
+
 
 
 
