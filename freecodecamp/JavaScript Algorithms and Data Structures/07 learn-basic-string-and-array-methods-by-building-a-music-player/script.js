@@ -208,6 +208,8 @@ nextButton.addEventListener("click", playNextSong);
 
 previousButton.addEventListener("click", playPreviousSong);
 
+shuffleButton.addEventListener("click", shuffle);
+
 const sortSongs = () => {
     userData?.songs.sort((a,b) => {
         if (a.title < b.title) {
@@ -1215,6 +1217,23 @@ renderSongs(userData?.songs);
 pauseSong();
 setPlayerDisplay();
 setPlayButtonAccessibleText();
+
+
+
+
+Шаг 80
+
+Добавьте прослушиватель события «click» к элементу shuffleButton. Для выполнения функции передайте функцию shuffle. Примечание: внутри этого прослушивателя событий не требуется обратный вызов. Вам также не нужно вызывать функцию shuffle, достаточно передать её идентификатор.
+
+
+shuffleButton.addEventListener("click", shuffle);
+
+
+
+
+
+
+
 
 
 
