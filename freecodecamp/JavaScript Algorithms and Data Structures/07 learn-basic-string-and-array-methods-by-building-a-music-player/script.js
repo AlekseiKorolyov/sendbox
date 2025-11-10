@@ -144,6 +144,7 @@ const shuffle = () => {
 };
 
 const deleteSong = (id) => {
+    if (userData?.currentSong?.id === id) {}
     userData.songs = userData?.songs.filter((song) => song.id !== id);
     renderSongs(userData?.songs);
     highlightCurrentSong();
@@ -1282,6 +1283,14 @@ userData.songs = userData?.songs.filter((song) => song.id !== id);
   setPlayButtonAccessibleText();
 
 
+
+
+Шаг 84
+
+Перед удалением песни необходимо проверить, воспроизводится ли она в данный момент. Если да, необходимо поставить её на паузу и воспроизвести следующую песню в плейлисте. Используйте оператор if, чтобы проверить, совпадает ли userData?.currentSong?.id с идентификатором песни, которую вы хотите удалить.
+
+
+if (userData?.currentSong?.id === id) {}
 
 
  */
