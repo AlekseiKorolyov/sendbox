@@ -132,6 +132,8 @@ const playPreviousSong = () => {
     }
 };
 
+const shuffle = () => {};
+
 const setPlayerDisplay = () => {
     const playingSong = document.getElementById("player-song-title");
     const songArtist = document.getElementById("player-song-artist");
@@ -1159,6 +1161,12 @@ playSong(setPlayButtonAccessibleText());
 
 
 
+
+Шаг 76
+
+Используем константы и синтаксис стрелок для создания пустой функции с именем shuffle. Эта функция отвечает за перемешивание песен в плейлисте и выполнение необходимых обновлений управления состоянием после перемешивания.
+
+const shuffle = () => {};
 
 
 
