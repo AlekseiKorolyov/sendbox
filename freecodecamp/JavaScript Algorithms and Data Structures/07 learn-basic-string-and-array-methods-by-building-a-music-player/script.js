@@ -132,7 +132,9 @@ const playPreviousSong = () => {
     }
 };
 
-const shuffle = () => {};
+const shuffle = () => {
+    userData?.songs.sort(() => Math.random() - 0.5);
+};
 
 const setPlayerDisplay = () => {
     const playingSong = document.getElementById("player-song-title");
@@ -1169,6 +1171,20 @@ playSong(setPlayButtonAccessibleText());
 const shuffle = () => {};
 
 
+
+
+Шаг 77
+
+На предыдущих шагах вы узнали, как использовать метод sort() для сортировки песен в алфавитном порядке. Другой вариант использования функции обратного вызова — рандомизация массива. Один из способов рандомизации массива элементов — вычесть 0,5 из Math.random(), что даст случайные значения, которые могут быть как положительными, так и отрицательными. Это делает результат сравнения смесью положительных и отрицательных значений, что приводит к случайному порядку элементов.
+Пример кода
+
+const names = ["Tom", "Jessica", "Quincy", "Naomi"];
+names.sort(() => Math.random() - 0.5);
+
+Используйте метод sort() для массива userData?.songs. Передайте методу обратный вызов и верните результат Math.random() - 0.5.
+
+
+userData?.songs.sort(() => Math.random() - 0.5);
 
 
 
