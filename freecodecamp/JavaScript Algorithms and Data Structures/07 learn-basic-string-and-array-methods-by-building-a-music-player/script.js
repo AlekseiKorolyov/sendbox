@@ -176,7 +176,9 @@ const renderSongs = (array) => {
     playlistSongs.innerHTML = songsHTML;
 };
 
-const setPlayButtonAccessibleText = () => {};
+const setPlayButtonAccessibleText = () => {
+    const song = userData?.currentSong || userData?.songs[0];
+};
 
 const getCurrentSongIndex = () => userData?.songs.indexOf(userData?.currentSong);
 
@@ -1128,6 +1130,12 @@ setPlayerDisplay();
 
 const setPlayButtonAccessibleText = () => {};
 
+
+Шаг 73
+
+Вам нужно получить текущую песню или первую песню в плейлисте. Для этого создайте константу «Song» и используйте оператор OR (||), чтобы присвоить ей текущую песню из userData или первую песню в массиве userData?.songs. Не забудьте использовать опциональную цепочку.
+
+const song = userData?.currentSong || userData?.songs[0];
 
 
 
