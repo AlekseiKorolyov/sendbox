@@ -178,6 +178,7 @@ const renderSongs = (array) => {
 
 const setPlayButtonAccessibleText = () => {
     const song = userData?.currentSong || userData?.songs[0];
+    playButton.setAttribute("aria-label", song?.title ? `Play ${song.title}` : "Play");
 };
 
 const getCurrentSongIndex = () => userData?.songs.indexOf(userData?.currentSong);
@@ -1138,7 +1139,12 @@ const setPlayButtonAccessibleText = () => {};
 const song = userData?.currentSong || userData?.songs[0];
 
 
+Шаг 74
 
+Функция setPlayButtonAccessibleText установит атрибут aria-label на текущую песню или на первую песню в плейлисте. Если плейлист пуст, она установит атрибут aria-label в значение «Play». Используйте метод setAttribute элемента playButton, чтобы установить атрибут с именем «aria-label». Используя тернарный оператор, установите значение атрибута на Play ${song.title} или «Play», если song?.title недоступен. Не забудьте, что здесь нужна интерполяция строк, поэтому нужно использовать обратные кавычки.
+
+
+playButton.setAttribute("aria-label", song?.title ? `Play ${song.title}` : "Play");
 
 
  */
