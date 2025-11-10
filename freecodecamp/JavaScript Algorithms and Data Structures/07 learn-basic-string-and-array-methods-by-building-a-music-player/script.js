@@ -134,6 +134,8 @@ const playPreviousSong = () => {
 
 const shuffle = () => {
     userData?.songs.sort(() => Math.random() - 0.5);
+    userData.currentSong = null;
+    userData.songCurrentTime = 0;
 };
 
 const setPlayerDisplay = () => {
@@ -1187,6 +1189,15 @@ names.sort(() => Math.random() - 0.5);
 userData?.songs.sort(() => Math.random() - 0.5);
 
 
+
+
+Шаг 78
+
+При нажатии кнопки перемешивания необходимо установить свойство currentSong равным нулю, а songCurrentTime — равным 0. Установите свойство userData.currentSong равным null, а свойство userData.songCurrentTime — равным 0. Примечание: не следует использовать необязательную цепочку на этом шаге, поскольку вы явно устанавливаете свойства currentSong и songCurrentTime равными null и 0 соответственно.
+
+
+  userData.currentSong = null;
+  userData.songCurrentTime = 0;
 
 
 
