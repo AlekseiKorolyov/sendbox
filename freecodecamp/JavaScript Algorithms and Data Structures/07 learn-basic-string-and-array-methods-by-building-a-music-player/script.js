@@ -144,7 +144,12 @@ const shuffle = () => {
 };
 
 const deleteSong = (id) => {
-    if (userData?.currentSong?.id === id) {}
+    if (userData?.currentSong?.id === id) {
+        userData.currentSong = null;
+        userData.songCurrentTime = 0;
+        pauseSong();
+        setPlayerDisplay();
+    }
     userData.songs = userData?.songs.filter((song) => song.id !== id);
     renderSongs(userData?.songs);
     highlightCurrentSong();
@@ -1291,6 +1296,29 @@ userData.songs = userData?.songs.filter((song) => song.id !== id);
 
 
 if (userData?.currentSong?.id === id) {}
+
+
+
+Шаг 85
+
+Если совпадение найдено, установите userData.currentSong в значение null, а userData.songCurrentTime — в значение 0. После этого вызовите функцию pauseSong(), чтобы остановить воспроизведение, и функцию setPlayerDisplay(), чтобы обновить отображение плеера.
+
+
+  userData.currentSong = null;
+  userData.songCurrentTime = 0;
+  pauseSong();
+  setPlayerDisplay();
+
+
+
+
+
+
+
+
+
+
+
 
 
  */
