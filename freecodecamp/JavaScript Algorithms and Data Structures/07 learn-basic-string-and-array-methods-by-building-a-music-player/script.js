@@ -100,7 +100,7 @@ const playSong = (id) => {
 
     highlightCurrentSong();
     setPlayerDisplay();
-    playSong(setPlayButtonAccessibleText());
+    setPlayButtonAccessibleText();
     audio.play();
 };
 
@@ -136,11 +136,14 @@ const shuffle = () => {
     userData?.songs.sort(() => Math.random() - 0.5);
     userData.currentSong = null;
     userData.songCurrentTime = 0;
+
     renderSongs(userData?.songs);
     pauseSong();
     setPlayerDisplay();
     setPlayButtonAccessibleText();
 };
+
+const deleteSong = (id) => {};
 
 const setPlayerDisplay = () => {
     const playingSong = document.getElementById("player-song-title");
@@ -189,7 +192,11 @@ const renderSongs = (array) => {
 
 const setPlayButtonAccessibleText = () => {
     const song = userData?.currentSong || userData?.songs[0];
-    playButton.setAttribute("aria-label", song?.title ? `Play ${song.title}` : "Play");
+
+    playButton.setAttribute(
+        "aria-label",
+        song?.title ? `Play ${song.title}` : "Play"
+    );
 };
 
 const getCurrentSongIndex = () => userData?.songs.indexOf(userData?.currentSong);
@@ -1231,6 +1238,12 @@ shuffleButton.addEventListener("click", shuffle);
 
 
 
+Шаг 81
+
+Пора реализовать функцию удаления для плейлиста. Она будет управлять удалением песни из плейлиста, обрабатывать другие связанные действия при удалении песни и создавать кнопку «Сбросить плейлист». Используйте синтаксис const и стрелок для создания пустой функции deleteSong и передачи идентификатора в качестве параметра.
+
+
+const deleteSong = (id) => {};
 
 
 
