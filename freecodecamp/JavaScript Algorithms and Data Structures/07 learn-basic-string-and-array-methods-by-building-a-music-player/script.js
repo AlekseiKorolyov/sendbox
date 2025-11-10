@@ -145,6 +145,9 @@ const shuffle = () => {
 
 const deleteSong = (id) => {
     userData.songs = userData?.songs.filter((song) => song.id !== id);
+    renderSongs(userData?.songs);
+    highlightCurrentSong();
+    setPlayButtonAccessibleText();
 };
 
 const setPlayerDisplay = () => {
@@ -1265,6 +1268,18 @@ console.log(numsGreaterThanThree) // Вывод: [10, 8, 4, 5]
 
 userData.songs = userData?.songs.filter((song) => song.id !== id);
 
+
+
+
+
+Шаг 83
+
+Вам необходимо повторно отрендерить песни, выделить их и установить доступный текст кнопки воспроизведения, поскольку список песен изменится. Вызовите функцию renderSongs и передайте массив userData?.songs в качестве аргумента. Это отобразит изменённый плейлист. После этого вызовите функцию highlightCurrentSong, чтобы выделить текущую песню, если она есть, и функцию setPlayButtonAccessibleText, чтобы обновить доступный текст кнопки воспроизведения.
+
+
+  renderSongs(userData?.songs);
+  highlightCurrentSong();
+  setPlayButtonAccessibleText();
 
 
 
