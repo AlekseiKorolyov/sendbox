@@ -143,7 +143,9 @@ const shuffle = () => {
     setPlayButtonAccessibleText();
 };
 
-const deleteSong = (id) => {};
+const deleteSong = (id) => {
+    userData.songs = userData?.songs.filter((song) => song.id !== id);
+};
 
 const setPlayerDisplay = () => {
     const playingSong = document.getElementById("player-song-title");
@@ -1245,6 +1247,23 @@ shuffleButton.addEventListener("click", shuffle);
 
 const deleteSong = (id) => {};
 
+
+
+
+
+Шаг 82
+
+Используйте метод filter() для удаления объекта song, соответствующего параметру id, из массива userData?.songs. Метод filter сохраняет только те элементы массива, которые удовлетворяют переданной ему функции обратного вызова:
+Пример кода
+
+const numArr = [1, 10, 8, 3, 4, 5]
+const numsGreaterThanThree = numArr.filter((num) => num > 3);
+console.log(numsGreaterThanThree) // Вывод: [10, 8, 4, 5]
+
+Используйте метод filter() для userData?.songs. Передайте song в качестве параметра обратного вызова стрелочной функции и используйте неявный возврат для проверки того, что song.id строго не равен id. Присвойте всё это объекту userData.songs. Примечание: не следует использовать необязательную цепочку при назначении результата userData?.songs.filter объекту userData.songs, поскольку в этот момент массив allSongs не будет неопределенным или нулевым.
+
+
+userData.songs = userData?.songs.filter((song) => song.id !== id);
 
 
 
