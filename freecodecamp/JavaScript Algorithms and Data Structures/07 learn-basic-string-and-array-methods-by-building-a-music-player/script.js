@@ -136,6 +136,10 @@ const shuffle = () => {
     userData?.songs.sort(() => Math.random() - 0.5);
     userData.currentSong = null;
     userData.songCurrentTime = 0;
+    renderSongs(userData?.songs);
+    pauseSong();
+    setPlayerDisplay();
+    setPlayButtonAccessibleText();
 };
 
 const setPlayerDisplay = () => {
@@ -1199,6 +1203,18 @@ userData?.songs.sort(() => Math.random() - 0.5);
   userData.currentSong = null;
   userData.songCurrentTime = 0;
 
+
+
+
+Шаг 79
+
+Также следует повторно отрендерить песни, приостановить текущую песню, настроить отображение плеера и заново настроить доступный текст для кнопки воспроизведения. Вызовите функцию renderSongs и передайте userData?.songs в качестве аргумента. Также вызовите функции pauseSong, setPlayerDisplay и setPlayButtonAccessibleText.
+
+
+renderSongs(userData?.songs);
+pauseSong();
+setPlayerDisplay();
+setPlayButtonAccessibleText();
 
 
 
