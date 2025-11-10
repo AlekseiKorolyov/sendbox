@@ -100,6 +100,7 @@ const playSong = (id) => {
 
     highlightCurrentSong();
     setPlayerDisplay();
+    playSong(setPlayButtonAccessibleText());
     audio.play();
 };
 
@@ -1145,6 +1146,25 @@ const song = userData?.currentSong || userData?.songs[0];
 
 
 playButton.setAttribute("aria-label", song?.title ? `Play ${song.title}` : "Play");
+
+
+
+
+Шаг 75
+
+Теперь вызовите функцию setPlayButtonAccessibleText внутри функции playSong.
+
+
+playSong(setPlayButtonAccessibleText());
+
+
+
+
+
+
+
+
+
 
 
  */
