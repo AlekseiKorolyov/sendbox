@@ -221,6 +221,9 @@ audio.addEventListener("ended", () => {
     const nextSongExists = userData?.songs[currentSongIndex + 1] !== undefined;
     if (nextSongExists) {
         playNextSong();
+    } else {
+        userData.currentSong = null;
+        userData.songCurrentTime = 0;
     }
 });
 
@@ -1444,6 +1447,17 @@ const nextSongExists = userData?.songs[currentSongIndex + 1] !== undefined;
 
 if (nextSongExists) {
     playNextSong();
+  }
+
+
+
+Шаг 98
+
+Если в плейлисте нет следующей песни, используйте блок else, чтобы сбросить ключ currentSong объекта userData на NULL, а его свойство songCurrentTime — на 0.
+
+ else {
+    userData.currentSong = null;
+    userData.songCurrentTime = 0;
   }
 
 
