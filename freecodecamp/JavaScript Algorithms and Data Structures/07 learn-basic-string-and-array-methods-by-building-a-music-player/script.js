@@ -207,7 +207,9 @@ const renderSongs = (array) => {
         resetButton.ariaLabel = "Reset playlist";
         resetButton.appendChild(resetText);
         playlistSongs.appendChild(resetButton);
-        resetButton.addEventListener("click", () => {});
+        resetButton.addEventListener("click", () => {
+            userData.songs = [...allSongs];
+        });
     }
 };
 
@@ -1399,6 +1401,14 @@ parentElement.appendChild(parentElementText)
 
 resetButton.addEventListener("click", () => {});
 
+
+
+
+Шаг 93
+
+Чтобы вернуть плейлист в исходное состояние, поместите allSongs в массив и присвойте его userData.songs. Примечание: Не следует использовать необязательную цепочку для userData.songs, поскольку на этом этапе песня не будет иметь значение null или undefined.
+
+userData.songs = [...allSongs];
 
 
 
