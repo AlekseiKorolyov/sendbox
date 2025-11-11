@@ -202,6 +202,7 @@ const renderSongs = (array) => {
 
     if (userData?.songs.length === 0) {
         const resetButton = document.createElement("button");
+        const resetText = document.createTextNode("Reset Playlist");
     }
 };
 
@@ -1333,6 +1334,25 @@ const divElement = document.createElement('div')
 
 const resetButton = document.createElement("button");
 
+
+
+
+Шаг 89
+
+Теперь, когда кнопка создана, нужно присвоить ей текст. Для этого используйте метод createTextNode() DOM. Метод createTextNode() используется для создания текстового узла. Чтобы использовать его, вызовите его и передайте текст как строку:
+Пример кода
+
+document.createTextNode("ваш текст")
+
+Вы также можете присвоить его переменной:
+Пример кода
+
+const myText = document.createTextNode("ваш текст")
+
+Используйте метод createTextNode() для создания текста «Сбросить плейлист», а затем присвойте его константе resetText.
+
+
+const resetText = document.createTextNode("Reset Playlist");
 
 
 
