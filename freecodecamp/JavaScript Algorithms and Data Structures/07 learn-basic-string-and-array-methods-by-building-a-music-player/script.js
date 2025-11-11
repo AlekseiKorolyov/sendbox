@@ -8,73 +8,38 @@ const shuffleButton = document.getElementById("shuffle");
 const allSongs = [
     {
         id: 0,
-        title: "Scratching The Surface",
-        artist: "Quincy Larson",
-        duration: "4:25",
-        src: "https://cdn.freecodecamp.org/curriculum/js-music-player/scratching-the-surface.mp3",
+        title: "Hello World",
+        artist: "Rafael",
+        duration: "0:23",
+        src: "https://cdn.freecodecamp.org/curriculum/js-music-player/hello-world.mp3",
     },
     {
         id: 1,
-        title: "Can't Stay Down",
-        artist: "Quincy Larson",
-        duration: "4:15",
-        src: "https://cdn.freecodecamp.org/curriculum/js-music-player/can't-stay-down.mp3",
+        title: "In the Zone",
+        artist: "Rafael",
+        duration: "0:11",
+        src: "https://cdn.freecodecamp.org/curriculum/js-music-player/in-the-zone.mp3",
     },
     {
         id: 2,
-        title: "Still Learning",
-        artist: "Quincy Larson",
-        duration: "3:51",
-        src: "https://cdn.freecodecamp.org/curriculum/js-music-player/still-learning.mp3",
+        title: "Camper Cat",
+        artist: "Rafael",
+        duration: "0:21",
+        src: "https://cdn.freecodecamp.org/curriculum/js-music-player/camper-cat.mp3",
     },
     {
         id: 3,
-        title: "Cruising for a Musing",
-        artist: "Quincy Larson",
-        duration: "3:34",
-        src: "https://cdn.freecodecamp.org/curriculum/js-music-player/cruising-for-a-musing.mp3",
+        title: "Electronic",
+        artist: "Rafael",
+        duration: "0:15",
+        src: "https://cdn.freecodecamp.org/curriculum/js-music-player/electronic.mp3",
     },
     {
         id: 4,
-        title: "Never Not Favored",
-        artist: "Quincy Larson",
-        duration: "3:35",
-        src: "https://cdn.freecodecamp.org/curriculum/js-music-player/never-not-favored.mp3",
-    },
-    {
-        id: 5,
-        title: "From the Ground Up",
-        artist: "Quincy Larson",
-        duration: "3:12",
-        src: "https://cdn.freecodecamp.org/curriculum/js-music-player/from-the-ground-up.mp3",
-    },
-    {
-        id: 6,
-        title: "Walking on Air",
-        artist: "Quincy Larson",
-        duration: "3:25",
-        src: "https://cdn.freecodecamp.org/curriculum/js-music-player/walking-on-air.mp3",
-    },
-    {
-        id: 7,
-        title: "Can't Stop Me. Can't Even Slow Me Down.",
-        artist: "Quincy Larson",
-        duration: "3:52",
-        src: "https://cdn.freecodecamp.org/curriculum/js-music-player/cant-stop-me-cant-even-slow-me-down.mp3",
-    },
-    {
-        id: 8,
-        title: "The Surest Way Out is Through",
-        artist: "Quincy Larson",
-        duration: "3:10",
-        src: "https://cdn.freecodecamp.org/curriculum/js-music-player/the-surest-way-out-is-through.mp3",
-    },
-    {
-        id: 9,
-        title: "Chasing That Feeling",
-        artist: "Quincy Larson",
-        duration: "2:43",
-        src: "https://cdn.freecodecamp.org/curriculum/js-music-player/chasing-that-feeling.mp3",
+        title: "Sailing Away",
+        artist: "Rafael",
+        duration: "0:22",
+        src: "https://cdn.freecodecamp.org/curriculum/js-music-player/sailing-away.mp3",
     },
 ];
 
@@ -251,7 +216,10 @@ previousButton.addEventListener("click", playPreviousSong);
 
 shuffleButton.addEventListener("click", shuffle);
 
-audio.addEventListener("ended", () => {});
+audio.addEventListener("ended", () => {
+    const currentSongIndex = getCurrentSongIndex();
+    const nextSongExists = (userData.songs.length - 1) > currentSongIndex;
+});
 
 const sortSongs = () => {
     userData?.songs.sort((a,b) => {
@@ -271,6 +239,16 @@ const sortSongs = () => {
 
 renderSongs(sortSongs());
 setPlayButtonAccessibleText();
+
+
+
+
+
+
+
+
+
+
 
 
 /*
@@ -1441,6 +1419,15 @@ resetButton.remove();
 Все основные функции теперь готовы. Единственная проблема заключается в том, что следующая песня не воспроизводится автоматически после окончания текущей. Чтобы исправить это, можно настроить прослушиватель событий, который будет определять окончание текущей песни. Для этого подходит прослушиватель событий «ended». Он срабатывает по завершении воспроизведения медиафайла. Добавьте прослушиватель событий к элементу audio, который отслеживает событие «ended». Передайте обратный вызов, используя синтаксис стрелок с пустыми фигурными скобками.
 
 audio.addEventListener("ended", () => {});
+
+
+
+
+Шаг 96
+
+Обратите внимание, что обложка альбома в HTML-коде и названия песен в массиве userData.songs изменились. Мы заменили оригинальные песни на более короткие, которые вы сможете использовать для тестирования своего приложения на следующих этапах. Далее вам нужно проверить, есть ли следующая песня для воспроизведения. Получите индекс текущей песни, вызвав функцию getCurrentSongIndex(), и сохраните его в константе currentSongIndex. После этого создайте константу nextSongExists, которая будет содержать логическое значение true или false в зависимости от того, существует ли следующая песня.
+
+const nextSongExists = (userData.songs.length - 1) > currentSongIndex;
 
 
 
