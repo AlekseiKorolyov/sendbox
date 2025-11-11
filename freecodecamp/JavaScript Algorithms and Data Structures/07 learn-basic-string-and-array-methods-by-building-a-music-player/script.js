@@ -207,6 +207,7 @@ const renderSongs = (array) => {
         resetButton.ariaLabel = "Reset playlist";
         resetButton.appendChild(resetText);
         playlistSongs.appendChild(resetButton);
+        resetButton.addEventListener("click", () => {});
     }
 };
 
@@ -1387,6 +1388,16 @@ parentElement.appendChild(parentElementText)
 
   resetButton.appendChild(resetText);
   playlistSongs.appendChild(resetButton);
+
+
+
+
+Шаг 92
+
+Теперь пора добавить функцию сброса к кнопке resetButton. Это позволит восстанавливать песни в плейлисте при нажатии. Добавьте прослушиватель событий click к переменной resetButton. Передайте обратный вызов, используя синтаксис стрелок, и пока оставьте его пустым.
+
+
+resetButton.addEventListener("click", () => {});
 
 
 
