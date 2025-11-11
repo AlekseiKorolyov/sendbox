@@ -209,6 +209,9 @@ const renderSongs = (array) => {
         playlistSongs.appendChild(resetButton);
         resetButton.addEventListener("click", () => {
             userData.songs = [...allSongs];
+            renderSongs(sortSongs());
+            setPlayButtonAccessibleText();
+            resetButton.remove();
         });
     }
 };
@@ -1409,6 +1412,17 @@ resetButton.addEventListener("click", () => {});
 Чтобы вернуть плейлист в исходное состояние, поместите allSongs в массив и присвойте его userData.songs. Примечание: Не следует использовать необязательную цепочку для userData.songs, поскольку на этом этапе песня не будет иметь значение null или undefined.
 
 userData.songs = [...allSongs];
+
+
+
+Шаг 94
+
+Наконец, необходимо снова отобразить песни, обновить доступный текст кнопки воспроизведения и удалить кнопку сброса из плейлиста. Также необходимо удалить resetButton из DOM. Вызовите функцию renderSongs() с sortSongs() в качестве аргумента, чтобы снова отобразить песни в алфавитном порядке. Вызовите функцию setPlayButtonAccessibleText(), чтобы обновить доступный текст кнопки воспроизведения. Удалите кнопку сброса из плейлиста, вызвав метод remove() переменной resetButton. Примечание: Теперь попробуйте удалить все песни и посмотреть, что произойдёт.
+
+renderSongs(sortSongs());
+setPlayButtonAccessibleText();
+resetButton.remove();
+
 
 
 
