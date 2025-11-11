@@ -205,6 +205,8 @@ const renderSongs = (array) => {
         const resetText = document.createTextNode("Reset Playlist");
         resetButton.id = "reset";
         resetButton.ariaLabel = "Reset playlist";
+        resetButton.appendChild(resetText);
+        playlistSongs.appendChild(resetButton);
     }
 };
 
@@ -1365,6 +1367,26 @@ const resetText = document.createTextNode("Reset Playlist");
 
     resetButton.id = "reset";
     resetButton.ariaLabel = "Reset playlist";
+
+
+
+
+
+Шаг 91
+
+Вам необходимо добавить resetText к элементу resetButton в качестве дочернего элемента, а также resetButton к элементу playlistSongs в качестве дочернего элемента. Для этого существует метод appendChild(). AppendChild() позволяет добавить узел или элемент в качестве дочернего элемента другого элемента. В примере ниже текст «Нажми меня» будет прикреплён к кнопке:
+Пример кода
+
+const parentElement = document.createElement("button")
+const parentElementText = document.createTextNode("Нажми меня")
+
+// прикрепляем текст «Нажми меня» к кнопке
+parentElement.appendChild(parentElementText)
+
+Используйте appendChild(), чтобы прикрепить resetText к элементу resetButton, а resetButton — к элементу playlistSongs.
+
+  resetButton.appendChild(resetText);
+  playlistSongs.appendChild(resetButton);
 
 
 
