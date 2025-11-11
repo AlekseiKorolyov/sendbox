@@ -218,7 +218,10 @@ shuffleButton.addEventListener("click", shuffle);
 
 audio.addEventListener("ended", () => {
     const currentSongIndex = getCurrentSongIndex();
-    const nextSongExists = (userData.songs.length - 1) > currentSongIndex;
+    const nextSongExists = userData?.songs[currentSongIndex + 1] !== undefined;
+    if (nextSongExists) {
+        playNextSong();
+    }
 });
 
 const sortSongs = () => {
@@ -1428,6 +1431,21 @@ audio.addEventListener("ended", () => {});
 Обратите внимание, что обложка альбома в HTML-коде и названия песен в массиве userData.songs изменились. Мы заменили оригинальные песни на более короткие, которые вы сможете использовать для тестирования своего приложения на следующих этапах. Далее вам нужно проверить, есть ли следующая песня для воспроизведения. Получите индекс текущей песни, вызвав функцию getCurrentSongIndex(), и сохраните его в константе currentSongIndex. После этого создайте константу nextSongExists, которая будет содержать логическое значение true или false в зависимости от того, существует ли следующая песня.
 
 const nextSongExists = (userData.songs.length - 1) > currentSongIndex;
+
+***
+
+const nextSongExists = userData?.songs[currentSongIndex + 1] !== undefined;
+
+
+
+Шаг 97
+
+Используйте оператор if для проверки наличия nextSongExists, затем вызовите функцию playNextSong() в блоке if. Это автоматически воспроизведёт следующую песню после окончания текущей.
+
+if (nextSongExists) {
+    playNextSong();
+  }
+
 
 
 
