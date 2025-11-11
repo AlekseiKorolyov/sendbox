@@ -203,6 +203,8 @@ const renderSongs = (array) => {
     if (userData?.songs.length === 0) {
         const resetButton = document.createElement("button");
         const resetText = document.createTextNode("Reset Playlist");
+        resetButton.id = "reset";
+        resetButton.ariaLabel = "Reset playlist";
     }
 };
 
@@ -1353,6 +1355,16 @@ const myText = document.createTextNode("ваш текст")
 
 
 const resetText = document.createTextNode("Reset Playlist");
+
+
+
+
+Шаг 90
+
+Теперь, когда вы создали элемент resetButton, вам нужно присвоить ему атрибуты id и aria-label. JavaScript предоставляет необходимые для этого свойства id и ariaLabel. Например, element.id устанавливает атрибут id, а element.ariaLabel — атрибут aria-label. Оба принимают значения в виде строк. Установите атрибут id элемента resetButton на «reset», а его атрибут aria-label — на «Сбросить плейлист».
+
+    resetButton.id = "reset";
+    resetButton.ariaLabel = "Reset playlist";
 
 
 
