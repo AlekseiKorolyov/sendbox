@@ -181,7 +181,7 @@ const highlightCurrentSong = () => {
 
 const renderSongs = (array) => {
     const songsHTML = array
-        .map((song)=> {
+        .map((song) => {
             return `
           <li id="song-${song.id}" class="playlist-song">
          <button class="playlist-song-info" onclick="playSong(${song.id})">
@@ -196,11 +196,13 @@ const renderSongs = (array) => {
           </li>
          `;
         })
-    .join("");
+        .join("");
 
-   playlistSongs.innerHTML = songsHTML;
+    playlistSongs.innerHTML = songsHTML;
 
-    if (userData?.songs.length === 0) {}
+    if (userData?.songs.length === 0) {
+        const resetButton = document.createElement("button");
+    }
 };
 
 const setPlayButtonAccessibleText = () => {
@@ -222,7 +224,7 @@ playButton.addEventListener("click", () => {
     }
 });
 
-pauseButton.addEventListener("click",  pauseSong);
+pauseButton.addEventListener("click", pauseSong);
 
 nextButton.addEventListener("click", playNextSong);
 
@@ -231,7 +233,7 @@ previousButton.addEventListener("click", playPreviousSong);
 shuffleButton.addEventListener("click", shuffle);
 
 const sortSongs = () => {
-    userData?.songs.sort((a,b) => {
+    userData?.songs.sort((a, b) => {
         if (a.title < b.title) {
             return -1;
         }
@@ -247,27 +249,6 @@ const sortSongs = () => {
 };
 
 renderSongs(sortSongs());
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*
@@ -1331,6 +1312,26 @@ if (userData?.songs.length ===0) {}
 
 
 
+Шаг 88
+
+Если плейлист пуст, необходимо создать элемент resetButton и текст для него. Эта кнопка будет отображаться только при пустом плейлисте. createElement() — это метод DOM, который можно использовать для динамического создания элемента с помощью JavaScript. Чтобы использовать createElement(), вы вызываете его, а затем передаете имя тега в виде строки:
+Пример кода
+
+// синтаксис
+document.createElement(tagName)
+
+// пример
+document.createElement('div')
+
+Вы также можете присвоить его переменной:
+Пример кода
+
+const divElement = document.createElement('div')
+
+Внутри оператора if объявите константу resetButton, а затем используйте createElement() для создания «кнопки».
+
+
+const resetButton = document.createElement("button");
 
 
 
