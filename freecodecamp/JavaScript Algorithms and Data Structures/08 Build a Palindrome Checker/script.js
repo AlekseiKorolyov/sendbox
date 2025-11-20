@@ -2,20 +2,26 @@ const textInput = document.getElementById("text-input");
 const checkButton = document.getElementById("check-btn");
 const resultElement = document.getElementById("result");
 
-const tet = textInput.value;
-const asd = tet.replace(/[^a-zA-Z0-9]/g, '');
 
-
+// let asd = textInput.value.replace(/[^a-zA-Z0-9]/g, '');
 
 checkButton.addEventListener("click", () => {
-    if (tet === "a") {
-        resultElement.innerHTML = 5;
-    } else if (textInput.value === "aa") {
-        resultElement.innerHTML = 10;
+    const asd = textInput.value.replace(/[^a-zA-Z0-9]/i, '');
+    const text = asd.split("");
+    const invertedText = text.reverse();
+    const str = invertedText.join();
+    if (asd === str) {
+        resultElement.innerHTML = textInput.value;
+
     } else{
-        alert(asd);
+        console.log("aaaaa");
     }
+    console.log(asd);
+    console.log(text);
+    console.log(invertedText);
+    console.log(str);
 });
+
 
 
 /*
