@@ -3,23 +3,21 @@ const checkButton = document.getElementById("check-btn");
 const resultElement = document.getElementById("result");
 
 
-// let asd = textInput.value.replace(/[^a-zA-Z0-9]/g, '');
-
 checkButton.addEventListener("click", () => {
-    const asd = textInput.value.replace(/[^a-zA-Z0-9]/i, '');
-    const text = asd.split("");
-    const invertedText = text.reverse();
-    const str = invertedText.join();
-    if (asd === str) {
-        resultElement.innerHTML = textInput.value;
-
-    } else{
+    const str = "";
+    const reg1 = textInput.value.replace(/[^a-zA-Z0-9]{1,7}/gi, '');
+    const reg2 = reg1.split("");
+    const reg3 = reg2.reverse();
+    const reg4 = reg3.join();
+    const reg5 = reg4.replace(/[^a-zA-Z0-9]/gi, '');
+    if (reg1 === str) {
+        // resultElement.innerHTML = textInput.value;
+        console.log("ssssssss");
+    } else if (reg1 === reg5) {
         console.log("aaaaa");
     }
-    console.log(asd);
-    console.log(text);
-    console.log(invertedText);
-    console.log(str);
+    console.log(reg1);
+    console.log(reg5);
 });
 
 
