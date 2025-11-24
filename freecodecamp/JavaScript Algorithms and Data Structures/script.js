@@ -3,6 +3,7 @@ const dateOptionsSelectElement = document.getElementById("date-options");
 
 const date = new Date();
 const day = date.getDate();
+const month = date.getMonth() + 1;
 
 
 
@@ -60,6 +61,17 @@ console.log(dayOfTheMonth); // 20
 
 
 const day = date.getDate();
+
+
+
+
+
+Шаг 5
+
+Метод .getMonth() возвращает число от 0 до 11. Оно представляет собой месяц для указанной даты, где 0 — январь, а 11 — декабрь. Поскольку возвращаемое этим методом число начинается с нуля, необходимо прибавить к нему 1, чтобы получить ожидаемый номер месяца. Используя const, создайте переменную с именем month и присвойте ей месяц из date с помощью метода .getMonth(). Не забудьте прибавить 1 к числу, возвращаемому .getMonth().
+
+
+const month = date.getMonth() + 1;
 
 
 
