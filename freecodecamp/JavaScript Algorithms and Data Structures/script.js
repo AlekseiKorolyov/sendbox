@@ -8,7 +8,7 @@ const year = date.getFullYear();
 const hours = date.getHours();
 const minutes = date.getMinutes();
 
-const formattedDate = `${day}`;
+const formattedDate = `${day}-${month}`;
 
 
 
@@ -118,6 +118,11 @@ const formattedDate = ``;
 
 
 Шаг 10 Внутри шаблонного литерала добавьте встроенное выражение, содержащее переменную дня.
+
+
+
+
+Шаг 11 После переменной дня добавьте тире (-), а затем ещё одно встроенное выражение, содержащее переменную месяца.
 
 
 
