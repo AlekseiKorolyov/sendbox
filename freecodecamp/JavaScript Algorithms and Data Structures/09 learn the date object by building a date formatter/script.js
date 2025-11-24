@@ -11,7 +11,7 @@ const minutes = date.getMinutes();
 const formattedDate = `${day}-${month}-${year}`;
 currentDateParagraph.textContent = formattedDate;
 
-const exampleSentence = "selur pmaCedoCeerf".split();
+const exampleSentence = "selur pmaCedoCeerf".split("");
 console.log(exampleSentence);
 dateOptionsSelectElement.addEventListener("change", () => {});
 switch (dateOptionsSelectElement.value) {
@@ -238,7 +238,22 @@ console.log(exampleSentence);
 
 
 
+Шаг 19
 
+Метод split принимает параметр, называемый разделителем. Разделитель используется для указания компьютеру места каждого разделения. Вот пример использования пустой строки в качестве разделителя:
+Пример кода
+
+// возвращает ["h", "e", "l", "l", "o"]
+"hello".split("");
+
+Другими примерами разделителей могут быть пробел " " или дефис "-". Если разделитель не указан, метод вернет массив, единственным элементом которого будет исходная строка. Обновите метод split, чтобы использовать пустую строку в качестве разделителя. Снова откройте консоль, чтобы увидеть результат.
+
+
+const exampleSentence = "selur pmaCedoCeerf".split();
+
+***
+
+const exampleSentence = "selur pmaCedoCeerf".split("");
 
 
 
