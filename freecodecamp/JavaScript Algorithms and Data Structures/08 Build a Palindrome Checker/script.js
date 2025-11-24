@@ -5,19 +5,19 @@ const resultElement = document.getElementById("result");
 
 checkButton.addEventListener("click", () => {
     const str = "";
-    const reg1 = textInput.value.replace(/[^a-zA-Z0-9]{1,7}/gi, '');
-    const reg2 = reg1.split("");
-    const reg3 = reg2.reverse();
-    const reg4 = reg3.join();
-    const reg5 = reg4.replace(/[^a-zA-Z0-9]/gi, '');
+    const reg1 = textInput.value.replace(/[^a-zA-Z0-9]/gi, '');
+    const reg2 = reg1.toLowerCase();
+    const reg3 = reg2.split("");
+    const reg4 = reg3.reverse();
+    const reg5 = reg4.join();
+    const reg6 = reg5.replace(/[^a-zA-Z0-9]/gi, '');
     if (reg1 === str) {
-        // resultElement.innerHTML = textInput.value;
-        console.log("ssssssss");
-    } else if (reg1 === reg5) {
-        console.log("aaaaa");
+        alert("Please input a value");
+    } else if (reg2 === reg6) {
+        resultElement.innerHTML = `${textInput.value} is a palindrome`;
+    } else {
+        resultElement.innerHTML = `${textInput.value} is not a palindrome`;
     }
-    console.log(reg1);
-    console.log(reg5);
 });
 
 
