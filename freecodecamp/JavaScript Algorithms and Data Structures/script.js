@@ -5,6 +5,7 @@ const date = new Date();
 const day = date.getDate();
 const month = date.getMonth() + 1;
 const year = date.getFullYear();
+const hours = date.getHours();
 
 
 
@@ -84,6 +85,14 @@ const month = date.getMonth() + 1;
 
 const year = date.getFullYear();
 
+
+
+
+Шаг 7
+
+Метод .getHours() возвращает число от 0 до 23. Оно представляет собой час для указанной даты, где 0 — полночь, а 23 — 23:00. Создайте константную переменную с именем hours и присвойте ей час для указанной даты с помощью метода .getHours().
+
+const hours = date.getHours();
 
 
 
