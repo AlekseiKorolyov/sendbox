@@ -11,7 +11,7 @@ const minutes = date.getMinutes();
 const formattedDate = `${day}-${month}-${year}`;
 currentDateParagraph.textContent = formattedDate;
 
-const exampleSentence = "selur pmaCedoCeerf".split("");
+const exampleSentence = "selur pmaCedoCeerf".split("").reverse();
 console.log(exampleSentence);
 dateOptionsSelectElement.addEventListener("change", () => {});
 switch (dateOptionsSelectElement.value) {
@@ -255,6 +255,28 @@ const exampleSentence = "selur pmaCedoCeerf".split();
 
 const exampleSentence = "selur pmaCedoCeerf".split("");
 
+
+
+
+Шаг 20
+
+Чтобы перевернуть массив элементов, можно использовать метод reverse. Этот метод меняет порядок элементов в массиве на обратный. Первый элемент становится последним, а последний — первым. Вот пример использования метода reverse:
+Пример кода
+
+// возвращает [5, 4, 3, 2, 1]
+[1, 2, 3, 4, 5].reverse();
+
+Добавьте метод reverse к вашему методу split. Снова откройте консоль, чтобы увидеть результат. Вспомните, что вы научились сцеплять методы в предыдущем проекте следующим образом:
+Пример кода
+
+method1().method2().method3();
+
+
+const exampleSentence = "selur pmaCedoCeerf".split("");
+
+***
+
+const exampleSentence = "selur pmaCedoCeerf".split("").reverse();
 
 
 
