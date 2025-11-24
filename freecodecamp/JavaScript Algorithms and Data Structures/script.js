@@ -7,6 +7,7 @@ const month = date.getMonth() + 1;
 const year = date.getFullYear();
 const hours = date.getHours();
 const minutes = date.getMinutes();
+const formattedDate = ``;
 
 
 
@@ -104,6 +105,14 @@ const hours = date.getHours();
 
 const minutes = date.getMinutes();
 
+
+
+Шаг 9
+
+Далее создайте константную переменную с именем formattedDate и присвойте ей пустые шаблонные литералы.
+
+
+const formattedDate = ``;
 
 
 
