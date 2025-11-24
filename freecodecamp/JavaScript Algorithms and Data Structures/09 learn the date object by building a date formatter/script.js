@@ -12,6 +12,7 @@ const formattedDate = `${day}-${month}-${year}`;
 currentDateParagraph.textContent = formattedDate;
 
 dateOptionsSelectElement.addEventListener("change", () => {});
+switch (dateOptionsSelectElement.value) {}
 
 
 
@@ -166,6 +167,31 @@ element.addEventListener("change", () => { });
 
 
 dateOptionsSelectElement.addEventListener("change", () => {});
+
+
+
+Шаг 16
+
+Когда пользователь делает выбор из раскрывающегося меню, функция должна получить значение пользователя и отобразить дату в выбранном формате. Для этого можно использовать оператор switch. Оператор switch используется для сравнения выражения с несколькими возможными значениями и выполнения различных блоков кода в зависимости от совпадения. Он обычно используется для ветвления логики. Например, вот как сравнить выражение dayOfWeek с возможными значениями:
+Пример кода
+
+switch (dayOfWeek) {
+ case 1:
+  console.log("Сегодня понедельник!");
+  break;
+ case 2:
+  console.log("Сегодня вторник!");
+  break;
+ // ...cases для других рабочих дней
+ default:
+  console.log("Сегодня выходные!");
+}
+
+Создайте оператор switch и используйте dateOptionsSelectElement.value в качестве выражения.
+
+
+switch (dateOptionsSelectElement.value) {}
+
 
 
 
