@@ -11,7 +11,7 @@ const minutes = date.getMinutes();
 const formattedDate = `${day}-${month}-${year}`;
 currentDateParagraph.textContent = formattedDate;
 
-
+dateOptionsSelectElement.addEventListener("change", () => {});
 
 
 
@@ -152,6 +152,20 @@ console.log(formattedDate);
 
 
 currentDateParagraph.textContent = formattedDate;
+
+
+
+Шаг 15
+
+В JavaScript событие change используется для обнаружения изменения значения HTML-элемента:
+Пример кода
+
+element.addEventListener("change", () => { });
+
+Присоедините метод addEventListener к dateOptionsSelectElement. Первым аргументом прослушивателя событий должна быть строка "change", а вторым — пустая стрелочная функция.
+
+
+dateOptionsSelectElement.addEventListener("change", () => {});
 
 
 
