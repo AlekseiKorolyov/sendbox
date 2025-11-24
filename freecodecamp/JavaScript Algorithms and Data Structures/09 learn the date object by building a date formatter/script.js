@@ -12,7 +12,10 @@ const formattedDate = `${day}-${month}-${year}`;
 currentDateParagraph.textContent = formattedDate;
 
 dateOptionsSelectElement.addEventListener("change", () => {});
-switch (dateOptionsSelectElement.value) {}
+switch (dateOptionsSelectElement.value) {
+    case "yyyy-mm-dd":
+        currentDateParagraph.textContent = formattedDate;
+}
 
 
 
@@ -191,6 +194,27 @@ switch (dayOfWeek) {
 
 
 switch (dateOptionsSelectElement.value) {}
+
+
+
+
+
+Шаг 17
+
+Когда пользователь выбирает вариант «Год, Месяц, День» из раскрывающегося списка, формат даты должен отражать этот выбор. Для этого можно добавить в оператор switch предложение case, которое проверяет соответствие выражению expr, а затем код, который выполняется в случае совпадения. Вот пример, где предложение case проверяет, что expr равно строке «case123»:
+Пример кода
+
+switch (expr) {
+ case 'case123':
+  // Введите здесь свою логику
+}
+
+Добавьте вариант case со значением «yyyy-mm-dd». Внутри варианта установите текстовое содержимое currentDateParagraph равным значению formattedDate.
+
+
+case "yyyy-mm-dd":
+    currentDateParagraph.textContent = formattedDate;
+
 
 
 
