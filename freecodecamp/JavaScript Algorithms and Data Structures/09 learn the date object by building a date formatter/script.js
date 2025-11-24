@@ -11,6 +11,8 @@ const minutes = date.getMinutes();
 const formattedDate = `${day}-${month}-${year}`;
 currentDateParagraph.textContent = formattedDate;
 
+const exampleSentence = "selur pmaCedoCeerf".split();
+console.log(exampleSentence);
 dateOptionsSelectElement.addEventListener("change", () => {});
 switch (dateOptionsSelectElement.value) {
     case "yyyy-mm-dd":
@@ -214,6 +216,30 @@ switch (expr) {
 
 case "yyyy-mm-dd":
     currentDateParagraph.textContent = formattedDate;
+
+
+
+
+
+Шаг 18
+
+Чтобы отформатировать дату в формате гггг-мм-дд, вам потребуется использовать методы split, reverse и join. Но сначала вам нужно будет разобрать несколько практических примеров, чтобы лучше понять, как использовать их в контексте этого проекта. Метод split() используется для разделения строки на подстроки по указанному разделителю. Затем он возвращает эти подстроки как элементы массива. Вот пример того, как взять слова "Hello World" и вернуть массив из одного элемента:
+Пример кода
+
+const greeting = "Hello World";
+greeting.split(); // ["Hello World"]
+
+Создайте новую константную переменную exampleSentence и присвойте ей результат "selur pmaCedoCeerf".split(). Затем добавьте консольный оператор для логирования значения exampleSentence. Откройте консоль, чтобы увидеть результат.
+
+
+const exampleSentence = "selur pmaCedoCeerf".split();
+console.log(exampleSentence);
+
+
+
+
+
+
 
 
 
