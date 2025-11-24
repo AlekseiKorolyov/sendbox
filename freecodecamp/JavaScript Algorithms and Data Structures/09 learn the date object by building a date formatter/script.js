@@ -10,6 +10,8 @@ const minutes = date.getMinutes();
 
 const formattedDate = `${day}-${month}-${year}`;
 
+console.log(formattedDate);
+
 
 
 
@@ -133,6 +135,14 @@ const formattedDate = ``;
 Шаг 12
 
 После переменной месяца добавьте тире, а затем ещё одно встроенное выражение, содержащее переменную года.
+
+
+
+Шаг 13
+
+Чтобы увидеть результаты переменной formattedDate, добавьте оператор console.log() и передайте переменную formattedDate в качестве аргумента. Откройте консоль, и вы увидите распечатанную дату.
+
+console.log(formattedDate);
 
 
 
