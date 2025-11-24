@@ -9,8 +9,7 @@ const hours = date.getHours();
 const minutes = date.getMinutes();
 
 const formattedDate = `${day}-${month}-${year}`;
-
-console.log(formattedDate);
+currentDateParagraph.textContent = formattedDate;
 
 
 
@@ -143,6 +142,16 @@ const formattedDate = ``;
 Чтобы увидеть результаты переменной formattedDate, добавьте оператор console.log() и передайте переменную formattedDate в качестве аргумента. Откройте консоль, и вы увидите распечатанную дату.
 
 console.log(formattedDate);
+
+
+
+
+Шаг 14
+
+Используйте свойство textContent для currentDateParagraph, чтобы установить его текстовое содержимое в соответствии со значением переменной formattedDate. Также обязательно удалите строку console.log(formattedDate);.
+
+
+currentDateParagraph.textContent = formattedDate;
 
 
 
