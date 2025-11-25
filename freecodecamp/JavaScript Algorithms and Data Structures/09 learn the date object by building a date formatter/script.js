@@ -12,20 +12,22 @@ const formattedDate = `${day}-${month}-${year}`;
 currentDateParagraph.textContent = formattedDate;
 
 dateOptionsSelectElement.addEventListener("change", () => {
+
+    switch (dateOptionsSelectElement.value) {
+        case "yyyy-mm-dd":
+            currentDateParagraph.textContent = formattedDate
+                .split("-")
+                .reverse()
+                .join("-");
+            break;
+        case "mm-dd-yyyy-h-mm":
+            currentDateParagraph.textContent = `${month}-${day}-${year} ${hours} Hours ${minutes} Minutes`;
+            break;
+        default:
+            currentDateParagraph.textContent = formattedDate;
+
+    }
 });
-switch (dateOptionsSelectElement.value) {
-    case "yyyy-mm-dd":
-        currentDateParagraph.textContent = formattedDate
-            .split("-")
-            .reverse()
-            .join("-");
-        break;
-
-    case "mm-dd-yyyy-h-mm":
-        currentDateParagraph.textContent = `${month}-${day}-${year} ${hours} Hours ${minutes} Minutes`
-        break;
-}
-
 
 /*
 
@@ -324,5 +326,32 @@ case "mm-dd-yyyy-h-mm":
 
 
 ${month}-${day}-${year} ${hours} Hours ${minutes} Minutes
+
+
+
+
+Шаг 27
+
+В операторе switch условие по умолчанию выполняется, когда ни одно из предыдущих условий не соответствует вычисляемому значению. Оно служит универсальным для всех остальных возможных случаев. Например:
+Пример кода
+
+const dayOfWeek = 7;
+switch (dayOfWeek) {
+ case 1:
+  console.log("Сегодня понедельник!");
+  break;
+ case 2:
+  console.log("Сегодня вторник!");
+  break;
+ // ...варианты для других рабочих дней
+ default:
+  console.log("Сегодня выходные!");
+}
+
+Для случая по умолчанию установите текстовое содержимое currentDateParagraph равным значению formattedDate. На этом ваш форматировщик даты готов! Теперь вы можете форматировать текущую дату тремя разными способами.
+
+
+default:
+      currentDateParagraph.textContent = formattedDate;
 
  */
