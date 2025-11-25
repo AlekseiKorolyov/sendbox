@@ -11,7 +11,8 @@ const minutes = date.getMinutes();
 const formattedDate = `${day}-${month}-${year}`;
 currentDateParagraph.textContent = formattedDate;
 
-dateOptionsSelectElement.addEventListener("change", () => {});
+dateOptionsSelectElement.addEventListener("change", () => {
+});
 switch (dateOptionsSelectElement.value) {
     case "yyyy-mm-dd":
         currentDateParagraph.textContent = formattedDate
@@ -19,27 +20,11 @@ switch (dateOptionsSelectElement.value) {
             .reverse()
             .join("-");
         break;
+
+    case "mm-dd-yyyy-h-mm":
+        currentDateParagraph.textContent = ``
+        break;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*
@@ -316,5 +301,17 @@ case 'case123':
 }
 
 Добавьте оператор break в конец блока case.
+
+
+
+
+
+Шаг 25
+
+Добавьте ещё один вариант со значением «мм-дд-гггг-ч-мм». Внутри этого варианта установите текстовое содержимое currentDateParagraph в виде пустых шаблонных литералов. Также обязательно добавьте оператор break для завершения оператора switch.
+
+case "mm-dd-yyyy-h-mm":
+      currentDateParagraph.textContent = ``
+    break;
 
  */
