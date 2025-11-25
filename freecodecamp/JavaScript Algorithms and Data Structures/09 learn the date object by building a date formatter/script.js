@@ -14,7 +14,11 @@ currentDateParagraph.textContent = formattedDate;
 dateOptionsSelectElement.addEventListener("change", () => {});
 switch (dateOptionsSelectElement.value) {
     case "yyyy-mm-dd":
-        currentDateParagraph.textContent = formattedDate.split("-").reverse().join("-");
+        currentDateParagraph.textContent = formattedDate
+            .split("-")
+            .reverse()
+            .join("-");
+        break;
 }
 
 
@@ -297,9 +301,20 @@ const exampleSentence = "selur pmaCedoCeerf".split("").reverse();
 
 Как и в предыдущем шаге, используйте цепочку методов для разделения, обращения и объединения переменной formattedDate. Используйте символ «-» в методах разделения и объединения. Протестируйте изменения, выбрав в раскрывающемся меню пункт «Год, Месяц, День». Теперь дата должна отображаться в формате гггг-мм-дд.
 
-.split("-").reverse().join("-")
 
 
 
+Шаг 24
+
+Если ваш оператор switch будет содержать несколько вариантов, рекомендуется включить оператор break. Оператор break сообщит интерпретатору JavaScript о необходимости прекратить выполнение операторов. Без добавления оператора break в конце каждого блока case программа выполнит код для всех соответствующих вариантов:
+Пример кода
+
+switch (someVariable) {
+case 'case123':
+// Запишите здесь свою логику break;
+// Завершает выполнение оператора switch
+}
+
+Добавьте оператор break в конец блока case.
 
  */
