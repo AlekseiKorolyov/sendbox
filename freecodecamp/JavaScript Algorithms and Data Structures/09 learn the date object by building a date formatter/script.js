@@ -14,7 +14,7 @@ currentDateParagraph.textContent = formattedDate;
 dateOptionsSelectElement.addEventListener("change", () => {});
 switch (dateOptionsSelectElement.value) {
     case "yyyy-mm-dd":
-        currentDateParagraph.textContent = formattedDate;
+        currentDateParagraph.textContent = formattedDate.split("-").reverse().join("-");
 }
 
 
@@ -292,6 +292,12 @@ const exampleSentence = "selur pmaCedoCeerf".split("").reverse();
 
 
 
+
+Шаг 23
+
+Как и в предыдущем шаге, используйте цепочку методов для разделения, обращения и объединения переменной formattedDate. Используйте символ «-» в методах разделения и объединения. Протестируйте изменения, выбрав в раскрывающемся меню пункт «Год, Месяц, День». Теперь дата должна отображаться в формате гггг-мм-дд.
+
+.split("-").reverse().join("-")
 
 
 
