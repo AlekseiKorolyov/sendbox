@@ -11,7 +11,7 @@ const minutes = date.getMinutes();
 const formattedDate = `${day}-${month}-${year}`;
 currentDateParagraph.textContent = formattedDate;
 
-const exampleSentence = "selur pmaCedoCeerf".split("").reverse();
+const exampleSentence = "selur pmaCedoCeerf".split("").reverse().join("");
 console.log(exampleSentence);
 dateOptionsSelectElement.addEventListener("change", () => {});
 switch (dateOptionsSelectElement.value) {
@@ -278,6 +278,19 @@ const exampleSentence = "selur pmaCedoCeerf".split("");
 
 const exampleSentence = "selur pmaCedoCeerf".split("").reverse();
 
+
+
+
+
+Шаг 21
+
+В предыдущем проекте вы научились работать с методом join. Этот метод принимает массив элементов и объединяет их в строку. Подобно методу split, метод join также принимает необязательный разделитель. Если разделитель не указан, разделителем по умолчанию будет запятая. Вот пример использования метода join:
+Пример кода
+
+// возвращает "1-2-3-4-5"
+[1, 2, 3, 4, 5].join("-");
+
+Добавьте метод join к обратному методу. Передайте пустую строку в качестве разделителя. Откройте консоль и посмотрите вывод.
 
 
 
