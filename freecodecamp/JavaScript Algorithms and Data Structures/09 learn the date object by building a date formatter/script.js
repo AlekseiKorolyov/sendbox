@@ -22,7 +22,7 @@ switch (dateOptionsSelectElement.value) {
         break;
 
     case "mm-dd-yyyy-h-mm":
-        currentDateParagraph.textContent = ``
+        currentDateParagraph.textContent = `${month}-${day}-${year} ${hours} Hours ${minutes} Minutes`
         break;
 }
 
@@ -313,5 +313,16 @@ case 'case123':
 case "mm-dd-yyyy-h-mm":
       currentDateParagraph.textContent = ``
     break;
+
+
+
+
+
+Шаг 26
+
+Когда пользователь выбирает в раскрывающемся списке пункт «Месяц, День, Год, Часы, Минуты», необходимо отобразить дату в формате мм-дд-гггг ч Часы м Минуты. В случае mm-dd-yyyy-h-mm используйте строковую интерполяцию, чтобы присвоить отформатированную дату, указанную выше, свойству textContent объекта currentDateParagraph. Обязательно используйте переменные month, day, year, hours, and minutes в вашем ответе.
+
+
+${month}-${day}-${year} ${hours} Hours ${minutes} Minutes
 
  */
