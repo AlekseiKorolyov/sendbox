@@ -173,9 +173,7 @@ const myFavoriteFootballTeam = {
 
 Object.freeze(myFavoriteFootballTeam);
 
-const sport = myFavoriteFootballTeam.sport;
-const team = myFavoriteFootballTeam.team;
-
+const { sport, team } = myFavoriteFootballTeam;
 
 
 
@@ -299,5 +297,32 @@ const sport = myFavoriteFootballTeam.sport;
 
 
 const team = myFavoriteFootballTeam.team;
+
+
+
+Шаг 15
+
+На последних двух шагах вы обращались к свойствам объекта myFavoriteFootballTeam, используя точечную нотацию, и присваивали их новым константным переменным. Но в JavaScript есть более простой способ добиться той же цели. Синтаксис деструктуризации объектов позволяет извлекать значения из массивов и объектов:
+Пример кода
+
+const developerObj = {
+ name: "Jessica Wilkins",
+ isDeveloper: true
+};
+
+// Деструктуризация объекта
+
+const {name, isDeveloper } = developerObj;
+
+Перепишите две строки кода ниже, используя новый синтаксис деструктуризации. Ваш ответ должен состоять из одной строки кода.
+
+
+
+const sport = myFavoriteFootballTeam.sport;
+const team = myFavoriteFootballTeam.team;
+
+***
+
+const { sport, team } = myFavoriteFootballTeam;
 
  */
