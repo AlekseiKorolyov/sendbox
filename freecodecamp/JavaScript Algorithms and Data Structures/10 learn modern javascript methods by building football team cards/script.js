@@ -172,10 +172,9 @@ const myFavoriteFootballTeam = {
 };
 
 Object.freeze(myFavoriteFootballTeam);
-
 const { sport, team, year, players } = myFavoriteFootballTeam;
 
-
+const { coachName } = myFavoriteFootballTeam.headCoach;
 
 
 
@@ -328,9 +327,19 @@ const { sport, team } = myFavoriteFootballTeam;
 
 
 Шаг 16
+
 Далее добавьте год и игроков в ваше задание по деструктуризации.
 
 
 const { sport, team, year, players }
+
+
+
+Шаг 17
+
+Теперь вам нужно получить доступ к значению coachName объекта myFavoriteFootballTeam.headCoach, используя синтаксис деструктуризации.
+
+
+const { coachName } = myFavoriteFootballTeam.headCoach;
 
  */
