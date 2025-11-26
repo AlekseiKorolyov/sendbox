@@ -6,6 +6,10 @@ const playerCards = document.getElementById("player-cards");
 const playersDropdownList = document.getElementById("players");
 const myFavoriteFootballTeam = {
     team: "Argentina",
+    sport: "Football",
+    year: 1986,
+    isWorldCupWinner: true,
+    headCoach: {}
 };
 
 
@@ -47,6 +51,16 @@ const myFavoriteFootballTeam = {
   team: "Argentina",
 };
 
+
+Шаг 7
+
+Под свойством команды добавьте четыре пары «ключ-значение». Ключ с именем «спорт» и строковое значение «Футбол». Ключ с именем «год» и числовое значение «1986». Ключ с именем «isWorldCupWinner» и логическое значение, равное true. Новый ключ с именем «headCoach» и значением пустого объекта.
+
+team: "Argentina",
+sport: "Football",
+year: 1986,
+isWorldCupWinner: true,
+headCoach: {}
 
 
 
