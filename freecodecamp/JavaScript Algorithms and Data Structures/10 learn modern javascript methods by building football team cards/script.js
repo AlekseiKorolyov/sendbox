@@ -175,6 +175,7 @@ Object.freeze(myFavoriteFootballTeam);
 const { sport, team, year, players } = myFavoriteFootballTeam;
 
 const { coachName } = myFavoriteFootballTeam.headCoach;
+typeOfSport.textContent = sport;
 
 
 
@@ -341,5 +342,14 @@ const { sport, team, year, players }
 
 
 const { coachName } = myFavoriteFootballTeam.headCoach;
+
+
+
+
+Шаг 18
+
+Теперь вам нужно начать отображать информацию о команде на экране. Под назначениями деструктуризации присвойте переменной «sport» значение typeOfSport.textContent. После завершения этой задачи вы увидите результат в окне предварительного просмотра.
+
+typeOfSport.textContent = sport;
 
  */
