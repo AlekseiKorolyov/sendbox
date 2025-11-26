@@ -4,7 +4,9 @@ const worldCupYear = document.getElementById("year");
 const headCoach = document.getElementById("head-coach");
 const playerCards = document.getElementById("player-cards");
 const playersDropdownList = document.getElementById("players");
-const myFavoriteFootballTeam = {};
+const myFavoriteFootballTeam = {
+    team: "Argentina",
+};
 
 
 
@@ -34,6 +36,16 @@ const myFavoriteFootballTeam = {};
 
 const myFavoriteFootballTeam = {};
 
+
+
+Шаг 6
+
+Внутри объекта myFavoriteFootballTeam добавьте новое свойство с ключом «team» и строковым значением «Argentina».
+
+
+const myFavoriteFootballTeam = {
+  team: "Argentina",
+};
 
 
 
