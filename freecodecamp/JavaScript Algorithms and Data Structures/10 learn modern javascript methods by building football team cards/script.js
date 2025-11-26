@@ -13,7 +13,15 @@ const myFavoriteFootballTeam = {
         coachName: "Carlos Bilardo",
         matches: 7,
     },
-    players: [],
+    players: [
+        {
+            name: "Sergio Almirón",
+            position: "forward",
+            number: 1,
+            isCaptain: false,
+            nickname: null,
+        },
+    ],
 };
 
 
@@ -89,6 +97,31 @@ headCoach: {
     matches: 7,
   },
   players: [],
+
+
+
+
+Шаг 10
+
+В массиве игроков создайте новый объект со следующими свойствами:
+Пример кода
+
+Имя: "Серхио Альмирон"
+Позиция: "нападающий"
+Номер: 1
+isCaptain: false
+Прозвище: null
+
+ПРИМЕЧАНИЕ: Номера игроков команды расположены в алфавитном порядке по фамилии. Это отличается от традиционной нумерации, где номера соответствуют номерам на футболках игроков.
+
+
+{
+name: "Sergio Almirón",
+position: "forward",
+number: 1,
+isCaptain: false,
+nickname: null,
+},
 
 
 
