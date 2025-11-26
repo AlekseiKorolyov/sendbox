@@ -174,6 +174,7 @@ const myFavoriteFootballTeam = {
 Object.freeze(myFavoriteFootballTeam);
 
 const sport = myFavoriteFootballTeam.sport;
+const team = myFavoriteFootballTeam.team;
 
 
 
@@ -290,5 +291,13 @@ Object.freeze(myFavoriteFootballTeam);
 
 const sport = myFavoriteFootballTeam.sport;
 
+
+
+Шаг 14
+
+Под переменной «спорт» найдите ключ «команда» из объекта myFavoriteFootballTeam и присвойте его новой константной переменной «команда».
+
+
+const team = myFavoriteFootballTeam.team;
 
  */
