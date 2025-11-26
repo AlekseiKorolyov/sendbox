@@ -9,7 +9,10 @@ const myFavoriteFootballTeam = {
     sport: "Football",
     year: 1986,
     isWorldCupWinner: true,
-    headCoach: {}
+    headCoach: {
+        coachName: "Carlos Bilardo",
+        matches: 7,
+    },
 };
 
 
@@ -64,9 +67,14 @@ headCoach: {}
 
 
 
+Шаг 8
 
+В объект headCoach добавьте свойство с ключом coachName и строковым значением «Carlos Bilardo». Под этим свойством добавьте ещё один ключ с именем matches и числовым значением 7.
 
-
+headCoach: {
+    coachName: "Carlos Bilardo",
+    matches: 7,
+  },
 
 
 
