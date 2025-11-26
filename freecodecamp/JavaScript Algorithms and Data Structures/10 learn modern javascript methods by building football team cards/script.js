@@ -173,7 +173,7 @@ const myFavoriteFootballTeam = {
 
 Object.freeze(myFavoriteFootballTeam);
 
-const { sport, team } = myFavoriteFootballTeam;
+const { sport, team, year, players } = myFavoriteFootballTeam;
 
 
 
@@ -324,5 +324,13 @@ const team = myFavoriteFootballTeam.team;
 ***
 
 const { sport, team } = myFavoriteFootballTeam;
+
+
+
+Шаг 16
+Далее добавьте год и игроков в ваше задание по деструктуризации.
+
+
+const { sport, team, year, players }
 
  */
