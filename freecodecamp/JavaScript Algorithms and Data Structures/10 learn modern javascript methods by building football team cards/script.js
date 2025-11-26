@@ -13,6 +13,7 @@ const myFavoriteFootballTeam = {
         coachName: "Carlos Bilardo",
         matches: 7,
     },
+    players: [],
 };
 
 
@@ -77,6 +78,17 @@ headCoach: {
   },
 
 
+
+
+Шаг 9
+
+Под свойством headCoach создайте новое свойство с ключом с именем players и значением пустого массива.
+
+  headCoach: {
+    coachName: "Carlos Bilardo",
+    matches: 7,
+  },
+  players: [],
 
 
 
