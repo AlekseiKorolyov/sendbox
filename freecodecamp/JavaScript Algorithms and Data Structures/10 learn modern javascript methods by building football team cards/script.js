@@ -170,9 +170,10 @@ const myFavoriteFootballTeam = {
         },
     ],
 };
+
 Object.freeze(myFavoriteFootballTeam);
 
-
+const sport = myFavoriteFootballTeam.sport;
 
 
 
@@ -280,6 +281,14 @@ nickname: null,
 
 Object.freeze(myFavoriteFootballTeam);
 
+
+
+Шаг 13
+
+Следующий шаг — получить доступ к ключу sport объекта myFavoriteFootballTeam и присвоить его новой константной переменной sport. Напомним, что для этого можно использовать точечную нотацию.
+
+
+const sport = myFavoriteFootballTeam.sport;
 
 
  */
