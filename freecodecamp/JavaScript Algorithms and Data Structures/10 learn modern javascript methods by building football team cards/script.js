@@ -180,7 +180,9 @@ teamName.textContent = team;
 worldCupYear.textContent = year;
 headCoach.textContent = coachName;
 
-const setPlayerCards = (arr = players) => {};
+const setPlayerCards = (arr = players) => {
+    playerCards.innerHTML += arr.map(() => {});
+};
 
 
 
@@ -383,6 +385,24 @@ console.log(greeting()); // Привет, Anonymous
 
 
 const setPlayerCards = (arr = players) => {};
+
+
+
+Шаг 23
+
+Следующий шаг — создание нового массива, который будет отвечать за добавление информации о карточке игрока на страницу. Внутри функции setPlayerCards добавьте метод map к arr, который будет принимать пустую функцию обратного вызова. Затем используйте оператор сложения и присваивания +=, чтобы присвоить новый массив элементу playerCards.innerHTML. Помните, что свойство innerHTML получает, или, в данном случае, задаёт HTML-разметку для элемента playerCards.
+
+
+playerCards.innerHTML += arr.map(() => {});
+
+
+
+
+
+
+
+
+
 
 
  */
