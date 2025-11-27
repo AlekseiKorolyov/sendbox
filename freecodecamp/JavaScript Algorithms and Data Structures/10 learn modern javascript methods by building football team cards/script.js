@@ -184,7 +184,7 @@ const setPlayerCards = (arr = players) => {
     playerCards.innerHTML += arr.map(() => {
         return `
             <div class="player-card">
-                <h2>${name}</h2>
+                <h2>${isCaptain ? "(Captain)" : ""} ${name}</h2>
             </div>
         `;
     });
@@ -446,6 +446,12 @@ ${expression goes here}
 
 
 
+Шаг 27
+
+Следующий шаг — отобразить слово (Captain) рядом с игроком, если он указан как капитан команды. Перед выражением ${name} добавьте новое встроенное выражение. Внутри этого выражения используйте тернарный оператор для проверки истинности isCaptain. Если да, верните "(Captain)", в противном случае верните пустую строку.
+
+
+<h2>${isCaptain ? "(Captain)" : ""} ${name}</h2>
 
 
 
