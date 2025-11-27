@@ -196,6 +196,9 @@ const setPlayerCards = (arr = players) => {
 
 playersDropdownList.addEventListener("change", (e) => {
     playerCards.innerHTML = "";
+    switch (e.target.value) {
+
+    };
 });
 
 
@@ -554,6 +557,17 @@ console.log(e.target.value);
 
 playerCards.innerHTML = "";
 
+
+
+
+Шаг 37
+
+Следующим шагом будет добавление оператора switch, который будет проверять выбор пользователя в раскрывающемся меню игроков и отфильтровывать карты в зависимости от позиции игрока. Добавьте оператор switch и используйте e.target.value для выражения.
+
+
+switch (e.target.value) {
+
+};
 
 
 
