@@ -187,6 +187,7 @@ const setPlayerCards = (arr = players) => {
                 <h2>${isCaptain ? "(Captain)" : ""} ${name}</h2>
                 <p>Position: ${position}</p>
                 <p>Number: ${number}</p>
+                <p>Nickname: </p>
             </div>
         `;
     });
@@ -474,6 +475,14 @@ ${expression goes here}
 
 <p>Number: ${number}</p>
 
+
+
+Шаг 30
+
+Под существующими элементами абзаца добавьте ещё один элемент абзаца с текстом «Псевдоним:».
+
+
+<p>Nickname: </p>
 
 
  */
