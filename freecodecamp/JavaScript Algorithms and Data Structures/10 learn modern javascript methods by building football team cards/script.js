@@ -194,7 +194,7 @@ const setPlayerCards = (arr = players) => {
 };
 
 
-playersDropdownList.addEventListener("change", () => {});
+playersDropdownList.addEventListener("change", (e) => {});
 
 
 
@@ -526,6 +526,12 @@ ${expression goes here}
 
 playersDropdownList.addEventListener("change", () => {});
 
+
+
+
+Шаг 34
+
+Для функции обратного вызова передайте e в качестве параметра. e представляет собой объект, содержащий информацию об этом событии.
 
 
 
