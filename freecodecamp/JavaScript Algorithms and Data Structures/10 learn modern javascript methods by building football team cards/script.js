@@ -194,7 +194,7 @@ const setPlayerCards = (arr = players) => {
 };
 
 
-
+playersDropdownList.addEventListener("change", () => {});
 
 
 
@@ -513,6 +513,19 @@ ${expression goes here}
       `;
     }
   ).join("")
+
+
+
+
+
+
+Шаг 33
+
+Следующий шаг — создание функции, которая будет определять, когда пользователь делает выбор из списка playersDropdownList. Используйте метод .addEventListener() для playersDropdownList. В прослушивателе событий передайте тип события «change» и пустую функцию обратного вызова.
+
+
+playersDropdownList.addEventListener("change", () => {});
+
 
 
 
