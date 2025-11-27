@@ -194,9 +194,10 @@ const setPlayerCards = (arr = players) => {
 };
 
 
-playersDropdownList.addEventListener("change", (e) => {});
+playersDropdownList.addEventListener("change", (e) => {
+    playerCards.innerHTML = "";
+});
 
-console.log(e.target.value);
 
 
 
@@ -543,6 +544,15 @@ playersDropdownList.addEventListener("change", () => {});
 
 console.log(e.target.value);
 
+
+
+
+Шаг 36
+
+Удалите оператор console.log, созданный на предыдущем шаге. Следующим шагом будет сброс содержимого элемента playerCards. Внутри функции обратного вызова обратитесь к свойству innerHTML элемента playerCards и присвойте ему значение пустой строки.
+
+
+playerCards.innerHTML = "";
 
 
 
