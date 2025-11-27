@@ -180,7 +180,7 @@ teamName.textContent = team;
 worldCupYear.textContent = year;
 headCoach.textContent = coachName;
 
-const setPlayerCards = () => {};
+const setPlayerCards = (arr = players) => {};
 
 
 
@@ -364,6 +364,25 @@ typeOfSport.textContent = sport;
 
 
 const setPlayerCards = () => {};
+
+
+
+
+Шаг 22
+
+Параметры функции можно инициализировать значениями по умолчанию. Если функция вызывается без аргумента, будет использовано значение по умолчанию:
+Пример кода
+
+const greeting = (name = "Anonymous") => {
+ return "Hello " + name;
+}
+console.log(greeting("John")); // Привет, John
+console.log(greeting()); // Привет, Anonymous
+
+Добавьте в функцию setPlayerCards новый параметр с именем arr и присвойте ему значение по умолчанию для игроков. Помните, что вы деструктурировали переменную players из объекта myFavoriteFootballTeam в строке 175.
+
+
+const setPlayerCards = (arr = players) => {};
 
 
  */
