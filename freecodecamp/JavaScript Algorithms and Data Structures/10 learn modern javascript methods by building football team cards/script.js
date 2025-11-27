@@ -206,6 +206,9 @@ playersDropdownList.addEventListener("change", (e) => {
         case "midfielder":
             setPlayerCards(players.filter((player) => player.position === "midfielder"));
             break;
+        case "defender":
+            setPlayerCards(players.filter((player) => player.position === "defender"));
+            break;
     }
 });
 
@@ -623,6 +626,19 @@ break;
     case "midfielder":
       setPlayerCards(players.filter((player) => player.position === "midfielder"));
     break;
+
+
+
+
+
+Шаг 43
+
+Добавьте новый случай для «defender», который проверяет, равно ли player.position «defender», следуя той же схеме, что и в предыдущем шаге.
+
+
+case "defender":
+      setPlayerCards(players.filter((player) => player.position === "defender"));
+      break;
 
 
  */
