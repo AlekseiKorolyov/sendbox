@@ -197,8 +197,8 @@ const setPlayerCards = (arr = players) => {
 playersDropdownList.addEventListener("change", (e) => {
     playerCards.innerHTML = "";
     switch (e.target.value) {
-
-    };
+        case "nickname":
+    }
 });
 
 
@@ -569,6 +569,13 @@ switch (e.target.value) {
 
 };
 
+
+
+Шаг 38
+
+Если пользователь выбирает «Псевдонимы» в раскрывающемся меню, вам нужно отфильтровать карточки игроков с псевдонимами. Начните с добавления условия case для «псевдоним» в оператор switch.
+
+case "nickname":
 
 
 
