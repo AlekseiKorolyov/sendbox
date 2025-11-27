@@ -199,6 +199,7 @@ playersDropdownList.addEventListener("change", (e) => {
     switch (e.target.value) {
         case "nickname":
             setPlayerCards(players.filter((player) => player.nickname != null));
+            break;
     }
 });
 
@@ -587,6 +588,13 @@ case "nickname":
 
 
 setPlayerCards(players.filter((player) => player.nickname != null));
+
+
+
+
+Шаг 40
+
+Прежде чем перейти к следующему случаю, вам необходимо добавить оператор break. Добавьте оператор break под вызовом setPlayerCards.
 
 
 
