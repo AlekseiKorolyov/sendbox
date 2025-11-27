@@ -199,7 +199,10 @@ playersDropdownList.addEventListener("change", (e) => {
     switch (e.target.value) {
         case "nickname":
             setPlayerCards(players.filter((player) => player.nickname != null));
-            break;
+        break;
+        case "forward":
+            setPlayerCards(players.filter((player) => player.position === "forward"));
+        break;
     }
 });
 
@@ -596,6 +599,16 @@ setPlayerCards(players.filter((player) => player.nickname != null));
 
 Прежде чем перейти к следующему случаю, вам необходимо добавить оператор break. Добавьте оператор break под вызовом setPlayerCards.
 
+
+
+Шаг 41
+
+Далее добавьте условие case для «forward». В этом случае вызовите функцию setPlayerCards с аргументом players.filter(). В метод filter() добавьте функцию обратного вызова с параметром player, которая будет проверять, равно ли player.position значению «forward». Наконец, добавьте оператор break под вызовом функции setPlayerCards.
+
+
+case "forward":
+      setPlayerCards(players.filter((player) => player.position === "forward"));
+break;
 
 
 
