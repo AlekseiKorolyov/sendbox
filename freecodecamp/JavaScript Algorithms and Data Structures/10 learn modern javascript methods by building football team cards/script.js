@@ -199,10 +199,13 @@ playersDropdownList.addEventListener("change", (e) => {
     switch (e.target.value) {
         case "nickname":
             setPlayerCards(players.filter((player) => player.nickname != null));
-        break;
+            break;
         case "forward":
             setPlayerCards(players.filter((player) => player.position === "forward"));
-        break;
+            break;
+        case "midfielder":
+            setPlayerCards(players.filter((player) => player.position === "midfielder"));
+            break;
     }
 });
 
@@ -610,6 +613,16 @@ case "forward":
       setPlayerCards(players.filter((player) => player.position === "forward"));
 break;
 
+
+
+Шаг 42
+
+Добавьте новый случай для «полузащитника», который проверяет, равно ли player.position слову «полузащитник», следуя той же схеме, что и в предыдущем шаге.
+
+
+    case "midfielder":
+      setPlayerCards(players.filter((player) => player.position === "midfielder"));
+    break;
 
 
  */
