@@ -173,32 +173,34 @@ const myFavoriteFootballTeam = {
 
 Object.freeze(myFavoriteFootballTeam);
 const { sport, team, year, players } = myFavoriteFootballTeam;
-
 const { coachName } = myFavoriteFootballTeam.headCoach;
+
 typeOfSport.textContent = sport;
 teamName.textContent = team;
 worldCupYear.textContent = year;
 headCoach.textContent = coachName;
 
 const setPlayerCards = (arr = players) => {
-    playerCards.innerHTML += arr.map(() => {
-        return `
-            <div class="player-card">
-                <h2>${isCaptain ? "(Captain)" : ""} ${name}</h2>
-                <p>Position: ${position}</p>
-                <p>Number: ${number}</p>
-                <p>Nickname: ${nickname ? nickname : "N/A"}</p>
-            </div>
-        `;
-    }).join("");
+    playerCards.innerHTML += arr
+        .map(
+            ({ name, position, number, isCaptain, nickname }) => {
+                return `
+        <div class="player-card">
+          <h2>${isCaptain ? "(Captain)" : ""} ${name}</h2>
+          <p>Position: ${position}</p>
+          <p>Number: ${number}</p>
+          <p>Nickname: ${nickname !== null ? nickname : "N/A"}</p>
+        </div>
+      ` }
+        ).join("");
 };
-
 
 playersDropdownList.addEventListener("change", (e) => {
     playerCards.innerHTML = "";
+
     switch (e.target.value) {
         case "nickname":
-            setPlayerCards(players.filter((player) => player.nickname != null));
+            setPlayerCards(players.filter((player) => player.nickname !== null));
             break;
         case "forward":
             setPlayerCards(players.filter((player) => player.position === "forward"));
@@ -212,10 +214,10 @@ playersDropdownList.addEventListener("change", (e) => {
         case "goalkeeper":
             setPlayerCards(players.filter((player) => player.position === "goalkeeper"));
             break;
+        default:
+            setPlayerCards();
     }
 });
-
-
 
 
 
@@ -652,6 +654,17 @@ case "defender":
 case "goalkeeper":
       setPlayerCards(players.filter((player) => player.position === "goalkeeper"));
       break;
+
+
+
+
+Шаг 45
+
+Заключительный шаг — добавить условие по умолчанию, если ни одно из других условий не соответствует выбору пользователя. Для условия по умолчанию вызовите функцию setPlayerCards без передачи каких-либо аргументов. Протестируйте выпадающее меню: вы должны увидеть, что карточки игроков отфильтрованы по позиции или прозвищу. Поздравляем с завершением проекта карточек футбольных команд!
+
+
+default:
+      setPlayerCards();
 
 
  */
