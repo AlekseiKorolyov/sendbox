@@ -196,7 +196,7 @@ const setPlayerCards = (arr = players) => {
 
 playersDropdownList.addEventListener("change", (e) => {});
 
-
+console.log(e.target.value);
 
 
 
@@ -532,6 +532,16 @@ playersDropdownList.addEventListener("change", () => {});
 Шаг 34
 
 Для функции обратного вызова передайте e в качестве параметра. e представляет собой объект, содержащий информацию об этом событии.
+
+
+
+
+Шаг 35
+
+Внутри функции обратного вызова добавьте console.log со значением e.target.value. Откройте консоль и выберите игрока из выпадающего списка. Вы должны увидеть значение этого выбора в консоли. e.target.value представляет собой свойство value элемента playersDropdownList. В дальнейшем вы будете использовать это значение для отображения карточек игроков в зависимости от их позиции.
+
+
+console.log(e.target.value);
 
 
 
