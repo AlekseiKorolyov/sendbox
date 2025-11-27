@@ -209,6 +209,9 @@ playersDropdownList.addEventListener("change", (e) => {
         case "defender":
             setPlayerCards(players.filter((player) => player.position === "defender"));
             break;
+        case "goalkeeper":
+            setPlayerCards(players.filter((player) => player.position === "goalkeeper"));
+            break;
     }
 });
 
@@ -638,6 +641,16 @@ break;
 
 case "defender":
       setPlayerCards(players.filter((player) => player.position === "defender"));
+      break;
+
+
+
+
+Шаг 44 Добавьте новый случай для «goalkeeper», который проверяет, равно ли player.position «goalkeeper», следуя той же схеме, что и на предыдущем шаге.
+
+
+case "goalkeeper":
+      setPlayerCards(players.filter((player) => player.position === "goalkeeper"));
       break;
 
 
