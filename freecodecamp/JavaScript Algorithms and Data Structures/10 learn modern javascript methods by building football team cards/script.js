@@ -182,7 +182,11 @@ headCoach.textContent = coachName;
 
 const setPlayerCards = (arr = players) => {
     playerCards.innerHTML += arr.map(() => {
-        return `<div class="player-card"></div>`;
+        return `
+            <div class="player-card">
+                <h2>${name}</h2>
+            </div>
+        `;
     });
 };
 
@@ -428,6 +432,17 @@ function myExampleFunction({ name, age, job, city }) {
 return `<div class="player-card"></div>`;
 
 
+
+
+Шаг 26
+
+Внутри div добавьте элемент h2, содержащий параметр name. Поскольку вы работаете с шаблонными литералами, вам потребуется использовать встроенное выражение для параметра name:
+Пример кода
+
+${expression goes here}
+
+
+<h2>${name}</h2>
 
 
 
