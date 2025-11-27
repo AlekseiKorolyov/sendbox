@@ -185,6 +185,7 @@ const setPlayerCards = (arr = players) => {
         return `
             <div class="player-card">
                 <h2>${isCaptain ? "(Captain)" : ""} ${name}</h2>
+                <p>Position: ${position}</p>
             </div>
         `;
     });
@@ -456,6 +457,12 @@ ${expression goes here}
 
 
 
+28
+
+Под элементом h2 добавьте элемент абзаца с текстом Position: и встроенным выражением, содержащим параметр position.
+
+
+<p>Position: ${position}</p>
 
 
 
