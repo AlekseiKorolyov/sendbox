@@ -187,7 +187,7 @@ const setPlayerCards = (arr = players) => {
                 <h2>${isCaptain ? "(Captain)" : ""} ${name}</h2>
                 <p>Position: ${position}</p>
                 <p>Number: ${number}</p>
-                <p>Nickname: </p>
+                <p>Nickname: ${nickname ? nickname : "N/A"}</p>
             </div>
         `;
     });
@@ -483,6 +483,20 @@ ${expression goes here}
 
 
 <p>Nickname: </p>
+
+
+
+
+Шаг 31
+
+Рядом с текстом «Псевдоним» добавьте встроенное выражение, которое покажет псевдоним игрока, если он у него есть. Используйте тернарный оператор для проверки того, что псевдоним не равен нулю. Если у игрока есть псевдоним, выведите псевдоним, иначе выведите «Н/Д».
+
+
+<p>Nickname: ${nickname ? nickname : "N/A"}</p>
+
+
+
+
 
 
  */
