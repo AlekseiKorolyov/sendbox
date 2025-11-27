@@ -181,7 +181,9 @@ worldCupYear.textContent = year;
 headCoach.textContent = coachName;
 
 const setPlayerCards = (arr = players) => {
-    playerCards.innerHTML += arr.map(() => {});
+    playerCards.innerHTML += arr.map(() => {
+        return `<div class="player-card"></div>`;
+    });
 };
 
 
@@ -411,6 +413,19 @@ function myExampleFunction({ name, age, job, city }) {
  playerCards.innerHTML += arr.map(({ name, position, number, isCaptain, nickname }) => {
 
   })
+
+
+
+
+
+Шаг 25
+
+В теле функции обратного вызова необходимо вернуть шаблонный литерал ``, который будет содержать HTML-контент карточек игроков. Внутри шаблонных литералов добавьте пустой div с классом «player-card».
+
+
+
+
+return `<div class="player-card"></div>`;
 
 
 
