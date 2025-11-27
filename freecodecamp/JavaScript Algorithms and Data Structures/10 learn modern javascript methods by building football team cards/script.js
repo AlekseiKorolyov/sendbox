@@ -198,6 +198,7 @@ playersDropdownList.addEventListener("change", (e) => {
     playerCards.innerHTML = "";
     switch (e.target.value) {
         case "nickname":
+            setPlayerCards(players.filter((player) => player.nickname != null));
     }
 });
 
@@ -576,6 +577,16 @@ switch (e.target.value) {
 Если пользователь выбирает «Псевдонимы» в раскрывающемся меню, вам нужно отфильтровать карточки игроков с псевдонимами. Начните с добавления условия case для «псевдоним» в оператор switch.
 
 case "nickname":
+
+
+
+Шаг 39
+
+Вызовите функцию setPlayerCards с аргументом players.filter(). Внутри метода filter добавьте функцию обратного вызова с параметром player и неявно верните player.nickname как ненулевое значение.
+Неявный возврат в JavaScript достигается путём удаления ключевого слова return и фигурных скобок {} из стрелочной функции, помещая возвращаемое выражение на ту же строку, что и тело функции, или используя круглые скобки () для выражения, которое занимает несколько строк. Этот синтаксис делает код короче, когда нужно вернуть одно значение.
+
+
+setPlayerCards(players.filter((player) => player.nickname != null));
 
 
 
