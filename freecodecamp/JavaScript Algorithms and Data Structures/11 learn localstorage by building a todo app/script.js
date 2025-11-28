@@ -33,7 +33,9 @@ taskForm.addEventListener("submit", (e) => {
 
     const dataArrIndex = taskData.findIndex((item) => item.id === currentTask.id);
 
-    const taskObj = {};
+    const taskObj = {
+        id: titleInput.value,
+    };
     console.log(taskObj);
 });
 
@@ -167,6 +169,18 @@ const dataArrIndex = taskData.findIndex((item) => item.id === currentTask.id);
 
 const taskObj = {};
 console.log(taskObj);
+
+
+
+
+Шаг 13
+
+В объект taskObj добавьте свойство id name. В качестве значения используйте значение titleInput. Чтобы увидеть новый результат, нажмите кнопку «Добавить новую задачу». Затем добавьте заголовок и нажмите кнопку «Добавить задачу». Откройте консоль, чтобы увидеть результат.
+
+
+const taskObj = {
+    id: titleInput.value,
+  };
 
 
 
