@@ -13,9 +13,13 @@ const descriptionInput = document.getElementById("description-input");
 const taskData = [];
 let currentTask = {};
 
-openTaskFormBtn.addEventListener("click", () => taskForm.classList.toggle("hidden"));
+openTaskFormBtn.addEventListener("click", () =>
+    taskForm.classList.toggle("hidden")
+);
 
-closeTaskFormBtn.addEventListener("click", () => confirmCloseDialog.showModal());
+closeTaskFormBtn.addEventListener("click", () => {
+    confirmCloseDialog.showModal();
+});
 
 cancelBtn.addEventListener("click", () => confirmCloseDialog.close());
 
@@ -24,7 +28,9 @@ discardBtn.addEventListener("click", () => {
     taskForm.classList.toggle("hidden");
 });
 
-
+taskForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+});
 
 
 
@@ -120,6 +126,18 @@ discardBtn.addEventListener("click", () => {
   confirmCloseDialog.close();
   taskForm.classList.toggle("hidden");
 });
+
+
+
+
+Шаг 10
+
+Теперь, когда вы поработали над открытием и закрытием модального окна, пора получить значения из полей ввода, сохранить их в массиве taskData и отобразить на странице. Для начала добавьте прослушиватель событий submit к элементу taskForm и передайте e в качестве параметра стрелочной функции. Внутри фигурных скобок используйте метод preventDefault(), чтобы предотвратить обновление страницы браузером после отправки формы.
+
+taskForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
+
 
 
 
