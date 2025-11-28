@@ -17,6 +17,10 @@ openTaskFormBtn.addEventListener("click", () => {
     taskForm.classList.toggle("hidden");
 });
 
+closeTaskFormBtn.addEventListener("click", () => {
+    confirmCloseDialog.showModal();
+});
+
 
 
 
@@ -66,6 +70,28 @@ element.classList.toggle("class-to-toggle");
 openTaskFormBtn.addEventListener("click", () => {
   taskForm.classList.toggle("hidden");
 });
+
+
+
+
+
+Шаг 7
+
+Модальное окно — это элемент, который предотвращает любое взаимодействие с внешними элементами до тех пор, пока не будет закрыто. Элемент HTML dialog имеет метод showModal(), который можно использовать для отображения модального диалогового окна на веб-странице.
+Пример кода
+
+dialogElement.showModal();
+
+Добавьте прослушиватель событий к переменной closeTaskFormBtn и передайте событие click в качестве первого аргумента и функцию обратного вызова в качестве второго аргумента. Для функции обратного вызова вызовите метод showModal() элемента confirmCloseDialog. Это отобразит модальное окно с кнопками «Отменить» и «Отмена».
+
+
+
+closeTaskFormBtn.addEventListener("click", () => {
+  confirmCloseDialog.showModal();
+});
+
+
+
 
 
 
