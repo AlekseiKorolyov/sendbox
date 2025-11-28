@@ -13,6 +13,10 @@ const descriptionInput = document.getElementById("description-input");
 const taskData = [];
 let currentTask = {};
 
+openTaskFormBtn.addEventListener("click", () => {
+    taskForm.classList.toggle("hidden");
+});
+
 
 
 
@@ -46,6 +50,22 @@ let currentTask = {};
 const taskData = [];
 let currentTask = {};
 
+
+
+
+Шаг 6
+
+Теперь вам предстоит поработать над открытием и закрытием модального окна формы. В предыдущих проектах вы научились добавлять и удалять классы элемента с помощью методов el.classList.add() и el.classList.remove(). Другой метод, используемый со свойством classList, — это метод toggle. Метод toggle добавит класс, если его нет в элементе, и удалит его, если он есть в элементе.
+Пример кода
+
+element.classList.toggle("class-to-toggle");
+
+Добавьте прослушиватель событий к элементу openTaskFormBtn и передайте событие click в качестве первого аргумента и анонимную функцию обратного вызова в качестве второго аргумента. Внутри функции обратного вызова используйте метод classList.toggle() для переключения скрытого класса элемента taskForm. Теперь вы можете нажать кнопку «Добавить новую задачу» и увидеть модальное окно формы.
+
+
+openTaskFormBtn.addEventListener("click", () => {
+  taskForm.classList.toggle("hidden");
+});
 
 
 
