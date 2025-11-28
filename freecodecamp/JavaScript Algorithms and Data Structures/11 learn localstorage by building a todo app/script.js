@@ -30,7 +30,11 @@ discardBtn.addEventListener("click", () => {
 
 taskForm.addEventListener("submit", (e) => {
     e.preventDefault();
+
     const dataArrIndex = taskData.findIndex((item) => item.id === currentTask.id);
+
+    const taskObj = {};
+    console.log(taskObj);
 });
 
 
@@ -153,6 +157,16 @@ console.log(firstNumLargerThanThree); // выводит индекс 2
 
 
 const dataArrIndex = taskData.findIndex((item) => item.id === currentTask.id);
+
+
+
+Шаг 12
+
+Когда пользователь создаёт задачу, её следует сохранить в объекте. Создайте константную переменную taskObj и присвойте ей значение пустого объекта. Затем добавьте ниже оператор console, который выводит значение taskObj в консоль. Откройте консоль, чтобы увидеть пустой объект.
+
+
+const taskObj = {};
+console.log(taskObj);
 
 
 
