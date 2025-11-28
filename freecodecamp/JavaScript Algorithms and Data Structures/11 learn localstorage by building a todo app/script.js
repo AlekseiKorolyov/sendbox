@@ -13,19 +13,16 @@ const descriptionInput = document.getElementById("description-input");
 const taskData = [];
 let currentTask = {};
 
-openTaskFormBtn.addEventListener("click", () => {
+openTaskFormBtn.addEventListener("click", () => taskForm.classList.toggle("hidden"));
+
+closeTaskFormBtn.addEventListener("click", () => confirmCloseDialog.showModal());
+
+cancelBtn.addEventListener("click", () => confirmCloseDialog.close());
+
+discardBtn.addEventListener("click", () => {
+    confirmCloseDialog.close();
     taskForm.classList.toggle("hidden");
 });
-
-closeTaskFormBtn.addEventListener("click", () => {
-    confirmCloseDialog.showModal();
-});
-
-cancelBtn.addEventListener("click", () => {
-    confirmCloseDialog.close();
-});
-
-
 
 
 
@@ -113,6 +110,16 @@ cancelBtn.addEventListener("click", () => {
 
 
 
+
+Шаг 9
+
+Если пользователь нажмёт кнопку «Отменить», необходимо закрыть модальное окно с кнопками «Отмена» и «Отменить», а затем скрыть модальное окно формы. Добавьте прослушиватель событий click к discardBtn, затем используйте метод close() для переменной confirmCloseDialog. Также используйте classList для переключения класса hidden в taskForm, чтобы модальное окно формы также закрылось.
+
+
+discardBtn.addEventListener("click", () => {
+  confirmCloseDialog.close();
+  taskForm.classList.toggle("hidden");
+});
 
 
 
