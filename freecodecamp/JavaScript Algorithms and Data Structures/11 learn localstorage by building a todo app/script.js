@@ -30,7 +30,9 @@ discardBtn.addEventListener("click", () => {
 
 taskForm.addEventListener("submit", (e) => {
     e.preventDefault();
+    const dataArrIndex = taskData.findIndex((item) => item.id === currentTask.id);
 });
+
 
 
 
@@ -137,6 +139,20 @@ discardBtn.addEventListener("click", () => {
 taskForm.addEventListener("submit", (e) => {
   e.preventDefault();
 });
+
+
+
+Шаг 11 Вам необходимо определить, существует ли уже задача, добавляемая в массив taskData. Если задача не существует, вы добавите её в массив. Если она существует, вы обновите её. Для этого можно использовать метод findIndex(). Метод массива findIndex() находит и возвращает индекс первого элемента в массиве, который соответствует критериям, указанным в предоставленной функции обратного вызова для тестирования. Если такой элемент не найден, метод возвращает -1. Функция обратного вызова должна возвращать истинное значение, указывающее на то, что соответствующий элемент найден, и ложное значение в противном случае. Вот пример:
+Пример кода
+
+const numbers = [3, 1, 5, 6];
+const firstNumLargerThanThree = numbers.findIndex((num) => num > 3);
+console.log(firstNumLargerThanThree); // выводит индекс 2
+
+Используйте const для объявления переменной dataArrIndex и присвоения ей значения taskData.findIndex(). Для метода findIndex() передайте стрелочную функцию с item в качестве параметра. В стрелочной функции проверьте, строго ли равно свойство id объекта item свойству id объекта currentTask.
+
+
+const dataArrIndex = taskData.findIndex((item) => item.id === currentTask.id);
 
 
 
