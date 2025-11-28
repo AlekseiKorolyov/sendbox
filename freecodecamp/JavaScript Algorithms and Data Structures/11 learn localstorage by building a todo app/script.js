@@ -21,6 +21,10 @@ closeTaskFormBtn.addEventListener("click", () => {
     confirmCloseDialog.showModal();
 });
 
+cancelBtn.addEventListener("click", () => {
+    confirmCloseDialog.close();
+});
+
 
 
 
@@ -88,6 +92,23 @@ dialogElement.showModal();
 
 closeTaskFormBtn.addEventListener("click", () => {
   confirmCloseDialog.showModal();
+});
+
+
+
+
+Шаг 8
+
+Если пользователь нажимает кнопку «Отмена», необходимо отменить процесс и закрыть модальное окно, чтобы пользователь мог продолжить редактирование. HTML-элемент dialog имеет метод close(), который можно использовать для закрытия модального диалогового окна на веб-странице.
+Пример кода
+
+dialogElement.close();
+
+Добавьте прослушиватель событий к элементу cancelBtn и передайте событие click в качестве первого аргумента и функцию обратного вызова в качестве второго аргумента. Для функции обратного вызова вызовите метод close() элемента confirmCloseDialog.
+
+
+cancelBtn.addEventListener("click", () => {
+  confirmCloseDialog.close();
 });
 
 
