@@ -34,7 +34,7 @@ taskForm.addEventListener("submit", (e) => {
     const dataArrIndex = taskData.findIndex((item) => item.id === currentTask.id);
 
     const taskObj = {
-        id: titleInput.value,
+        id: titleInput.value.toLowerCase(),
     };
     console.log(taskObj);
 });
@@ -181,6 +181,20 @@ console.log(taskObj);
 const taskObj = {
     id: titleInput.value,
   };
+
+
+
+Шаг 14
+
+Пользователь должен иметь возможность вводить заголовок заглавными и строчными буквами. Однако значение идентификатора должно быть указано строчными буквами. Обновите titleInput.value, чтобы оно было написано строчными буквами. Для этого можно использовать метод toLowerCase().
+Пример кода
+
+str.toLowerCase();
+
+Чтобы увидеть новый результат, нажмите кнопку «Добавить новую задачу». Затем добавьте заголовок «WALK DOG» и нажмите кнопку «Добавить задачу». Откройте консоль, чтобы увидеть результат поиска по запросу «walk dog».
+
+
+id: titleInput.value.toLowerCase(),
 
 
 
