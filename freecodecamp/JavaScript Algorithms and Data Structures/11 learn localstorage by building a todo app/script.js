@@ -34,7 +34,7 @@ taskForm.addEventListener("submit", (e) => {
     const dataArrIndex = taskData.findIndex((item) => item.id === currentTask.id);
 
     const taskObj = {
-        id: `${titleInput.value.toLowerCase().split(" ").join("-")}`,
+        id: `${titleInput.value.toLowerCase().split(" ").join("-")}-${Date.now()}`,
     };
     console.log(taskObj);
 });
@@ -228,6 +228,19 @@ titleInput.value.toLowerCase().split(" ").join("-")
 Затем заключите это значение в строки шаблона. На следующем шаге вы добавите уникальный номер в конец значения идентификатора, чтобы сделать его по-настоящему уникальным.
 
 id: `${titleInput.value.toLowerCase().split(" ").join("-")}`
+
+
+
+Шаг 18
+
+Чтобы сделать идентификатор более уникальным, добавьте ещё один дефис и используйте функцию Date.now(). Date.now() возвращает количество миллисекунд, прошедших с 1 января 1970 года 00:00:00 UTC.
+Пример кода
+
+console.log(Date.now()); // 1628586800000
+
+Чтобы увидеть новый результат, нажмите кнопку «Добавить новую задачу». Затем добавьте название «WALK DOG» и нажмите кнопку «Добавить задачу». Откройте консоль, чтобы увидеть результат.
+
+-${Date.now()}
 
 
 
