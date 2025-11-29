@@ -44,7 +44,9 @@ taskForm.addEventListener("submit", (e) => {
         taskData.unshift(taskObj);
     }
 
-    taskData.forEach(({id, title, date, description}));
+    taskData.forEach(({id, title, date, description}) => {
+        tasksContainer.innerHTML += ``;
+    });
 });
 
 
@@ -287,5 +289,17 @@ console.log(arr);
 
 
 taskData.forEach(({id, title, date, description}));
+
+
+
+Шаг 23
+
+Используя синтаксис стрелок, завершите функцию обратного вызова forEach. Внутри тела функции обратного вызова используйте дополнительное присваивание, чтобы установить значение innerHTML контейнера tasksContainer равным пустым обратным кавычкам.
+
+
+taskData.forEach(({id, title, date, description}) => {
+    tasksContainer.innerHTML += ``;
+  });
+
 
  */
