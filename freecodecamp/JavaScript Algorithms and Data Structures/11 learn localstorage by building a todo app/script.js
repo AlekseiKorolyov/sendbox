@@ -45,7 +45,9 @@ taskForm.addEventListener("submit", (e) => {
     }
 
     taskData.forEach(({id, title, date, description}) => {
-        tasksContainer.innerHTML += ``;
+        tasksContainer.innerHTML += `
+        <div class="task" id="${id}"></div>
+        `;
     });
 });
 
@@ -300,6 +302,14 @@ taskData.forEach(({id, title, date, description}));
 taskData.forEach(({id, title, date, description}) => {
     tasksContainer.innerHTML += ``;
   });
+
+
+
+Шаг 24
+
+Создайте элемент div с классом task. Используйте строки шаблона, чтобы присвоить атрибуту id элемента div , полученный из данных task.
+
+<div class="task" id="${id}"></div>
 
 
  */
