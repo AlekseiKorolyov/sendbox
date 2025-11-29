@@ -34,7 +34,7 @@ taskForm.addEventListener("submit", (e) => {
     const dataArrIndex = taskData.findIndex((item) => item.id === currentTask.id);
 
     const taskObj = {
-        id: titleInput.value.toLowerCase(),
+        id: titleInput.value.toLowerCase().split(" "),
     };
     console.log(taskObj);
 });
@@ -196,6 +196,15 @@ str.toLowerCase();
 
 id: titleInput.value.toLowerCase(),
 
+
+
+
+Шаг 15
+
+Сейчас ваше значение id представляет собой строку в нижнем регистре. Но конечный результат должен быть строкой с дефисами. Начните с привязки метода split к titleInput.value, чтобы разбить строку на массив слов. В качестве разделителя используйте пробел (" "). Чтобы увидеть новый результат, нажмите кнопку «Добавить новую задачу». Затем добавьте заголовок «WALK DOG» и нажмите кнопку «Добавить задачу». Откройте консоль, чтобы увидеть результат ['walk', 'dog'].
+
+
+id: titleInput.value.toLowerCase().split(" ")
 
 
 
