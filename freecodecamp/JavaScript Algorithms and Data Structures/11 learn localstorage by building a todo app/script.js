@@ -47,6 +47,7 @@ taskForm.addEventListener("submit", (e) => {
     taskData.forEach(({id, title, date, description}) => {
         tasksContainer.innerHTML += `
         <div class="task" id="${id}"></div>
+        <p><strong>Title:</strong>${title}</p>
         `;
     });
 });
@@ -310,6 +311,13 @@ taskData.forEach(({id, title, date, description}) => {
 Создайте элемент div с классом task. Используйте строки шаблона, чтобы присвоить атрибуту id элемента div , полученный из данных task.
 
 <div class="task" id="${id}"></div>
+
+
+Шаг 25
+
+Создайте элемент p и, используя строки шаблона, укажите в его содержимом title, который вы деструктурировали. Непосредственно перед содержимым элемента p создайте элемент strong с текстом Title:.
+
+<p><strong>Title:</strong>${title}</p>
 
 
  */
