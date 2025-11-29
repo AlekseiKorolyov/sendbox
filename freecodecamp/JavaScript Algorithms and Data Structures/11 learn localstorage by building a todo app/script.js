@@ -43,6 +43,8 @@ taskForm.addEventListener("submit", (e) => {
     if (dataArrIndex === -1) {
         taskData.unshift(taskObj);
     }
+
+    taskData.forEach(({id, title, date, description}));
 });
 
 
@@ -277,5 +279,13 @@ console.log(arr);
     taskData.unshift(taskObj);
   }
 
+
+
+Шаг 22
+
+Теперь, когда вы сохранили задачу в массиве taskData, вы должны отобразить её на странице, пройдя по ней циклом. Используйте forEach() для taskData, затем деструктурируйте идентификатор, заголовок, дату и описание в качестве параметров. Пока ничего не возвращайте.
+
+
+taskData.forEach(({id, title, date, description}));
 
  */
