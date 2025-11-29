@@ -34,7 +34,7 @@ taskForm.addEventListener("submit", (e) => {
     const dataArrIndex = taskData.findIndex((item) => item.id === currentTask.id);
 
     const taskObj = {
-        id: titleInput.value.toLowerCase().split(" ").join("-"),
+        id: `${titleInput.value.toLowerCase().split(" ").join("-")}`,
     };
     console.log(taskObj);
 });
@@ -215,6 +215,19 @@ id: titleInput.value.toLowerCase().split(" ")
 
 
 id: titleInput.value.toLowerCase().split(" ").join("-")
+
+
+
+Шаг 17
+
+Осталось сделать ещё одно, чтобы сделать этот идентификатор уникальным. Но сначала поместите всё значение ниже во встроенное выражение ${}.
+Пример кода
+
+titleInput.value.toLowerCase().split(" ").join("-")
+
+Затем заключите это значение в строки шаблона. На следующем шаге вы добавите уникальный номер в конец значения идентификатора, чтобы сделать его по-настоящему уникальным.
+
+id: `${titleInput.value.toLowerCase().split(" ").join("-")}`
 
 
 
