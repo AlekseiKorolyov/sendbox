@@ -39,7 +39,10 @@ taskForm.addEventListener("submit", (e) => {
         date: dateInput.value,
         description: descriptionInput.value,
     };
-    console.log(taskObj);
+
+    if (dataArrIndex === -1) {
+        taskData.unshift(taskObj);
+    }
 });
 
 
@@ -255,6 +258,24 @@ console.log(Date.now()); // 1628586800000
     title: titleInput.value,
     date: dateInput.value,
     description: descriptionInput.value,
+
+
+
+Шаг 21
+
+Теперь, когда вы получили значения из полей ввода и сгенерировали идентификатор, нужно добавить их в массив taskData, чтобы отслеживать каждую задачу. Однако это следует делать только если задача новая. Если задача уже существует, вы настроите её для редактирования. Именно поэтому у вас есть переменная dataArrIndex, которая содержит индекс каждой задачи. Создайте оператор if с условием dataArrIndex === -1. В операторе if используйте метод unshift(), чтобы добавить объект taskObj в начало массива taskData. unshift() — это метод работы с массивами, который используется для добавления одного или нескольких элементов в начало массива.
+Пример кода
+
+const arr = [1, 2, 3];
+arr.unshift(0);
+
+// [0, 1, 2, 3]
+console.log(arr);
+
+
+  if (dataArrIndex === -1) {
+    taskData.unshift(taskObj);
+  }
 
 
  */
