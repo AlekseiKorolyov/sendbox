@@ -35,6 +35,9 @@ taskForm.addEventListener("submit", (e) => {
 
     const taskObj = {
         id: `${titleInput.value.toLowerCase().split(" ").join("-")}-${Date.now()}`,
+        title: titleInput.value,
+        date: dateInput.value,
+        description: descriptionInput.value,
     };
     console.log(taskObj);
 });
@@ -242,6 +245,16 @@ console.log(Date.now()); // 1628586800000
 
 -${Date.now()}
 
+
+
+Шаг 19
+
+Теперь пора добавить оставшиеся свойства к объекту taskObj. Извлеките значения из полей titleInput, dateInput и descriptionInput, а затем сохраните их в свойствах title, date и description объекта taskObj. Добавьте новую задачу и откройте консоль, чтобы увидеть объект taskObj с новыми свойствами.
+
+
+    title: titleInput.value,
+    date: dateInput.value,
+    description: descriptionInput.value,
 
 
  */
