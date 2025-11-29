@@ -34,7 +34,7 @@ taskForm.addEventListener("submit", (e) => {
     const dataArrIndex = taskData.findIndex((item) => item.id === currentTask.id);
 
     const taskObj = {
-        id: titleInput.value.toLowerCase().split(" "),
+        id: titleInput.value.toLowerCase().split(" ").join("-"),
     };
     console.log(taskObj);
 });
@@ -205,6 +205,16 @@ id: titleInput.value.toLowerCase(),
 
 
 id: titleInput.value.toLowerCase().split(" ")
+
+
+
+
+Шаг 16
+
+Теперь, когда ваш идентификатор представляет собой массив слов, вы можете использовать метод join, чтобы преобразовать результат обратно в строку. В качестве разделителя используйте дефис (-). Чтобы увидеть новый результат, нажмите кнопку «Добавить новую задачу». Затем добавьте заголовок «WALK DOG» и нажмите кнопку «Добавить задачу». Откройте консоль, чтобы увидеть результат «walk-dog».
+
+
+id: titleInput.value.toLowerCase().split(" ").join("-")
 
 
 
