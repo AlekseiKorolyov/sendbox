@@ -48,7 +48,11 @@ const updateTaskContainer = () => {
 };
 
 const deleteTask = (buttonEl) => {
-    const dataArrIndex = taskData.findIndex((item) => item.id === buttonEl.parentElement.id);
+    const dataArrIndex = taskData.findIndex(
+        (item) => item.id === buttonEl.parentElement.id
+    );
+    buttonEl.parentElement.remove();
+    taskData.splice(dataArrIndex, 1);
 };
 
 const reset = () => {
@@ -537,6 +541,24 @@ const deleteTask = (buttonEl) => {
 const dataArrIndex = taskData.findIndex((item) => item.id === buttonEl.parentElement.id);
 };
 
+
+Шаг 43
+
+Вам необходимо удалить задачу из DOM с помощью метода remove() и из массива taskData с помощью метода splice(). splice() — это метод массива, который изменяет массивы, удаляя, заменяя или добавляя элементы по указанному индексу, а также возвращает удалённые элементы. Он может принимать до трёх аргументов: первый — обязательный индекс, с которого нужно начать, второй — количество удаляемых элементов, а третий — необязательный заменяющий элемент. Вот пример:
+Пример кода
+
+const fruits = ["mango", "date", "cherry", "banana", "apple"];
+
+// Удаляем дату и вишню из массива, начиная с индекса 1
+const removedFruits = fruits.splice(1, 2);
+console.log(fruits); // [ 'mango', 'banana', 'apple' ]
+console.log(removedFruits); // [ 'date', 'cherry' ]
+
+Используйте метод remove() для удаления parentElement элемента buttonEl из DOM. Затем используйте метод splice() для удаления задачи из массива taskData. Передайте dataArrIndex и 1 в качестве аргументов метода splice(). dataArrIndex — это начальный индекс, а 1 — количество элементов для удаления.
+
+
+  buttonEl.parentElement.remove();
+  taskData.splice(dataArrIndex, 1);
 
 
 
