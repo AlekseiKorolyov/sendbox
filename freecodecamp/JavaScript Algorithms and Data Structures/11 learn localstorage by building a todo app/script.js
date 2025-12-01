@@ -55,7 +55,11 @@ const deleteTask = (buttonEl) => {
     taskData.splice(dataArrIndex, 1);
 };
 
-const editTask = (buttonEl) => {};
+const editTask = (buttonEl) => {
+    const dataArrIndex = taskData.findIndex(
+        (item) => item.id === buttonEl.parentElement.id
+    );
+};
 
 const reset = () => {
     titleInput.value = "";
@@ -570,6 +574,17 @@ console.log(removedFruits); // [ 'date', 'cherry' ]
 
 
 const editTask = (buttonEl) => {};
+
+
+
+Шаг 45
+
+Как и в функции deleteTask, вам нужно найти индекс задачи, которую нужно изменить. Создайте переменную dataArrIndex. Для её значения используйте метод findIndex() объекта taskData. Передайте item в качестве параметра его функции обратного вызова и проверьте, равен ли идентификатор item идентификатору parentElement элемента buttonEl.
+
+
+const dataArrIndex = taskData.findIndex(
+    (item) => item.id === buttonEl.parentElement.id
+    );
 
 
  */
