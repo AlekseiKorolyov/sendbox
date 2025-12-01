@@ -26,7 +26,13 @@ openTaskFormBtn.addEventListener("click", () =>
 );
 
 closeTaskFormBtn.addEventListener("click", () => {
-    confirmCloseDialog.showModal();
+    const formInputsContainValues = titleInput.value || dateInput.value || descriptionInput.value;
+
+    if (formInputsContainValues) {
+        confirmCloseDialog.showModal();
+    } else {
+        reset();
+    }
 });
 
 cancelBtn.addEventListener("click", () => confirmCloseDialog.close());
@@ -403,6 +409,30 @@ const reset = () => {};
 Шаг 33
 
 Кроме того, удалите существующий код, переключающий класс, скрытый на taskForm, внутри прослушивателя событий discardBtn и вместо этого вызовите функцию сброса. Это связано с тем, что при нажатии кнопки «Отменить» все данные в полях ввода должны исчезнуть.
+
+
+
+
+Шаг 34
+
+Кнопки «Отмена» и «Отменить» должны отображаться пользователю только при наличии текста в полях ввода. Начните с удаления строки confirmCloseDialog.showModal();. Затем внутри прослушивателя событий closeTaskFormBtn напишите логику для проверки наличия значения в полях titleInput, dateInput или descriptionInput. Если какое-либо из этих полей ввода имеет значение, используйте метод showModal() для confirmCloseDialog. В противном случае, если изменений нет, вызовите функцию reset(), чтобы очистить поля ввода и скрыть модальное окно формы.
+
+
+if (titleInput.value !== "" || dateInput.value !== "" || descriptionInput.value !== "") {
+    confirmCloseDialog.showModal();
+  } else {
+    reset();
+  }
+
+***
+
+ const formInputsContainValues = titleInput.value || dateInput.value || descriptionInput.value;
+
+  if (formInputsContainValues) {
+    confirmCloseDialog.showModal();
+  } else {
+    reset();
+  }
 
 
 
