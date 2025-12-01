@@ -63,7 +63,7 @@ taskForm.addEventListener("submit", (e) => {
             </div>
         `;
     });
-    taskForm.classList.toggle("hidden");
+    reset();
 });
 
 
@@ -390,6 +390,12 @@ const reset = () => {};
   descriptionInput.value = "";
   taskForm.classList.toggle("hidden");
   currentTask = {};
+
+
+
+Шаг 32
+
+Удалите существующий код, переключающий класс hidden на taskForm, и вместо этого вызовите функцию reset. Это очистит поля ввода и скроет модальное окно формы, чтобы пользователь мог увидеть добавленную задачу.
 
 
  */
