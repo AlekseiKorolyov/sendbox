@@ -55,6 +55,8 @@ const deleteTask = (buttonEl) => {
     taskData.splice(dataArrIndex, 1);
 };
 
+const editTask = (buttonEl) => {};
+
 const reset = () => {
     titleInput.value = "";
     dateInput.value = "";
@@ -561,6 +563,13 @@ console.log(removedFruits); // [ 'date', 'cherry' ]
   taskData.splice(dataArrIndex, 1);
 
 
+
+Шаг 44
+
+Используйте синтаксис стрелок для создания функции editTask. Передайте buttonEl в качестве параметра и добавьте пустые фигурные скобки для тела функции.
+
+
+const editTask = (buttonEl) => {};
 
 
  */
