@@ -50,6 +50,8 @@ taskForm.addEventListener("submit", (e) => {
                 <p><strong>Title:</strong> ${title}</p>
                 <p><strong>Date:</strong> ${date}</p>
                 <p><strong>Description:</strong> ${description}</p>
+                <button type="button" class="btn">Edit</button>
+                <button type="button" class="btn">Delete</button>
             </div>
         `;
     });
@@ -339,6 +341,16 @@ taskData.forEach(({id, title, date, description}) => {
 Создайте ещё один элемент p и вставьте в него description описание в виде текста. Также создайте внутри абзаца элемент strong с текстом Description:.
 
 <p><strong>Description:</strong> ${description}</p>
+
+
+
+Шаг 28
+
+Чтобы обеспечить управление задачами, необходимо добавить кнопки «Удалить» и «Редактировать» для каждой задачи. Создайте два элемента «Кнопка» с атрибутом type, установленным на «button», и атрибутом class, установленным на «btn». Задайте текст первой кнопки как «Изменить», а текст второй кнопки как «Удалить».
+
+
+          <button type="button" class="btn">Edit</button>
+          <button type="button" class="btn">Delete</button>
 
 
  */
