@@ -102,7 +102,7 @@ taskForm.addEventListener("submit", (e) => {
             </div>
         `;
     });
-    reset();
+    addOrUpdateTask();
 });
 
 
@@ -489,6 +489,12 @@ if (titleInput.value !== "" || dateInput.value !== "" || descriptionInput.value 
 
 updateTaskContainer();
 reset();
+
+
+
+Шаг 38
+
+Теперь удалите вызов reset() внутри прослушивателя событий отправки taskForm и вместо этого вызовите функцию addOrUpdateTask.
 
 
 
