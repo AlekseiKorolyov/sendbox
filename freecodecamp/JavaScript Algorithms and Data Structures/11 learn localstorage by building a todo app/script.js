@@ -13,7 +13,13 @@ const descriptionInput = document.getElementById("description-input");
 const taskData = [];
 let currentTask = {};
 
-const reset = () => {};
+const reset = () => {
+    titleInput.value = "";
+    dateInput.value = "";
+    descriptionInput.value = "";
+    taskForm.classList.toggle("hidden");
+    currentTask = {};
+};
 
 openTaskFormBtn.addEventListener("click", () =>
     taskForm.classList.toggle("hidden")
@@ -371,6 +377,19 @@ taskForm.classList.toggle("hidden");
 
 
 const reset = () => {};
+
+
+
+Шаг 31
+
+В функции сброса установите для каждого значения titleInput, dateInput и descriptionInput пустую строку. Также используйте classList для переключения класса, скрытого в taskForm, и установите currentTask как пустой объект. Это связано с тем, что на этом этапе currentTask будет заполнен задачей, которую мог добавить пользователь.
+
+
+  titleInput.value = "";
+  dateInput.value = "";
+  descriptionInput.value = "";
+  taskForm.classList.toggle("hidden");
+  currentTask = {};
 
 
  */
