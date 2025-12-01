@@ -25,6 +25,9 @@ const addOrUpdateTask = () => {
     if (dataArrIndex === -1) {
         taskData.unshift(taskObj);
     }
+
+    updateTaskContainer();
+    reset();
 };
 
 const updateTaskContainer = () => {
@@ -478,6 +481,14 @@ if (titleInput.value !== "" || dateInput.value !== "" || descriptionInput.value 
 
 
 
+
+Шаг 37
+
+Внутри функции addOrUpdateTask вызовите функции updateTaskContainer и reset.
+
+
+updateTaskContainer();
+reset();
 
 
 
