@@ -47,7 +47,9 @@ const updateTaskContainer = () => {
     );
 };
 
-const deleteTask = (buttonEl) => {};
+const deleteTask = (buttonEl) => {
+    const dataArrIndex = taskData.findIndex((item) => item.id === buttonEl.parentElement.id);
+};
 
 const reset = () => {
     titleInput.value = "";
@@ -526,6 +528,14 @@ tasksContainer.innerHTML = "";
 const deleteTask = (buttonEl) => {};
 
 
+Шаг 42
+
+Сначала вам нужно найти индекс задачи, которую вы хотите удалить. Создайте переменную dataArrIndex и задайте её значение с помощью метода findIndex() массива taskData. Передайте item в качестве параметра функции обратного вызова стрелок, а в функции обратного вызова проверьте, равен ли идентификатор item идентификатору parentElement элемента buttonEl.
+
+
+const deleteTask = (buttonEl) => {
+const dataArrIndex = taskData.findIndex((item) => item.id === buttonEl.parentElement.id);
+};
 
 
 
