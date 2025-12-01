@@ -31,6 +31,7 @@ const addOrUpdateTask = () => {
 };
 
 const updateTaskContainer = () => {
+    tasksContainer.innerHTML = "";
     taskData.forEach(
         ({ id, title, date, description }) => {
             tasksContainer.innerHTML += `
@@ -495,6 +496,14 @@ reset();
 Шаг 38
 
 Теперь удалите вызов reset() внутри прослушивателя событий отправки taskForm и вместо этого вызовите функцию addOrUpdateTask.
+
+
+
+Шаг 39
+
+Возникла проблема. Если вы добавляете одну задачу, а затем другую, предыдущая задача дублируется. Это означает, что вам необходимо очистить существующее содержимое tasksContainer перед добавлением новой задачи. Верните innerHTML для tasksContainer к пустой строке.
+
+tasksContainer.innerHTML = "";
 
 
 
