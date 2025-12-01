@@ -13,6 +13,20 @@ const descriptionInput = document.getElementById("description-input");
 const taskData = [];
 let currentTask = {};
 
+const addOrUpdateTask = () => {
+    const dataArrIndex = taskData.findIndex((item) => item.id === currentTask.id);
+    const taskObj = {
+        id: `${titleInput.value.toLowerCase().split(" ").join("-")}-${Date.now()}`,
+        title: titleInput.value,
+        date: dateInput.value,
+        description: descriptionInput.value,
+    };
+
+    if (dataArrIndex === -1) {
+        taskData.unshift(taskObj);
+    }
+};
+
 const reset = () => {
     titleInput.value = "";
     dateInput.value = "";
@@ -433,6 +447,13 @@ if (titleInput.value !== "" || dateInput.value !== "" || descriptionInput.value 
   } else {
     reset();
   }
+
+
+
+Шаг 35
+
+Вы можете улучшить читаемость и поддержку кода, разделив прослушиватель событий отправки на две отдельные функции. Первая функция может использоваться для добавления входных значений в taskData, а вторая — для добавления задач в DOM. Используйте синтаксис стрелок для создания функции addOrUpdateTask. Затем переместите переменную dataArrIndex, объект taskObj и оператор if в функцию addOrUpdateTask.
+
 
 
 
