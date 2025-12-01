@@ -47,6 +47,8 @@ const updateTaskContainer = () => {
     );
 };
 
+const deleteTask = (buttonEl) => {};
+
 const reset = () => {
     titleInput.value = "";
     dateInput.value = "";
@@ -514,6 +516,18 @@ tasksContainer.innerHTML = "";
 
 <button type="button" class="btn" onclick="editTask(this)">Edit</button>
 <button type="button" class="btn" onclick="deleteTask(this)">Delete</button>
+
+
+
+Шаг 41
+
+Создайте функцию deleteTask, используя синтаксис стрелок. Передайте buttonEl в качестве параметра и определите пустые фигурные скобки для тела функции.
+
+const deleteTask = (buttonEl) => {};
+
+
+
+
 
 
 
