@@ -56,9 +56,8 @@ const deleteTask = (buttonEl) => {
 };
 
 const editTask = (buttonEl) => {
-    const dataArrIndex = taskData.findIndex(
-        (item) => item.id === buttonEl.parentElement.id
-    );
+    const dataArrIndex = taskData.findIndex((item) => item.id === buttonEl.parentElement.id);
+    currentTask = taskData[dataArrIndex];
 };
 
 const reset = () => {
@@ -585,6 +584,15 @@ const editTask = (buttonEl) => {};
 const dataArrIndex = taskData.findIndex(
     (item) => item.id === buttonEl.parentElement.id
     );
+
+
+Шаг 46
+
+Используйте квадратные скобки для извлечения задачи, которую нужно отредактировать, из массива taskData с помощью dataArrIndex. Затем присвойте её объекту currentTask для отслеживания.
+
+currentTask = taskData[dataArrIndex];
+
+
 
 
  */
