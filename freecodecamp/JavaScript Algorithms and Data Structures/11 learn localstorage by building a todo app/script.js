@@ -39,8 +39,8 @@ const updateTaskContainer = () => {
           <p><strong>Title:</strong> ${title}</p>
           <p><strong>Date:</strong> ${date}</p>
           <p><strong>Description:</strong> ${description}</p>
-          <button type="button" class="btn">Edit</button>
-          <button type="button" class="btn">Delete</button>
+          <button type="button" class="btn" onclick="editTask(this)">Edit</button>
+          <button type="button" class="btn" onclick="deleteTask(this)">Delete</button>
         </div>
       `
         }
@@ -504,6 +504,16 @@ reset();
 Возникла проблема. Если вы добавляете одну задачу, а затем другую, предыдущая задача дублируется. Это означает, что вам необходимо очистить существующее содержимое tasksContainer перед добавлением новой задачи. Верните innerHTML для tasksContainer к пустой строке.
 
 tasksContainer.innerHTML = "";
+
+
+
+Шаг 40
+
+Чтобы разрешить редактирование и удаление для каждой задачи, добавьте атрибут onclick к обеим кнопкам. Установите значение атрибута onclick равным editTask(this) для кнопки «Изменить» и deleteTask(this) для кнопки «Удалить». Функция editTask(this) будет обрабатывать редактирование, а функция deleteTask(this) — удаление. this — ключевое слово, ссылающееся на текущий контекст. В данном случае this указывает на элемент, вызывающий событие, — кнопки.
+
+
+<button type="button" class="btn" onclick="editTask(this)">Edit</button>
+<button type="button" class="btn" onclick="deleteTask(this)">Delete</button>
 
 
 
