@@ -55,6 +55,7 @@ taskForm.addEventListener("submit", (e) => {
             </div>
         `;
     });
+    taskForm.classList.toggle("hidden");
 });
 
 
@@ -351,6 +352,14 @@ taskData.forEach(({id, title, date, description}) => {
 
           <button type="button" class="btn">Edit</button>
           <button type="button" class="btn">Delete</button>
+
+
+Шаг 29
+
+После добавления задачи на страницу необходимо закрыть модальное окно формы, чтобы увидеть её. Для этого используйте classList, чтобы включить/выключить скрытый класс элемента taskForm.
+
+
+taskForm.classList.toggle("hidden");
 
 
  */
