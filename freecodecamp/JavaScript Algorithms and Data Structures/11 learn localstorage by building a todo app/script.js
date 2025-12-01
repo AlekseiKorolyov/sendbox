@@ -48,6 +48,7 @@ taskForm.addEventListener("submit", (e) => {
         tasksContainer.innerHTML += `
         <div class="task" id="${id}"></div>
         <p><strong>Title:</strong>${title}</p>
+        <p><strong>Date:</strong>${date}</p>
         `;
     });
 });
@@ -318,6 +319,15 @@ taskData.forEach(({id, title, date, description}) => {
 Создайте элемент p и, используя строки шаблона, укажите в его содержимом title, который вы деструктурировали. Непосредственно перед содержимым элемента p создайте элемент strong с текстом Title:.
 
 <p><strong>Title:</strong>${title}</p>
+
+
+
+Шаг 26
+
+Аналогично предыдущему шагу создайте ещё один элемент p и вставьте в него деструктурированную дату в качестве текстового содержимого. Внутри этого абзаца создайте элемент strong с текстом Date:.
+
+
+<p><strong>Date:</strong>${date}</p>
 
 
  */
