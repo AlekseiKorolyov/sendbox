@@ -46,9 +46,11 @@ taskForm.addEventListener("submit", (e) => {
 
     taskData.forEach(({id, title, date, description}) => {
         tasksContainer.innerHTML += `
-        <div class="task" id="${id}"></div>
-        <p><strong>Title:</strong>${title}</p>
-        <p><strong>Date:</strong>${date}</p>
+            <div class="task" id="${id}">
+                <p><strong>Title:</strong> ${title}</p>
+                <p><strong>Date:</strong> ${date}</p>
+                <p><strong>Description:</strong> ${description}</p>
+            </div>
         `;
     });
 });
@@ -328,6 +330,15 @@ taskData.forEach(({id, title, date, description}) => {
 
 
 <p><strong>Date:</strong>${date}</p>
+
+
+
+
+Шаг 27
+
+Создайте ещё один элемент p и вставьте в него description описание в виде текста. Также создайте внутри абзаца элемент strong с текстом Description:.
+
+<p><strong>Description:</strong> ${description}</p>
 
 
  */
