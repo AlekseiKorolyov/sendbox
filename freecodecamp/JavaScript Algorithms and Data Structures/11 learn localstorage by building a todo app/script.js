@@ -33,7 +33,7 @@ cancelBtn.addEventListener("click", () => confirmCloseDialog.close());
 
 discardBtn.addEventListener("click", () => {
     confirmCloseDialog.close();
-    taskForm.classList.toggle("hidden");
+    reset();
 });
 
 taskForm.addEventListener("submit", (e) => {
@@ -396,6 +396,16 @@ const reset = () => {};
 Шаг 32
 
 Удалите существующий код, переключающий класс hidden на taskForm, и вместо этого вызовите функцию reset. Это очистит поля ввода и скроет модальное окно формы, чтобы пользователь мог увидеть добавленную задачу.
+
+
+
+
+Шаг 33
+
+Кроме того, удалите существующий код, переключающий класс, скрытый на taskForm, внутри прослушивателя событий discardBtn и вместо этого вызовите функцию сброса. Это связано с тем, что при нажатии кнопки «Отменить» все данные в полях ввода должны исчезнуть.
+
+
+
 
 
  */
