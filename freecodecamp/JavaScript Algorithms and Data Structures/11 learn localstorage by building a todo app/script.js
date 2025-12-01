@@ -27,6 +27,22 @@ const addOrUpdateTask = () => {
     }
 };
 
+const updateTaskContainer = () => {
+    taskData.forEach(
+        ({ id, title, date, description }) => {
+            tasksContainer.innerHTML += `
+        <div class="task" id="${id}">
+          <p><strong>Title:</strong> ${title}</p>
+          <p><strong>Date:</strong> ${date}</p>
+          <p><strong>Description:</strong> ${description}</p>
+          <button type="button" class="btn">Edit</button>
+          <button type="button" class="btn">Delete</button>
+        </div>
+      `
+        }
+    );
+};
+
 const reset = () => {
     titleInput.value = "";
     dateInput.value = "";
@@ -453,6 +469,12 @@ if (titleInput.value !== "" || dateInput.value !== "" || descriptionInput.value 
 Шаг 35
 
 Вы можете улучшить читаемость и поддержку кода, разделив прослушиватель событий отправки на две отдельные функции. Первая функция может использоваться для добавления входных значений в taskData, а вторая — для добавления задач в DOM. Используйте синтаксис стрелок для создания функции addOrUpdateTask. Затем переместите переменную dataArrIndex, объект taskObj и оператор if в функцию addOrUpdateTask.
+
+
+
+Шаг 36
+
+Используйте синтаксис стрелок для создания функции updateTaskContainer. Затем переместите taskData.forEach() и его содержимое из прослушивателя событий отправки taskForm во вновь созданную функцию.
 
 
 
