@@ -86,7 +86,7 @@ closeTaskFormBtn.addEventListener("click", () => {
     const formInputsContainValues = titleInput.value || dateInput.value || descriptionInput.value;
     const formInputValuesUpdated = titleInput.value !== currentTask.title || dateInput.value !== currentTask.date || descriptionInput.value !== currentTask.description;
 
-    if (formInputsContainValues) {
+    if (formInputsContainValues && formInputValuesUpdated) {
         confirmCloseDialog.showModal();
     } else {
         reset();
@@ -646,6 +646,21 @@ taskForm.classList.toggle("hidden");
 Шаг 51
 
 Если пользователь пытается редактировать задачу, но решает не вносить изменения перед закрытием формы, нет необходимости отображать модальное окно с кнопками «Отмена» и «Отменить». В прослушивателе событий closeTaskFormBtn используйте const для создания ещё одной переменной с именем formInputValuesUpdated. Проверьте, вносил ли пользователь изменения при попытке редактирования задачи, убедившись, что значение titleInput не равно currentTask.title, значение dateInput не равно currentTask.date или значение descriptionInput не равно currentTask.description.
+
+
+const formInputValuesUpdated = titleInput.value !== currentTask.title || dateInput.value !== currentTask.date || descriptionInput.value !== currentTask.description;
+
+
+
+
+
+
+Шаг 52
+
+Теперь добавьте formInputValuesUpdated в качестве второго обязательного условия в оператор if, используя оператор AND. Таким образом, кнопки «Отмена» и «Отменить» в модальном окне не будут отображаться пользователю, если он не внес никаких изменений в поля ввода при попытке редактирования задачи.
+
+
+if (formInputsContainValues && formInputValuesUpdated)
 
 
 
