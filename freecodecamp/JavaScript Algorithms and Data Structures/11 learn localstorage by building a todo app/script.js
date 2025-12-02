@@ -24,6 +24,8 @@ const addOrUpdateTask = () => {
 
     if (dataArrIndex === -1) {
         taskData.unshift(taskObj);
+    } else {
+        taskData[dataArrIndex] = taskObj;
     }
 
     updateTaskContainer();
@@ -627,6 +629,16 @@ addOrUpdateTaskBtn.innerText = "Update Task";
 
 taskForm.classList.toggle("hidden");
 
+
+
+Шаг 50
+
+На этом этапе редактирование задачи не отразится при её отправке. Чтобы сделать редактирование функциональным, вернитесь к оператору if внутри функции addOrUpdateTask. Создайте блок else и установите taskData[dataArrIndex] равным taskObj.
+
+
+ else {
+    taskData[dataArrIndex] = taskObj;
+  }
 
 
 
