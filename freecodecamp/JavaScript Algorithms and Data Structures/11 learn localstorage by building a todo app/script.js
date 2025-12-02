@@ -120,6 +120,8 @@ const myTaskArr = [
 
 localStorage.setItem("data", JSON.stringify(myTaskArr));
 
+localStorage.removeItem("data");
+
 const getTaskArr = localStorage.getItem("data");
 console.log(getTaskArr);
 
@@ -701,6 +703,15 @@ console.log(getTaskArr);
 
 const getTaskArrObj =  JSON.parse(localStorage.getItem("data"));
 console.log(getTaskArrObj);
+
+
+
+Шаг 57
+
+Можно использовать метод localStorage.removeItem() для удаления определённого элемента и метод localStorage.clear() для очистки всех элементов в локальном хранилище. Удалите элемент данных из локального хранилища и откройте консоль, чтобы увидеть результат. Вы должны увидеть значение null.
+
+
+localStorage.removeItem("data");
 
 
 
