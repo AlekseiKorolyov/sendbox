@@ -28,12 +28,13 @@ const addOrUpdateTask = () => {
         taskData[dataArrIndex] = taskObj;
     }
 
-    updateTaskContainer();
-    reset();
+    updateTaskContainer()
+    reset()
 };
 
 const updateTaskContainer = () => {
     tasksContainer.innerHTML = "";
+
     taskData.forEach(
         ({ id, title, date, description }) => {
             tasksContainer.innerHTML += `
@@ -41,21 +42,23 @@ const updateTaskContainer = () => {
           <p><strong>Title:</strong> ${title}</p>
           <p><strong>Date:</strong> ${date}</p>
           <p><strong>Description:</strong> ${description}</p>
-          <button type="button" class="btn" onclick="editTask(this)">Edit</button>
-          <button type="button" class="btn" onclick="deleteTask(this)">Delete</button>
+          <button onclick="editTask(this)" type="button" class="btn">Edit</button>
+          <button onclick="deleteTask(this)" type="button" class="btn">Delete</button> 
         </div>
       `
         }
     );
 };
 
+
 const deleteTask = (buttonEl) => {
     const dataArrIndex = taskData.findIndex(
         (item) => item.id === buttonEl.parentElement.id
     );
+
     buttonEl.parentElement.remove();
     taskData.splice(dataArrIndex, 1);
-};
+}
 
 const editTask = (buttonEl) => {
     const dataArrIndex = taskData.findIndex(
@@ -63,12 +66,15 @@ const editTask = (buttonEl) => {
     );
 
     currentTask = taskData[dataArrIndex];
+
     titleInput.value = currentTask.title;
     dateInput.value = currentTask.date;
     descriptionInput.value = currentTask.description;
+
     addOrUpdateTaskBtn.innerText = "Update Task";
+
     taskForm.classList.toggle("hidden");
-};
+}
 
 const reset = () => {
     titleInput.value = "";
@@ -76,7 +82,7 @@ const reset = () => {
     descriptionInput.value = "";
     taskForm.classList.toggle("hidden");
     currentTask = {};
-};
+}
 
 openTaskFormBtn.addEventListener("click", () =>
     taskForm.classList.toggle("hidden")
@@ -97,40 +103,22 @@ cancelBtn.addEventListener("click", () => confirmCloseDialog.close());
 
 discardBtn.addEventListener("click", () => {
     confirmCloseDialog.close();
-    reset();
+    reset()
 });
 
 taskForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const dataArrIndex = taskData.findIndex((item) => item.id === currentTask.id);
-
-    const taskObj = {
-        id: `${titleInput.value.toLowerCase().split(" ").join("-")}-${Date.now()}`,
-        title: titleInput.value,
-        date: dateInput.value,
-        description: descriptionInput.value,
-    };
-
-    if (dataArrIndex === -1) {
-        taskData.unshift(taskObj);
-    }
-
-    taskData.forEach(({id, title, date, description}) => {
-        tasksContainer.innerHTML += `
-            <div class="task" id="${id}">
-                <p><strong>Title:</strong> ${title}</p>
-                <p><strong>Date:</strong> ${date}</p>
-                <p><strong>Description:</strong> ${description}</p>
-                <button type="button" class="btn">Edit</button>
-                <button type="button" class="btn">Delete</button>
-            </div>
-        `;
-    });
     addOrUpdateTask();
 });
 
+const myTaskArr = [
+    { task: "Walk the Dog", date: "22-04-2022" },
+    { task: "Read some books", date: "02-11-2023" },
+    { task: "Watch football", date: "10-08-2021" },
+];
 
+localStorage.setItem("data", myTaskArr);
 
 
 
@@ -661,6 +649,20 @@ const formInputValuesUpdated = titleInput.value !== currentTask.title || dateInp
 
 
 if (formInputsContainValues && formInputValuesUpdated)
+
+
+
+Шаг 53
+
+localStorage предлагает методы для сохранения, извлечения и удаления элементов. Сохраняемые элементы могут иметь любой тип данных JavaScript. Например, метод setItem() используется для сохранения элемента, а метод getItem() — для его извлечения. Чтобы удалить отдельный элемент, можно использовать метод removeItem(), а если нужно удалить все элементы в хранилище, можно использовать метод clear(). Вот как сохранить элемент:
+Пример кода
+
+localStorage.setItem("key", value); // значение может быть строкой, числом или любым другим типом данных
+
+Вам предоставлен массив myTaskArr. Используйте метод setItem(), чтобы сохранить его с ключом data. После этого откройте консоль браузера и перейдите на вкладку «Приложения», выберите «Локальное хранилище» и домен freeCodeCamp, который вы видите.
+
+
+localStorage.setItem("data", myTaskArr);
 
 
 
