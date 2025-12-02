@@ -118,7 +118,7 @@ const myTaskArr = [
     { task: "Watch football", date: "10-08-2021" },
 ];
 
-localStorage.setItem("data", myTaskArr);
+localStorage.setItem("data", JSON.stringify(myTaskArr));
 
 
 
@@ -663,6 +663,16 @@ localStorage.setItem("key", value); // значение может быть ст
 
 
 localStorage.setItem("data", myTaskArr);
+
+
+
+
+Шаг 54
+
+Если вы проверите вкладку «Приложение» в консоли браузера, вы увидите ряд [object Object]. Это связано с тем, что все данные, сохраняемые в localStorage, должны быть в строковом формате. Чтобы решить эту проблему, оберните сохраняемые данные в метод JSON.stringify(). Затем снова проверьте локальное хранилище и посмотрите на результаты.
+
+
+localStorage.setItem("data", JSON.stringify(myTaskArr));
 
 
 
