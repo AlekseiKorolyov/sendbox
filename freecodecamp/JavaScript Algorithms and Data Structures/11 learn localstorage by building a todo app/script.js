@@ -13,6 +13,10 @@ const descriptionInput = document.getElementById("description-input");
 const taskData = JSON.parse(localStorage.getItem("data")) || [];
 let currentTask = {};
 
+const removeSpecialChars = (string) => {
+    return string.trim().replace(/[^a-zA-Z0-9\-\s]/g, "");
+};
+
 const addOrUpdateTask = () => {
     if (!titleInput.value.trim()) {
         alert("Please provide a title");
@@ -784,6 +788,18 @@ if (!titleInput.value.trim()) {
   alert("Please provide a title");
   return
 }
+
+
+
+Шаг 65
+
+Пришло время поработать над последней проблемой. Если в названии или описании задачи есть специальный символ, например, кавычка, приложение перестаёт работать. В противном случае, хотя это и так, нужный элемент будет отображаться как отсутствующий. Чтобы исправить это, нам нужно создать функцию removeSpecialChars, которая принимает строку в качестве входных данных и удаляет все специальные символы.
+
+
+const removeSpecialChars = (string) => {
+  return string.trim().replace(/[^a-zA-Z0-9\-\s]/g, "");
+};
+
 
 
  */
