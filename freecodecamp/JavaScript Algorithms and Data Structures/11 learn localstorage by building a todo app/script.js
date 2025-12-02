@@ -56,8 +56,14 @@ const deleteTask = (buttonEl) => {
 };
 
 const editTask = (buttonEl) => {
-    const dataArrIndex = taskData.findIndex((item) => item.id === buttonEl.parentElement.id);
+    const dataArrIndex = taskData.findIndex(
+        (item) => item.id === buttonEl.parentElement.id
+    );
+
     currentTask = taskData[dataArrIndex];
+    titleInput.value = currentTask.title;
+    dateInput.value = currentTask.date;
+    descriptionInput.value = currentTaskDescription;
 };
 
 const reset = () => {
@@ -591,6 +597,16 @@ const dataArrIndex = taskData.findIndex(
 Используйте квадратные скобки для извлечения задачи, которую нужно отредактировать, из массива taskData с помощью dataArrIndex. Затем присвойте её объекту currentTask для отслеживания.
 
 currentTask = taskData[dataArrIndex];
+
+
+
+Шаг 47
+
+Задача, которую нужно отредактировать, теперь находится в объекте currentTask. Подготовьте её к редактированию в полях ввода, установив значение titleInput равным currentTask.title, значение dateInput равным currentTask.date и значение descriptionInput равным currentTask.description.
+
+  titleInput.value = currentTask.title;
+  dateInput.value = currentTask.date;
+  descriptionInput.value = currentTaskDescription;
 
 
 
