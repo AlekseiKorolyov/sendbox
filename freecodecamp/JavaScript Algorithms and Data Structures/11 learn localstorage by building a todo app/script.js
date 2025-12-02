@@ -123,6 +123,9 @@ localStorage.setItem("data", JSON.stringify(myTaskArr));
 const getTaskArr = localStorage.getItem("data");
 console.log(getTaskArr);
 
+const getTaskArrObj =  JSON.parse(localStorage.getItem("data"));
+console.log(getTaskArrObj);
+
 
 
 
@@ -687,6 +690,18 @@ localStorage.setItem("data", JSON.stringify(myTaskArr));
 
 const getTaskArr = localStorage.getItem("data");
 console.log(getTaskArr);
+
+
+
+
+Шаг 56
+
+Извлеченный элемент — строка, поскольку вы сохранили его с помощью JSON.stringify(). Чтобы просмотреть его в исходном виде перед сохранением, необходимо использовать JSON.parse(). Используйте getItem() для повторного извлечения массива myTaskArr. На этот раз оберните его в JSON.parse(), присвойте переменной getTaskArrObj и выведите getTaskArrObj в консоль. Проверьте консоль, чтобы увидеть разницу между getTaskArr и getTaskArrObj.
+
+
+const getTaskArrObj =  JSON.parse(localStorage.getItem("data"));
+console.log(getTaskArrObj);
+
 
 
 
