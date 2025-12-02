@@ -65,6 +65,7 @@ const editTask = (buttonEl) => {
     dateInput.value = currentTask.date;
     descriptionInput.value = currentTask.description;
     addOrUpdateTaskBtn.innerText = "Update Task";
+    taskForm.classList.toggle("hidden");
 };
 
 const reset = () => {
@@ -616,6 +617,15 @@ currentTask = taskData[dataArrIndex];
 
 
 addOrUpdateTaskBtn.innerText = "Update Task";
+
+
+
+Шаг 49
+
+Наконец, отобразите модальное окно формы со значениями полей ввода, используя classList для переключения скрытого класса на taskForm.
+
+
+taskForm.classList.toggle("hidden");
 
 
 
