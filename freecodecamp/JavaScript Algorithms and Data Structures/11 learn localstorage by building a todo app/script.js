@@ -86,6 +86,10 @@ const reset = () => {
     currentTask = {};
 }
 
+if (taskData.length) {
+    updateTaskContainer();
+}
+
 openTaskFormBtn.addEventListener("click", () =>
     taskForm.classList.toggle("hidden")
 );
@@ -736,6 +740,25 @@ localStorage.setItem("data", JSON.stringify(taskData));
 
 
 const taskData = JSON.parse(localStorage.getItem("data")) || [];
+
+
+
+
+Шаг 62
+
+Вы получили элементы задач, но они всё ещё не отображаются в пользовательском интерфейсе при загрузке страницы. Однако они появляются при добавлении новой задачи. Вы можете проверить наличие задачи в taskData, используя длину массива. Поскольку 0 — ложное значение, для условия достаточно только длины массива. Вот пример проверки длины массива:
+Пример кода
+
+if (arr.length) {
+ // do something
+ }
+
+В этом примере, если длина arr больше 0, код внутри блока оператора if будет выполнен. Если длина arr равна 0, код внутри блока оператора if не будет выполнен. Проверьте наличие задачи внутри taskData, затем вызовите updateTaskContainer() внутри блока оператора if.
+
+
+if (taskData.length) {
+  updateTaskContainer();
+}
 
 
 
