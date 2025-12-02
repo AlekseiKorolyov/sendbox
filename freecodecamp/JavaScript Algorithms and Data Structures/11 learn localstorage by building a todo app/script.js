@@ -79,6 +79,7 @@ const editTask = (buttonEl) => {
 }
 
 const reset = () => {
+    addOrUpdateTaskBtn.innerText = "Add Task";
     titleInput.value = "";
     dateInput.value = "";
     descriptionInput.value = "";
@@ -760,6 +761,13 @@ if (taskData.length) {
   updateTaskContainer();
 }
 
+
+Шаг 63
+
+Если вы попытаетесь добавить новую задачу, отредактируете её, а затем нажмёте кнопку «Добавить новую задачу», вы заметите ошибку. На кнопке формы будет отображаться неверный текст «Обновить задачу» вместо «Добавить задачу». Чтобы исправить это, необходимо присвоить строку «Добавить задачу» методу addOrUpdateTaskBtn.innerText внутри функции сброса.
+
+
+addOrUpdateTaskBtn.innerText = "Add Task";
 
 
 
