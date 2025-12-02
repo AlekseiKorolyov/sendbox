@@ -120,6 +120,9 @@ const myTaskArr = [
 
 localStorage.setItem("data", JSON.stringify(myTaskArr));
 
+const getTaskArr = localStorage.getItem("data");
+console.log(getTaskArr);
+
 
 
 
@@ -673,6 +676,17 @@ localStorage.setItem("data", myTaskArr);
 
 
 localStorage.setItem("data", JSON.stringify(myTaskArr));
+
+
+
+
+Шаг 55
+
+Теперь, когда массив myTaskArr корректно сохранён в localStorage, вы можете извлечь его с помощью метода getItem(), указав ключ, который вы использовали для сохранения элемента. Используйте метод getItem() для извлечения массива myTaskArr и присвойте его переменной getTaskArr. Затем выведите переменную getTaskArr в консоль, чтобы увидеть результат.
+
+
+const getTaskArr = localStorage.getItem("data");
+console.log(getTaskArr);
 
 
 
