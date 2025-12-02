@@ -59,6 +59,7 @@ const deleteTask = (buttonEl) => {
 
     buttonEl.parentElement.remove();
     taskData.splice(dataArrIndex, 1);
+    localStorage.setItem("data", JSON.stringify(taskData));
 }
 
 const editTask = (buttonEl) => {
@@ -672,6 +673,7 @@ localStorage.setItem("data", JSON.stringify(myTaskArr));
 
 
 
+
 Шаг 55
 
 Теперь, когда массив myTaskArr корректно сохранён в localStorage, вы можете извлечь его с помощью метода getItem(), указав ключ, который вы использовали для сохранения элемента. Используйте метод getItem() для извлечения массива myTaskArr и присвойте его переменной getTaskArr. Затем выведите переменную getTaskArr в консоль, чтобы увидеть результат.
@@ -711,6 +713,20 @@ localStorage.removeItem("data");
 Шаг 59
 
 Теперь необходимо сохранять элементы задач в локальном хранилище, когда пользователь добавляет, обновляет или удаляет задачу. В функции addOrUpdateTask используйте setItem() для сохранения задач с ключом data, а затем передайте массив taskData в качестве аргумента. Убедитесь, что вы преобразовали taskData в строковый тип. Это позволит сохранять данные после добавления или обновления задач пользователем.
+
+
+localStorage.setItem("data", JSON.stringify(taskData));
+
+
+
+
+
+Шаг 60
+
+Вы также хотите удалить удалённую задачу из локального хранилища. Для этого вам не нужны методы removeItem() или clear(). Поскольку вы уже использовали splice() для удаления удалённой задачи из taskData, теперь вам нужно просто снова сохранить taskData в локальном хранилище. Используйте setItem() для повторного сохранения массива taskData. Передайте data в качестве ключа и убедитесь, что taskData преобразован в строку перед сохранением.
+
+
+localStorage.setItem("data", JSON.stringify(taskData));
 
 
 
