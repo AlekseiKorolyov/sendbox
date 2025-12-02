@@ -63,7 +63,8 @@ const editTask = (buttonEl) => {
     currentTask = taskData[dataArrIndex];
     titleInput.value = currentTask.title;
     dateInput.value = currentTask.date;
-    descriptionInput.value = currentTaskDescription;
+    descriptionInput.value = currentTask.description;
+    addOrUpdateTaskBtn.innerText = "Update Task";
 };
 
 const reset = () => {
@@ -606,7 +607,15 @@ currentTask = taskData[dataArrIndex];
 
   titleInput.value = currentTask.title;
   dateInput.value = currentTask.date;
-  descriptionInput.value = currentTaskDescription;
+  descriptionInput.value = currentTask.description;
+
+
+Шаг 48
+
+Установите для внутреннего текста кнопки addOrUpdateTaskBtn значение «Обновить задачу».
+
+
+addOrUpdateTaskBtn.innerText = "Update Task";
 
 
 
