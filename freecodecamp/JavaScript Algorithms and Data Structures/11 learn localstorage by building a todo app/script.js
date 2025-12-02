@@ -14,6 +14,10 @@ const taskData = JSON.parse(localStorage.getItem("data")) || [];
 let currentTask = {};
 
 const addOrUpdateTask = () => {
+    if (!titleInput.value.trim()) {
+        alert("Please provide a title");
+        return
+    }
     const dataArrIndex = taskData.findIndex((item) => item.id === currentTask.id);
     const taskObj = {
         id: `${titleInput.value.toLowerCase().split(" ").join("-")}-${Date.now()}`,
@@ -769,6 +773,17 @@ if (taskData.length) {
 
 addOrUpdateTaskBtn.innerText = "Add Task";
 
+
+
+Шаг 64
+
+Осталось исправить две ошибки. Во-первых, если создать задачу, в названии которой будут только пробелы, будет создана пустая задача, несмотря на то, что название требуется. Исправьте это, добавив проверку в начало функции if !titleInput.value.trim(). Если названия нет, выведите оповещение с текстом «Укажите название» и верните управление после этого.
+
+
+if (!titleInput.value.trim()) {
+  alert("Please provide a title");
+  return
+}
 
 
  */
