@@ -10,7 +10,7 @@ const titleInput = document.getElementById("title-input");
 const dateInput = document.getElementById("date-input");
 const descriptionInput = document.getElementById("description-input");
 
-const taskData = [];
+const taskData = JSON.parse(localStorage.getItem("data")) || [];
 let currentTask = {};
 
 const addOrUpdateTask = () => {
@@ -727,6 +727,15 @@ localStorage.setItem("data", JSON.stringify(taskData));
 
 
 localStorage.setItem("data", JSON.stringify(taskData));
+
+
+
+Шаг 61
+
+Если вы добавляете, обновляете или удаляете задачу, это должно отразиться в пользовательском интерфейсе. Однако сейчас этого не происходит, поскольку вы ещё не извлекли задачи. Для этого необходимо изменить исходный taskData, сделав его пустым массивом. Установите taskData на извлечение данных из локального хранилища или пустой массив. Убедитесь, что вы анализируете данные, поступающие с помощью JSON.parse(), поскольку вы сохранили их как строку.
+
+
+const taskData = JSON.parse(localStorage.getItem("data")) || [];
 
 
 
