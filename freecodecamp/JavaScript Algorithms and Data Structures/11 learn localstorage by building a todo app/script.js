@@ -27,6 +27,7 @@ const addOrUpdateTask = () => {
     } else {
         taskData[dataArrIndex] = taskObj;
     }
+    localStorage.setItem("data", JSON.stringify(taskData));
 
     updateTaskContainer()
     reset()
@@ -704,6 +705,12 @@ localStorage.removeItem("data");
 Шаг 58
 
 Удалите массив myTaskArr и весь код для localStorage, поскольку они вам больше не нужны.
+
+
+
+Шаг 59
+
+Теперь необходимо сохранять элементы задач в локальном хранилище, когда пользователь добавляет, обновляет или удаляет задачу. В функции addOrUpdateTask используйте setItem() для сохранения задач с ключом data, а затем передайте массив taskData в качестве аргумента. Убедитесь, что вы преобразовали taskData в строковый тип. Это позволит сохранять данные после добавления или обновления задач пользователем.
 
 
 
