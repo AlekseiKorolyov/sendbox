@@ -11,6 +11,8 @@ const decimalToBinary = (input) => {
         const quotient = Math.floor(input / 2);
         const remainder = input % 2;
         inputs.push(input);
+        quotients.push(quotient);
+        remainders.push(remainder);
 
         input = quotient;
     }
@@ -442,6 +444,18 @@ const remainder = input % 2;
 
 
 inputs.push(input);
+
+
+
+
+
+Шаг 30
+
+Используйте .push() для добавления переменной quotient к массиву quotients. Также добавьте переменную remainder к массиву remainders.
+
+
+    quotients.push(quotient);
+    remainders.push(remainder);
 
 
 
