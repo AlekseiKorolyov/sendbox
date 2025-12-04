@@ -17,6 +17,7 @@ const checkUserInput = () => {
     }
 
     decimalToBinary(parseInt(numberInput.value));
+    numberInput.value = "";
 };
 
 convertBtn.addEventListener("click", checkUserInput);
@@ -243,6 +244,16 @@ const decimalToBinary = (input) => {
 
 
 decimalToBinary(parseInt(numberInput.value));
+
+
+
+
+Шаг 17
+
+Наконец, необходимо очистить поле ввода чисел, установив его значение в пустую строку. Тогда при последующем преобразовании нескольких чисел подряд вам не придётся удалять предыдущее число перед вводом следующего. Установите свойство value параметра numberInput в пустую строку.
+
+
+numberInput.value = "";
 
 
  */
