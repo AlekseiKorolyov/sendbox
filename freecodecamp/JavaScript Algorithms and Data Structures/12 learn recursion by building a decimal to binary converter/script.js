@@ -6,6 +6,8 @@ const decimalToBinary = (input) => {
     const inputs = [];
     const quotients = [];
     const remainders = [];
+
+    input = 0;
 };
 
 const checkUserInput = () => {
@@ -328,6 +330,16 @@ return "01110110";
   const quotients = [];
   const remainders = [];
 
+
+
+
+
+Шаг 22
+
+Установите на данный момент input значение равным 0. Мы изменим это в следующих нескольких шагах.
+
+
+input = 0;
 
 
 
