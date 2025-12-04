@@ -3,7 +3,7 @@ const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
 
 const checkUserInput = () => {
-    if (!numberInput.value) {
+    if (!numberInput.value || parseInt(numberInput.value)) {
 
     }
 
@@ -158,6 +158,22 @@ console.log(!num); // true
 
   }
 
+
+
+
+Шаг 11 Поскольку элемент input type="number" допускает специальные символы, такие как ., + и e, пользователи могут вводить числа с плавающей точкой, например, 2.2, уравнения, например, 2e+3, или даже просто e, что вам не подходит. Хороший способ проверки и нормализации чисел в JavaScript — использовать встроенную функцию parseInt(), которая преобразует строку в целое число. parseInt() принимает как минимум один аргумент — строку, которую нужно преобразовать в целое число, — и возвращает либо целое число, либо NaN (Not a Number). Например:
+Пример кода
+
+parseInt(2.2); // 2
+parseInt("2e+3"); // 2
+parseInt("e") // NaN
+
+Добавьте логический оператор ИЛИ (||) после первого условия в операторе if. Затем передайте значение(value) numberInput в функцию parseInt() в качестве второго условия в операторе if.
+
+
+  if (!numberInput.value || parseInt(numberInput.value)) {
+
+  }
 
 
 
