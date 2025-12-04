@@ -16,7 +16,7 @@ const checkUserInput = () => {
         return;
     }
 
-    console.log(numberInput.value);
+    decimalToBinary(parseInt(numberInput.value));
 };
 
 convertBtn.addEventListener("click", checkUserInput);
@@ -233,6 +233,16 @@ isNaN("3.5"); // false
 const decimalToBinary = (input) => {
 
 };
+
+
+
+
+Шаг 16
+
+В функции checkUserInput удалите оператор console.log(). Затем вызовите функцию decimalToBinary и передайте ей значение(value) numberInput в качестве аргумента. Также обязательно используйте функцию parseInt() для преобразования входных данных в число.
+
+
+decimalToBinary(parseInt(numberInput.value));
 
 
  */
