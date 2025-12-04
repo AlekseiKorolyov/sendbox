@@ -8,7 +8,9 @@ const checkUserInput = () => {
 
 convertBtn.addEventListener("click", checkUserInput);
 
-numberInput.addEventListener("keydown", () => {});
+numberInput.addEventListener("keydown", (e) => {
+    console.log(e);
+});
 
 
 
@@ -85,6 +87,18 @@ convertBtn.addEventListener("click", checkUserInput);
 
 
 numberInput.addEventListener("keydown", () => {});
+
+
+
+
+Шаг 6
+
+Всякий раз, когда прослушиватель событий срабатывает при возникновении события, автоматически создаётся объект события. Этот объект не всегда требуется использовать, как в случае с обработчиком щелчков, описанным выше, но он может быть полезен для доступа к информации о сработавшем событии. Сначала передайте e в качестве параметра функции обратного вызова. Помните, что e — это общее имя параметра для объекта события. Затем выведите e в консоль в теле функции обратного вызова.
+
+
+numberInput.addEventListener("keydown", (e) => {
+  console.log(e);
+});
 
 
 
