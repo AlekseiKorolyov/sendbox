@@ -3,7 +3,9 @@ const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
 
 const decimalToBinary = (input) => {
-    return "01110110";
+    const inputs = [];
+    const quotients = [];
+    const remainders = [];
 };
 
 const checkUserInput = () => {
@@ -312,6 +314,20 @@ return "1010";
 
 
 return "01110110";
+
+
+
+
+
+Шаг 21
+
+Теперь, когда вы знакомы с двоичными числами, пора завершить создание функции для их преобразования. Сначала вы начнёте с более простого решения, а затем преобразуете его в рекурсивное. Сначала вам нужно создать несколько массивов для хранения входных данных и результатов деления, которое вы выполните на следующих шагах. Это упростит понимание того, как работает преобразование из десятичной системы в двоичную. Удалите оператор return из функции decimalToBinary. Затем объявите переменные с именами inputs, quotients и residuals и присвойте каждой из них пустой массив.
+
+
+  const inputs = [];
+  const quotients = [];
+  const remainders = [];
+
 
 
 
