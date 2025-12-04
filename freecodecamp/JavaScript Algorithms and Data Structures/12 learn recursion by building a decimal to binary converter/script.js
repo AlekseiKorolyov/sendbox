@@ -3,7 +3,11 @@ const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
 
 const checkUserInput = () => {
-    if (!numberInput.value || parseInt(numberInput.value)) {
+    if (
+        !numberInput.value ||
+        isNaN(parseInt(numberInput.value)) ||
+        parseInt(numberInput.value) < 0
+    ) {
 
     }
 
@@ -178,7 +182,27 @@ parseInt("e") // NaN
 
 
 
+Шаг 12.
 
+Далее необходимо проверить, является ли возвращаемое функцией parseInt() значение числом. Для этого можно использовать функцию isNaN(). Эта функция принимает строку или число в качестве аргумента и возвращает true, если результат равен NaN. Например:
+Пример кода
+
+isNaN("test"); // true
+isNaN(2); // false
+isNaN("3.5"); // false
+
+Измените второе условие в операторе if, чтобы использовать функцию isNaN() для проверки того, является ли возвращаемое функцией parseInt() значение NaN. Кроме того, как мы упоминали в шаге 1, что мы рассматриваем только положительные числа, необходимо добавить третье условие в оператор if для проверки того, меньше ли число 0 (т.е. отрицательные числа).
+Пример кода
+
+6 < 0; // false
+-1 < 0; // true
+-8 < 0; // true
+0 < 0; // false
+
+
+  if (!numberInput.value || isNaN(parseInt(numberInput.value)) || parseInt(numberInput.value) < 0) {
+
+  }
 
 
  */
