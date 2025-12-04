@@ -18,6 +18,8 @@ const decimalToBinary = (input) => {
     }
 
     console.log("Inputs: ", inputs);
+    console.log("Quotients: ", quotients);
+    console.log("Remainders: ", remainders);
 };
 
 const checkUserInput = () => {
@@ -469,6 +471,18 @@ inputs.push(input);
 
 
 console.log("Inputs: ", inputs);
+
+
+
+
+
+Шаг 32
+
+Далее выведите на консоль текст "Quotients: ", запятую и массив quotients. Также выведите на консоль текст "Remainders: ", запятую и массив remainders.
+
+
+  console.log("Quotients: ", quotients);
+  console.log("Remainders: ", remainders);
 
 
 
