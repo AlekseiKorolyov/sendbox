@@ -10,6 +10,7 @@ const decimalToBinary = (input) => {
     while (input > 0) {
         const quotient = Math.floor(input / 2);
         const remainder = input % 2;
+        inputs.push(input);
 
         input = quotient;
     }
@@ -430,6 +431,17 @@ const remainder = 5 % 2; // 1
 
 
 const remainder = input % 2;
+
+
+
+
+
+Шаг 29
+
+Внутри цикла while используйте метод .push() для добавления входных данных(input) в массив inputs. Это поможет вам лучше понять, как работает преобразование, когда вы будете выводить содержимое массивов в консоль.
+
+
+inputs.push(input);
 
 
 
