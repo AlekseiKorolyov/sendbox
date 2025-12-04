@@ -8,6 +8,8 @@ const checkUserInput = () => {
 
 convertBtn.addEventListener("click", checkUserInput);
 
+numberInput.addEventListener("keydown", () => {});
+
 
 
 
@@ -73,6 +75,16 @@ console.log(numberInput.value);
 
 
 convertBtn.addEventListener("click", checkUserInput);
+
+
+
+
+Шаг 5
+
+Кнопка «Преобразовать» теперь должна работать. Но пользователям может быть утомительно вводить число, а затем нажимать эту кнопку каждый раз, когда нужно преобразовать его из десятичного формата в двоичный. Было бы гораздо удобнее выполнять преобразование при нажатии клавиши Enter или Return. Событие keydown срабатывает каждый раз, когда пользователь нажимает клавишу на клавиатуре, и это хороший способ добавить больше интерактивности элементам ввода. Добавьте .addEventListener() к numberInput. Обработчик событий должен отслеживать события keydown и принимать пустую стрелочную функцию в качестве обратного вызова.
+
+
+numberInput.addEventListener("keydown", () => {});
 
 
 
