@@ -7,6 +7,10 @@ const decimalToBinary = (input) => {
     const quotients = [];
     const remainders = [];
 
+    if (input === 0) {
+
+    }
+
     while (input > 0) {
         const quotient = Math.floor(input / 2);
         const remainder = input % 2;
@@ -503,6 +507,19 @@ Remainders:  [ 0, 1, 1 ]
 
 
 result.innerText = remainders.reverse().join("");
+
+
+
+
+
+Шаг 34
+
+Ваша функция decimalToBinary работает хорошо, но есть проблема: из-за условия в цикле while она работает только для чисел больше 0. Если вы попытаетесь преобразовать 0 в двоичное число, на страницу ничего не добавится. Чтобы исправить это, добавьте оператор if для проверки того, равен ли input 0. Тело оператора if пока оставьте пустым.
+
+
+if (input === 0) {
+
+}
 
 
 
