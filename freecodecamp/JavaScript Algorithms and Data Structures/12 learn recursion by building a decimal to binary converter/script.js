@@ -3,6 +3,10 @@ const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
 
 const checkUserInput = () => {
+    if (numberInput.value === "") {
+
+    }
+
     console.log(numberInput.value);
 };
 
@@ -123,6 +127,18 @@ numberInput.addEventListener("keydown", (e) => {
 
 
 checkUserInput();
+
+
+
+
+Шаг 9
+
+Теперь, когда кнопка «Конвертировать» и поле ввода чисел отслеживают нажатия клавиш Enter и клики, пора завершить функцию checkUserInput(). Было бы полезно предупреждать пользователей, если они не вводят значение в поле ввода чисел или вводят недопустимое число. Хотя элемент input type="number" упрощает проверку, допуская только числа и некоторые специальные символы, помните, что все значения, получаемые из HTML-элементов, фактически являются строками. Кроме того, если поле ввода чисел пусто, свойство value будет пустой строкой. Внутри функции checkUserInput используйте оператор if, чтобы проверить, равно ли значение numberInput пустой строке. Тело оператора if пока оставьте пустым.
+
+
+if (numberInput.value === "") {
+
+};
 
 
 
