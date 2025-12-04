@@ -2,6 +2,10 @@ const numberInput = document.getElementById("number-input");
 const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
 
+const decimalToBinary = (input) => {
+
+};
+
 const checkUserInput = () => {
     if (
         !numberInput.value ||
@@ -218,6 +222,17 @@ isNaN("3.5"); // false
 Шаг 14
 
 После оповещения пользователя о том, что введенное число пусто или значение не является числом, вы можете использовать ключевое слово return для преждевременного прерывания этой функции. Это предотвратит выполнение последующего кода в этой функции. Добавьте ключевое слово return после alert().
+
+
+
+
+Шаг 15
+
+Теперь приступим к созданию функции для преобразования десятичных чисел в двоичные. Создайте функцию с именем decimalToBinary и входными(input) данными в качестве параметра. Тело функции пока оставьте пустым.
+
+const decimalToBinary = (input) => {
+
+};
 
 
  */
