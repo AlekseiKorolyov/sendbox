@@ -2,7 +2,9 @@ const numberInput = document.getElementById("number-input");
 const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
 
-const checkUserInput = () => {};
+const checkUserInput = () => {
+    console.log(numberInput.value);
+};
 
 
 
@@ -49,6 +51,16 @@ const result = document.getElementById("result");
 
 
 const checkUserInput = () => {};
+
+
+
+
+Шаг 3
+
+Хороший способ проверить работоспособность — вывести значение атрибута value элемента numberInput на консоль. Напоминаем, что доступ к значению атрибута value элемента можно получить, используя точку или скобки. В функции checkUserInput используйте console.log() для выведения значения numberInput на консоль.
+
+
+console.log(numberInput.value);
 
 
 
