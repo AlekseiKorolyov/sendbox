@@ -10,7 +10,7 @@ const decimalToBinary = (input) => {
     while (input > 0) {
         const quotient = Math.floor(input / 2);
 
-        input = 0;
+        input = quotient;
     }
 };
 
@@ -402,6 +402,18 @@ const quotient = input / 2;
 
 
 const quotient = Math.floor(input / 2);
+
+
+
+
+
+Шаг 27
+
+Теперь, когда у вас есть операция, которая будет уменьшать значение входного значения при каждом выполнении цикла, вам не нужно беспокоиться о том, что цикл будет выполняться вечно. Обновите последнюю строку цикла while и присвойте значение частного(quotient) входному(input) значению.
+
+
+
+input = quotient;
 
 
 
