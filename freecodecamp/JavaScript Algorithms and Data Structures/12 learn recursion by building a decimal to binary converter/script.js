@@ -10,7 +10,7 @@ convertBtn.addEventListener("click", checkUserInput);
 
 numberInput.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
-
+        checkUserInput();
     }
 });
 
@@ -114,6 +114,15 @@ numberInput.addEventListener("keydown", (e) => {
 
   }
 
+
+
+
+Шаг 8.
+
+Далее, в теле оператора if вызовите функцию checkUserInput(). После этого, если ввести числа в поле ввода и нажать клавишу Enter/Return, вы увидите числа, выведенные на консоль.
+
+
+checkUserInput();
 
 
 
