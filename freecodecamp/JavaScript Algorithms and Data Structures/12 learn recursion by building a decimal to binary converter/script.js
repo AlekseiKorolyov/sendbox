@@ -8,7 +8,7 @@ const checkUserInput = () => {
         isNaN(parseInt(numberInput.value)) ||
         parseInt(numberInput.value) < 0
     ) {
-
+        alert("Please provide a decimal number greater than or equal to 0");
     }
 
     console.log(numberInput.value);
@@ -203,6 +203,13 @@ isNaN("3.5"); // false
   if (!numberInput.value || isNaN(parseInt(numberInput.value)) || parseInt(numberInput.value) < 0) {
 
   }
+
+
+
+
+Шаг 13
+
+Теперь вы можете предупреждать пользователя, если он не ввёл число или число недопустимо, прежде чем пытаться преобразовать его в двоичный код. В теле оператора if используйте метод alert() для отображения текста «Укажите десятичное число, большее или равное 0». Обратите внимание, что alert() — это метод объекта window в браузере, поэтому вы можете использовать как window.alert(), так и alert().
 
 
  */
