@@ -20,6 +20,8 @@ const decimalToBinary = (input) => {
     console.log("Inputs: ", inputs);
     console.log("Quotients: ", quotients);
     console.log("Remainders: ", remainders);
+
+    result.innerText = remainders.reverse().join("");
 };
 
 const checkUserInput = () => {
@@ -483,6 +485,24 @@ console.log("Inputs: ", inputs);
 
   console.log("Quotients: ", quotients);
   console.log("Remainders: ", remainders);
+
+
+
+
+
+Шаг 33
+
+Теперь, если ввести число 6 и нажать кнопку «Преобразовать», вы увидите следующий результат:
+Пример кода
+
+Inputs:  [ 6, 3, 1 ]
+Quotients:  [ 3, 1, 0 ]
+Remainders:  [ 0, 1, 1 ]
+
+Обратите внимание, что массив remainders — это двоичное представление числа 6, но в обратном порядке. Используйте метод .reverse(), чтобы изменить порядок элементов массива remainders, и метод .join() с пустой строкой в качестве разделителя, чтобы объединить элементы в двоичную строку. Затем установите result.innerText равным двоичной строке.
+
+
+result.innerText = remainders.reverse().join("");
 
 
 
