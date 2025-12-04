@@ -3,7 +3,7 @@ const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
 
 const checkUserInput = () => {
-    if (numberInput.value === "") {
+    if (!numberInput.value) {
 
     }
 
@@ -140,6 +140,23 @@ if (numberInput.value === "") {
 
 };
 
+
+
+Шаг 10
+
+В предыдущем проекте вы узнали об истинности и ложности значений, которые могут быть результатом true или false. В JavaScript к ложным значениям часто относятся null, undefined, число 0 и пустые строки. Вместо проверки значения на равенство ложному значению вы можете использовать логический оператор NOT (!) для проверки ложности самого значения. Например:
+Пример кода
+
+const num = 0;
+console.log(num === 0); // true
+console.log(!num); // true
+
+Обновите условие в операторе if, чтобы использовать логический оператор NOT для проверки ложности numberInput.value.
+
+
+  if (!numberInput.value) {
+
+  }
 
 
 
