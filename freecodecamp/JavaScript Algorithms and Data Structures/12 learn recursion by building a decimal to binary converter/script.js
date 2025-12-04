@@ -8,7 +8,8 @@ const decimalToBinary = (input) => {
     const remainders = [];
 
     if (input === 0) {
-
+        result.innerText = "0";
+        return;
     }
 
     while (input > 0) {
@@ -520,6 +521,17 @@ result.innerText = remainders.reverse().join("");
 if (input === 0) {
 
 }
+
+
+
+
+Шаг 35
+
+В теле оператора if установите свойство innerText объекта result равным строке «0». Затем используйте оператор возврата для раннего выхода из функции.
+
+
+    result.innerText = "0";
+    return;
 
 
 
