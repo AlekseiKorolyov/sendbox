@@ -8,7 +8,7 @@ const decimalToBinary = (input) => {
     const remainders = [];
 
     while (input > 0) {
-        const quotient = input / 2;
+        const quotient = Math.floor(input / 2);
 
         input = 0;
     }
@@ -390,6 +390,18 @@ const quotient = 5 / 2; // 2.5
 
 
 const quotient = input / 2;
+
+
+
+
+
+Шаг 26
+
+Как вы видели на предыдущем шаге, деление может привести к получению числа с плавающей точкой или числа с десятичной точкой. Лучший способ решения этой проблемы — округлить до ближайшего целого числа. Используйте функцию Math.floor(), чтобы округлить частное от деления входного значения на 2 до его присвоения переменной quotient.
+
+
+
+const quotient = Math.floor(input / 2);
 
 
 
