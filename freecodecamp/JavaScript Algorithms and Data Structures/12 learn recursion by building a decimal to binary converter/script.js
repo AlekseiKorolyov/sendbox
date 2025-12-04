@@ -6,6 +6,8 @@ const checkUserInput = () => {
     console.log(numberInput.value);
 };
 
+convertBtn.addEventListener("click", checkUserInput);
+
 
 
 
@@ -61,6 +63,16 @@ const checkUserInput = () => {};
 
 
 console.log(numberInput.value);
+
+
+
+
+Шаг 4
+
+Теперь, когда функция checkUserInput() настроена для тестирования, вы можете использовать прослушиватель событий для вызова функции при нажатии кнопки «Конвертировать». Свяжите метод .addEventListener() с convertBtn. Прослушиватель событий должен отслеживать события нажатия и принимать ссылку на функцию checkUserInput в качестве обратного вызова. Помните, что ссылки на функции не вызываются в скобках. После этого при каждом нажатии кнопки «Конвертировать» значение введённого числа должно выводиться в консоль.
+
+
+convertBtn.addEventListener("click", checkUserInput);
 
 
 
