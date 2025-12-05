@@ -2,21 +2,8 @@ const numberInput = document.getElementById("number-input");
 const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
 
-
-
 const decimalToBinary = (input) => {
-    let binary = "";
 
-    if (input ===0) {
-        binary = "0";
-    }
-
-    while (input > 0) {
-        binary = (input % 2) + binary;
-        input = Math.floor(input / 2);
-    }
-
-    result.innerText = binary;
 };
 
 const checkUserInput = () => {
@@ -874,6 +861,12 @@ countdown(3);
 Шаг 65
 
 Теперь вы должны увидеть обратный отсчёт от 3 до 0, за которым следует Reached base case и счётчик от 1 до 3. Это связано с тем, что после завершения рекурсивного цикла функция продолжит выполнение кода после рекурсивного вызова. Именно поэтому вы видите Reached base case перед счётчиком от 1 до 3. Теперь, когда вы лучше понимаете, как работает стек вызовов и рекурсия, вы проведёте рефакторинг функции decimalToBinary(), чтобы использовать рекурсию вместо цикла while. Сначала удалите функцию countDownAndUp() и её вызов.
+
+
+
+
+
+Шаг 66 Затем удалите содержимое функции decimalToBinary(). Тело функции пока оставьте пустым.
 
 
 
