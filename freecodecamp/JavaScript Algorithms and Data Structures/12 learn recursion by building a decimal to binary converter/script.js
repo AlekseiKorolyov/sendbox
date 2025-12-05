@@ -4,6 +4,7 @@ const result = document.getElementById("result");
 
 const decimalToBinary = (input) => {
     let binary = "";
+    result.innerText = binary;
 };
 
 const checkUserInput = () => {
@@ -520,6 +521,17 @@ if (input === 0) {
 
 
 let binary = "";
+
+
+
+
+
+Шаг 37
+
+Поскольку вы хотите отобразить результат преобразования, присвойте binary переменную свойству innerText result в конце функции.
+
+
+result.innerText = binary;
 
 
 
