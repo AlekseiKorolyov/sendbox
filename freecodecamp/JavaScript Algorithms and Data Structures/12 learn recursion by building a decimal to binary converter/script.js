@@ -5,6 +5,10 @@ const result = document.getElementById("result");
 const decimalToBinary = (input) => {
     let binary = "";
 
+    if (input ===0) {
+        binary = "0";
+    }
+
     while (input > 0) {
         binary = (input % 2) + binary;
         input = Math.floor(input / 2);
@@ -595,6 +599,19 @@ binary = input % 2 + binary;
 
 
 binary = (input % 2) + binary;
+
+
+
+
+
+Шаг 43
+
+Наконец, вам нужно обработать случаи, когда input равны 0. Вместо того, чтобы обновлять DOM и возвращать управление как раньше, вы можете обновить binary и позволить остальной части кода в функции выполниться. Создайте оператор if, который проверяет, равны ли input 0. Если да, установите binary равной строке "0".
+
+
+if (input ===0) {
+  binary = "0";
+}
 
 
 
