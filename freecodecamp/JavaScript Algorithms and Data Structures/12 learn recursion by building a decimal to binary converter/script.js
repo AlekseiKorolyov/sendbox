@@ -6,7 +6,7 @@ const decimalToBinary = (input) => {
     let binary = "";
 
     while (input > 0) {
-        binary = input % 2;
+        binary = input % 2 + binary;
         input = Math.floor(input / 2);
     }
 
@@ -573,6 +573,18 @@ input = Math.floor(input / 2);
 
 
 binary = input % 2;
+
+
+
+
+
+Шаг 41
+
+Затем используйте оператор сложения, чтобы добавить текущее binary значение к концу input % 2. Это позволит построить двоичную строку справа налево.
+
+
+binary = input % 2 + binary;
+
 
 
  */
