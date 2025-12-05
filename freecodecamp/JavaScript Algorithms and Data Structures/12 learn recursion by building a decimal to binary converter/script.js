@@ -2,17 +2,17 @@ const numberInput = document.getElementById("number-input");
 const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
 
-const countdown = (number) => {
+const countDownAndUp = (number) => {
     console.log(number);
 
     if (number === 0) {
         return;
     } else {
-        countdown(number - 1);
+        countDownAndUp(number - 1);
     }
 };
 
-countdown(3);
+countDownAndUp(3);
 
 const decimalToBinary = (input) => {
     let binary = "";
@@ -852,6 +852,14 @@ console.log(number);
 
 
 countdown(3);
+
+
+
+
+
+Шаг 62
+
+Чтобы увидеть стек вызовов в действии, нужно лишь немного изменить функцию. Сначала переименуйте функцию countdown() в countDownAndUp(). Не забудьте также обновить вызовы функций.
 
 
 
