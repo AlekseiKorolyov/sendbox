@@ -1,4 +1,14 @@
-const a = () => "freeCodeCamp" + b();
+const a = () => {
+    return "freeCodeCamp " + b();
+};
+
+const b = () => {
+    return "is " + c();
+};
+
+const c = () => {
+    return "awesome!";
+};
 
 const numberInput = document.getElementById("number-input");
 const convertBtn = document.getElementById("convert-btn");
@@ -625,6 +635,29 @@ if (input ===0) {
 
 
 const a = () => "freeCodeCamp" + b();
+
+***
+
+const a = () => {
+  return "freeCodeCamp " + b();
+};
+
+
+
+
+
+Шаг 45
+
+Далее создайте функцию с именем b, которая возвращает следующее: "is " + c(). Также создайте функцию с именем c, которая возвращает следующее: "awesome!".
+
+
+const b = () => {
+  return "is " + c();
+};
+
+const c = () => {
+  return "awesome!";
+};
 
 
 
