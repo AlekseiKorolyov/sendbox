@@ -6,7 +6,7 @@ const decimalToBinary = (input) => {
     if (input === 0) {
         return "";
     } else {
-        return decimalToBinary(Math.floor(input / 2));
+        return decimalToBinary(Math.floor(input / 2)) + (input % 2);
     }
 };
 
@@ -898,6 +898,16 @@ if (input === 0) {
     return decimalToBinary(Math.floor(input / 2));
   }
 
+
+
+
+
+Шаг 69
+
+Это фактически уменьшает input примерно вдвое при каждом вызове функции decimalToBinary(). Однако помните, что строка двоичных чисел формируется путём вычисления остатка от деления input на 2 и добавления его в конец строки. После вызова decimalToBinary() используйте оператор сложения (+), чтобы присоединить остаток от деления input на 2 к концу строки, возвращаемой рекурсивной функцией. Также заключите операцию в скобки.
+
+
+return decimalToBinary(Math.floor(input / 2)) + (input % 2);
 
 
 
