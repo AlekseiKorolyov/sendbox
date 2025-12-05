@@ -4,6 +4,11 @@ const result = document.getElementById("result");
 
 const decimalToBinary = (input) => {
     let binary = "";
+
+    while (input > 0) {
+        input = 0;
+    }
+
     result.innerText = binary;
 };
 
@@ -532,6 +537,19 @@ let binary = "";
 
 
 result.innerText = binary;
+
+
+
+
+
+Шаг 38
+
+Создайте цикл while, который будет выполняться до тех пор, пока  input больше 0. Внутри цикла пока присвойте input 0. Примечание: Будьте внимательны и не вызовите функцию decimalToBinary, пока не присвоите input 0 внутри цикла. В противном случае это может привести к бесконечному циклу.
+
+
+  while (input > 0) {
+    input = 0;
+  }
 
 
 
