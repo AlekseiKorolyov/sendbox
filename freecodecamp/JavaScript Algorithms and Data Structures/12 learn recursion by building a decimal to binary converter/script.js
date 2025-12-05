@@ -10,6 +10,8 @@ const c = () => {
     return "awesome!";
 };
 
+console.log(a());
+
 const numberInput = document.getElementById("number-input");
 const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
@@ -658,6 +660,17 @@ const b = () => {
 const c = () => {
   return "awesome!";
 };
+
+
+
+
+
+Шаг 46
+
+Наконец, вызовите a() из оператора console.log(), чтобы вывести вывод на консоль.
+
+
+console.log(a());
 
 
 
