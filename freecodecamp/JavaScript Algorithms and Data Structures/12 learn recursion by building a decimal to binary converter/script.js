@@ -6,6 +6,7 @@ const countDownAndUp = (number) => {
     console.log(number);
 
     if (number === 0) {
+        console.log("Reached base case");
         return;
     } else {
         countDownAndUp(number - 1);
@@ -860,6 +861,14 @@ countdown(3);
 Шаг 62
 
 Чтобы увидеть стек вызовов в действии, нужно лишь немного изменить функцию. Сначала переименуйте функцию countdown() в countDownAndUp(). Не забудьте также обновить вызовы функций.
+
+
+
+
+
+Шаг 63
+
+В базовом варианте выведите на консоль сообщение «Достигнут базовый вариант».
 
 
 
