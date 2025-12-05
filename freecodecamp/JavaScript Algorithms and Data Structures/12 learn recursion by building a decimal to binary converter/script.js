@@ -1,5 +1,6 @@
 const callStack = [
-    'a(): returns "freeCodeCamp " + b()'
+    'a(): returns "freeCodeCamp " + b()',
+    'b(): returns "is " + c()'
 ];
 
 const a = () => {
@@ -698,6 +699,20 @@ const callStack = [];
 
 const callStack = [
 'a(): returns "freeCodeCamp " + b()'
+];
+
+
+
+
+
+Шаг 49
+
+Затем, поскольку a() вызывает b(), функция b() добавляется в стек вызовов. Затем добавьте следующую строку в массив callStack: "b(): returns 'is ' + c()". Помните, что стек вызовов — это структура данных LIFO, поэтому последняя функция добавляется в начало или конец стека, аналогично добавлению элемента в массив.
+
+
+const callStack = [
+  'a(): returns "freeCodeCamp " + b()',
+  'b(): returns "is " + c()'
 ];
 
 
