@@ -3,7 +3,7 @@ const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
 
 const countdown = (number) => {
-
+    console.log(number);
 };
 
 const decimalToBinary = (input) => {
@@ -778,6 +778,17 @@ const callStack = [
 const countdown = (number) => {
 
 };
+
+
+
+
+
+Шаг 57
+
+Первое, что вам нужно сделать, — это вывести текущее значение number на консоль, чтобы использовать его в качестве обратного отсчёта. Используйте console.log() для вывода number на консоль.
+
+
+console.log(number);
 
 
 
