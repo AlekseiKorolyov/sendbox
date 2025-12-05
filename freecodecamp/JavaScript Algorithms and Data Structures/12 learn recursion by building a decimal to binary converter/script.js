@@ -1,6 +1,7 @@
 const callStack = [
     'a(): returns "freeCodeCamp " + b()',
-    'b(): returns "is " + c()'
+    'b(): returns "is " + c()',
+    'c(): returns "awesome!"'
 ];
 
 const a = () => {
@@ -713,6 +714,21 @@ const callStack = [
 const callStack = [
   'a(): returns "freeCodeCamp " + b()',
   'b(): returns "is " + c()'
+];
+
+
+
+
+
+Шаг 50
+
+И поскольку b() вызывает c(), функция c() добавляется в стек вызовов. Добавьте следующую строку в массив callStack: "c(): returns 'awesome!'".
+
+
+const callStack = [
+  'a(): returns "freeCodeCamp " + b()',
+  'b(): returns "is " + c()',
+  'c(): returns "awesome!"'
 ];
 
 
