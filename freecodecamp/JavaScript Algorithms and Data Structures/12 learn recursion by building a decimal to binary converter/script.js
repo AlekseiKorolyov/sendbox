@@ -1,4 +1,6 @@
-const callStack = [];
+const callStack = [
+    'a(): returns "freeCodeCamp " + b()'
+];
 
 const a = () => {
     return "freeCodeCamp " + b();
@@ -684,6 +686,19 @@ console.log(a());
 
 
 const callStack = [];
+
+
+
+
+
+Шаг 48
+
+При запуске кода функция a() добавляется в стек вызовов первой. В массиве callStack добавьте следующую строку: 'a(): returns "freeCodeCamp " + b()'. Это представляет вызов функции и код, который будет выполнен. Примечание: Поскольку добавляемая строка содержит двойные кавычки ("), заключите её в одинарные кавычки (') или обратные кавычки (`).
+
+
+const callStack = [
+'a(): returns "freeCodeCamp " + b()'
+];
 
 
 
