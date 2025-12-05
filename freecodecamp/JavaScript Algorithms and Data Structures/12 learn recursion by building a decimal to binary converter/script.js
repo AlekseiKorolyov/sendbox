@@ -1,6 +1,4 @@
-const callStack = [
-    'a(): returns "freeCodeCamp " +"is awesome!"',
-];
+const callStack = [];
 
 const a = () => {
     return "freeCodeCamp " + b();
@@ -763,6 +761,14 @@ const callStack = [
 const callStack = [
   'a(): returns "freeCodeCamp " +"is awesome!"',
 ];
+
+
+
+
+
+Шаг 54
+
+Наконец, a() возвращает объединённую строку «freeCodeCamp is awesome!». Удалить a() из вершины стека вызовов.
 
 
 
