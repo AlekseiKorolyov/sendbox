@@ -1,3 +1,5 @@
+const a = () => "freeCodeCamp" + b();
+
 const numberInput = document.getElementById("number-input");
 const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
@@ -612,6 +614,17 @@ binary = (input % 2) + binary;
 if (input ===0) {
   binary = "0";
 }
+
+
+
+
+
+Шаг 44
+
+Отлично! Теперь у вас есть более эффективный способ преобразования десятичных чисел в двоичные. Немного изучив стек вызовов и рекурсию, вы проведёте рефакторинг функции decimalToBinary, используя рекурсию вместо цикла while. Создайте функцию с именем a, которая возвращает следующее: "freeCodeCamp " + b().
+
+
+const a = () => "freeCodeCamp" + b();
 
 
 
