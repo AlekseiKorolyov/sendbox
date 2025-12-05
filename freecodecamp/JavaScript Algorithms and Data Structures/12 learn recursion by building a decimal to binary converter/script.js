@@ -6,7 +6,7 @@ const decimalToBinary = (input) => {
     let binary = "";
 
     while (input > 0) {
-        binary = input % 2 + binary;
+        binary = (input % 2) + binary;
         input = Math.floor(input / 2);
     }
 
@@ -584,6 +584,18 @@ binary = input % 2;
 
 
 binary = input % 2 + binary;
+
+
+
+
+
+Шаг 42
+
+Чтобы немного упростить код, заключите input % 2 в скобки. Иногда это может изменить порядок операций, но в данном случае это просто упростит чтение кода.
+
+
+binary = (input % 2) + binary;
+
 
 
 
