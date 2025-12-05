@@ -1,8 +1,10 @@
-
-
 const numberInput = document.getElementById("number-input");
 const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
+
+const countdown = (number) => {
+
+};
 
 const decimalToBinary = (input) => {
     let binary = "";
@@ -763,6 +765,19 @@ const callStack = [
 Шаг 55
 
 Хотя это простой пример, он демонстрирует, как стек вызовов проходит по вашему коду и вызывает несколько функций. Теперь пора перейти к рекурсии и посмотреть, как стек вызовов вписывается в общую картину. Удалите массив callStack, функции a(), b() и c(), а также оператор console.log().
+
+
+
+
+
+Шаг 56
+
+Теперь вам нужно создать функцию, которая будет вести обратный отсчёт от заданного числа до нуля, используя рекурсию. Создайте новую функцию с именем countdown и параметром number. Тело функции пока оставьте пустым.
+
+
+const countdown = (number) => {
+
+};
 
 
 
