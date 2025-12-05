@@ -3,7 +3,9 @@ const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
 
 const decimalToBinary = (input) => {
-
+    if (input === 0) {
+        return "";
+    }
 };
 
 const checkUserInput = () => {
@@ -867,6 +869,20 @@ countdown(3);
 
 
 Шаг 66 Затем удалите содержимое функции decimalToBinary(). Тело функции пока оставьте пустым.
+
+
+
+
+
+Шаг 67
+
+Напоминаем, что при написании рекурсивной функции часто лучше начинать с базового случая, чтобы понимать, к чему стремитесь, и избежать бесконечного цикла. Как и в предыдущей реализации, вы будете многократно делить input на 2, пока input не станут равны 0. Используйте оператор if, чтобы проверить, равны ли input 0. Если да, верните пустую строку.
+
+
+if (input === 0) {
+  return "";
+}
+
 
 
 
