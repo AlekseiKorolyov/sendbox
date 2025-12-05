@@ -1,6 +1,5 @@
 const callStack = [
-    'a(): returns "freeCodeCamp " + b()',
-    'b(): returns "is " + "awesome!"'
+    'a(): returns "freeCodeCamp " +"is awesome!"',
 ];
 
 const a = () => {
@@ -751,6 +750,20 @@ const callStack = [
   'a(): returns "freeCodeCamp " + b()',
   'b(): returns "is " + "awesome!"'
 ];
+
+
+
+
+
+Шаг 53
+
+Теперь, когда b() выполнился, удалите его из стека вызовов. Затем обновите ваш фиктивный вызов a() следующим образом: «a(): returns 'freeCodeCamp ' + 'is awesome!'».
+
+
+const callStack = [
+  'a(): returns "freeCodeCamp " +"is awesome!"',
+];
+
 
 
 
