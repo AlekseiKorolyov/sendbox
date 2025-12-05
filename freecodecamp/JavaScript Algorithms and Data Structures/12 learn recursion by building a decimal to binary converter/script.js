@@ -1,18 +1,4 @@
-const callStack = [];
 
-const a = () => {
-    return "freeCodeCamp " + b();
-};
-
-const b = () => {
-    return "is " + c();
-};
-
-const c = () => {
-    return "awesome!";
-};
-
-console.log(a());
 
 const numberInput = document.getElementById("number-input");
 const convertBtn = document.getElementById("convert-btn");
@@ -769,6 +755,14 @@ const callStack = [
 Шаг 54
 
 Наконец, a() возвращает объединённую строку «freeCodeCamp is awesome!». Удалить a() из вершины стека вызовов.
+
+
+
+
+
+Шаг 55
+
+Хотя это простой пример, он демонстрирует, как стек вызовов проходит по вашему коду и вызывает несколько функций. Теперь пора перейти к рекурсии и посмотреть, как стек вызовов вписывается в общую картину. Удалите массив callStack, функции a(), b() и c(), а также оператор console.log().
 
 
 
