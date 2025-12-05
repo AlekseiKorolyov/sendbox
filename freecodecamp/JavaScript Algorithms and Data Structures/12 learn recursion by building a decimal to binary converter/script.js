@@ -12,6 +12,8 @@ const countdown = (number) => {
     }
 };
 
+countdown(3);
+
 const decimalToBinary = (input) => {
     let binary = "";
 
@@ -839,6 +841,17 @@ console.log(number);
   } else {
     countdown(number - 1);
   }
+
+
+
+
+
+Шаг 61
+
+Пора протестировать функцию. Вызовите countdown() с аргументом 3, чтобы проверить её работоспособность.
+
+
+countdown(3);
 
 
 
