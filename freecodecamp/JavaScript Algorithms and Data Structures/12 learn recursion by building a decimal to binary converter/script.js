@@ -5,6 +5,8 @@ const result = document.getElementById("result");
 const decimalToBinary = (input) => {
     if (input === 0) {
         return "";
+    } else {
+        return decimalToBinary(Math.floor(input / 2));
     }
 };
 
@@ -882,6 +884,20 @@ countdown(3);
 if (input === 0) {
   return "";
 }
+
+
+
+
+
+Шаг 68
+
+Для рекурсивного случая добавьте оператор else и верните результат вызова decimalToBinary(). Передайте input, делённые на 2 и округлённые в меньшую сторону, используя Math.floor() в качестве аргумента.
+
+
+ else {
+    return decimalToBinary(Math.floor(input / 2));
+  }
+
 
 
 
