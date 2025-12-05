@@ -3,30 +3,7 @@ const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
 
 const decimalToBinary = (input) => {
-    const inputs = [];
-    const quotients = [];
-    const remainders = [];
-
-    if (input === 0) {
-        result.innerText = "0";
-        return;
-    }
-
-    while (input > 0) {
-        const quotient = Math.floor(input / 2);
-        const remainder = input % 2;
-
-        inputs.push(input);
-        quotients.push(quotient);
-        remainders.push(remainder);
-        input = quotient;
-    }
-
-    console.log("Inputs: ", inputs);
-    console.log("Quotients: ", quotients);
-    console.log("Remainders: ", remainders);
-
-    result.innerText = remainders.reverse().join("");
+    let binary = "";
 };
 
 const checkUserInput = () => {
@@ -533,6 +510,16 @@ if (input === 0) {
     result.innerText = "0";
     return;
 
+
+
+
+
+Шаг 36
+
+Теперь ваша функция decimalToBinary готова. Можете экспериментировать с ней. Но есть несколько способов улучшить её. Например, теперь не нужно отслеживать входные данные и частные. Мы можем сделать функцию более эффективной. Сначала удалите всё из тела функции decimalToBinary. Затем используйте let для создания переменной с именем binary и присвойте ей пустую строку.
+
+
+let binary = "";
 
 
 
