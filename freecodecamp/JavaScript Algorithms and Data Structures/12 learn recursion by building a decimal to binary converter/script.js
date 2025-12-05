@@ -10,6 +10,7 @@ const countDownAndUp = (number) => {
         return;
     } else {
         countDownAndUp(number - 1);
+        console.log(number);
     }
 };
 
@@ -869,6 +870,14 @@ countdown(3);
 Шаг 63
 
 В базовом варианте выведите на консоль сообщение «Достигнут базовый вариант».
+
+
+
+
+
+Шаг 64
+
+Затем выведите number на консоль после рекурсивного вызова функции countDownAndUp(number - 1).
 
 
 
