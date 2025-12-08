@@ -13,7 +13,8 @@ const animationData = [
     },
     {
         inputVal: 1,
-        addElDelay: 2000
+        addElDelay: 2000,
+        msg: ""
     }
 ];
 
@@ -1238,6 +1239,22 @@ animationContainer.innerHTML += `<p id=""></p>`;
 
 
 decimalToBinary(${obj.inputVal})
+
+
+
+
+
+Шаг 97
+
+Теперь пора подготовиться к следующему этапу анимации, где вы обновите и удалите абзацы, добавленные в DOM во время анимации. Добавьте свойство msg к объекту анимации наверху стека и задайте его значение пустой строкой.
+
+
+  {
+    inputVal: 1,
+    addElDelay: 2000,
+    msg: ""
+  }
+
 
 
 
