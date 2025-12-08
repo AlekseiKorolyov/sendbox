@@ -27,6 +27,7 @@ const decimalToBinary = (input) => {
 
 const showAnimation = () => {
     result.innerText = "Call Stack Animation";
+    animationData.forEach((obj) => {});
 };
 
 const checkUserInput = () => {
@@ -1155,6 +1156,17 @@ setTimeout(() => {
 Шаг 89
 
 Теперь приступим к созданию самой анимации. Сначала установите для свойства innerText result значение «Call Stack Animation».
+
+
+
+
+
+Шаг 90
+
+Далее используйте метод .forEach() для перебора массива animationData. Для функции обратного вызова метода .forEach() передайте obj в качестве параметра, но оставьте тело функции обратного вызова пока пустым.
+
+
+animationData.forEach((obj) => {});
 
 
 
