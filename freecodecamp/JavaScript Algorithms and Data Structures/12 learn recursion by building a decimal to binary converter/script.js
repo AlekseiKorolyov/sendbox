@@ -10,6 +10,8 @@ const decimalToBinary = (input) => {
     }
 };
 
+const showAnimation = () => {};
+
 const checkUserInput = () => {
     if (
         !numberInput.value ||
@@ -959,6 +961,17 @@ console.log(String(null)); // "null"
 if (input === 0 || input === 1) {
     return String(input);
   }
+
+
+
+
+
+Шаг 74
+
+Теперь ваша функция decimalToBinary() готова. Можете смело протестировать её. Если вы всё ещё не понимаете, как она работает, не волнуйтесь. Далее вы создадите простую анимацию, которая поможет вам понять, что происходит на каждом этапе. Создайте новую функцию с именем showAnimation. Пока оставьте тело функции пустым.
+
+
+const showAnimation = () => {};
 
 
 
