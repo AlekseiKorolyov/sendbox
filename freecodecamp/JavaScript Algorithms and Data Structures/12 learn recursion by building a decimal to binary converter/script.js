@@ -29,7 +29,7 @@ const showAnimation = () => {
     result.innerText = "Call Stack Animation";
     animationData.forEach((obj) => {
         setTimeout(() => {
-            animationContainer.innerHTML += `<p id="${obj.inputVal}"></p>`;
+            animationContainer.innerHTML += `<p class="animation-frame" id="${obj.inputVal}"></p>`;
         }, obj.addElDelay);
     });
 };
@@ -1215,6 +1215,14 @@ animationContainer.innerHTML += `<p id=""></p>`;
 
 
 <p id="${obj.inputVal}"></p>
+
+
+
+
+
+Шаг 95
+
+Добавьте атрибут класса со значением «animation-frame».
 
 
 
