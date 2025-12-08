@@ -26,15 +26,7 @@ const decimalToBinary = (input) => {
 };
 
 const showAnimation = () => {
-    setTimeout(() => {
-        console.log("free");
-    }, 500);
-    setTimeout(() => {
-        console.log("Code");
-    }, 1000);
-    setTimeout(() => {
-        console.log("Camp");
-    }, 1500);
+
 };
 
 const checkUserInput = () => {
@@ -1149,6 +1141,12 @@ setTimeout(() => {
 Шаг 87
 
 Теперь приступим к созданию самой анимации. Сначала используйте метод document.getElementById(), чтобы выбрать элемент с идентификатором animation-container и присвоить его переменной animationContainer.
+
+
+
+
+
+Шаг 88 Далее очистите функцию showAnimation(), удалив все вызовы setTimeout().
 
 
 
