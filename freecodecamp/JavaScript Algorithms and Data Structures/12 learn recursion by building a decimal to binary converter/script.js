@@ -11,7 +11,9 @@ const decimalToBinary = (input) => {
 };
 
 const showAnimation = () => {
-
+    console.log("free");
+    console.log("Code");
+    console.log("Camp");
 };
 
 const checkUserInput = () => {
@@ -1022,6 +1024,15 @@ const inputInt = parseInt(numberInput.value);
 Шаг 78
 
 Замените все вхождения parseInt(numberInput.value) на inputInt.
+
+
+
+
+
+Шаг 79
+
+Теперь, когда функция showAnimation() настроена, давайте проведём тестирование. Добавьте три оператора console.log() в функцию showAnimation() для вывода на консоль текстов «free», «Code» и «Camp». Вы должны увидеть этот текст в консоли, когда введёте число 5 в поле ввода и нажмёте кнопку «Преобразовать».
+
 
 
 
