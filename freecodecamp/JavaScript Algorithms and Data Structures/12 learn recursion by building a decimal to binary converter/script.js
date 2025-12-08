@@ -26,7 +26,7 @@ const decimalToBinary = (input) => {
 };
 
 const showAnimation = () => {
-
+    result.innerText = "Call Stack Animation";
 };
 
 const checkUserInput = () => {
@@ -1147,6 +1147,14 @@ setTimeout(() => {
 
 
 Шаг 88 Далее очистите функцию showAnimation(), удалив все вызовы setTimeout().
+
+
+
+
+
+Шаг 89
+
+Теперь приступим к созданию самой анимации. Сначала установите для свойства innerText result значение «Call Stack Animation».
 
 
 
