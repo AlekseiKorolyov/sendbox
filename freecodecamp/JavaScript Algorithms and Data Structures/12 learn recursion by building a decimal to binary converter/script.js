@@ -1,6 +1,7 @@
 const numberInput = document.getElementById("number-input");
 const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
+const animationData = [];
 
 const decimalToBinary = (input) => {
     if (input === 0 || input === 1) {
@@ -1082,6 +1083,15 @@ setTimeout(() => {
   setTimeout(() => {
     console.log("Camp");
   }, 1500);
+
+
+
+
+
+Шаг 83
+
+Теперь вы готовы приступить к самой анимации. Вы будете использовать массив объектов для хранения данных для каждого кадра анимации. Сначала создайте новую переменную с именем animationData и присвойте ей пустой массив.
+
 
 
 
