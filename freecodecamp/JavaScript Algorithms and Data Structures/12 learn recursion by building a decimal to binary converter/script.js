@@ -24,7 +24,10 @@ const checkUserInput = () => {
         return;
     }
 
-    if (parseInt(numberInput.value) === 5) {}
+    if (parseInt(numberInput.value) === 5) {
+        showAnimation();
+        return;
+    }
 
     result.textContent = decimalToBinary(parseInt(numberInput.value));
     numberInput.value = "";
@@ -987,6 +990,18 @@ const showAnimation = () => {};
 
 
 if (parseInt(numberInput.value) === 5) {}
+
+
+
+
+
+Шаг 76
+
+Если значение numberInput равно 5, вызвать функцию showAnimation(), а затем выполнить ранний возврат.
+
+
+showAnimation();
+return;
 
 
 
