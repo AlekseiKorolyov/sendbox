@@ -18,19 +18,19 @@ const checkUserInput = () => {
     const inputInt = parseInt(numberInput.value);
     if (
         !numberInput.value ||
-        isNaN(parseInt(numberInput.value)) ||
-        parseInt(numberInput.value) < 0
+        isNaN(inputInt) ||
+        inputInt < 0
     ) {
         alert("Please provide a decimal number greater than or equal to 0");
         return;
     }
 
-    if (parseInt(numberInput.value) === 5) {
+    if (inputInt === 5) {
         showAnimation();
         return;
     }
 
-    result.textContent = decimalToBinary(parseInt(numberInput.value));
+    result.textContent = decimalToBinary(inputInt);
     numberInput.value = "";
 };
 
@@ -1014,6 +1014,14 @@ return;
 
 
 const inputInt = parseInt(numberInput.value);
+
+
+
+
+
+Шаг 78
+
+Замените все вхождения parseInt(numberInput.value) на inputInt.
 
 
 
