@@ -49,6 +49,8 @@ const showAnimation = () => {
         setTimeout(() => {
             obj.msg = document.getElementById(obj.inputVal).textContent;
         }, obj.showMsgDelay);
+
+        setTimeout(() => {}, obj.removeElDelay);
     });
 };
 
@@ -1351,6 +1353,17 @@ setTimeout(() => {}, obj.showMsgDelay);
 
 
 obj.msg = document.getElementById(obj.inputVal).textContent;
+
+
+
+
+
+Шаг 104
+
+Далее вам нужно удалить элементы абзаца из элемента #show-animation после заданных ранее задержек. Добавьте функцию setTimeout() в цикл .forEach(). Передайте пустую функцию обратного вызова в качестве первого аргумента, а свойство removeElDelay текущего объекта — в качестве второго аргумента.
+
+
+setTimeout(() => {}, obj.removeElDelay);
 
 
 
