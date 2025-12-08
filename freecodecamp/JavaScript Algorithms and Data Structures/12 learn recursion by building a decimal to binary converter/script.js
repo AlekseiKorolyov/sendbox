@@ -9,6 +9,10 @@ const animationData = [
     {
         inputVal: 2,
         addElDelay: 1500
+    },
+    {
+        inputVal: 1,
+        addElDelay: 2000
     }
 ];
 
@@ -1128,6 +1132,17 @@ setTimeout(() => {
     inputVal: 2,
     addElDelay: 1500
   }
+
+
+
+
+
+Шаг 86
+
+Добавьте ещё один объект в массив animationData. Свойства inputVal и addElDelay нового объекта должны быть установлены в значения 1 и 2000 соответственно. Не забудьте рассматривать массив animationData как стек и добавить новый объект наверх стека.
+
+
+
 
 
 
