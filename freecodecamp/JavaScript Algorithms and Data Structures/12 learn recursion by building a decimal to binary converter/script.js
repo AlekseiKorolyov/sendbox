@@ -10,7 +10,9 @@ const decimalToBinary = (input) => {
     }
 };
 
-const showAnimation = () => {};
+const showAnimation = () => {
+
+};
 
 const checkUserInput = () => {
     if (
@@ -22,8 +24,10 @@ const checkUserInput = () => {
         return;
     }
 
-    decimalToBinary(parseInt(numberInput.value));
+    if (parseInt(numberInput.value) === 5) {}
+
     result.textContent = decimalToBinary(parseInt(numberInput.value));
+    numberInput.value = "";
 };
 
 convertBtn.addEventListener("click", checkUserInput);
@@ -972,6 +976,18 @@ if (input === 0 || input === 1) {
 
 
 const showAnimation = () => {};
+
+
+
+
+
+Шаг 75
+
+Вы будете показывать анимацию, когда пользователи попытаются преобразовать десятичное число 5 в двоичное, поэтому вам нужно добавить проверку этого в функцию checkUserInput(). Используйте оператор if, чтобы проверить, равен ли атрибут value объекта numberInput числу 5. Не забудьте использовать функцию parseInt() для преобразования строки в число перед сравнением её с 5. Пока оставьте оператор if пустым.
+
+
+if (parseInt(numberInput.value) === 5) {}
+
 
 
 
