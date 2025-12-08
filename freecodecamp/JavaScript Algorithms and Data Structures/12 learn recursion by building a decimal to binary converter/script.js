@@ -29,7 +29,7 @@ const showAnimation = () => {
     result.innerText = "Call Stack Animation";
     animationData.forEach((obj) => {
         setTimeout(() => {
-            animationContainer.innerHTML += ``;
+            animationContainer.innerHTML += `<p id=""></p>`;
         }, obj.addElDelay);
     });
 };
@@ -1193,6 +1193,14 @@ setTimeout(() => {}, obj.addElDelay);
 
 
 animationContainer.innerHTML += ``;
+
+
+
+
+
+Шаг 93
+
+В шаблонный литерал добавьте элемент абзаца с атрибутом id, равным пустой строке.
 
 
 
