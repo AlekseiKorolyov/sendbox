@@ -27,7 +27,9 @@ const decimalToBinary = (input) => {
 
 const showAnimation = () => {
     result.innerText = "Call Stack Animation";
-    animationData.forEach((obj) => {});
+    animationData.forEach((obj) => {
+        setTimeout(() => {}, obj.addElDelay);
+    });
 };
 
 const checkUserInput = () => {
@@ -1167,6 +1169,17 @@ setTimeout(() => {
 
 
 animationData.forEach((obj) => {});
+
+
+
+
+
+Шаг 91
+
+Поскольку время каждого кадра анимации хранится в addElDelay, вы можете использовать это значение в setTimeout() для настройки задержки добавления элементов в DOM. В теле функции обратного вызова метода .forEach() добавьте функцию setTimeout(). Передайте пустую функцию обратного вызова в качестве первого аргумента и obj.addElDelay в качестве второго аргумента.
+
+
+setTimeout(() => {}, obj.addElDelay);
 
 
 
