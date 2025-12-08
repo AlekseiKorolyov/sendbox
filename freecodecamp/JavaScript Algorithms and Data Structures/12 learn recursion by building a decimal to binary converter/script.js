@@ -51,9 +51,11 @@ const showAnimation = () => {
         }, obj.showMsgDelay);
 
         setTimeout(() => {
-            obj.inputVal = document.getElementById(obj.inputVal).remove();
+            document.getElementById(obj.inputVal).remove();
         }, obj.removeElDelay);
     });
+
+    setTimeout(() => {}, 20000);
 };
 
 const checkUserInput = () => {
@@ -1377,6 +1379,17 @@ setTimeout(() => {}, obj.removeElDelay);
 
 
 obj.inputVal = document.getElementById(obj.inputVal).remove();
+
+
+
+
+
+Шаг 106
+
+Теперь ваша анимация готова. Когда вы вводите число 5 в поле ввода и нажимаете кнопку «Преобразовать», анимация добавляет абзацы в DOM, обновляет текст каждого абзаца, а затем удаляет абзацы из DOM. После завершения анимации вам остаётся добавить результат преобразования числа 5 в двоичное число на страницу. После метода .forEach() добавьте ещё одну функцию setTimeout(). Передайте ей пустую функцию обратного вызова в качестве первого аргумента и задержку 20000 миллисекунд в качестве второго аргумента.
+
+
+setTimeout(() => {}, 20000);
 
 
 
