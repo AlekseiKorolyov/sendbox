@@ -14,7 +14,9 @@ const animationData = [
     {
         inputVal: 1,
         addElDelay: 2000,
-        msg: "decimalToBinary(1) returns '1' (base case) and gives that value to the stack below. Then it pops off the stack."
+        msg: "decimalToBinary(1) returns '1' (base case) and gives that value to the stack below. Then it pops off the stack.",
+        showMsgDelay: 5000,
+        removeElDelay: 10000
     }
 ];
 
@@ -1268,6 +1270,18 @@ decimalToBinary(${obj.inputVal})
 
 
 "decimalToBinary(1) returns '1' (base case) and gives that value to the stack below. Then it pops off the stack."
+
+
+
+
+
+Шаг 99
+
+Далее добавьте свойство showMsgDelay со значением 5000 и removeElDelay со значением 10000.
+
+
+    showMsgDelay: 5000,
+    removeElDelay: 10000
 
 
 
