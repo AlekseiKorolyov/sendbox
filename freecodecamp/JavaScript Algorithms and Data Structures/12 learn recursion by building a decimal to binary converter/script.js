@@ -15,6 +15,7 @@ const showAnimation = () => {
 };
 
 const checkUserInput = () => {
+    const inputInt = parseInt(numberInput.value);
     if (
         !numberInput.value ||
         isNaN(parseInt(numberInput.value)) ||
@@ -1002,6 +1003,17 @@ if (parseInt(numberInput.value) === 5) {}
 
 showAnimation();
 return;
+
+
+
+
+
+Шаг 77
+
+Теперь ваша функция showAnimation() настроена. Но если вы посмотрите на функцию checkUserInput(), вы заметите, что она вызывает parseInt() для преобразования numberInput.value в число несколько раз. Как правило, это плохая практика, например, по причинам производительности или просто потому, что вам придётся менять логику в нескольких местах для обновления вызова parseInt(). Чтобы исправить это, создайте новую переменную для хранения преобразованного числа. Тогда вам нужно будет преобразовать число только один раз, и вы сможете использовать его во всей функции. Создайте новую переменную с именем inputInt и присвойте ей число, преобразованное из numberInput.value.
+
+
+const inputInt = parseInt(numberInput.value);
 
 
 
