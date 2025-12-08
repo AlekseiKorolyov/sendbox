@@ -1,6 +1,7 @@
 const numberInput = document.getElementById("number-input");
 const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
+const animationContainer = document.getElementById("animation-container");
 const animationData = [
     {
         inputVal: 5,
@@ -1140,6 +1141,15 @@ setTimeout(() => {
 Шаг 86
 
 Добавьте ещё один объект в массив animationData. Свойства inputVal и addElDelay нового объекта должны быть установлены в значения 1 и 2000 соответственно. Не забудьте рассматривать массив animationData как стек и добавить новый объект наверх стека.
+
+
+
+
+
+Шаг 87
+
+Теперь приступим к созданию самой анимации. Сначала используйте метод document.getElementById(), чтобы выбрать элемент с идентификатором animation-container и присвоить его переменной animationContainer.
+
 
 
 
