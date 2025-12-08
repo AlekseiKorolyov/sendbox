@@ -1,7 +1,12 @@
 const numberInput = document.getElementById("number-input");
 const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
-const animationData = [];
+const animationData = [
+    {
+        inputVal: 5,
+        addElDelay: 1000
+    }
+];
 
 const decimalToBinary = (input) => {
     if (input === 0 || input === 1) {
@@ -1091,6 +1096,20 @@ setTimeout(() => {
 Шаг 83
 
 Теперь вы готовы приступить к самой анимации. Вы будете использовать массив объектов для хранения данных для каждого кадра анимации. Сначала создайте новую переменную с именем animationData и присвойте ей пустой массив.
+
+
+
+
+
+Шаг 84
+
+Далее вам нужно создать объект, представляющий первый кадр анимации. У вашего объекта должно быть два свойства или ключа: inputVal и addElDelay. inputVal будет представлять значение входных данных при каждом запуске рекурсивной функции. А addElDelay — задержку между добавлением элементов DOM на страницу. Добавьте объект в animationData со свойством inputVal, равным 5, и свойством addElDelay, равным 1000.
+
+
+{
+  inputVal: 5,
+  addElDelay: 1000
+}
 
 
 
