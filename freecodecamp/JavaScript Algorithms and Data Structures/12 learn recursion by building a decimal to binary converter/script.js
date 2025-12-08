@@ -4,7 +4,7 @@ const result = document.getElementById("result");
 
 const decimalToBinary = (input) => {
     if (input === 0) {
-        return "";
+        return "0";
     } else {
         return decimalToBinary(Math.floor(input / 2)) + (input % 2);
     }
@@ -919,6 +919,14 @@ return decimalToBinary(Math.floor(input / 2)) + (input % 2);
 
 
 result.textContent = decimalToBinary(parseInt(numberInput.value));
+
+
+
+
+
+Шаг 71
+
+Ваш конвертер должен работать. Можете свободно экспериментировать с разными числами и размышлять о том, что происходит каждый раз при вызове decimalToBinary(). Но если вы протестируете конвертер с 0, вы увидите, что ничего не происходит. Это связано с тем, что в базовом варианте возвращается пустая строка, когда входное значение равно 0. Мы можем исправить это сейчас. Обновите базовый вариант так, чтобы он возвращал строку «0», когда входное значение равно 0.
 
 
 
