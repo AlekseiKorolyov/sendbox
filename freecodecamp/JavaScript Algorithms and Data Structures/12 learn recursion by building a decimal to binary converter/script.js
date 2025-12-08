@@ -50,7 +50,9 @@ const showAnimation = () => {
             obj.msg = document.getElementById(obj.inputVal).textContent;
         }, obj.showMsgDelay);
 
-        setTimeout(() => {}, obj.removeElDelay);
+        setTimeout(() => {
+            obj.inputVal = document.getElementById(obj.inputVal).remove();
+        }, obj.removeElDelay);
     });
 };
 
@@ -1364,6 +1366,17 @@ obj.msg = document.getElementById(obj.inputVal).textContent;
 
 
 setTimeout(() => {}, obj.removeElDelay);
+
+
+
+
+
+Шаг 105
+
+Используйте метод .getElementById() для выбора элемента с атрибутом id, значение которого равно значению свойства inputVal текущего объекта. Затем используйте метод .remove() для удаления этого элемента из DOM после истечения времени задержки.
+
+
+obj.inputVal = document.getElementById(obj.inputVal).remove();
 
 
 
