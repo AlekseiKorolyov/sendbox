@@ -36,6 +36,7 @@ const decimalToBinary = (input) => {
 
 const showAnimation = () => {
     result.innerText = "Call Stack Animation";
+
     animationData.forEach((obj) => {
         setTimeout(() => {
             animationContainer.innerHTML += `
@@ -44,7 +45,10 @@ const showAnimation = () => {
               </p>
             `;
         }, obj.addElDelay);
-        setTimeout(() => {}, obj.showMsgDelay);
+
+        setTimeout(() => {
+            obj.msg = document.getElementById(obj.inputVal).textContent;
+        }, obj.showMsgDelay);
     });
 };
 
@@ -1336,6 +1340,17 @@ decimalToBinary(${obj.inputVal})
 
 
 setTimeout(() => {}, obj.showMsgDelay);
+
+
+
+
+
+Шаг 103
+
+Вы установили атрибут id для элементов абзаца в свойство obj.inputVal. Теперь используйте метод .getElementById(), чтобы выбрать элемент с этим значением атрибута, снова используя свойство obj.inputVal. Значение obj.inputVal следует передать непосредственно в вызов getElementById. После этого установите свойство textContent выбранного элемента равным свойству msg текущего объекта, чтобы обновить его текст после указанной ранее задержки.
+
+
+obj.msg = document.getElementById(obj.inputVal).textContent;
 
 
 
