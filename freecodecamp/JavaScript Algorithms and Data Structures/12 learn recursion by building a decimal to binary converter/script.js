@@ -29,7 +29,11 @@ const showAnimation = () => {
     result.innerText = "Call Stack Animation";
     animationData.forEach((obj) => {
         setTimeout(() => {
-            animationContainer.innerHTML += `<p class="animation-frame" id="${obj.inputVal}"></p>`;
+            animationContainer.innerHTML += `
+              <p class="animation-frame" id="${obj.inputVal}">
+              decimalToBinary(${obj.inputVal})
+              </p>
+            `;
         }, obj.addElDelay);
     });
 };
@@ -1223,6 +1227,17 @@ animationContainer.innerHTML += `<p id=""></p>`;
 Шаг 95
 
 Добавьте атрибут класса со значением «animation-frame».
+
+
+
+
+
+Шаг 96
+
+Наконец, используйте интерполяцию строк, чтобы установить текст элемента абзаца в значение decimalToBinary(${currVal}), где currVal — это свойство inputVal текущего объекта. После этого протестируйте свой код, введя число 5 в поле ввода и нажав кнопку «Преобразовать».
+
+
+decimalToBinary(${obj.inputVal})
 
 
 
