@@ -44,6 +44,7 @@ const showAnimation = () => {
               </p>
             `;
         }, obj.addElDelay);
+        setTimeout(() => {}, obj.showMsgDelay);
     });
 };
 
@@ -1324,6 +1325,17 @@ decimalToBinary(${obj.inputVal})
     msg: "decimalToBinary(5) returns '10' + 1 (5 % 2). Then it pops off the stack.",
     showMsgDelay: 15000,
     removeElDelay: 20000
+
+
+
+
+
+Шаг 102
+
+На следующем этапе анимации вы обновите абзацы текстом сообщения. Поскольку задержки для каждого этапа анимации уже заданы, вы можете добавить свой код в тот же цикл .forEach(). Добавьте ещё одну функцию setTimeout(). Передайте пустую функцию обратного вызова в качестве первого аргумента, а свойство showMsgDelay текущего объекта — в качестве второго аргумента.
+
+
+setTimeout(() => {}, obj.showMsgDelay);
 
 
 
