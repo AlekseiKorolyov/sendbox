@@ -29,7 +29,7 @@ const showAnimation = () => {
     result.innerText = "Call Stack Animation";
     animationData.forEach((obj) => {
         setTimeout(() => {
-            animationContainer.innerHTML += `<p id=""></p>`;
+            animationContainer.innerHTML += `<p id="${obj.inputVal}"></p>`;
         }, obj.addElDelay);
     });
 };
@@ -1201,6 +1201,22 @@ animationContainer.innerHTML += ``;
 Шаг 93
 
 В шаблонный литерал добавьте элемент абзаца с атрибутом id, равным пустой строке.
+
+
+animationContainer.innerHTML += `<p id=""></p>`;
+
+
+
+
+
+Шаг 94
+
+Далее используйте интерполяцию строк, чтобы установить атрибут id в значение свойства inputVal текущего объекта obj.
+
+
+<p id="${obj.inputVal}"></p>
+
+
 
 
 
