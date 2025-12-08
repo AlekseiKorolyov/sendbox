@@ -21,7 +21,7 @@ const checkUserInput = () => {
     }
 
     decimalToBinary(parseInt(numberInput.value));
-    numberInput.value = "";
+    result.textContent = decimalToBinary(parseInt(numberInput.value));
 };
 
 convertBtn.addEventListener("click", checkUserInput);
@@ -908,6 +908,17 @@ if (input === 0) {
 
 
 return decimalToBinary(Math.floor(input / 2)) + (input % 2);
+
+
+
+
+
+Шаг 70
+
+Наконец, в функции checkUserInput() установите свойство textContent результата равным строке, возвращаемой функцией decimalToBinary().
+
+
+result.textContent = decimalToBinary(parseInt(numberInput.value));
 
 
 
