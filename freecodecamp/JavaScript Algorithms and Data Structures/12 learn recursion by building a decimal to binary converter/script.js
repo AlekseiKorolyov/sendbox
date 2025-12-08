@@ -3,10 +3,8 @@ const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
 
 const decimalToBinary = (input) => {
-    if (input === 0) {
-        return "0";
-    } else if (input === 1) {
-        return "1";
+    if (input === 0 || input === 1) {
+        return String(input);
     } else {
         return decimalToBinary(Math.floor(input / 2)) + (input % 2);
     }
@@ -942,6 +940,26 @@ result.textContent = decimalToBinary(parseInt(numberInput.value));
  else if (input === 1) {
     return "1";
   }
+
+
+
+
+
+Шаг 73
+
+Теперь всё должно работать как надо. Поскольку на данном этапе вы знаете, что input будут либо 0, либо 1, вы можете объединить два базовых варианта и просто вернуть input в виде строки. Для надёжного преобразования значения в строку, даже ложных значений, таких как null и undefined, можно использовать функцию String(). Например: Пример кода
+
+const num = 5;
+console.log(String(num)); // "5"
+console.log(String(null)); // "null"
+
+Объедините операторы if и else if в один оператор if, проверяющий, равен ли входной параметр 0 или 1. Если да, используйте функцию String() для преобразования входных данных в строку и её возврата.
+
+
+if (input === 0 || input === 1) {
+    return String(input);
+  }
+
 
 
 
