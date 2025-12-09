@@ -1,0 +1,38 @@
+body, .input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #f5f6f7;
+}
+
+body {
+    background-color: #1b1b32;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.input-container {
+    width: 35vw;
+    height: 40vh;
+    background-color: #3b3b4f;
+    align-items: stretch;
+    text-align: center;
+    border: 3px solid #fff;
+}
+
+.input-container input, button {
+    height: 50px;
+    margin: 10px 40px;
+}
+
+.number-input {
+    background-color: #0a0a23;
+}
+
+.convert-btn {
+    background-color: #ffbd40;
+}
