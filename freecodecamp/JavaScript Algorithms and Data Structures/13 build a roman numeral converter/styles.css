@@ -1,4 +1,4 @@
-body, .input-container {
+body, .input-container, .output-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,13 +15,17 @@ h1 {
     margin: 20px 0;
 }
 
-.input-container {
-    width: 35vw;
-    height: 40vh;
+.input-container, .output-container  {
+    width: 400px;
+    color: #f5f6f7;
     background-color: #3b3b4f;
     align-items: stretch;
     text-align: center;
     border: 3px solid #fff;
+}
+
+.input-container {
+    height: 200px;
 }
 
 .input-container input, button {
@@ -33,6 +37,16 @@ h1 {
     background-color: #0a0a23;
 }
 
+.number-input, #output {
+    color: #fff;
+    font-size: 2rem;
+}
+
 .convert-btn {
     background-color: #ffbd40;
+}
+
+.output-container {
+    height: 100px;
+    margin: 40px 0;
 }
