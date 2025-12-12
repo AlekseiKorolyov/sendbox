@@ -2,7 +2,7 @@ const messageInput = document.getElementById("message-input");
 const result = document.getElementById("result");
 const checkMessageButton = document.getElementById("check-message-btn");
 
-const helpRegex = /please help/;
+const helpRegex = /please help/i;
 
 const isSpam = (msg) => false;
 
@@ -113,6 +113,17 @@ checkMessageButton.addEventListener("click", () => {
 
 
 const helpRegex = /please help/;
+
+
+
+
+
+Шаг 7
+
+Регулярные выражения могут принимать флаги для изменения своего поведения. Например, флаг i можно использовать, чтобы выражение игнорировало регистр, в результате чего оно будет соответствовать словам hello, HELLO и Hello для выражения /hello/. Флаги добавляются после завершающей косой черты. Добавьте флаг i в ваше helpRegex.
+
+
+const helpRegex = /please help/i;
 
 
 
