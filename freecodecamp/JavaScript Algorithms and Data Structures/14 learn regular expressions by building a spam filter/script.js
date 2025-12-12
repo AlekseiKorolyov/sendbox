@@ -2,6 +2,8 @@ const messageInput = document.getElementById("message-input");
 const result = document.getElementById("result");
 const checkMessageButton = document.getElementById("check-message-btn");
 
+const helpRegex = /please help/;
+
 const isSpam = (msg) => false;
 
 checkMessageButton.addEventListener("click", () => {
@@ -100,6 +102,17 @@ checkMessageButton.addEventListener("click", () => {
   result.textContent = isSpam(messageInput.value) ? "Oh no! This looks like a spam message." : "This message does not seem to contain any spam.";
   messageInput.value = "";
 });
+
+
+
+
+
+Шаг 6
+
+Ваше первое регулярное выражение будет использоваться для перехвата запросов на помощь. Объявите переменную helpRegex и присвойте ей регулярное выражение, соответствующее строке "пожалуйста, помогите". В качестве напоминания, вот регулярное выражение для сопоставления строки "hello world": Пример кода const regex = /hello world/;
+
+
+const helpRegex = /please help/;
 
 
 
