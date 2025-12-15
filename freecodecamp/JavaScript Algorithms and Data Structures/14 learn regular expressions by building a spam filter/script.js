@@ -2,7 +2,7 @@ const messageInput = document.getElementById("message-input");
 const result = document.getElementById("result");
 const checkMessageButton = document.getElementById("check-message-btn");
 
-const helpRegex = /please help/i;
+const helpRegex = /please help|assist me/i;
 
 const isSpam = (msg) => helpRegex.test(msg);
 
@@ -146,6 +146,18 @@ const isSpam = (msg) => msg.match(helpRegex);
 
 
 const isSpam = (msg) => helpRegex.test(msg);
+
+
+
+
+
+Шаг 10
+
+Альтернативная последовательность | может использоваться для сопоставления либо текста слева, либо текста справа от |. Например, регулярное выражение /yes|no/ будет соответствовать либо yes, либо no. Обновите ваше helpRegex, чтобы оно соответствовало либо please help, либо assist me.
+
+
+const helpRegex = /please help|assist me/i;
+
 
 
 
