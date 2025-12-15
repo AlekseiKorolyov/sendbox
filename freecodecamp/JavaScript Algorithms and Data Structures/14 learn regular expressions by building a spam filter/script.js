@@ -4,10 +4,11 @@ const checkMessageButton = document.getElementById("check-message-btn");
 
 const helpRegex = /please help|assist me/i;
 const dollarRegex = /[0-9]+\s*(?:hundred|thousand|million|billion)?\s+dollars/i;
+const freeRegex = /free money/i;
 
 const denyList = [helpRegex, dollarRegex];
 
-const isSpam = (msg) => helpRegex.test(msg);
+const isSpam = (msg) => denyList.some((regex) => regex.test(msg));
 
 checkMessageButton.addEventListener("click", () => {
     if (messageInput.value === "") {
@@ -287,6 +288,18 @@ const dollarRegex = /[0-9]+\s*(hundred|thousand|million|billion)?\s+dollars/i;
 
 
 const dollarRegex = /[0-9]+\s*(?:hundred|thousand|million|billion)?\s+dollars/i;
+
+
+
+
+
+Шаг 22
+
+Ваше следующее регулярное выражение будет искать строки типа «free money». Начните с объявления переменной freeRegex и присвойте ей регулярное выражение, которое будет соответствовать строке «free money». Не забудьте сделать его нечувствительным к регистру.
+
+
+const freeRegex = /free money/i;
+
 
 
 
