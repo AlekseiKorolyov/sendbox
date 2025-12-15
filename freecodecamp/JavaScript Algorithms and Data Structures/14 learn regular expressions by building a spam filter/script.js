@@ -6,7 +6,7 @@ const helpRegex = /please help|assist me/i;
 const dollarRegex = /[0-9]+\s*(?:hundred|thousand|million|billion)?\s+dollars/i;
 const freeRegex = /(?:^|\s)fr[e3][e3] m[o0]n[e3]y(?:\s|$)/i;
 const stockRegex = /(?:^|\s)[s5][t7][o0][c{[(]k [a@4]l[e3]r[t7](?:$|\s)/i;
-const dearRegex = /dear friend/i;
+const dearRegex = /(?:^|\s)d[e3][a@4]r fr[i1|][e3]nd(?:$|\s)/i;
 
 const denyList = [helpRegex, dollarRegex, freeRegex, stockRegex, dearRegex];
 
@@ -444,6 +444,17 @@ const stockRegex = /(?:^|\s)[s5][t7][o0][c{[(]k [a@4]l[e3]r[t7](?:$|\s)/i;
 const dearRegex = /dear friend/i;
 
 const denyList = [helpRegex, dollarRegex, freeRegex, stockRegex, dearRegex];
+
+
+
+
+
+Шаг 36
+
+Чтобы объединить все полученные знания, обновите ваш dearRegex, чтобы сопоставлять гласные с соответствующими числами (обратите внимание, что i должно соответствовать 1, а также символу вертикальной черты |), и чтобы он соответствовал целым словам. На этом ваш проект по фильтрации спама завершен.
+
+
+const dearRegex = /(?:^|\s)d[e3][a@4]r fr[i1|][e3]nd(?:$|\s)/i;
 
 
 
