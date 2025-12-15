@@ -4,7 +4,7 @@ const checkMessageButton = document.getElementById("check-message-btn");
 
 const helpRegex = /please help/i;
 
-const isSpam = (msg) => msg.match(helpRegex);
+const isSpam = (msg) => helpRegex.test(msg);
 
 checkMessageButton.addEventListener("click", () => {
     if (messageInput.value === "") {
@@ -135,6 +135,17 @@ const helpRegex = /please help/i;
 
 
 const isSpam = (msg) => msg.match(helpRegex);
+
+
+
+
+
+Шаг 9
+
+Вместо использования метода `.match()`, вы можете использовать метод `.test()` регулярного выражения, чтобы проверить, соответствует ли строка шаблону. В отличие от `.match()`, `.test()` возвращает логическое значение, указывающее, соответствует ли строка шаблону или нет. Обновите функцию `isSpam()`, чтобы она использовала метод `.test()` функции `helpRegex` для проверки соответствия шаблону `msg`. Затем попробуйте ввести несколько сообщений на вашей странице и посмотрите результат.
+
+
+const isSpam = (msg) => helpRegex.test(msg);
 
 
 
