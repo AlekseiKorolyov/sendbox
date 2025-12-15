@@ -1,5 +1,7 @@
 const sortButton = document.getElementById("sort");
 
+const sortInputArray = (event) => {};
+
 
 
 
@@ -31,6 +33,13 @@ const sortButton = document.getElementById("sort");
 Шаг 1
 
 В этом проекте вы будете создавать сортировщик чисел. HTML и CSS коды предоставлены. Можете свободно их изучить. Когда будете готовы, объявите переменную sortButton и присвойте ей значение из метода .getElementById() с аргументом "sort".
+
+
+
+
+Шаг 2
+
+Для подготовки логики вашего проекта используйте синтаксис const и arrow для объявления функции sortInputArray. Она должна принимать один параметр event.
 
 
 
