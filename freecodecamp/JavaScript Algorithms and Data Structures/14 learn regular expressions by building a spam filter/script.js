@@ -4,7 +4,7 @@ const checkMessageButton = document.getElementById("check-message-btn");
 
 const helpRegex = /please help|assist me/i;
 const dollarRegex = /[0-9]+\s*(?:hundred|thousand|million|billion)?\s+dollars/i;
-const freeRegex = /free money/i;
+const freeRegex = /fr[e3][e3] mon[e3]y/i;
 
 const denyList = [helpRegex, dollarRegex, freeRegex];
 
@@ -307,6 +307,17 @@ const freeRegex = /free money/i;
 Шаг 23
 
 Добавьте новое регулярное выражение в массив denyList, чтобы вы могли его протестировать.
+
+
+
+
+
+Шаг 24
+
+В спам-сообщениях часто используются цифры вместо букв, чтобы обойти фильтры. Ваше регулярное выражение должно их отлавливать. Замените символы «e» в вашем регулярном выражении на классы символов, соответствующие «e» и «3».
+
+
+const freeRegex = /fr[e3][e3] mon[e3]y/i;
 
 
 
