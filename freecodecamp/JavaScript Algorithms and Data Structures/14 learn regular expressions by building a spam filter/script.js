@@ -4,7 +4,7 @@ const checkMessageButton = document.getElementById("check-message-btn");
 
 const helpRegex = /please help|assist me/i;
 const dollarRegex = /[0-9]+\s*(?:hundred|thousand|million|billion)?\s+dollars/i;
-const freeRegex = /fr[e3][e3] mon[e3]y/i;
+const freeRegex = /fr[e3][e3] m[0o]n[e3]y/i;
 
 const denyList = [helpRegex, dollarRegex, freeRegex];
 
@@ -318,6 +318,16 @@ const freeRegex = /free money/i;
 
 
 const freeRegex = /fr[e3][e3] mon[e3]y/i;
+
+
+
+
+Шаг 25
+
+Теперь обновите символ «о», чтобы он соответствовал «о» и «0» (цифре).
+
+
+const freeRegex = /fr[e3][e3] m[0o]n[e3]y/i;
 
 
 
