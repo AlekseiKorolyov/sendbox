@@ -4,9 +4,10 @@ const checkMessageButton = document.getElementById("check-message-btn");
 
 const helpRegex = /please help|assist me/i;
 const dollarRegex = /[0-9]+\s*(?:hundred|thousand|million|billion)?\s+dollars/i;
-const freeRegex = /(?:\s|^)fr[e3][e3] m[o0]n[e3]y\s/i;
+const freeRegex = /(?:^|\s)fr[e3][e3] m[o0]n[e3]y(?:\s|$)/i;
+const stockRegex = /stock alert/i;
 
-const denyList = [helpRegex, dollarRegex, freeRegex];
+const denyList = [helpRegex, dollarRegex, freeRegex, stockRegex];
 
 const isSpam = (msg) => denyList.some((regex) => regex.test(msg));
 
@@ -361,6 +362,20 @@ const freeRegex = /(?:\s|^)fr[e3][e3] m[o0]n[e3]y\s/i;
 
 
 const freeRegex = /(?:^|\s)fr[e3][e3] m[o0]n[e3]y(?:\s|$)/i;
+
+
+
+
+
+Шаг 29
+
+Следующее регулярное выражение будет соответствовать строкам типа "stock alert". Объявите переменную stockRegex и присвойте ей регулярное выражение, которое будет соответствовать строке "stock alert". Не забудьте сделать его нечувствительным к регистру. Добавьте его также в массив denyList.
+
+
+const stockRegex = /stock alert/i;
+
+const denyList = [helpRegex, dollarRegex, freeRegex, stockRegex];
+
 
 
 
