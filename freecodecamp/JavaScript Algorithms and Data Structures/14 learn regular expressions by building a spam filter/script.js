@@ -6,7 +6,7 @@ const helpRegex = /please help|assist me/i;
 const dollarRegex = /[0-9]+\s*(?:hundred|thousand|million|billion)?\s+dollars/i;
 const freeRegex = /free money/i;
 
-const denyList = [helpRegex, dollarRegex];
+const denyList = [helpRegex, dollarRegex, freeRegex];
 
 const isSpam = (msg) => denyList.some((regex) => regex.test(msg));
 
@@ -299,6 +299,14 @@ const dollarRegex = /[0-9]+\s*(?:hundred|thousand|million|billion)?\s+dollars/i;
 
 
 const freeRegex = /free money/i;
+
+
+
+
+
+Шаг 23
+
+Добавьте новое регулярное выражение в массив denyList, чтобы вы могли его протестировать.
 
 
 
