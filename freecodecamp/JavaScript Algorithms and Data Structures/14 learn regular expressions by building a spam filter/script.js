@@ -5,7 +5,7 @@ const checkMessageButton = document.getElementById("check-message-btn");
 const helpRegex = /please help|assist me/i;
 const dollarRegex = /dollars/i;
 
-const denyList = [helpRegex];
+const denyList = [helpRegex, dollarRegex];
 
 const isSpam = (msg) => helpRegex.test(msg);
 
@@ -196,6 +196,17 @@ const isSpam = (msg) => denyList.some((regex) => regex.test(msg));
 Шаг 13
 
 Следующее регулярное выражение, с которым вы будете работать, — это выражение, которое соответствует упоминаниям сумм в долларах. Начните с объявления переменной dollarRegex и присвойте ей регистронезависимое регулярное выражение, которое соответствует тексту «доллары».
+
+
+
+
+
+Шаг 14
+
+Добавьте ваш dollarRegex в массив denyList, чтобы вы могли протестировать регулярное выражение. Затем попробуйте ввести сообщение в вашем приложении.
+
+
+const denyList = [helpRegex, dollarRegex];
 
 
 
