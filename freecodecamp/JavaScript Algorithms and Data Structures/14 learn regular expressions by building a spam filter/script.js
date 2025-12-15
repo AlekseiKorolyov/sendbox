@@ -3,7 +3,7 @@ const result = document.getElementById("result");
 const checkMessageButton = document.getElementById("check-message-btn");
 
 const helpRegex = /please help|assist me/i;
-const dollarRegex = /[0-9]+ (hundred|thousand|million|billion) dollars/i;
+const dollarRegex = /[0-9]+ (hundred|thousand|million|billion)? dollars/i;
 
 const denyList = [helpRegex, dollarRegex];
 
@@ -251,6 +251,17 @@ const dollarRegex = /[0-9]+ hundred|thousand|million|billion dollars/i;
 
 
 const dollarRegex = /[0-9]+ (hundred|thousand|million|billion) dollars/i;
+
+
+
+
+
+Шаг 19
+
+Теперь, когда у вас есть группа захвата, вы можете пометить весь шаблон как необязательное совпадение. Квантификатор ? соответствует нулю или одному вхождению предыдущего символа или группы. Например, регулярное выражение /colou?r/ соответствует как color, так и colour, поскольку u является необязательным символом. Пометьте вашу группу захвата как необязательную.
+
+
+const dollarRegex = /[0-9]+ (hundred|thousand|million|billion)? dollars/i;
 
 
 
