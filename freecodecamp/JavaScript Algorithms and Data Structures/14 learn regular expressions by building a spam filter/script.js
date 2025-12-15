@@ -3,7 +3,7 @@ const result = document.getElementById("result");
 const checkMessageButton = document.getElementById("check-message-btn");
 
 const helpRegex = /please help|assist me/i;
-const dollarRegex = /[0-9]+ (hundred|thousand|million|billion)? dollars/i;
+const dollarRegex = /[0-9]+\s*(hundred|thousand|million|billion)?\s+dollars/i;
 
 const denyList = [helpRegex, dollarRegex];
 
@@ -262,6 +262,17 @@ const dollarRegex = /[0-9]+ (hundred|thousand|million|billion) dollars/i;
 
 
 const dollarRegex = /[0-9]+ (hundred|thousand|million|billion)? dollars/i;
+
+
+
+
+
+Шаг 20
+
+Хотя это выражение соответствует 100 долларам, оно не будет соответствовать 100 долларам или 10 долларам. Спам-сообщения могут и будут находить способы использовать уязвимости в вашей системе обнаружения. Пора улучшить ваши регулярные выражения. Замените первый пробел выражением \s*. Класс символов \s соответствует пробелам, таким как пробелы, табуляция и новые строки. Квантификатор * означает «соответствует предыдущему символу 0 или более раз». Замените второй пробел выражением \s+. Квантификатор + означает «соответствует предыдущему символу хотя бы один раз».
+
+
+const dollarRegex = /[0-9]+\s*(hundred|thousand|million|billion)?\s+dollars/i;
 
 
 
