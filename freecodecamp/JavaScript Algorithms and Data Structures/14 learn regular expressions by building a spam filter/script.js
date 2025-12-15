@@ -3,7 +3,7 @@ const result = document.getElementById("result");
 const checkMessageButton = document.getElementById("check-message-btn");
 
 const helpRegex = /please help|assist me/i;
-const dollarRegex = /[0-9]+\s*(hundred|thousand|million|billion)?\s+dollars/i;
+const dollarRegex = /[0-9]+\s*(?:hundred|thousand|million|billion)?\s+dollars/i;
 
 const denyList = [helpRegex, dollarRegex];
 
@@ -273,6 +273,20 @@ const dollarRegex = /[0-9]+ (hundred|thousand|million|billion)? dollars/i;
 
 
 const dollarRegex = /[0-9]+\s*(hundred|thousand|million|billion)?\s+dollars/i;
+
+
+
+
+
+Шаг 21
+
+И ещё один момент, касающийся этого выражения. Вам на самом деле не нужно значение совпадения из вашей группы захвата, поэтому вы можете преобразовать её в группу без захвата. Это позволит вам группировать символы вместе, не сохраняя результат. Чтобы создать группу без захвата в регулярном выражении, вы можете добавить ?: после открывающей скобки группы. Например, (?:a|b) будет соответствовать либо a, либо b, но не будет захватывать результат. Обновите ваше регулярное выражение, чтобы использовать группу без захвата.
+
+
+
+
+
+const dollarRegex = /[0-9]+\s*(?:hundred|thousand|million|billion)?\s+dollars/i;
 
 
 
