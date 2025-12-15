@@ -5,7 +5,7 @@ const checkMessageButton = document.getElementById("check-message-btn");
 const helpRegex = /please help|assist me/i;
 const dollarRegex = /[0-9]+\s*(?:hundred|thousand|million|billion)?\s+dollars/i;
 const freeRegex = /(?:^|\s)fr[e3][e3] m[o0]n[e3]y(?:\s|$)/i;
-const stockRegex = /st[o0]ck al[e3]rt/i;
+const stockRegex = /[s5][t7][o0]ck al[e3]r[t7]/i;
 
 const denyList = [helpRegex, dollarRegex, freeRegex, stockRegex];
 
@@ -386,6 +386,17 @@ const denyList = [helpRegex, dollarRegex, freeRegex, stockRegex];
 
 
 const stockRegex = /st[o0]ck al[e3]rt/i;
+
+
+
+
+
+Шаг 31
+
+Далее обновите символы s и t так, чтобы они также соответствовали числам 5 и 7 соответственно.
+
+
+const stockRegex = /[s5][t7][o0]ck al[e3]r[t7]/i;
 
 
 
