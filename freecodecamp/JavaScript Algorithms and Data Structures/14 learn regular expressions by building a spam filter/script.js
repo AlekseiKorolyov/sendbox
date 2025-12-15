@@ -4,6 +4,8 @@ const checkMessageButton = document.getElementById("check-message-btn");
 
 const helpRegex = /please help|assist me/i;
 
+const denyList = [helpRegex];
+
 const isSpam = (msg) => helpRegex.test(msg);
 
 checkMessageButton.addEventListener("click", () => {
@@ -157,6 +159,17 @@ const isSpam = (msg) => helpRegex.test(msg);
 
 
 const helpRegex = /please help|assist me/i;
+
+
+
+
+
+Шаг 11
+
+Прежде чем начать создавать дополнительные регулярные выражения, необходимо обновить приложение, чтобы оно проверяло более одного регулярного выражения. Начните с объявления переменной denyList. Присвойте ей массив, содержащий ваше helpRegex.
+
+
+const denyList = [helpRegex];
 
 
 
