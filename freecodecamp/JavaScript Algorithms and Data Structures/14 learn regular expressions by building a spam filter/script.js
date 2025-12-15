@@ -3,7 +3,7 @@ const result = document.getElementById("result");
 const checkMessageButton = document.getElementById("check-message-btn");
 
 const helpRegex = /please help|assist me/i;
-const dollarRegex = /[0-9] dollars/i;
+const dollarRegex = /[0-9]+ dollars/i;
 
 const denyList = [helpRegex, dollarRegex];
 
@@ -218,6 +218,17 @@ const denyList = [helpRegex, dollarRegex];
 
 
 const dollarRegex = /[0-9] dollars/i;
+
+
+
+
+
+Шаг 16
+
+Сумма в долларах может состоять из нескольких цифр. Для сопоставления можно использовать квантификатор +, который соответствует одному или нескольким последовательным вхождениям. Например, регулярное выражение /a+/ соответствует одному или нескольким последовательным символам «a». Обновите ваше регулярное выражение, чтобы оно соответствовало одной или нескольким последовательным цифрам.
+
+
+const dollarRegex = /[0-9]+ dollars/i;
 
 
 
