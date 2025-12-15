@@ -3,7 +3,7 @@ const result = document.getElementById("result");
 const checkMessageButton = document.getElementById("check-message-btn");
 
 const helpRegex = /please help|assist me/i;
-const dollarRegex = /[0-9]+ hundred|thousand|million|billion dollars/i;
+const dollarRegex = /[0-9]+ (hundred|thousand|million|billion) dollars/i;
 
 const denyList = [helpRegex, dollarRegex];
 
@@ -240,6 +240,17 @@ const dollarRegex = /[0-9]+ dollars/i;
 
 
 const dollarRegex = /[0-9]+ hundred|thousand|million|billion dollars/i;
+
+
+
+
+
+Шаг 18
+
+Группа захвата — это способ определить часть выражения, которая должна быть захвачена и сохранена для последующего использования. Вы можете определить группу захвата, заключив часть выражения в скобки. Например, /h(i|ey) camper/ будет соответствовать либо hi camper, либо hey camper и захватит i или ey в группу. Превратите ваши значения разрядов в группу захвата.
+
+
+const dollarRegex = /[0-9]+ (hundred|thousand|million|billion) dollars/i;
 
 
 
