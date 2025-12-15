@@ -5,7 +5,7 @@ const checkMessageButton = document.getElementById("check-message-btn");
 const helpRegex = /please help|assist me/i;
 const dollarRegex = /[0-9]+\s*(?:hundred|thousand|million|billion)?\s+dollars/i;
 const freeRegex = /(?:^|\s)fr[e3][e3] m[o0]n[e3]y(?:\s|$)/i;
-const stockRegex = /[s5][t7][o0]ck al[e3]r[t7]/i;
+const stockRegex = /[s5][t7][o0]ck [a@4]l[e3]r[t7]/i;
 
 const denyList = [helpRegex, dollarRegex, freeRegex, stockRegex];
 
@@ -397,6 +397,17 @@ const stockRegex = /st[o0]ck al[e3]rt/i;
 
 
 const stockRegex = /[s5][t7][o0]ck al[e3]r[t7]/i;
+
+
+
+
+
+Шаг 32
+
+Классы символов могут содержать более двух символов. Замените символ «a» на класс символов, соответствующий символам «a», «@» и «4».
+
+
+const stockRegex = /[s5][t7][o0]ck [a@4]l[e3]r[t7]/i;
 
 
 
