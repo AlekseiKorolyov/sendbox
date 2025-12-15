@@ -4,7 +4,7 @@ const checkMessageButton = document.getElementById("check-message-btn");
 
 const helpRegex = /please help|assist me/i;
 const dollarRegex = /[0-9]+\s*(?:hundred|thousand|million|billion)?\s+dollars/i;
-const freeRegex = /fr[e3][e3] m[0o]n[e3]y/i;
+const freeRegex = /\sfr[e3][e3] m[o0]n[e3]y\s/i;
 
 const denyList = [helpRegex, dollarRegex, freeRegex];
 
@@ -328,6 +328,17 @@ const freeRegex = /fr[e3][e3] mon[e3]y/i;
 
 
 const freeRegex = /fr[e3][e3] m[0o]n[e3]y/i;
+
+
+
+
+
+Шаг 26
+
+Ваше регулярное выражение должно соответствовать целым словам, а не их частям. То есть, вам не нужно сопоставлять его с фразой «управление деньгами без рук». Для этого начните с проверки наличия пробелов до и после вашего шаблона. Вы можете сделать это, используя метасимвол \s, который будет соответствовать пробелам, табуляции и переносам строк.
+
+
+const freeRegex = /\sfr[e3][e3] m[o0]n[e3]y\s/i;
 
 
 
