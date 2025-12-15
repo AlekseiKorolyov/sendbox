@@ -3,7 +3,7 @@ const result = document.getElementById("result");
 const checkMessageButton = document.getElementById("check-message-btn");
 
 const helpRegex = /please help|assist me/i;
-const dollarRegex = /dollars/i;
+const dollarRegex = /[0-9] dollars/i;
 
 const denyList = [helpRegex, dollarRegex];
 
@@ -207,6 +207,17 @@ const isSpam = (msg) => denyList.some((regex) => regex.test(msg));
 
 
 const denyList = [helpRegex, dollarRegex];
+
+
+
+
+
+Шаг 15
+
+Вам нужно найти число перед текстом dollars. Хотя вы могли бы написать 0|1|2 и так далее, регулярные выражения имеют функцию, которая упрощает это. Класс символов определяется квадратными скобками и соответствует любому символу внутри скобок. Например, [aeiou] соответствует любому символу из списка aeiou. Вы также можете определить диапазон символов для сопоставления, используя дефис. Например, [a-z] соответствует любому символу от a до z. Добавьте класс символов для сопоставления цифр от 0 до 9 в ваше регулярное выражение dollarRegex — помните, что цифра должна стоять перед словом dollars, и между цифрой и словом должен быть пробел.
+
+
+const dollarRegex = /[0-9] dollars/i;
 
 
 
