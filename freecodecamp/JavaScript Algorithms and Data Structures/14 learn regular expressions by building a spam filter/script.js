@@ -4,7 +4,7 @@ const checkMessageButton = document.getElementById("check-message-btn");
 
 const helpRegex = /please help|assist me/i;
 const dollarRegex = /[0-9]+\s*(?:hundred|thousand|million|billion)?\s+dollars/i;
-const freeRegex = /\sfr[e3][e3] m[o0]n[e3]y\s/i;
+const freeRegex = /(?:\s|^)fr[e3][e3] m[o0]n[e3]y\s/i;
 
 const denyList = [helpRegex, dollarRegex, freeRegex];
 
@@ -339,6 +339,17 @@ const freeRegex = /fr[e3][e3] m[0o]n[e3]y/i;
 
 
 const freeRegex = /\sfr[e3][e3] m[o0]n[e3]y\s/i;
+
+
+
+
+
+Шаг 27
+
+Если вы попробуете ввести сообщение «free money», вы заметите, что оно не соответствует вашему выражению! Это происходит потому, что символ \s не соответствует началу или концу текста. Чтобы сопоставить начало текста, вы можете использовать якорь ^. Это означает, что сопоставление с шаблоном начинается с начала всей строки. Замените первый символ \s на незахватывающую группу, которая соответствует \s или ^.
+
+
+const freeRegex = /(?:\s|^)fr[e3][e3] m[o0]n[e3]y\s/i;
 
 
 
