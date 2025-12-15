@@ -4,7 +4,7 @@ const checkMessageButton = document.getElementById("check-message-btn");
 
 const helpRegex = /please help/i;
 
-const isSpam = (msg) => false;
+const isSpam = (msg) => msg.match(helpRegex);
 
 checkMessageButton.addEventListener("click", () => {
     if (messageInput.value === "") {
@@ -124,6 +124,18 @@ const helpRegex = /please help/;
 
 
 const helpRegex = /please help/i;
+
+
+
+
+
+Шаг 8
+
+Строки имеют метод `.match()`, который принимает в качестве аргумента регулярное выражение и определяет, соответствует ли строка этому выражению. Обновите функцию `isSpam()` так, чтобы она неявно возвращала результат вызова метода `.match()` для `msg`, передавая в качестве аргумента `helpRegex`. Затем попробуйте ввести несколько сообщений на вашей странице и посмотрите результат.
+
+
+const isSpam = (msg) => msg.match(helpRegex);
+
 
 
 
