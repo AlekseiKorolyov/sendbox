@@ -3,6 +3,7 @@ const result = document.getElementById("result");
 const checkMessageButton = document.getElementById("check-message-btn");
 
 const helpRegex = /please help|assist me/i;
+const dollarRegex = /dollars/i;
 
 const denyList = [helpRegex];
 
@@ -187,6 +188,14 @@ arr.some(letter => letter === letter.toUpperCase());
 
 
 const isSpam = (msg) => denyList.some((regex) => regex.test(msg));
+
+
+
+
+
+Шаг 13
+
+Следующее регулярное выражение, с которым вы будете работать, — это выражение, которое соответствует упоминаниям сумм в долларах. Начните с объявления переменной dollarRegex и присвойте ей регистронезависимое регулярное выражение, которое соответствует тексту «доллары».
 
 
 
