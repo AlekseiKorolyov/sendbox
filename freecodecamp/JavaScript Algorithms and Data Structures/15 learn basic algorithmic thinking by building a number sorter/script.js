@@ -9,7 +9,7 @@ const sortInputArray = (event) => {
 sortButton.addEventListener("click", sortInputArray);
 
 const updateUI = (array = []) => {
-
+    array.forEach((num, i) => {});
 }
 
 
@@ -143,6 +143,19 @@ const myFunction = (string = "") => {
 const updateUI = (array = []) => {
 
 }
+
+
+
+
+Шаг 12
+
+Чтобы выполнить действие над каждым элементом массива, используйте метод, предназначенный для итерации по массивам. Используйте метод forEach() и передайте ему пустую функцию обратного вызова, которая принимает в качестве параметров num и i.
+
+
+const updateUI = (array = []) => {
+  array.forEach((num, i) => {});
+}
+
 
 
 
