@@ -3,7 +3,7 @@ const sortButton = document.getElementById("sort");
 const sortInputArray = (event) => {
     event.preventDefault();
 
-    const inputValues = [...document.getElementsByClassName("values-dropdown")].map((dropdown) => dropdown.value);
+    const inputValues = [...document.getElementsByClassName("values-dropdown")].map((dropdown) => Number(dropdown.value));
     console.log(inputValues);
 }
 
@@ -106,6 +106,16 @@ const inputValues = [...document.getElementsByClassName("values-dropdown")].map(
 Шаг 8
 
 Для вывода результата inputValues следует использовать console.log(). Код для этого следует написать внутри функции sortInputArray. Чтобы увидеть выведенный в консоль массив inputValues, нажмите кнопку сортировки и откройте консоль. Вы должны увидеть массив строк, подобный этому: Пример кода [ "8", "2", "4", "1", "3" ] Прежде чем продолжить, убедитесь, что вы обратили внимание на тип данных выводимого в консоль результата. На следующем шаге вы преобразуете эти строки в числа.
+
+
+
+
+Шаг 9
+
+Обновите функцию обратного вызова `.map()`, чтобы она вызывала функцию `Number()`. Передайте `dropdown.value` в этот вызов функции. Откройте вкладку «Консоль», чтобы увидеть, что ваш `inputValues` теперь представляет собой массив чисел.
+
+
+const inputValues = [...document.getElementsByClassName("values-dropdown")].map((dropdown) => Number(dropdown.value));
 
 
 
