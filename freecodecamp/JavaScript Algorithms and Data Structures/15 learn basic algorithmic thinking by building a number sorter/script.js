@@ -3,7 +3,7 @@ const sortButton = document.getElementById("sort");
 const sortInputArray = (event) => {
     event.preventDefault();
 
-    const inputValues = [...document.getElementsByClassName("values-dropdown")];
+    const inputValues = [...document.getElementsByClassName("values-dropdown")].map((dropdown) => dropdown.value);
 }
 
 sortButton.addEventListener("click", sortInputArray);
@@ -88,6 +88,16 @@ const inputValues = document.getElementsByClassName("values-dropdown");
 
 
 const inputValues = [...document.getElementsByClassName("values-dropdown")];
+
+
+
+
+Шаг 7
+
+Вам нужно получить значения из выбранных элементов. В настоящее время эти значения будут строками, и вам нужно будет преобразовать их в числа. Используйте функцию `map` для итерации по массиву. Передайте в `map` функцию обратного вызова, которая принимает параметр типа `dropdown` и возвращает `dropdown.value`.
+
+
+const inputValues = [...document.getElementsByClassName("values-dropdown")].map((dropdown) => dropdown.value);
 
 
 
