@@ -4,6 +4,7 @@ const sortInputArray = (event) => {
     event.preventDefault();
 
     const inputValues = [...document.getElementsByClassName("values-dropdown")].map((dropdown) => dropdown.value);
+    console.log(inputValues);
 }
 
 sortButton.addEventListener("click", sortInputArray);
@@ -98,6 +99,13 @@ const inputValues = [...document.getElementsByClassName("values-dropdown")];
 
 
 const inputValues = [...document.getElementsByClassName("values-dropdown")].map((dropdown) => dropdown.value);
+
+
+
+
+Шаг 8
+
+Для вывода результата inputValues следует использовать console.log(). Код для этого следует написать внутри функции sortInputArray. Чтобы увидеть выведенный в консоль массив inputValues, нажмите кнопку сортировки и откройте консоль. Вы должны увидеть массив строк, подобный этому: Пример кода [ "8", "2", "4", "1", "3" ] Прежде чем продолжить, убедитесь, что вы обратили внимание на тип данных выводимого в консоль результата. На следующем шаге вы преобразуете эти строки в числа.
 
 
 
