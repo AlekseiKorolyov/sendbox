@@ -7,20 +7,23 @@ const sortInputArray = (event) => {
         ...document.getElementsByClassName("values-dropdown")
     ].map((dropdown) => Number(dropdown.value));
 
-    sortInputArray(updateUI(inputValues));
+    updateUI(inputValues);
 }
 
-sortButton.addEventListener("click", sortInputArray);
-
 const updateUI = (array = []) => {
-    array.forEach((num, i) => {});
-    const outputValueNode = document.getElementById(`output-value-${i}`);
-    outputValueNode.innerText = num;
+    array.forEach((num, i) => {
+        const outputValueNode = document.getElementById(`output-value-${i}`);
+        outputValueNode.innerText = num;
+    })
 }
 
 const bubbleSort = (array) => {
+    for (let i = 0; i < array.length; i++) {
 
-};
+    }
+}
+
+sortButton.addEventListener("click", sortInputArray);
 
 
 
@@ -200,6 +203,18 @@ sortInputArray(updateUI(inputValues));
 const bubbleSort = (array) => {
 
 };
+
+
+
+
+Шаг 17
+
+Вам потребуется пройтись по массиву. Для простоты используйте для этого цикл for.
+
+
+for (let i = 0; i < array.length; i++) {
+
+  }
 
 
 
