@@ -3,7 +3,11 @@ const sortButton = document.getElementById("sort");
 const sortInputArray = (event) => {
     event.preventDefault();
 
-    const inputValues = [...document.getElementsByClassName("values-dropdown")].map((dropdown) => Number(dropdown.value));
+    const inputValues = [
+        ...document.getElementsByClassName("values-dropdown")
+    ].map((dropdown) => Number(dropdown.value));
+
+    sortInputArray(updateUI(inputValues));
 }
 
 sortButton.addEventListener("click", sortInputArray);
@@ -177,6 +181,16 @@ const outputValueNode = document.getElementById(`output-value-${i}`);
 
 
 outputValueNode.innerText = num;
+
+
+
+
+Шаг 15
+
+В функции sortInputArray() вызовите функцию updateUI() и передайте в качестве аргумента inputValues. Теперь вы сможете нажать кнопку «Сортировать» и увидеть введенный массив в разделе «Вывод».
+
+
+sortInputArray(updateUI(inputValues));
 
 
 
