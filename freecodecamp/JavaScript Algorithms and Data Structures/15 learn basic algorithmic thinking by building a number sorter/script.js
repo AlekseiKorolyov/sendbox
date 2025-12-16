@@ -1,6 +1,8 @@
 const sortButton = document.getElementById("sort");
 
-const sortInputArray = (event) => {};
+const sortInputArray = (event) => {
+    event.preventDefault();
+}
 
 
 
@@ -40,6 +42,19 @@ const sortInputArray = (event) => {};
 Шаг 2
 
 Для подготовки логики вашего проекта используйте синтаксис const и arrow для объявления функции sortInputArray. Она должна принимать один параметр event.
+
+
+
+
+Шаг 3
+
+Вы будете использовать это в качестве обработчика событий для кнопки сортировки. Поскольку кнопки, связанные с элементом формы, отправляют данные по умолчанию, вам необходимо предотвратить такое поведение. Для этого вызовите event.preventDefault() в вашей функции.
+
+
+const sortInputArray = (event) => {
+  event.preventDefault();
+}
+
 
 
 
