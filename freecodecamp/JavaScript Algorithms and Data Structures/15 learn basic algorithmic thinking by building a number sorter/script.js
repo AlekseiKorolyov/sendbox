@@ -18,6 +18,10 @@ const updateUI = (array = []) => {
     outputValueNode.innerText = num;
 }
 
+const bubbleSort = (array) => {
+
+};
+
 
 
 
@@ -191,6 +195,11 @@ outputValueNode.innerText = num;
 
 
 sortInputArray(updateUI(inputValues));
+
+
+const bubbleSort = (array) => {
+
+};
 
 
 
