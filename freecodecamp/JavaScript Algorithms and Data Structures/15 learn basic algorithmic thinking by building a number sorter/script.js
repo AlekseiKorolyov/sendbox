@@ -2,6 +2,7 @@ const sortButton = document.getElementById("sort");
 
 const sortInputArray = (event) => {
     event.preventDefault();
+    const inputValues = document.getElementsByClassName("values-dropdown");
 }
 
 sortButton.addEventListener("click", sortInputArray);
@@ -66,6 +67,16 @@ const sortInputArray = (event) => {
 
 
 sortButton.addEventListener("click", sortInputArray);
+
+
+
+
+Шаг 5
+
+В функции sortInputArray вам нужно получить значения из элементов select. Поскольку все они имеют класс values-dropdown, вы можете запросить их все сразу. Используйте document.getElementsByClassName(), чтобы получить все элементы с этим классом, передав аргумент "values-dropdown". Присвойте его переменной inputValues с параметром const.
+
+
+const inputValues = document.getElementsByClassName("values-dropdown");
 
 
 
