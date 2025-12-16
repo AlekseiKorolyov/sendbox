@@ -4,6 +4,8 @@ const sortInputArray = (event) => {
     event.preventDefault();
 }
 
+sortButton.addEventListener("click", sortInputArray);
+
 
 
 
@@ -54,6 +56,16 @@ const sortInputArray = (event) => {
 const sortInputArray = (event) => {
   event.preventDefault();
 }
+
+
+
+
+Шаг 4
+
+Чтобы протестировать свой код в процессе написания, добавьте обработчик событий к элементу sortButton. Он должен отслеживать событие "click" и принимать sortInputArray в качестве функции обратного вызова.
+
+
+sortButton.addEventListener("click", sortInputArray);
 
 
 
