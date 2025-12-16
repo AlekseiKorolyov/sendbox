@@ -19,7 +19,7 @@ const updateUI = (array = []) => {
 
 const bubbleSort = (array) => {
     for (let i = 0; i < array.length; i++) {
-
+        for (let j = 0; j < array.length - 1; j++) {}
     }
 }
 
@@ -215,6 +215,20 @@ const bubbleSort = (array) => {
 for (let i = 0; i < array.length; i++) {
 
   }
+
+
+
+
+Шаг 18
+
+Поскольку вам нужно сравнивать элементы, вам потребуется использовать вложенный цикл for. Этот цикл должен перебирать все элементы массива, кроме последнего. Используйте j в качестве переменной-итератора внутреннего цикла.
+
+
+const bubbleSort = (array) => {
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array.length - 1; j++) {}
+  }
+}
 
 
 
