@@ -2,7 +2,8 @@ const sortButton = document.getElementById("sort");
 
 const sortInputArray = (event) => {
     event.preventDefault();
-    const inputValues = document.getElementsByClassName("values-dropdown");
+
+    const inputValues = [...document.getElementsByClassName("values-dropdown")];
 }
 
 sortButton.addEventListener("click", sortInputArray);
@@ -77,6 +78,16 @@ sortButton.addEventListener("click", sortInputArray);
 
 
 const inputValues = document.getElementsByClassName("values-dropdown");
+
+
+
+
+Шаг 6
+
+Помните, что метод `.getElementsByClassName()` возвращает `HTMLCollection`, который представляет собой массивоподобный объект, содержащий все элементы с совпадающим именем класса. Вы можете использовать оператор расширения (spread operator) для преобразования его в массив. Преобразуйте вызов `document.getElementsByClassName()` в массив с помощью оператора расширения и присвойте его переменной с именем `inputValues`.
+
+
+const inputValues = [...document.getElementsByClassName("values-dropdown")];
 
 
 
