@@ -4,7 +4,6 @@ const sortInputArray = (event) => {
     event.preventDefault();
 
     const inputValues = [...document.getElementsByClassName("values-dropdown")].map((dropdown) => Number(dropdown.value));
-    console.log(inputValues);
 }
 
 sortButton.addEventListener("click", sortInputArray);
@@ -116,6 +115,14 @@ const inputValues = [...document.getElementsByClassName("values-dropdown")].map(
 
 
 const inputValues = [...document.getElementsByClassName("values-dropdown")].map((dropdown) => Number(dropdown.value));
+
+
+
+
+Шаг 10
+
+Теперь, когда вы подтвердили тип данных элементов inputValues, удалите вызов console.log().
+
 
 
 
