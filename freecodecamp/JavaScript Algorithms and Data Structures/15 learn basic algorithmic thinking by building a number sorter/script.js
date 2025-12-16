@@ -10,6 +10,7 @@ sortButton.addEventListener("click", sortInputArray);
 
 const updateUI = (array = []) => {
     array.forEach((num, i) => {});
+    const outputValueNode = document.getElementById(`output-value-${i}`);
 }
 
 
@@ -155,6 +156,16 @@ const updateUI = (array = []) => {
 const updateUI = (array = []) => {
   array.forEach((num, i) => {});
 }
+
+
+
+
+Шаг 13
+
+Создайте переменную с именем outputValueNode и присвойте ей значение результата вызова метода document.getElementById(). Используйте синтаксис шаблонных литералов для передачи строки `output-value-${i}` в метод .getElementById().
+
+
+const outputValueNode = document.getElementById(`output-value-${i}`);
 
 
 
