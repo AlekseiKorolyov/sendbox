@@ -43,6 +43,10 @@ const selectionSort = (array) => {
                 minIndex = j;
             }
         }
+
+        const temp = array[i];
+        array[i] = array[minIndex];
+        array[minIndex] = temp;
     }
 }
 
@@ -372,6 +376,17 @@ const selectionSort = (array) => {
         minIndex = j;
       }
     }
+
+
+
+Шаг 30
+
+После вложенного цикла for вы нашли наименьшее значение. Вам нужно поменять его местами с текущим значением. Как и в сортировке пузырьком, используйте временную переменную, чтобы извлечь значение из массива [i], затем поменяйте местами значения в массиве [i] и массиве [minIndex].
+
+
+    const temp = array[i];
+    array[i] = array[minIndex];
+    array[minIndex] = temp;
 
 
 
