@@ -7,7 +7,7 @@ const sortInputArray = (event) => {
         ...document.getElementsByClassName("values-dropdown")
     ].map((dropdown) => Number(dropdown.value));
 
-    const sortedValues = bubbleSort(inputValues);
+    const sortedValues = selectionSort(inputValues);
 
     updateUI(sortedValues);
 }
@@ -315,6 +315,13 @@ if (array[j] > array[j + 1]) {}
 const selectionSort = (array) => {
 
 };
+
+
+
+
+Шаг 26
+
+Обновите переменную sortedValues, указав в ней результат вызова метода selectionSort вместо bubbleSort.
 
 
 
