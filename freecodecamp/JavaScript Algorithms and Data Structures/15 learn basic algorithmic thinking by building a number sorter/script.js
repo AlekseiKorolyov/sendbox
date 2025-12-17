@@ -48,6 +48,8 @@ const selectionSort = (array) => {
         array[i] = array[minIndex];
         array[minIndex] = temp;
     }
+
+    return array;
 }
 
 sortButton.addEventListener("click", sortInputArray);
@@ -388,6 +390,12 @@ const selectionSort = (array) => {
     array[i] = array[minIndex];
     array[minIndex] = temp;
 
+
+
+
+Шаг 31
+
+Наконец, после завершения внешнего цикла необходимо вернуть массив. После этого вы сможете увидеть изменение результата при повторном нажатии кнопки «Сортировка».
 
 
 
