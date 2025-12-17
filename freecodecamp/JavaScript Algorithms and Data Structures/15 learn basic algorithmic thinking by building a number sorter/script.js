@@ -7,7 +7,7 @@ const sortInputArray = (event) => {
         ...document.getElementsByClassName("values-dropdown")
     ].map((dropdown) => Number(dropdown.value));
 
-    const sortedValues = selectionSort(inputValues);
+    const sortedValues = insertionSort(inputValues);
 
     updateUI(sortedValues);
 }
@@ -418,6 +418,16 @@ const selectionSort = (array) => {
 const insertionSort = (array) => {
 
 };
+
+
+
+
+Шаг 34
+
+Как и прежде, обновите переменную sortedValues, указав в качестве результата сортировки вставкой (insertionSort) вместо сортировки выбором (selectionSort).
+
+
+const sortedValues = insertionSort(inputValues);
 
 
 
