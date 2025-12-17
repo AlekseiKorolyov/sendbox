@@ -38,7 +38,7 @@ const selectionSort = (array) => {
         let minIndex = i;
 
         for (let j = i + 1; j < array.length; j++) {
-            console.log(array, array[j], array[minIndex]);
+
             if (array[j] < array[minIndex]) {
                 minIndex = j;
             }
@@ -396,6 +396,13 @@ const selectionSort = (array) => {
 Шаг 31
 
 Наконец, после завершения внешнего цикла необходимо вернуть массив. После этого вы сможете увидеть изменение результата при повторном нажатии кнопки «Сортировка».
+
+
+
+
+Шаг 32
+
+Теперь, когда сортировка выбором работает, удалите оператор console.log().
 
 
 
