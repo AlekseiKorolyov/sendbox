@@ -31,6 +31,7 @@ const bubbleSort = (array) => {
             }
         }
     }
+    return array;
 }
 
 sortButton.addEventListener("click", sortInputArray);
@@ -285,6 +286,13 @@ if (array[j] > array[j + 1]) {}
         array[j] = array[j + 1];
         array[j + 1] = temp;
       }
+
+
+
+
+Шаг 23
+
+Наконец, после завершения выполнения внешнего цикла, верните отсортированный массив.
 
 
 
