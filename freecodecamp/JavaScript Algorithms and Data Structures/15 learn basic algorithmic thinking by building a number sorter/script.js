@@ -34,7 +34,9 @@ const bubbleSort = (array) => {
 }
 
 const selectionSort = (array) => {
+    for (let i = 0; i < array.length; i++) {
 
+    }
 };
 
 sortButton.addEventListener("click", sortInputArray);
@@ -322,6 +324,18 @@ const selectionSort = (array) => {
 Шаг 26
 
 Обновите переменную sortedValues, указав в ней результат вызова метода selectionSort вместо bubbleSort.
+
+
+
+
+Шаг 27
+
+Как и сортировка пузырьком, сортировка выбором требует перебора элементов массива. Для этого объявите цикл for.
+
+
+  for (let i = 0; i < array.length; i++) {
+
+  }
 
 
 
