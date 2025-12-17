@@ -52,6 +52,9 @@ const selectionSort = (array) => {
 }
 
 const insertionSort = (array) => {
+    for (let i = 1; i < array.length; i++) {
+
+    }
 
 };
 
@@ -428,6 +431,18 @@ const insertionSort = (array) => {
 
 
 const sortedValues = insertionSort(inputValues);
+
+
+
+
+Шаг 35
+
+Алгоритм сортировки вставками начинает сортировку с начала списка, то есть первый элемент уже отсортирован. Учитывая это, создайте цикл for, который начинается со второго элемента массива — он должен продолжать перебирать остальную часть массива.
+
+
+  for (let i = 1; i < array.length; i++) {
+
+  }
 
 
 
