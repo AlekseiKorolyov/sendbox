@@ -24,7 +24,11 @@ const bubbleSort = (array) => {
         for (let j = 0; j < array.length - 1; j++) {
             console.log(array, array[j], array[j + 1]);
 
-            if (array[j] > array[j + 1]) {}
+            if (array[j] > array[j + 1]) {
+                const temp = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = temp;
+            }
         }
     }
 }
@@ -267,6 +271,20 @@ const sortedValues = bubbleSort(inputValues);
 
 
 if (array[j] > array[j + 1]) {}
+
+
+
+
+Шаг 22
+
+Когда ваше условие if истинно, вам нужно поменять местами два элемента, «подняв» больший элемент к концу массива. Для этого объявите временную переменную и присвойте ей значение array[j]. Затем присвойте array[j] значение array[j + 1]. Наконец, присвойте array[j + 1] значение temp.
+
+
+      if (array[j] > array[j + 1]) {
+        const temp = array[j];
+        array[j] = array[j + 1];
+        array[j + 1] = temp;
+      }
 
 
 
