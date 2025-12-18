@@ -7,7 +7,9 @@ const sortInputArray = (event) => {
         ...document.getElementsByClassName("values-dropdown")
     ].map((dropdown) => Number(dropdown.value));
 
-    const sortedValues = inputValues.sort((a, b) => {});
+    const sortedValues = inputValues.sort((a, b) => {
+        return a - b;
+    });
 
     updateUI(sortedValues);
 }
@@ -533,6 +535,18 @@ const sortedValues = inputValues.sort();
 ***
 
 const sortedValues = inputValues.sort((a, b) => {});
+
+
+
+
+Шаг 44
+
+Обратный вызов метода `.sort()` должен возвращать число. Это число определяет, как отсортировать элементы `a` и `b`: Если число отрицательное, отсортируйте `a` перед `b`. Если число положительное, отсортируйте `b` перед `a`. Если число равно нулю, не меняйте порядок `a` и `b`. Учитывая, что вам нужно отсортировать числа в порядке возрастания (от наименьшего к наибольшему), верните одно вычисление вычитания с использованием `a` и `b`, которое правильно отсортирует числа в соответствии с описанной выше логикой.
+
+
+  const sortedValues = inputValues.sort((a, b) => {
+    return a - b;
+  });
 
 
 
