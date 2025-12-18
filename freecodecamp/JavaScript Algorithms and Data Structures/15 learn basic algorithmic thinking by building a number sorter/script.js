@@ -55,7 +55,9 @@ const insertionSort = (array) => {
     for (let i = 1; i < array.length; i++) {
         const currValue = array[i];
         let j = i - 1;
+
         while (j >= 0 && array[j] > currValue) {
+            array[j + 1] = array[j];
             j--;
         }
     }
@@ -472,6 +474,15 @@ const sortedValues = insertionSort(inputValues);
       j--;
     }
 
+
+
+
+Шаг 38
+
+На каждой итерации цикла while вы находите элемент, который больше вашего текущего значения. Вам нужно переместить этот элемент вправо, чтобы освободить место для вашего текущего значения. Для этого присвойте значение с индексом j следующему индексу.
+
+
+array[j + 1] = array[j];
 
 
 
