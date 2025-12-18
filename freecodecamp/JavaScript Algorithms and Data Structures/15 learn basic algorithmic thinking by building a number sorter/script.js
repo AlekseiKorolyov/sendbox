@@ -53,9 +53,9 @@ const selectionSort = (array) => {
 
 const insertionSort = (array) => {
     for (let i = 1; i < array.length; i++) {
-
+        const currValue = array[i];
+        let j = i - 1;
     }
-
 };
 
 sortButton.addEventListener("click", sortInputArray);
@@ -444,6 +444,18 @@ const sortedValues = insertionSort(inputValues);
 
   }
 
+
+
+
+Шаг 36
+
+Объявите переменную currValue и присвойте ей значение из массива array[i]. Затем объявите переменную j и присвойте ей значение i - 1. Ваша переменная j должна быть переназначаемой.
+
+
+  for (let i = 1; i < array.length; i++) {
+    const currValue = array[i];
+    let j = i - 1;
+  }
 
 
 
