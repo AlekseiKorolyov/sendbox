@@ -7,7 +7,7 @@ const sortInputArray = (event) => {
         ...document.getElementsByClassName("values-dropdown")
     ].map((dropdown) => Number(dropdown.value));
 
-    const sortedValues = insertionSort(inputValues);
+    const sortedValues = inputValues.sort();
 
     updateUI(sortedValues);
 }
@@ -502,6 +502,16 @@ array[j + 1] = currValue;
 Шаг 40
 
 После завершения цикла for необходимо вернуть массив. После этого вы сможете увидеть изменение результата при повторном нажатии кнопки «Сортировка».
+
+
+
+
+Шаг 41
+
+Для сортировки элементов массива можно использовать встроенный метод `.sort()`. Таким образом, вы можете обновить переменную `sortedValues`, присвоив ей результат вызова метода `.sort()` для массива `inputValues`.
+
+
+const sortedValues = inputValues.sort();
 
 
 
