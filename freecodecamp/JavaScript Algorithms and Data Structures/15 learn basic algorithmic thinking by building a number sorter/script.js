@@ -62,6 +62,7 @@ const insertionSort = (array) => {
         }
         array[j + 1] = currValue;
     }
+    return array;
 };
 
 sortButton.addEventListener("click", sortInputArray);
@@ -494,6 +495,13 @@ array[j + 1] = array[j];
 
 
 array[j + 1] = currValue;
+
+
+
+
+Шаг 40
+
+После завершения цикла for необходимо вернуть массив. После этого вы сможете увидеть изменение результата при повторном нажатии кнопки «Сортировка».
 
 
 
