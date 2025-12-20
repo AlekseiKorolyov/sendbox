@@ -2,6 +2,7 @@ const calculate = () => {
     const value = document.querySelector("#numbers").value;
     const array = value.split(/,\s*/g);
     const numbers = array.map(el => Number(el));
+    const filtered = numbers.filter();
 };
 
 
@@ -84,6 +85,16 @@ array.map(el => {
 
 
 const numbers = array.map(el => Number(el));
+
+
+
+
+Шаг 6
+
+Пользователь может ввести в поле ввода любой текст. Важно убедиться, что вы работаете только с числами. Конструктор Number() вернет NaN (что означает «не число»), если переданное значение не может быть преобразовано в число. Вам необходимо отфильтровать эти значения — к счастью, для этого есть специальный метод для массивов. Метод `.filter()` позволяет отфильтровывать элементы из массива, создавая при этом новый массив. Объявите переменную filtered и присвойте ей значение `numbers.filter()`.
+
+
+const filtered = numbers.filter();
 
 
 
