@@ -2,7 +2,7 @@ const calculate = () => {
     const value = document.querySelector("#numbers").value;
     const array = value.split(/,\s*/g);
     const numbers = array.map(el => Number(el));
-    const filtered = numbers.filter();
+    const filtered = numbers.filter(el => !isNaN(el));
 };
 
 
@@ -95,6 +95,19 @@ const numbers = array.map(el => Number(el));
 
 
 const filtered = numbers.filter();
+
+
+
+
+Шаг 7
+
+Подобно методу `.map()`, метод `.filter()` принимает функцию обратного вызова. Функция обратного вызова принимает текущий элемент в качестве первого аргумента.
+Пример кода
+
+`array.filter(el => { })` Функция обратного вызова должна возвращать логическое значение, указывающее, следует ли включать элемент в новый массив. В данном случае вы хотите вернуть `true`, если элемент не является NaN (не числом). Однако здесь нельзя проверить равенство, поскольку NaN не равно самому себе. Вместо этого вы можете использовать метод `isNaN()`, который возвращает `true`, если аргумент равен NaN. Добавьте функцию обратного вызова в ваш метод `.filter()` с `el` в качестве параметра и используйте неявное возвращаемое значение, чтобы вернуть `true`, если элемент НЕ является NaN.
+
+
+const filtered = numbers.filter(el => !isNaN(el));
 
 
 
