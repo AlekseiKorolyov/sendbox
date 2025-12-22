@@ -1,8 +1,7 @@
 const calculate = () => {
     const value = document.querySelector("#numbers").value;
     const array = value.split(/,\s*/g);
-    const numbers = array.map(el => Number(el));
-    const filtered = numbers.filter(el => !isNaN(el));
+    const numbers = array.map(el => Number(el)).filter(el => !isNaN(el));
 };
 
 
@@ -108,6 +107,21 @@ const filtered = numbers.filter();
 
 
 const filtered = numbers.filter(el => !isNaN(el));
+
+
+
+
+Шаг 8
+
+Методы массивов часто можно объединять в цепочку для выполнения нескольких операций одновременно. Например:
+Пример кода
+
+array.map().filter();
+
+Метод .map() вызывается для массива, а затем метод .filter() вызывается для результата метода .map(). Это называется цепочкой методов. Следуя этому примеру, удалите переменную filtered и объедините вызов .filter() с вызовом .map() выше. Не удаляйте ни одну из функций обратного вызова.
+
+
+const numbers = array.map(el => Number(el)).filter(el => !isNaN(el));
 
 
 
