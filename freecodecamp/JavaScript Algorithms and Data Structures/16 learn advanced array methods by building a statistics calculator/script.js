@@ -1,5 +1,6 @@
 const getMean = (array) => {
     const sum = array.reduce((acc, el) => acc + el, 0);
+    const mean = sum / array.length;
 };
 
 const calculate = () => {
@@ -180,6 +181,16 @@ array.reduce((acc, el) => acc + el.toLowerCase(), "");
 
 
 const sum = array.reduce((acc, el) => acc + el, 0);
+
+
+
+
+Шаг 13
+
+Следующий шаг в вычислении среднего значения — разделить сумму чисел на количество чисел в списке. Объявите переменную `mean` и присвойте ей значение суммы, деленной на длину массива.
+
+
+const mean = sum / array.length;
 
 
 
