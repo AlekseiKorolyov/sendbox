@@ -1,8 +1,4 @@
-const getMean = (array) => {
-    const sum = array.reduce((acc, el) => acc + el, 0);
-    const mean = sum / array.length;
-    return mean;
-};
+const getMean = (array) => array.reduce((acc, el) => acc + el, 0) / array.length;
 
 const calculate = () => {
     const value = document.querySelector("#numbers").value;
@@ -199,6 +195,16 @@ const mean = sum / array.length;
 Шаг 14
 
 Наконец, вам нужно вернуть значение среднего.
+
+
+
+
+Шаг 15
+
+На самом деле, эту логику можно немного упростить. Используя неявный возврат стрелочной функции, вы можете напрямую вернуть значение метода `.reduce()`, деленное на длину массива, без необходимости присваивать какие-либо переменные. Обновите функцию `getMean`, как описано выше.
+
+
+const getMean = (array) => array.reduce((acc, el) => acc + el, 0) / array.length;
 
 
 
