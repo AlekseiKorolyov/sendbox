@@ -1,6 +1,7 @@
 const getMean = (array) => {
     const sum = array.reduce((acc, el) => acc + el, 0);
     const mean = sum / array.length;
+    return mean;
 };
 
 const calculate = () => {
@@ -191,6 +192,13 @@ const sum = array.reduce((acc, el) => acc + el, 0);
 
 
 const mean = sum / array.length;
+
+
+
+
+Шаг 14
+
+Наконец, вам нужно вернуть значение среднего.
 
 
 
