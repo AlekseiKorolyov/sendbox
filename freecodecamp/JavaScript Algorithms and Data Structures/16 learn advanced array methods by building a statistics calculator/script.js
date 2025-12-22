@@ -1,3 +1,7 @@
+const getMean = (array) => {
+
+};
+
 const calculate = () => {
     const value = document.querySelector("#numbers").value;
     const array = value.split(/,\s*/g);
@@ -122,6 +126,19 @@ array.map().filter();
 
 
 const numbers = array.map(el => Number(el)).filter(el => !isNaN(el));
+
+
+
+
+Шаг 9
+
+На этом пока что функция calculate завершается. Пришло время написать логику вычисления среднего значения. Создайте пустую функцию с именем getMean. Она должна принимать один параметр — array.
+
+
+const getMean = (array) => {
+
+};
+
 
 
 
