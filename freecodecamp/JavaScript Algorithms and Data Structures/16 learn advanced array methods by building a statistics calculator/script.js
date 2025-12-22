@@ -4,6 +4,7 @@ const calculate = () => {
     const value = document.querySelector("#numbers").value;
     const array = value.split(/,\s*/g);
     const numbers = array.map(el => Number(el)).filter(el => !isNaN(el));
+    const mean = getMean(numbers);
 };
 
 
@@ -205,6 +206,16 @@ const mean = sum / array.length;
 
 
 const getMean = (array) => array.reduce((acc, el) => acc + el, 0) / array.length;
+
+
+
+
+Шаг 16
+
+Теперь вам нужно использовать вашу новую функцию getMean. В вашей функции calculate объявите переменную mean и присвойте ей значение из функции getMean(numbers).
+
+
+const mean = getMean(numbers);
 
 
 
