@@ -1,5 +1,9 @@
 const getMean = (array) => array.reduce((acc, el) => acc + el, 0) / array.length;
 
+const getMedian = (array) => {
+
+};
+
 const calculate = () => {
     const value = document.querySelector("#numbers").value;
     const array = value.split(/,\s*/g);
@@ -237,6 +241,18 @@ document.querySelector("#mean").textContent = mean;
 
 
 <form onsubmit="calculate(); return false;">
+
+
+
+
+Шаг 19
+
+Пора приступить к вычислению медианы. Медиана — это середина набора чисел. Начните с пустой функции с именем getMedian, которая должна принимать в качестве параметра массив.
+
+
+const getMedian = (array) => {
+
+};
 
 
 
