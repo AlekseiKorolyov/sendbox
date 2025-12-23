@@ -3,7 +3,8 @@ const getMean = (array) => array.reduce((acc, el) => acc + el, 0) / array.length
 const testArr1 = [1, 2, 3, 4, 5];
 const testArr2 = [1, 2, 3, 4, 5, 6];
 const isEven = testArr2.length % 2 === 0;
-console.log(isEven);
+const oddListMedian = testArr1[Math.floor(testArr1.length / 2)];
+console.log(oddListMedian);
 
 const getMedian = (array) => {
     const sorted = array.sort((a, b) => a - b);
@@ -300,6 +301,30 @@ const testArr1 = [1, 2, 3, 4, 5];
 const testArr2 = [1, 2, 3, 4, 5, 6];
 const isEven = testArr2.length % 2 === 0;
 console.log(isEven);
+
+
+
+
+Шаг 23
+
+Чтобы найти медиану массива с нечетным числом элементов, вам нужно найти и вернуть среднее число. Вот как найти среднее число массива с нечетным числом элементов:
+Пример кода
+
+arr[Math.floor(arr.length / 2)];
+
+Вот более длинный пример нахождения среднего числа массива с 5 элементами:
+Пример кода
+
+const numbers = [1, 2, 3, 4, 5];
+const middleNumber = numbers[Math.floor(numbers.length / 2)];
+console.log(middleNumber); // 3
+
+Причина использования Math.floor заключается в том, что результат деления нечетного числа на 2 будет десятичным числом. Math.floor округлит до ближайшего целого числа в меньшую сторону. Объявите переменную oddListMedian и присвойте ей результат нахождения среднего числа массива testArr1. Затем выведите значение переменной oddListMedian в консоль. Откройте консоль, чтобы увидеть результат.
+
+
+const testArr1 = [1, 2, 3, 4, 5];
+const oddListMedian = testArr1[Math.floor(testArr1.length / 2)];
+console.log(oddListMedian);
 
 
 
