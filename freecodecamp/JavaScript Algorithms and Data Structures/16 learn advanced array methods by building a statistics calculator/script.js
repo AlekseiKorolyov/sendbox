@@ -1,7 +1,7 @@
 const getMean = (array) => array.reduce((acc, el) => acc + el, 0) / array.length;
 
 const getMedian = (array) => {
-
+    const sorted = array.sort();
 };
 
 const calculate = () => {
@@ -253,6 +253,14 @@ document.querySelector("#mean").textContent = mean;
 const getMedian = (array) => {
 
 };
+
+
+
+
+Шаг 20 Первый шаг в вычислении медианы — убедиться, что список чисел отсортирован от наименьшего к наибольшему. Для этого идеально подходит метод массива — метод .sort(). Объявите sorted переменную и присвойте ей значение, полученное с помощью метода array.sort().
+
+
+const sorted = array.sort();
 
 
 
