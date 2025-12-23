@@ -4,7 +4,9 @@ const calculate = () => {
     const value = document.querySelector("#numbers").value;
     const array = value.split(/,\s*/g);
     const numbers = array.map(el => Number(el)).filter(el => !isNaN(el));
+
     const mean = getMean(numbers);
+    document.querySelector("#mean").textContent = mean;
 };
 
 
@@ -216,6 +218,15 @@ const getMean = (array) => array.reduce((acc, el) => acc + el, 0) / array.length
 
 
 const mean = getMean(numbers);
+
+
+
+
+Шаг 17 Чтобы отобразить значение переменной mean, в вашем приложении уже есть готовый элемент #mean. Используйте .querySelector, чтобы найти этот элемент, а затем установите для его .textContent значение переменной mean.
+
+
+document.querySelector("#mean").textContent = mean;
+
 
 
 
