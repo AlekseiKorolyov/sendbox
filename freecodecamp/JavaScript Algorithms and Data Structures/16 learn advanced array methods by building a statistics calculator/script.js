@@ -3,8 +3,11 @@ const getMean = (array) => array.reduce((acc, el) => acc + el, 0) / array.length
 const testArr1 = [1, 2, 3, 4, 5];
 const testArr2 = [1, 2, 3, 4, 5, 6];
 const isEven = testArr2.length % 2 === 0;
+console.log(isEven);
 const oddListMedian = testArr1[Math.floor(testArr1.length / 2)];
 console.log(oddListMedian);
+const evenListMedian = getMean([testArr2[testArr2.length / 2 - 1], testArr2[testArr2.length / 2]]);
+console.log(evenListMedian);
 
 const getMedian = (array) => {
     const sorted = array.sort((a, b) => a - b);
@@ -325,6 +328,34 @@ console.log(middleNumber); // 3
 const testArr1 = [1, 2, 3, 4, 5];
 const oddListMedian = testArr1[Math.floor(testArr1.length / 2)];
 console.log(oddListMedian);
+
+
+
+
+Шаг 24
+
+Чтобы найти медиану четного списка чисел, необходимо найти два средних числа и вычислить их среднее арифметическое. Вот как найти два средних числа четного списка элементов:
+Пример кода
+
+// первое среднее число
+arr[arr.length / 2];
+// второе среднее число
+arr[(arr.length / 2) - 1];
+
+Чтобы найти медиану, можно использовать функцию getMean, которая складывает средние числа и делит сумму на 2.
+Пример кода
+
+const numbers = [1, 2, 3, 4];
+const firstMiddleNumber = numbers[numbers.length / 2];
+const secondMiddleNumber = numbers[(numbers.length / 2) - 1];
+// результат 2.5
+getMean([firstMiddleNumber, secondMiddleNumber]);
+
+Создайте переменную evenListMedian и присвойте ей результат нахождения медианы объекта testArr2. Затем выведите значение переменной evenListMedian в консоль.
+
+
+const evenListMedian = getMean(testArr2);
+console.log(evenListMedian);
 
 
 
