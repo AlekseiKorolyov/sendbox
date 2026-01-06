@@ -4,7 +4,12 @@ const getMean = (array) => array.reduce((acc, el) => acc + el, 0) / array.length
 
 const getMedian = (array) => {
     const sorted = array.toSorted((a, b) => a - b);
-};
+    const median =
+        sorted.length % 2 === 0
+            ? getMean([sorted[sorted.length / 2], sorted[sorted.length / 2 - 1]])
+            : sorted[Math.floor(sorted.length / 2)];
+    return median;
+}
 
 const calculate = () => {
     const value = document.querySelector("#numbers").value;
@@ -374,6 +379,33 @@ console.log(evenListMedian);
 
 const sorted = array.toSorted((a, b) => a - b);
 
+
+
+
+Шаг 27
+
+Теперь пришло время применить полученные знания к функции getMedian. Внутри функции getMedian проверьте, является ли длина массива sorted четной. Если да, найдите два средних числа, вычислите их среднее значение и верните результат. Если длина массива sorted нечетная, верните среднее число. Обязательно работайте с массивом sorted, чтобы найти средние числа. Также, если вам нужна помощь, вернитесь к предыдущим шагам, чтобы узнать, как найти медиану для массива.
+
+
+const getMedian = (array) => {
+  const sorted = array.toSorted((a, b) => a - b);
+  if (sorted.length % 2 === 0) {
+    return getMean([sorted[sorted.length / 2 - 1], sorted[sorted.length / 2]]);
+  } else {
+    return sorted[Math.floor(sorted.length / 2)];
+  }
+}
+
+***
+
+const getMedian = (array) => {
+  const sorted = array.toSorted((a, b) => a - b);
+  const median =
+    sorted.length % 2 === 0
+      ? getMean([sorted[sorted.length / 2], sorted[sorted.length / 2 - 1]])
+      : sorted[Math.floor(sorted.length / 2)];
+  return median;
+}
 
 
 
