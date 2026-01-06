@@ -1,7 +1,5 @@
 const getMean = (array) => array.reduce((acc, el) => acc + el, 0) / array.length;
 
-
-
 const getMedian = (array) => {
     const sorted = array.toSorted((a, b) => a - b);
     const median =
@@ -10,6 +8,10 @@ const getMedian = (array) => {
             : sorted[Math.floor(sorted.length / 2)];
     return median;
 }
+
+const getMode = (array) => {
+
+};
 
 const calculate = () => {
     const value = document.querySelector("#numbers").value;
@@ -422,6 +424,18 @@ const median = getMedian(numbers);
 
 
 document.querySelector("#median").textContent = median;
+
+
+
+
+Шаг 29
+
+Следующий шаг — вычисление моды, то есть числа, которое встречается в списке чаще всего. Для начала объявите функцию getMode, которая принимает тот же параметр в виде array, что и раньше.
+
+
+const getMode = (array) => {
+
+};
 
 
 
