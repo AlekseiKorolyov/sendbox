@@ -22,6 +22,8 @@ const calculate = () => {
     const mean = getMean(numbers);
     const median = getMedian(numbers);
 
+    console.log(getMode(numbers));
+
     document.querySelector("#mean").textContent = mean;
     document.querySelector("#median").textContent = median;
 };
@@ -474,6 +476,20 @@ const counts = {};
 Чтобы лучше понять, как будет работать функция getMode, вам нужно будет вывести её содержимое. Это позволит вам увидеть, что происходит по мере построения функции. Но сначала вам нужно вернуть array, чтобы его можно было правильно протестировать. Внутри вашей функции getMode верните ваш параметр-array.
 
 return array;
+
+
+
+
+Шаг 32
+
+Внутри функции calculate вы уже вызвали функции getMean и getMedian. Ниже этих вызовов функций добавьте console.log(getMode(numbers)). Чтобы увидеть результат, введите числа 4, 4, 2, 5 и нажмите кнопку «Вычислить». Откройте консоль, чтобы увидеть следующий массив:
+Пример кода
+
+[ 4, 4, 2, 5 ]
+
+
+console.log(getMode(numbers));
+
 
 
 
