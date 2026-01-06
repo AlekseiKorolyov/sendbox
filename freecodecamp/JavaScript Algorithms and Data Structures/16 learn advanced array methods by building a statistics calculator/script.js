@@ -11,6 +11,7 @@ const getMedian = (array) => {
 
 const getMode = (array) => {
     const counts = {};
+    array.forEach((el) => {});
     return array;
 };
 
@@ -489,6 +490,16 @@ return array;
 
 
 console.log(getMode(numbers));
+
+
+
+
+Шаг 33
+
+Внутри вашей функции getMode, на пустой строке над оператором return, вызовите метод forEach для array. Ваш метод .forEach() должен содержать пустую функцию обратного вызова, которая принимает параметр el. В следующих нескольких шагах вы будете использовать этот цикл для подсчета частоты вхождений каждого числа в массиве.
+
+
+array.forEach((el) => {});
 
 
 
