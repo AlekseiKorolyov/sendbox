@@ -17,7 +17,10 @@ const calculate = () => {
     const numbers = array.map(el => Number(el)).filter(el => !isNaN(el));
 
     const mean = getMean(numbers);
+    const median = getMedian(numbers);
+
     document.querySelector("#mean").textContent = mean;
+    document.querySelector("#median").textContent = median;
 };
 
 
@@ -406,6 +409,20 @@ const getMedian = (array) => {
       : sorted[Math.floor(sorted.length / 2)];
   return median;
 }
+
+
+
+
+Шаг 28
+
+Как и в случае с функцией getMean, вам необходимо добавить функцию getMedian в логику вычислений. Объявите переменную median и присвойте ей значение getMedian(numbers). Затем запросите DOM для элемента #median и установите textContent равным median.
+
+
+const median = getMedian(numbers);
+
+
+document.querySelector("#median").textContent = median;
+
 
 
 
