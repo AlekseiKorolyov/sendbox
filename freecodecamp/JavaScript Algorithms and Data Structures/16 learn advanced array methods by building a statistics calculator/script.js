@@ -11,8 +11,14 @@ const getMedian = (array) => {
 
 const getMode = (array) => {
     const counts = {};
-    array.forEach((el) => {});
-    return array;
+    array.forEach((el) => {
+        if (counts[el]) {
+            counts[el] += 1;
+        } else {
+            counts[el] = 1;
+        }
+    })
+    return counts;
 };
 
 const calculate = () => {
@@ -500,6 +506,31 @@ console.log(getMode(numbers));
 
 
 array.forEach((el) => {});
+
+
+
+
+Шаг 34
+
+Внутри функции обратного вызова array.forEach() проверьте, находится ли текущий элемент внутри объекта counts. Если элемент найден, увеличьте значение counts[el] на 1. В противном случае присвойте counts[el] число 1. Измените оператор return так, чтобы он возвращал counts вместо array. Для проверки введите числа 4, 4, 2, 5 и нажмите «Вычислить». В консоли должно отобразиться следующее:
+Пример кода
+
+{ '2': 1, '4': 2, '5': 1 }
+
+
+
+
+const getMode = (array) => {
+  const counts = {};
+  array.forEach(el => {
+    if (counts[el]) {
+      counts[el] += 1;
+    } else {
+      counts[el] = 1;
+    }
+  })
+  return counts;
+}
 
 
 
