@@ -31,15 +31,7 @@ const getRange = (array) => {
 
 const getVariance = (array) => {
     const mean = getMean(array);
-    const differences = array.map(
-        (el) => el - mean
-    );
-    const squaredDifferences = differences.map(
-        (el) => el ** 2
-    );
-    const sumSquaredDifferences = squaredDifferences.reduce(
-        (acc, el) => acc + el, 0
-    );
+    const variance = array.reduce((acc, el) => {}, 0);
 }
 
 const calculate = () => {
@@ -735,6 +727,15 @@ const squaredDifferences = differences.map((el) => el ** 2);
     (acc, el) => acc + el, 0
     );
 
+
+
+
+Шаг 51
+
+Используя два вызова `.map()` и один вызов `.reduce()`, вы создаёте лишние массивы и выполняете итерации больше раз, чем необходимо. Всю логику следует перенести в вызов `.reduce()`, чтобы сэкономить время и память. Удалите переменные `differences`, `squaredDifferences` и `sumSquaredDifferences` (и их значения). Объявите переменную `variance` и присвойте ей значение из `array.reduce()`. В качестве функции обратного вызова передайте стандартные параметры `acc` и `el`, но пока оставьте тело функции пустым. Не забудьте установить начальное значение равным 0.
+
+
+const variance = array.reduce((acc, el) => {}, 0);
 
 
 
