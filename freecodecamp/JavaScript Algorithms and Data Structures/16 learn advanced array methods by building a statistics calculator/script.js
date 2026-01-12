@@ -19,7 +19,7 @@ const getMode = (array) => {
     const highest = Object.keys(counts).sort(
         (a, b) => counts[b] - counts[a]
     )[0];
-    const mode = Object.keys(counts);
+    const mode = Object.keys(counts).filter((el) => counts[el] === counts[highest]);
 }
 
 const calculate = () => {
@@ -601,6 +601,16 @@ const highest = Object.keys(counts).sort((a, b) => counts[b] - counts[a])[0];
 
 
 const mode = Object.keys(counts);
+
+
+
+
+Шаг 42
+
+Теперь добавьте метод filter к вашему последнему вызову Object.keys(). Функция обратного вызова должна возвращать значение, равное ли значение counts[el] значению counts[highest].
+
+
+const mode = Object.keys(counts).filter((el) => counts[el] === counts[highest]);
 
 
 
