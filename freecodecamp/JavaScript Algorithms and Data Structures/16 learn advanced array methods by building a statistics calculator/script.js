@@ -11,15 +11,9 @@ const getMedian = (array) => {
 
 const getMode = (array) => {
     const counts = {};
-    array.forEach((el) => {
-        if (counts[el]) {
-            counts[el] += 1;
-        } else {
-            counts[el] = 1;
-        }
-    })
+    array.forEach(el => counts[el] = counts[el] ? counts[el] + 1 : 1);
     return counts;
-};
+}
 
 const calculate = () => {
     const value = document.querySelector("#numbers").value;
@@ -531,6 +525,21 @@ const getMode = (array) => {
   })
   return counts;
 }
+
+
+
+
+Шаг 35
+
+Есть еще один способ написать цикл forEach. Вместо использования блока body () => {} для функции обратного вызова, можно использовать тело выражения () =>. Вам придется преобразовать операторы if...else в выражение. Напишите выражение в виде тернарного оператора и используйте одно присваивание для тернарного оператора. Пример кода assignment = condition ? exprIfTrue : exprIfFalse Преобразуйте функцию обратного вызова forEach, чтобы использовать тело выражения, и замените операторы тернарным оператором.
+
+
+const getMode = (array) => {
+  const counts = {};
+  array.forEach(el => counts[el] = counts[el] ? counts[el] + 1 : 1);
+  return counts;
+}
+
 
 
 
