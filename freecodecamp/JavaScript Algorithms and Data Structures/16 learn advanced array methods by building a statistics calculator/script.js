@@ -39,6 +39,10 @@ const getVariance = (array) => {
     return variance;
 }
 
+const getStandardDeviation = (array) => {
+    const variance = getVariance(array);
+};
+
 const calculate = () => {
     const value = document.querySelector("#numbers").value;
     const array = value.split(/,\s*/g);
@@ -784,6 +788,19 @@ const variance = array.reduce((acc, el) => {
   const variance = getVariance(numbers);
 
   document.querySelector("#variance").textContent = variance;
+
+
+
+
+Шаг 55
+
+Ваш окончательный результат — стандартное отклонение, которое является квадратным корнем из variance. Начните с объявления функции getStandardDeviation с параметром в виде массива. В теле функции объявите переменную variance и присвойте ей variance массива.
+
+
+const getStandardDeviation = (array) => {
+  const variance = getVariance(array);
+};
+
 
 
 
