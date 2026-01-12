@@ -31,6 +31,7 @@ const getRange = (array) => {
 
 const getVariance = (array) => {
     const mean = getMean(array);
+    const differences = array.map((el) => el - mean);
 }
 
 const calculate = () => {
@@ -693,6 +694,16 @@ const getRange = (array) => {
 const getVariance = (array) => {
   const mean = getMean(array);
 }
+
+
+
+
+Шаг 48
+
+Следующий шаг — вычислить, насколько каждый элемент отличается от среднего значения. Объявите переменную differences и присвойте ей значение из array.map(). В качестве функции обратного вызова верните значение el минус mean.
+
+
+const differences = array.map((el) => el - mean);
 
 
 
