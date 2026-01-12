@@ -35,7 +35,8 @@ const getVariance = (array) => {
         const difference = el - mean;
         const squared = difference ** 2;
         return acc + squared;
-    }, 0);
+    }, 0) / array.length;
+    return variance;
 }
 
 const calculate = () => {
@@ -760,7 +761,15 @@ const variance = array.reduce((acc, el) => {
 
 Шаг 53
 
-Последний шаг в вычислении дисперсии — это деление суммы квадратов разностей на количество чисел. Разделите ваш вызов .reduce() на длину массива (в объявлении дисперсии). Затем верните дисперсию.
+Последний шаг в вычислении дисперсии — это деление суммы квадратов разностей на количество чисел. Разделите ваш вызов .reduce() на длину массива (в объявлении variance). Затем верните variance.
+
+
+  const variance = array.reduce((acc, el) => {
+    const difference = el - mean;
+    const squared = difference ** 2;
+    return acc + squared;
+  }, 0) / array.length;
+  return variance;
 
 
 
