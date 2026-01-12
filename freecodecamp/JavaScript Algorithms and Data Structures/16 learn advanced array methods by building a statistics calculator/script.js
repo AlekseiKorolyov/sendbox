@@ -12,7 +12,6 @@ const getMedian = (array) => {
 const getMode = (array) => {
     const counts = {};
     array.forEach(el => counts[el] = counts[el] ? counts[el] + 1 : 1);
-    return counts;
 }
 
 const calculate = () => {
@@ -544,6 +543,19 @@ const getMode = (array) => {
 Шаг 36
 
 Теперь, когда вы лучше понимаете, как работает функция getMode, вы можете удалить оператор console.log(getMode(numbers)) из функции calculate.
+
+
+
+
+Шаг 37
+
+Возвращение переменной counts было необходимо только для тестирования. Теперь, когда тестирование завершено, удалите строку return counts из функции getMode.
+
+
+
+
+
+
 
 
 
