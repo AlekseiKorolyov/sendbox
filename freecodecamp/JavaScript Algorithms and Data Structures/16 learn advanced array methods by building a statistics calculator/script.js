@@ -16,7 +16,10 @@ const getMode = (array) => {
     if (new Set(Object.values(counts)).size === 1) {
         return null;
     }
-    const highest = Object.keys(counts).sort((a, b) => counts[b] - counts[a])[0];
+    const highest = Object.keys(counts).sort(
+        (a, b) => counts[b] - counts[a]
+    )[0];
+    const mode = Object.keys(counts);
 }
 
 const calculate = () => {
@@ -588,6 +591,16 @@ const highest = Object.keys(counts);
 
 
 const highest = Object.keys(counts).sort((a, b) => counts[b] - counts[a])[0];
+
+
+
+
+Шаг 41
+
+Если несколько чисел в ряду встречаются с одинаковой максимальной частотой, все они считаются модой. В противном случае модой является число, которое встречается чаще всего, то есть это единственное число является модой. К счастью, вы можете обработать оба этих случая одновременно с помощью метода `.filter()`. Начните с объявления переменной `mode` и присвойте ей значение `Object.keys(counts)`.
+
+
+const mode = Object.keys(counts);
 
 
 
