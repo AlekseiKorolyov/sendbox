@@ -53,7 +53,9 @@ const calculate = () => {
     const mean = getMean(numbers);
     const median = getMedian(numbers);
     const mode = getMode(numbers);
+    const range = getRange(numbers);
     const variance = getVariance(numbers);
+    const standardDeviation = getStandardDeviation(numbers);
 
 
     document.querySelector("#mean").textContent = mean;
@@ -61,7 +63,7 @@ const calculate = () => {
     document.querySelector("#mode").textContent = mode;
     document.querySelector("#range").textContent = range;
     document.querySelector("#variance").textContent = variance;
-
+    document.querySelector("#standardDeviation").textContent = standardDeviation;
 
 }
 
@@ -848,6 +850,19 @@ const standardDeviation = Math.sqrt(variance);
 
 
 return standardDeviation;
+
+
+
+
+Шаг 59
+
+
+Наконец, обновите функцию calculate, добавив логику расчета стандартного отклонения, как вы это сделали с другими функциями. Поздравляем! Ваш проект завершен.
+
+
+  const standardDeviation = getStandardDeviation(numbers);
+
+  document.querySelector("#standardDeviation").textContent = standardDeviation;
 
 
 
