@@ -16,7 +16,7 @@ const getMode = (array) => {
     if (new Set(Object.values(counts)).size === 1) {
         return null;
     }
-    const highest = Object.keys(counts);
+    const highest = Object.keys(counts).sort((a, b) => counts[b] - counts[a])[0];
 }
 
 const calculate = () => {
@@ -578,6 +578,16 @@ const getMode = (array) => {
 
 
 const highest = Object.keys(counts);
+
+
+
+
+Шаг 40
+
+Теперь вам нужно правильно отсортировать значения. Привяжите метод `.sort()` к вызову `Object.keys()`. Для функции обратного вызова вам потребуется использовать объект `counts` для сравнения значений каждого ключа. Вы можете использовать параметры `a` и `b` для доступа к ключам. Затем верните значение `counts[b]` минус значение `counts[a]`. Наконец, получите доступ к первому элементу массива, используя скобки, чтобы завершить создание highest переменной.
+
+
+const highest = Object.keys(counts).sort((a, b) => counts[b] - counts[a])[0];
 
 
 
