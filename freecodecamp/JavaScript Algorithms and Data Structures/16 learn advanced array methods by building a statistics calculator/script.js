@@ -41,7 +41,8 @@ const getVariance = (array) => {
 
 const getStandardDeviation = (array) => {
     const variance = getVariance(array);
-};
+    const standardDeviation = Math.pow(variance, 1/2);
+}
 
 const calculate = () => {
     const value = document.querySelector("#numbers").value;
@@ -800,6 +801,32 @@ const variance = array.reduce((acc, el) => {
 const getStandardDeviation = (array) => {
   const variance = getVariance(array);
 };
+
+
+
+
+Шаг 56
+
+Для вычисления показателя степени корня, например x−−√n 𝑥 𝑛 , можно использовать обратный показатель степени x1/n 𝑥 1 / 𝑛 . В JavaScript есть встроенная функция Math.pow(), которую можно использовать для вычисления показателей степени. Вот базовый синтаксис функции Math.pow():
+Пример кода
+
+Math.pow(base, exponent);
+
+Вот пример вычисления квадратного корня из 4:
+Пример кода
+
+const base = 4;
+const exponent = 0.5;
+// возвращает 2
+Math.pow(base, exponent);
+
+Объявите переменную standardDeviation и используйте функцию Math.pow(), чтобы присвоить ей значение variance1/2 𝑣 𝑎 𝑟 𝑖 𝑎 𝑛 𝑐 𝑒 1 / 2 .
+
+
+const getStandardDeviation = (array) => {
+  const variance = getVariance(array);
+  const standardDeviation = Math.pow(variance, 1/2);
+}
 
 
 
