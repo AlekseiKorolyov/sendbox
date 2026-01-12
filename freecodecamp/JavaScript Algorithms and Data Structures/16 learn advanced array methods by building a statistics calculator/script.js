@@ -29,6 +29,10 @@ const getRange = (array) => {
     return Math.max(...array) - Math.min(...array);
 }
 
+const getVariance = (array) => {
+    const mean = getMean(array);
+}
+
 const calculate = () => {
     const value = document.querySelector("#numbers").value;
     const array = value.split(/,\s*/g);
@@ -677,6 +681,18 @@ const getRange = (array) => {
   const range = getRange(numbers);
 
   document.querySelector("#range").textContent = range;
+
+
+
+
+Шаг 47
+
+Дисперсия ряда показывает, насколько данные отклоняются от среднего значения, и может использоваться для определения степени разброса данных. Дисперсия вычисляется в несколько шагов. Начните с объявления функции getVariance, которая принимает в качестве параметра массив. Внутри этой функции объявите переменную mean и присвойте ей значение функции getMean, передав массив в качестве аргумента.
+
+
+const getVariance = (array) => {
+  const mean = getMean(array);
+}
 
 
 
