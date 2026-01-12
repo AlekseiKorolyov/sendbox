@@ -23,8 +23,6 @@ const calculate = () => {
     const mean = getMean(numbers);
     const median = getMedian(numbers);
 
-    console.log(getMode(numbers));
-
     document.querySelector("#mean").textContent = mean;
     document.querySelector("#median").textContent = median;
 };
@@ -539,6 +537,13 @@ const getMode = (array) => {
   array.forEach(el => counts[el] = counts[el] ? counts[el] + 1 : 1);
   return counts;
 }
+
+
+
+
+Шаг 36
+
+Теперь, когда вы лучше понимаете, как работает функция getMode, вы можете удалить оператор console.log(getMode(numbers)) из функции calculate.
 
 
 
