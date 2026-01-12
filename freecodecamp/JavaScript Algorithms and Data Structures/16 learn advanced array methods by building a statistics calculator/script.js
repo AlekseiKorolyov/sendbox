@@ -19,7 +19,10 @@ const getMode = (array) => {
     const highest = Object.keys(counts).sort(
         (a, b) => counts[b] - counts[a]
     )[0];
-    const mode = Object.keys(counts).filter((el) => counts[el] === counts[highest]);
+    const mode = Object.keys(counts).filter(
+        (el) => counts[el] === counts[highest]
+    );
+    return mode.join(", ");
 }
 
 const calculate = () => {
@@ -611,6 +614,16 @@ const mode = Object.keys(counts);
 
 
 const mode = Object.keys(counts).filter((el) => counts[el] === counts[highest]);
+
+
+
+
+Шаг 43
+
+Пришло время вернуть переменную `mode`. `mode` — это массив, поэтому верните его в виде строки с помощью метода `.join()`. Разделите элементы запятой, за которой следует пробел.
+
+
+return mode.join(", ");
 
 
 
