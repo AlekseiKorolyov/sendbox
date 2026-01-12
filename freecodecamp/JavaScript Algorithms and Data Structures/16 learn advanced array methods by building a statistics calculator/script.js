@@ -47,12 +47,14 @@ const calculate = () => {
     const mean = getMean(numbers);
     const median = getMedian(numbers);
     const mode = getMode(numbers);
-    const range = getRange(numbers);
+    const variance = getVariance(numbers);
+
 
     document.querySelector("#mean").textContent = mean;
     document.querySelector("#median").textContent = median;
     document.querySelector("#mode").textContent = mode;
     document.querySelector("#range").textContent = range;
+    document.querySelector("#variance").textContent = variance;
 
 
 }
@@ -771,6 +773,17 @@ const variance = array.reduce((acc, el) => {
   }, 0) / array.length;
   return variance;
 
+
+
+
+Шаг 54
+
+Добавьте новую функцию getVariance в функцию calculate и обновите соответствующий HTML-элемент.
+
+
+  const variance = getVariance(numbers);
+
+  document.querySelector("#variance").textContent = variance;
 
 
 
