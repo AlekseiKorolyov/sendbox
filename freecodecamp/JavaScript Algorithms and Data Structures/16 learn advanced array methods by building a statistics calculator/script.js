@@ -25,6 +25,9 @@ const getMode = (array) => {
     return mode.join(", ");
 }
 
+const getRange = (array) => {
+    return Math.max(...array) - Math.min(...array);
+}
 
 const calculate = () => {
     const value = document.querySelector("#numbers").value;
@@ -639,6 +642,27 @@ return mode.join(", ");
   const mode = getMode(numbers);
 
   document.querySelector("#mode").textContent = mode;
+
+
+
+
+Шаг 45
+
+Следующий шаг — вычисление диапазона, то есть разницы между наибольшим и наименьшим числами в списке. Вы ранее изучали глобальный объект Math. У Math есть метод `.min()` для получения наименьшего числа из ряда чисел и метод `.max()` для получения наибольшего числа. Вот пример, который получает наименьшее число из массива:
+Пример кода
+
+const numbersArr = [2, 3, 1];
+
+console.log(Math.min(...numbersArr));
+// Ожидаемый результат: 1
+
+Объявите функцию `getRange`, которая принимает тот же параметр массива, что и раньше. Используя `Math.min()`, `Math.max()` и оператор расширения, верните разницу между наибольшим и наименьшим числами в списке.
+
+
+const getRange = (array) => {
+  return Math.max(...array) - Math.min(...array);
+}
+
 
 
 
