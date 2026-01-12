@@ -31,7 +31,10 @@ const getRange = (array) => {
 
 const getVariance = (array) => {
     const mean = getMean(array);
-    const differences = array.map((el) => el - mean);
+    const differences = array.map(
+        (el) => el - mean
+    );
+    const squaredDifferences = differences.map((el) => el ** 2);
 }
 
 const calculate = () => {
@@ -704,6 +707,16 @@ const getVariance = (array) => {
 
 
 const differences = array.map((el) => el - mean);
+
+
+
+
+Шаг 49
+
+Следующий шаг — возвести в квадрат каждую из разностей. Для возведения значения в квадрат можно использовать оператор **. Например, 3 ** 2 вернет 9. Объявите переменную squaredDifferences и присвойте ей значение из differences.map(). В качестве функции обратного вызова верните значение el squared.
+
+
+const squaredDifferences = differences.map((el) => el ** 2);
 
 
 
