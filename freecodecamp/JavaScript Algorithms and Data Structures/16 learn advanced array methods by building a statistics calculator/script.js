@@ -31,7 +31,11 @@ const getRange = (array) => {
 
 const getVariance = (array) => {
     const mean = getMean(array);
-    const variance = array.reduce((acc, el) => {}, 0);
+    const variance = array.reduce((acc, el) => {
+        const difference = el - mean;
+        const squared = difference ** 2;
+        return acc + squared;
+    }, 0);
 }
 
 const calculate = () => {
@@ -736,6 +740,20 @@ const squaredDifferences = differences.map((el) => el ** 2);
 
 
 const variance = array.reduce((acc, el) => {}, 0);
+
+
+
+
+Шаг 52
+
+Внутри вашего пустого коллбэка `.reduce()` объявите переменную `difference` и присвойте ей значение `el минус mean`. Затем объявите переменную `squared` и присвойте ей значение `difference` в степени 2. Наконец, верните значение `acc плюс squared`.
+
+
+const variance = array.reduce((acc, el) => {
+    const difference = el - mean;
+    const squared = difference ** 2;
+    return acc + squared;
+  }, 0);
 
 
 
