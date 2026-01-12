@@ -34,7 +34,12 @@ const getVariance = (array) => {
     const differences = array.map(
         (el) => el - mean
     );
-    const squaredDifferences = differences.map((el) => el ** 2);
+    const squaredDifferences = differences.map(
+        (el) => el ** 2
+    );
+    const sumSquaredDifferences = squaredDifferences.reduce(
+        (acc, el) => acc + el, 0
+    );
 }
 
 const calculate = () => {
@@ -717,6 +722,19 @@ const differences = array.map((el) => el - mean);
 
 
 const squaredDifferences = differences.map((el) => el ** 2);
+
+
+
+
+Шаг 50
+
+Далее вам нужно вычислить сумму квадратов разностей. Объявите переменную sumSquaredDifferences и присвойте ей значение функции squaredDifferences.reduce(). В качестве функции обратного вызова верните сумму acc и el. Не забудьте установить начальное значение равным 0.
+
+
+  const sumSquaredDifferences = squaredDifferences.reduce(
+    (acc, el) => acc + el, 0
+    );
+
 
 
 
