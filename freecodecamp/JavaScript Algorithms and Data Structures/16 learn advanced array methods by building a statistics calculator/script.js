@@ -41,7 +41,7 @@ const getVariance = (array) => {
 
 const getStandardDeviation = (array) => {
     const variance = getVariance(array);
-    const standardDeviation = Math.pow(variance, 1/2);
+    const standardDeviation = Math.sqrt(variance);
 }
 
 const calculate = () => {
@@ -827,6 +827,17 @@ const getStandardDeviation = (array) => {
   const variance = getVariance(array);
   const standardDeviation = Math.pow(variance, 1/2);
 }
+
+
+
+
+Шаг 57
+
+Объект Math имеет метод `.sqrt()`, специально предназначенный для нахождения квадратного корня числа. Измените переменную `standardDeviation`, чтобы она использовала этот метод вместо `Math.pow()`.
+
+
+const standardDeviation = Math.sqrt(variance);
+
 
 
 
