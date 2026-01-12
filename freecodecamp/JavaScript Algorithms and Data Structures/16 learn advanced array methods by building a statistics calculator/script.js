@@ -25,6 +25,7 @@ const getMode = (array) => {
     return mode.join(", ");
 }
 
+
 const calculate = () => {
     const value = document.querySelector("#numbers").value;
     const array = value.split(/,\s*/g);
@@ -32,11 +33,13 @@ const calculate = () => {
 
     const mean = getMean(numbers);
     const median = getMedian(numbers);
+    const mode = getMode(numbers);
 
     document.querySelector("#mean").textContent = mean;
     document.querySelector("#median").textContent = median;
-};
+    document.querySelector("#mode").textContent = mode;
 
+}
 
 
 
@@ -624,6 +627,19 @@ const mode = Object.keys(counts).filter((el) => counts[el] === counts[highest]);
 
 
 return mode.join(", ");
+
+
+
+
+Шаг 44
+
+Добавьте функцию getMode() в логику вычислений и обновите соответствующий HTML-элемент.
+
+
+  const mode = getMode(numbers);
+
+  document.querySelector("#mode").textContent = mode;
+
 
 
 
