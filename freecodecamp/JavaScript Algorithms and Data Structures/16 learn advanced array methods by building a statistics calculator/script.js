@@ -37,10 +37,13 @@ const calculate = () => {
     const mean = getMean(numbers);
     const median = getMedian(numbers);
     const mode = getMode(numbers);
+    const range = getRange(numbers);
 
     document.querySelector("#mean").textContent = mean;
     document.querySelector("#median").textContent = median;
     document.querySelector("#mode").textContent = mode;
+    document.querySelector("#range").textContent = range;
+
 
 }
 
@@ -662,6 +665,19 @@ console.log(Math.min(...numbersArr));
 const getRange = (array) => {
   return Math.max(...array) - Math.min(...array);
 }
+
+
+
+
+Шаг 46
+
+Добавьте логику для вычисления и отображения диапазона в вашу функцию calculate.
+
+
+  const range = getRange(numbers);
+
+  document.querySelector("#range").textContent = range;
+
 
 
 
