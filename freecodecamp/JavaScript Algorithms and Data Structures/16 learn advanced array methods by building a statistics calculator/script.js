@@ -12,9 +12,11 @@ const getMedian = (array) => {
 const getMode = (array) => {
     const counts = {};
     array.forEach(el => counts[el] = counts[el] ? counts[el] + 1 : 1);
+
     if (new Set(Object.values(counts)).size === 1) {
         return null;
-    };
+    }
+    const highest = Object.keys(counts);
 }
 
 const calculate = () => {
@@ -565,6 +567,18 @@ const getMode = (array) => {
   if (new Set(Object.values(counts)).size === 1) {
     return null;
   };
+
+
+
+
+
+Шаг 39
+
+Теперь вам нужно найти значение, которое встречается с наибольшей частотой. Для этого вы будете использовать метод Object.keys(). Начните с объявления переменной `highest` и присвойте ей значение из метода Object.keys() объекта `counts`.
+
+
+const highest = Object.keys(counts);
+
 
 
 
