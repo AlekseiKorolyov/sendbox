@@ -1,3 +1,5 @@
+const sum = (nums) => nums.reduce((acc, el) => acc + el);
+
 const range = (start, end) => Array(end - start + 1).fill(start).map((element, index) => element + index);
 const charRange = (start, end) => range(start.charCodeAt(0), end.charCodeAt(0)).map((code) => String.fromCharCode(code));
 
@@ -264,6 +266,16 @@ input.ariaLabel = letter + number;
 
 
 container.appendChild(input);
+
+
+
+
+Шаг 20
+
+Большинство программ для работы с электронными таблицами включают встроенные функции для вычислений. Объявите функцию sum, которая принимает параметр nums, представляющий собой массив чисел. Она должна возвращать результат вызова функции reduce для этого массива, суммирующего все числа.
+
+
+const sum = (nums) => nums.reduce((acc, el) => acc + el);
 
 
 
