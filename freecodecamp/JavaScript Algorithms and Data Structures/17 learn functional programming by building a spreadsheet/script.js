@@ -1,5 +1,5 @@
 const range = (start, end) => Array(end - start + 1).fill(start).map((element, index) => element + index);
-const charRange = (start, end) => range(start, end);
+const charRange = (start, end) => range(start.charCodeAt(0), end.charCodeAt(0));
 
 window.onload =  () => {
     const container = document.getElementById("container");
@@ -148,6 +148,16 @@ const range = (start, end) => Array(end - start + 1).fill(start).map((element, i
 
 
 const charRange = (start, end) => range(start, end);
+
+
+
+
+Шаг 11
+
+Ваша функция range ожидает числа, но начальное и конечное значения будут строками (в частности, это будут отдельные символы, например, A). Преобразуйте начальное и конечное значения в вызове range() в числа, используя метод .charCodeAt(), передав в качестве аргумента этому методу число 0.
+
+
+const charRange = (start, end) => range(start.charCodeAt(0), end.charCodeAt(0));
 
 
 
