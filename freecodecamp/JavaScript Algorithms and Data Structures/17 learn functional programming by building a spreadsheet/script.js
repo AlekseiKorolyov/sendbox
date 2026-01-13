@@ -1,4 +1,4 @@
-const range = (start, end) => Array(end - start + 1);
+const range = (start, end) => Array(end - start + 1).fill(start);
 
 window.onload =  () => {
     const container = document.getElementById("container");
@@ -117,6 +117,16 @@ const range = (start, end) => Array();
 
 
 end - start + 1
+
+
+
+
+Шаг 8
+
+Конструктор Array() имеет метод .fill(), который можно использовать для заполнения массива значением. Вы можете использовать его для заполнения массива start значением. Привяжите метод .fill() к конструктору Array() и передайте ему start значение.
+
+
+const range = (start, end) => Array(end - start + 1).fill(start);
 
 
 
