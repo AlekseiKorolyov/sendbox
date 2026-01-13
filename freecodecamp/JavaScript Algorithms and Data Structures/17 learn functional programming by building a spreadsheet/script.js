@@ -1,4 +1,4 @@
-const range = (start, end) => Array();
+const range = (start, end) => Array(end - start + 1);
 
 window.onload =  () => {
     const container = document.getElementById("container");
@@ -109,6 +109,15 @@ container.appendChild(label);
 
 
 const range = (start, end) => Array();
+
+
+
+
+Шаг 7 Размер вашего массива должен соответствовать размеру диапазона. Вы можете вычислить это, найдя разницу между end и start и добавив 1 к результату. Передайте это вычисление в качестве аргумента конструктору Array().
+
+
+end - start + 1
+
 
 
 
