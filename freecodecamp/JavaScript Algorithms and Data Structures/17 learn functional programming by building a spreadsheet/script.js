@@ -4,6 +4,7 @@ window.onload =  () => {
         const label = document.createElement("div");
         label.className = "label";
         label.textContent = name;
+        container.appendChild(label);
     };
 };
 
@@ -84,6 +85,16 @@ const label = document.createElement("div");
   label.className = "label";
   label.textContent = name;
 
+
+
+
+
+Шаг 5
+
+Наконец, используйте метод `.appendChild()`, чтобы добавить элемент label к элементу container.
+
+
+container.appendChild(label);
 
 
 
