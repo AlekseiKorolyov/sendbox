@@ -11,6 +11,10 @@ window.onload =  () => {
     };
     const letters = charRange("A", "J");
     letters.forEach(createLabel);
+    range(1, 99).forEach(number => {
+        createLabel(number)
+        letters.forEach((letter) => {});
+    });
 };
 
 
@@ -201,6 +205,17 @@ letters.forEach(createLabel);
 
 
 range(1, 99).forEach((number) => {});
+
+
+
+
+Шаг 16
+
+В функции обратного вызова вам потребуется сделать два вызова. Начните с вызова функции createLabel() и передайте в качестве аргумента number. Вы должны увидеть несколько чисел в вашей электронной таблице. Затем вызовите метод .forEach() для вашего массива letters. Передайте пустую функцию обратного вызова, которая принимает параметр в виде letter.
+
+
+    createLabel(number)
+    letters.forEach((letter) => {});
 
 
 
