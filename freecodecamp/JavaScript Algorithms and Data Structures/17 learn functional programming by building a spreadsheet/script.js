@@ -1,3 +1,4 @@
+const isEven = (num) => num % 2 === 0 ? true : false;
 const sum = (nums) => nums.reduce((acc, el) => acc + el);
 
 const range = (start, end) => Array(end - start + 1).fill(start).map((element, index) => element + index);
@@ -276,6 +277,16 @@ container.appendChild(input);
 
 
 const sum = (nums) => nums.reduce((acc, el) => acc + el);
+
+
+
+
+Шаг 21
+
+Объявите функцию isEven, которая принимает параметр num и возвращает true, если число четное, и false в противном случае. Используйте оператор деления по модулю % для определения того, является ли число четным или нечетным.
+
+
+const isEven = (num) => num % 2 === 0 ? true : false;
 
 
 
