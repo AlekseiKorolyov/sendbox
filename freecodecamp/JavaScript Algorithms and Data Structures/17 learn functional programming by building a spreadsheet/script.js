@@ -1,7 +1,7 @@
 window.onload =  () => {
     const container = document.getElementById("container");
     const createLabel = (name) => {
-
+        const label = document.createElement("div");
     };
 };
 
@@ -60,6 +60,16 @@ const outer = () => {
   const createLabel = (name) => {
 
   };
+
+
+
+
+Шаг 3
+
+Помните, что у объекта документа есть метод `.createElement()`, который позволяет динамически создавать новые HTML-элементы. В функции `createLabel` объявите переменную `label` и присвойте ей новый элемент `div`.
+
+
+const label = document.createElement("div");
 
 
 
