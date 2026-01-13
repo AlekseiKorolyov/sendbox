@@ -1,4 +1,5 @@
 const range = (start, end) => Array(end - start + 1).fill(start).map((element, index) => element + index);
+const charRange = (start, end) => range(start, end);
 
 window.onload =  () => {
     const container = document.getElementById("container");
@@ -137,6 +138,17 @@ const range = (start, end) => Array(end - start + 1).fill(start);
 
 
 const range = (start, end) => Array(end - start + 1).fill(start).map((element, index) => element + index);
+
+
+
+
+Шаг 10
+
+Теперь, когда у вас есть функция range, вы можете использовать ее и для создания диапазона букв. Объявите функцию charRange, используя синтаксис const и стрелка. Она должна принимать параметры start и end. Функция должна неявно возвращать результат вызова функции range() с аргументами start и end.
+
+
+const charRange = (start, end) => range(start, end);
+
 
 
 
