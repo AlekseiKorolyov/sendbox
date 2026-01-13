@@ -17,6 +17,7 @@ window.onload =  () => {
             const input = document.createElement("input");
             input.type = "text";
             input.id = letter + number;
+            input.ariaLabel = letter + number;
         });
     });
 };
@@ -233,6 +234,25 @@ range(1, 99).forEach((number) => {});
       input.type = "text";
       input.id = letter + number;
 
+
+
+
+Шаг 18
+
+В предыдущих проектах вы изучили метод setAttribute. Другой способ обновить атрибут в JavaScript — использовать следующий синтаксис:
+Пример кода
+
+el.attribute = value;
+
+Названия свойств для значений HTML-атрибутов с дефисом, таких как aria-label, следуют верблюжьему регистру и становятся ariaLabel.
+Пример кода
+
+el.ariaLabel = "Значение метки Aria";
+
+Установите атрибут aria-label для элемента input на то же значение, что и атрибут id.
+
+
+input.ariaLabel = letter + number;
 
 
 
