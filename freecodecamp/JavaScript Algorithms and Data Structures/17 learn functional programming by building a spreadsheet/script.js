@@ -1,5 +1,7 @@
 const range = (start, end) => Array(end - start + 1).fill(start).map((element, index) => element + index);
-const charRange = (start, end) => range(start.charCodeAt(0), end.charCodeAt(0));
+const charRange = (start, end) => range(
+    start.charCodeAt(0), end.charCodeAt(0)).map((code) => String.fromCharCode(code));
+
 
 window.onload =  () => {
     const container = document.getElementById("container");
@@ -158,6 +160,18 @@ const charRange = (start, end) => range(start, end);
 
 
 const charRange = (start, end) => range(start.charCodeAt(0), end.charCodeAt(0));
+
+
+
+
+Шаг 12
+
+Функция range() вернет массив чисел, которые вам нужно преобразовать обратно в символы. Привяжите метод .map() к вызову range(). Передайте функцию обратного вызова, которая принимает code в качестве параметра и неявно возвращает значение переданного code методу String.fromCharCode().
+
+
+const charRange = (start, end) => range(
+  start.charCodeAt(0), end.charCodeAt(0)).map((code) => String.fromCharCode(code));
+
 
 
 
