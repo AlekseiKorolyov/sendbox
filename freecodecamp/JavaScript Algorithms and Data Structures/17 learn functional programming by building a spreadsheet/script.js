@@ -2,6 +2,8 @@ window.onload =  () => {
     const container = document.getElementById("container");
     const createLabel = (name) => {
         const label = document.createElement("div");
+        label.className = "label";
+        label.textContent = name;
     };
 };
 
@@ -70,6 +72,18 @@ const outer = () => {
 
 
 const label = document.createElement("div");
+
+
+
+
+Шаг 4
+
+Установите для элемента label значение className равным "label", а для параметра textContent — значение name.
+
+
+  label.className = "label";
+  label.textContent = name;
+
 
 
 
