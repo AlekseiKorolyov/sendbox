@@ -18,6 +18,7 @@ window.onload =  () => {
             input.type = "text";
             input.id = letter + number;
             input.ariaLabel = letter + number;
+            container.appendChild(input);
         });
     });
 };
@@ -253,6 +254,16 @@ el.ariaLabel = "Значение метки Aria";
 
 
 input.ariaLabel = letter + number;
+
+
+
+
+Шаг 19
+
+Добавьте элемент input к вашему элементу container в качестве дочернего элемента. Теперь вы должны видеть ячейки вашей электронной таблицы.
+
+
+container.appendChild(input);
 
 
 
