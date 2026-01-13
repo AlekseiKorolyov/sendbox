@@ -1,5 +1,8 @@
 window.onload =  () => {
     const container = document.getElementById("container");
+    const createLabel = (name) => {
+
+    };
 };
 
 
@@ -37,6 +40,26 @@ window.onload =  () => {
 window.onload =  () => {
   const container = document.getElementById("container");
 };
+
+
+
+
+Шаг 2
+
+Функции идеально подходят для многократно используемой логики. Когда самой функции необходимо повторно использовать логику, можно объявить вложенную функцию для обработки этой логики. Вот пример вложенной функции:
+Пример кода
+
+const outer = () => {
+ const inner = () => {
+  };
+ };
+
+Объявите вложенную функцию createLabel, используя стрелочный синтаксис. Она должна принимать параметр name.
+
+
+  const createLabel = (name) => {
+
+  };
 
 
 
