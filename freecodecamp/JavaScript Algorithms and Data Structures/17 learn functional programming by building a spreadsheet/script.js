@@ -10,6 +10,7 @@ window.onload =  () => {
         container.appendChild(label);
     };
     const letters = charRange("A", "J");
+    letters.forEach(createLabel);
 };
 
 
@@ -180,6 +181,16 @@ const charRange = (start, end) => range(
 
 
 const letters = charRange("A", "J");
+
+
+
+
+Шаг 14
+
+Теперь вызовите метод `.forEach()` вашего массива letters и передайте ссылку на функцию `createLabel` в качестве функции обратного вызова. Вы должны увидеть несколько букв в верхней части вашей электронной таблицы.
+
+
+letters.forEach(createLabel);
 
 
 
