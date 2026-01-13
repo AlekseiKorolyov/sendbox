@@ -1,3 +1,5 @@
+const range = (start, end) => Array();
+
 window.onload =  () => {
     const container = document.getElementById("container");
     const createLabel = (name) => {
@@ -7,6 +9,8 @@ window.onload =  () => {
         container.appendChild(label);
     };
 };
+
+
 
 
 
@@ -95,6 +99,17 @@ const label = document.createElement("div");
 
 
 container.appendChild(label);
+
+
+
+
+Шаг 6
+
+Вам понадобится функция для генерации диапазона чисел. Объявите пустую функцию range, которая принимает параметры start и end. Используйте конструктор Array() и неявно верните пустой массив.
+
+
+const range = (start, end) => Array();
+
 
 
 
