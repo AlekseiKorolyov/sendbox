@@ -1,4 +1,4 @@
-const range = (start, end) => Array(end - start + 1).fill(start);
+const range = (start, end) => Array(end - start + 1).fill(start).map((element, index) => element + index);
 
 window.onload =  () => {
     const container = document.getElementById("container");
@@ -127,6 +127,16 @@ end - start + 1
 
 
 const range = (start, end) => Array(end - start + 1).fill(start);
+
+
+
+
+Шаг 9
+
+В настоящее время ваша функция range возвращает массив правильной длины, но все значения в нем равны значению переменной start. Чтобы это исправить, свяжите метод .map() с вашим методом .fill(). Передайте методу .map() функцию обратного вызова, которая принимает в качестве параметров element и index и возвращает сумму этих параметров.
+
+
+const range = (start, end) => Array(end - start + 1).fill(start).map((element, index) => element + index);
 
 
 
