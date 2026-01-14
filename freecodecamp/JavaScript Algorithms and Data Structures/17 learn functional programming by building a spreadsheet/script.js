@@ -1,5 +1,6 @@
 const isEven = (num) => num % 2 === 0 ? true : false;
 const sum = (nums) => nums.reduce((acc, el) => acc + el);
+const average = (nums) => sum(nums) / nums.length;
 
 const range = (start, end) => Array(end - start + 1).fill(start).map((element, index) => element + index);
 const charRange = (start, end) => range(start.charCodeAt(0), end.charCodeAt(0)).map((code) => String.fromCharCode(code));
@@ -287,6 +288,17 @@ const sum = (nums) => nums.reduce((acc, el) => acc + el);
 
 
 const isEven = (num) => num % 2 === 0 ? true : false;
+
+
+
+
+Шаг 22
+
+Объявите average функцию  вычисления среднего значения, которая принимает массив чисел в качестве параметра nums. Она должна возвращать среднее арифметическое всех чисел в массиве. Среднее значение можно вычислить, разделив сумму всех чисел в массиве на длину массива. Помните, что у вас есть функция sum, которую вы можете использовать.
+
+
+const average = (nums) => sum(nums) / nums.length;
+
 
 
 
