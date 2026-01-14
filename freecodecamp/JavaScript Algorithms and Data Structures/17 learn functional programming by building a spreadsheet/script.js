@@ -4,6 +4,8 @@ const average = (nums) => sum(nums) / nums.length;
 
 const median = (nums) => {
     const sorted = nums.slice().sort((a, b) => a - b);
+    const length = sorted.length;
+    const middle = length / 2 - 1;
 };
 
 const range = (start, end) => Array(end - start + 1).fill(start).map((element, index) => element + index);
@@ -314,6 +316,17 @@ const average = (nums) => sum(nums) / nums.length;
 const median = (nums) => {
   const sorted = nums.slice().sort((a, b) => a - b);
   };
+
+
+
+
+Шаг 24
+
+Теперь объявите переменную length и присвойте ей длину отсортированного массива, а также middle переменная, значение которой равно длине, деленной на 2, вычтено 1.
+
+
+  const length = sorted.length;
+  const middle = length / 2 - 1;
 
 
 
