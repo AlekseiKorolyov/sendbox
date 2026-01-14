@@ -2,6 +2,10 @@ const isEven = (num) => num % 2 === 0 ? true : false;
 const sum = (nums) => nums.reduce((acc, el) => acc + el);
 const average = (nums) => sum(nums) / nums.length;
 
+const median = (nums) => {
+    const sorted = nums.slice().sort((a, b) => a - b);
+};
+
 const range = (start, end) => Array(end - start + 1).fill(start).map((element, index) => element + index);
 const charRange = (start, end) => range(start.charCodeAt(0), end.charCodeAt(0)).map((code) => String.fromCharCode(code));
 
@@ -298,6 +302,19 @@ const isEven = (num) => num % 2 === 0 ? true : false;
 
 
 const average = (nums) => sum(nums) / nums.length;
+
+
+
+
+Шаг 23
+
+Следующая функция вычислит медианное значение массива чисел. Начните с объявления стрелочной функции median вычисления медианы, которая принимает параметр типа nums. В функции объявите переменную sorted и присвойте ей значение отсортированной копии массива nums. Для создания поверхностной копии массива следует использовать метод slice().
+
+
+const median = (nums) => {
+  const sorted = nums.slice().sort((a, b) => a - b);
+  };
+
 
 
 
