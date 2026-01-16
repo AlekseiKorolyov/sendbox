@@ -6,7 +6,15 @@ const median = (nums) => {
     const sorted = nums.slice().sort((a, b) => a - b);
     const length = sorted.length;
     const middle = length / 2 - 1;
-    return isEven(length) ? average([sorted[middle], sorted[middle + 1]]) : sorted[Math.ceil(middle)];
+    return isEven(length)
+        ? average([sorted[middle], sorted[middle + 1]])
+        : sorted[Math.ceil(middle)];
+};
+
+const spreadsheetFunctions = {
+    sum,
+    average,
+    median,
 };
 
 const range = (start, end) => Array(end - start + 1).fill(start).map((element, index) => element + index);
@@ -339,6 +347,33 @@ const median = (nums) => {
 
 
 return isEven(length) ? average([sorted[middle], sorted[middle + 1]]) : sorted[Math.ceil(middle)];
+
+
+
+
+Шаг 26
+
+Свойства объекта состоят из пар ключ/значение. При объявлении литерала объекта можно использовать сокращенные имена свойств. При использовании сокращенного синтаксиса имен свойств имя переменной становится ключом свойства, а ее значение — значением свойства. В следующем примере объявляется объект пользователя со свойствами userId, firstName и loggedIn.
+Пример кода
+
+const userId = 1;
+const firstName = "John";
+const loggedIn = true;
+const user = {
+ userId,
+ firstName,
+ loggedIn,
+};
+console.log(user); // { userId: 1, firstName: 'John', loggedIn: true }
+
+Чтобы отслеживать все функции вашей электронной таблицы, объявите объект spreadsheetFunctions. Используя сокращенный синтаксис, установите sum, average и median в качестве свойств объекта spreadsheetFunctions.
+
+
+const spreadsheetFunctions = {
+  sum,
+  average,
+  median,
+};
 
 
 
