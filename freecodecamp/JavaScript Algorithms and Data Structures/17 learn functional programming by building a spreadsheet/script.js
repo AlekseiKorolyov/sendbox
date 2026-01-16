@@ -1,4 +1,4 @@
-const isEven = (num) => num % 2 === 0 ? true : false;
+const isEven = (num) => num % 2 === 0;
 const sum = (nums) => nums.reduce((acc, el) => acc + el);
 const average = (nums) => sum(nums) / nums.length;
 
@@ -6,6 +6,7 @@ const median = (nums) => {
     const sorted = nums.slice().sort((a, b) => a - b);
     const length = sorted.length;
     const middle = length / 2 - 1;
+    return isEven(length) ? average([sorted[middle], sorted[middle + 1]]) : sorted[Math.ceil(middle)];
 };
 
 const range = (start, end) => Array(end - start + 1).fill(start).map((element, index) => element + index);
@@ -331,6 +332,13 @@ const median = (nums) => {
 
 
 
+Шаг 25
+
+Проверьте, является ли length четной, используя функцию isEven. Если да, верните middle в середине списка и числа после него. Если оно нечетное, верните middle в середине списка — вам нужно будет округлить middle в большую сторону.
+
+
+
+return isEven(length) ? average([sorted[middle], sorted[middle + 1]]) : sorted[Math.ceil(middle)];
 
 
 
