@@ -42,6 +42,8 @@ window.onload =  () => {
     });
 };
 
+const update = (event) => {};
+
 
 
 
@@ -374,6 +376,17 @@ const spreadsheetFunctions = {
   average,
   median,
 };
+
+
+
+
+Шаг 27
+
+Теперь вы можете начать использовать функции электронных таблиц. Для начала объявите стрелочную функцию update. Она должна принимать параметр event.
+
+
+const update = (event) => {};
+
 
 
 
