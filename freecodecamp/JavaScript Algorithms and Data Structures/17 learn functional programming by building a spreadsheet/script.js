@@ -37,6 +37,7 @@ window.onload =  () => {
             input.type = "text";
             input.id = letter + number;
             input.ariaLabel = letter + number;
+            input.onchange = update;
             container.appendChild(input);
         });
     });
@@ -386,6 +387,17 @@ const spreadsheetFunctions = {
 
 
 const update = (event) => {};
+
+
+
+
+Шаг 28
+
+В функции window.onload необходимо указать элементам input вызывать функцию update при изменении значения. Это можно сделать, напрямую установив свойство onchange. Установите свойство onchange как ссылку на вашу функцию update.
+
+
+input.onchange = update;
+
 
 
 
