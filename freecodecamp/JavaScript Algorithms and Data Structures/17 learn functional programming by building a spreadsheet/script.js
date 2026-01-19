@@ -46,6 +46,9 @@ window.onload =  () => {
 const update = (event) => {
     const element = event.target;
     const value = element.value.replace(/\s/g, "");
+    if (!value.includes(element.id)) {
+
+    }
 };
 
 
@@ -419,6 +422,18 @@ const element = event.target;
 
 
 const value = element.value.replace(/\s/g, "");
+
+
+
+
+Шаг 31
+
+Теперь вам нужно проверить, не содержит ли value id элемента. Для этого создайте условие if.
+
+
+  if (!value.includes(element.id)) {
+
+  }
 
 
 
