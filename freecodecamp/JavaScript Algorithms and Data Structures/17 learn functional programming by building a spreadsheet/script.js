@@ -46,7 +46,7 @@ window.onload =  () => {
 const update = (event) => {
     const element = event.target;
     const value = element.value.replace(/\s/g, "");
-    if (!value.includes(element.id)) {
+    if (!value.includes(element.id) && value[0] === "=") {
 
     }
 };
@@ -434,6 +434,16 @@ const value = element.value.replace(/\s/g, "");
   if (!value.includes(element.id)) {
 
   }
+
+
+
+
+Шаг 32
+
+В программах для работы с электронными таблицами обычно используется знак "=" в начале ячейки, указывающий на необходимость выполнения вычисления и оценки функций электронных таблиц. Используйте оператор &&, чтобы добавить второе условие в оператор if, которое также проверяет, является ли первый символ value "=". Вы можете использовать [0], .startsWith() или .charAt(0).
+
+
+if (!value.includes(element.id) && value[0] === "=")
 
 
 
