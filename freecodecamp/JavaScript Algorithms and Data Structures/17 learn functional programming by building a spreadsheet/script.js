@@ -20,6 +20,10 @@ const spreadsheetFunctions = {
 const range = (start, end) => Array(end - start + 1).fill(start).map((element, index) => element + index);
 const charRange = (start, end) => range(start.charCodeAt(0), end.charCodeAt(0)).map((code) => String.fromCharCode(code));
 
+const evalFormula = (x, cells) => {
+    const idToText = (id) => cells.find(cell => cell.id === id );
+}
+
 window.onload =  () => {
     const container = document.getElementById("container");
     const createLabel = (name) => {
@@ -458,6 +462,16 @@ value.startsWith('=')
 
 
 const evalFormula = (x, cells) => {};
+
+
+
+
+Шаг 34
+
+В вашем evalFormula объявите стрелочную функцию idToText, которая принимает параметр id. Ваша функция idToText должна возвращать результат вызова метода .find() для массива cells с функцией обратного вызова, которая принимает параметр cell и возвращает cell.id === id. Обе ваши функции должны использовать неявное возвращение.
+
+
+const idToText = (id) => cells.find(cell => cell.id === id );
 
 
 
