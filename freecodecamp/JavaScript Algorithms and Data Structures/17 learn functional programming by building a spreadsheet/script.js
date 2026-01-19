@@ -22,6 +22,7 @@ const charRange = (start, end) => range(start.charCodeAt(0), end.charCodeAt(0)).
 
 const evalFormula = (x, cells) => {
     const idToText = (id) => cells.find(cell => cell.id === id ).value;
+    const rangeRegex = /([A-J])/;
 }
 
 window.onload =  () => {
@@ -482,6 +483,17 @@ const idToText = (id) => cells.find(cell => cell.id === id );
 
 
 const idToText = id => cells.find(cell => cell.id === id).value
+
+
+
+
+Шаг 36
+
+Вам необходимо уметь сопоставлять диапазоны ячеек в формуле. Диапазоны ячеек могут выглядеть как A1:B12 или A3:A25. Для сопоставления этих шаблонов можно использовать регулярное выражение. Начните с объявления переменной rangeRegex и присвойте ей регулярное выражение, которое соответствует диапазону от A до J (диапазон столбцов в вашей электронной таблице). Для этого используйте группу захвата с символьным классом.
+
+
+const rangeRegex = /([A-J])/;
+
 
 
 
