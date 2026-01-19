@@ -43,7 +43,9 @@ window.onload =  () => {
     });
 };
 
-const update = (event) => {};
+const update = (event) => {
+    const element = event.target;
+};
 
 
 
@@ -401,6 +403,11 @@ input.onchange = update;
 
 
 
+Шаг 29
+
+Поскольку ваше событие update выполняется как обработчик события change, параметр события будет представлять собой событие изменения. Свойство target события изменения представляет собой элемент, который изменился. Присвойте свойство target новой переменной с именем element.
+
+const element = event.target;
 
 
 
@@ -409,4 +416,7 @@ input.onchange = update;
 
 
 
+
+
+105
 */
