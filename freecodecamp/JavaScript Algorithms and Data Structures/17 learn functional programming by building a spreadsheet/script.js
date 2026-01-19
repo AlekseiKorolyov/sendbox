@@ -22,7 +22,7 @@ const charRange = (start, end) => range(start.charCodeAt(0), end.charCodeAt(0)).
 
 const evalFormula = (x, cells) => {
     const idToText = (id) => cells.find(cell => cell.id === id ).value;
-    const rangeRegex = /([A-J])/;
+    const rangeRegex = /([A-J])([1-9][0-9]?)/;
 }
 
 window.onload =  () => {
@@ -493,6 +493,16 @@ const idToText = id => cells.find(cell => cell.id === id).value
 
 
 const rangeRegex = /([A-J])/;
+
+
+
+
+Шаг 37
+
+После успешного сопоставления буквы ячейки ваш rangeRegex должен сопоставить номер ячейки. Номера ячеек на вашем листе варьируются от 1 до 99. Добавьте группу захвата после группы захвата буквы. Ваша новая группа захвата должна соответствовать одной или двум цифрам – первая цифра должна быть от 1 до 9, а вторая – от 0 до 9. Вторая цифра должна быть необязательной.
+
+
+const rangeRegex = /([A-J])([1-9][0-9]?)/;
 
 
 
