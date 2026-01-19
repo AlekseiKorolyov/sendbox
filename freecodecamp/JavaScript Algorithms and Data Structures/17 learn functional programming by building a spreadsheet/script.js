@@ -21,7 +21,7 @@ const range = (start, end) => Array(end - start + 1).fill(start).map((element, i
 const charRange = (start, end) => range(start.charCodeAt(0), end.charCodeAt(0)).map((code) => String.fromCharCode(code));
 
 const evalFormula = (x, cells) => {
-    const idToText = (id) => cells.find(cell => cell.id === id );
+    const idToText = (id) => cells.find(cell => cell.id === id ).value;
 }
 
 window.onload =  () => {
@@ -472,6 +472,17 @@ const evalFormula = (x, cells) => {};
 
 
 const idToText = (id) => cells.find(cell => cell.id === id );
+
+
+
+
+Шаг 35
+
+Ваша функция idToText в настоящее время возвращает элемент input. Обновите ее, чтобы она возвращала value этого элемента input.
+
+
+const idToText = id => cells.find(cell => cell.id === id).value
+
 
 
 
