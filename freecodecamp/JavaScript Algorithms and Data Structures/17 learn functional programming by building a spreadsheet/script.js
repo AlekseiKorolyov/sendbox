@@ -45,6 +45,7 @@ window.onload =  () => {
 
 const update = (event) => {
     const element = event.target;
+    const value = element.value.replace(/\s/g, "");
 };
 
 
@@ -408,6 +409,17 @@ input.onchange = update;
 Поскольку ваше событие update выполняется как обработчик события change, параметр события будет представлять собой событие изменения. Свойство target события изменения представляет собой элемент, который изменился. Присвойте свойство target новой переменной с именем element.
 
 const element = event.target;
+
+
+
+
+Шаг 30
+
+Поскольку событие change срабатывает на элементе input, у этого элемента будет свойство `value`, представляющее текущее значение поля ввода. Присвойте свойство `value` element новой переменной с именем `value` и используйте метод `.replace()` для удаления всех пробелов.
+
+
+const value = element.value.replace(/\s/g, "");
+
 
 
 
