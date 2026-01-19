@@ -46,7 +46,7 @@ window.onload =  () => {
 const update = (event) => {
     const element = event.target;
     const value = element.value.replace(/\s/g, "");
-    if (!value.includes(element.id) && value[0] === "=") {
+    if (!value.includes(element.id) && value.startsWith('=')) {
 
     }
 };
@@ -444,6 +444,20 @@ const value = element.value.replace(/\s/g, "");
 
 
 if (!value.includes(element.id) && value[0] === "=")
+
+***
+
+value.startsWith('=')
+
+
+
+
+Шаг 33
+
+Для выполнения функций электронной таблицы вам необходимо уметь анализировать и оценивать входную строку. Сейчас самое время использовать другую функцию. Объявите стрелочную функцию evalFormula, которая принимает параметры x и cells.
+
+
+const evalFormula = (x, cells) => {};
 
 
 
