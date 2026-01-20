@@ -5,7 +5,7 @@ const infixToFunction = {
     "/": (x, y) => x / y,
 };
 
-const infixEval = (str, regex) => str.replace(regex, (_match, arg1, operator, arg2) => infixToFunction[operator](arg1, arg2));
+const infixEval = (str, regex) => str.replace(regex, (_match, arg1, operator, arg2) => infixToFunction[operator](parseFloat(arg1), parseFloat(arg2)));
 
 const isEven = (num) => num % 2 === 0;
 const sum = (nums) => nums.reduce((acc, el) => acc + el);
@@ -887,6 +887,16 @@ infixToFunction[operator] возвращает функцию. Вызовите 
 
 
 infixToFunction[operator](arg1, arg2)
+
+
+
+
+Шаг 72
+
+У вас небольшая ошибка. arg1 и arg2 — это строки, а не числа. Функция infixToFunction['+']("1", "2") вернет 12, что математически некорректно. Оберните каждый из аргументов infixToFunction[operator] в вызов parseFloat().
+
+
+infixToFunction[operator](parseFloat(arg1), parseFloat(arg2)))
 
 
 
