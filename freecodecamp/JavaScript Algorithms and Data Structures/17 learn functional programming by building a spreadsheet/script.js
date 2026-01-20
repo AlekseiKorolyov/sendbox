@@ -24,7 +24,12 @@ const evalFormula = (x, cells) => {
     const idToText = (id) => cells.find(cell => cell.id === id ).value;
     const rangeRegex = /([A-J])([1-9][0-9]?):([A-J])([1-9][0-9]?)/gi;
     const rangeFromString = (num1, num2) => range(parseInt(num1), parseInt(num2));
-    const elemValue = (num) => {};
+    const elemValue = (num) => {
+        const inner = (character) => {
+
+        };
+        return inner;
+    };
 }
 
 window.onload =  () => {
@@ -553,6 +558,20 @@ const rangeFromString = (num1, num2) => range(parseInt(num1), parseInt(num2));
 
 
 const elemValue = (num) => {};
+
+
+
+
+Шаг 43
+
+В функции elemValue объявите функцию с именем inner, которая принимает параметр character. Затем верните вашу inner функцию.
+
+
+    const inner = (character) => {
+
+    };
+    return inner;
+
 
 
 
