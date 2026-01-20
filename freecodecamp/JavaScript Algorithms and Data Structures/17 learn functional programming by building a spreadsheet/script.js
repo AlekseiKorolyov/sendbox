@@ -22,7 +22,7 @@ const charRange = (start, end) => range(start.charCodeAt(0), end.charCodeAt(0)).
 
 const evalFormula = (x, cells) => {
     const idToText = (id) => cells.find(cell => cell.id === id ).value;
-    const rangeRegex = /([A-J])([1-9][0-9]?):/;
+    const rangeRegex = /([A-J])([1-9][0-9]?):([A-J])([1-9][0-9]?)/;
 }
 
 window.onload =  () => {
@@ -513,6 +513,16 @@ const rangeRegex = /([A-J])([1-9][0-9]?)/;
 
 
 const rangeRegex = /([A-J])([1-9][0-9]?):/
+
+
+
+
+Шаг 39
+
+После того, как ваше регулярное выражение rangeRegex найдет двоеточие, ему необходимо найти тот же шаблон из букв и цифр, что и раньше. Скопируйте две существующие группы захвата и вставьте их после двоеточия.
+
+
+const rangeRegex = /([A-J])([1-9][0-9]?):([A-J])([1-9][0-9]?)/;
 
 
 
