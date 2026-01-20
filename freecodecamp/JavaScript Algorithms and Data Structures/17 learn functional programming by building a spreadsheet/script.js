@@ -30,7 +30,9 @@ const evalFormula = (x, cells) => {
         };
         return inner;
     };
-    const addCharacters = (character1) => {};
+    const addCharacters = character1 => character2 => {
+
+    };
 }
 
 window.onload =  () => {
@@ -598,6 +600,23 @@ innerOne будет вашей внутренней функцией, где num
 
 
 const addCharacters = (character1) => {};
+
+
+
+
+Шаг 46
+
+В вашей функции elemValue вы явно объявили функцию с именем inner и вернули её. Однако, поскольку вы используете стрелочный синтаксис, вы можете неявно вернуть функцию.
+Например:
+
+Пример кода const curry = soup => veggies => {};
+
+curry — это функция, которая принимает параметр soup и возвращает функцию, которая принимает параметр veggies. Используя этот синтаксис, обновите вашу функцию addCharacters, чтобы она возвращала пустую функцию, которая принимает параметр character2.
+
+
+  const addCharacters = character1 => character2 => {
+
+  }
 
 
 
