@@ -22,7 +22,7 @@ const charRange = (start, end) => range(start.charCodeAt(0), end.charCodeAt(0)).
 
 const evalFormula = (x, cells) => {
     const idToText = (id) => cells.find(cell => cell.id === id ).value;
-    const rangeRegex = /([A-J])([1-9][0-9]?)/;
+    const rangeRegex = /([A-J])([1-9][0-9]?):/;
 }
 
 window.onload =  () => {
@@ -503,6 +503,16 @@ const rangeRegex = /([A-J])/;
 
 
 const rangeRegex = /([A-J])([1-9][0-9]?)/;
+
+
+
+
+Шаг 38
+
+Диапазоны разделены двоеточием. После двух групп захвата ваше регулярное выражение для диапазонов должно искать двоеточие.
+
+
+const rangeRegex = /([A-J])([1-9][0-9]?):/
 
 
 
