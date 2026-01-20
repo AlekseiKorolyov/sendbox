@@ -25,7 +25,7 @@ const evalFormula = (x, cells) => {
     const rangeRegex = /([A-J])([1-9][0-9]?):([A-J])([1-9][0-9]?)/gi;
     const rangeFromString = (num1, num2) => range(parseInt(num1), parseInt(num2));
     const elemValue = num => character => idToText(character + num);
-    const addCharacters = character1 => character2 => num => charRange(character1, character2);
+    const addCharacters = character1 => character2 => num => charRange(character1, character2).map()
 }
 
 window.onload =  () => {
@@ -642,6 +642,16 @@ const addCharacters = character1 => character2 => num => charRange(character1, c
 
 
 const elemValue = num => character => idToText(character + num);
+
+
+
+
+Шаг 50
+
+Ваша функция addCharacters в конечном итоге возвращает диапазон символов. Вам нужно, чтобы она возвращала массив идентификаторов ячеек. Привяжите метод .map() к вызову charRange(). Пока не передавайте функцию обратного вызова.
+
+
+const addCharacters = character1 => character2 => num => charRange(character1, character2).map()
 
 
 
