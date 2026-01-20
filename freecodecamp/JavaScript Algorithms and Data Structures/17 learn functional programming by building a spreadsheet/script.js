@@ -5,7 +5,7 @@ const infixToFunction = {
     "/": (x, y) => x / y,
 };
 
-const infixEval = (str, regex) => str.replace(regex, (_match, arg1, operator, arg2) => infixToFunction[operator]);
+const infixEval = (str, regex) => str.replace(regex, (_match, arg1, operator, arg2) => infixToFunction[operator](arg1, arg2));
 
 const isEven = (num) => num % 2 === 0;
 const sum = (nums) => nums.reduce((acc, el) => acc + el);
@@ -877,6 +877,17 @@ regex, которое вы будете передавать в функцию i
 
 
 infixToFunction[operator])
+
+
+
+
+Шаг 71
+
+infixToFunction[operator] возвращает функцию. Вызовите эту функцию напрямую, передав arg1 и arg2 в качестве аргументов.
+
+
+infixToFunction[operator](arg1, arg2)
+
 
 
 
