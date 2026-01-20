@@ -5,6 +5,8 @@ const infixToFunction = {
     "/": (x, y) => x / y,
 };
 
+const infixEval = (str, regex) => str.replace(regex, () => {});
+
 const isEven = (num) => num % 2 === 0;
 const sum = (nums) => nums.reduce((acc, el) => acc + el);
 const average = (nums) => sum(nums) / nums.length;
@@ -845,6 +847,17 @@ const infixToFunction = {
 
   "*": (x, y) => x * y,
   "/": (x, y) => x / y,
+
+
+
+
+Шаг 68
+
+Теперь, когда у вас есть инфиксные функции, вам нужен способ их вычисления. Объявите функцию infixEval, которая принимает два параметра: str и regex. Она должна неявно возвращать метод .replace() функции str, передавая в качестве аргументов regex и пустую функцию обратного вызова.
+
+
+const infixEval = (str, regex) => str.replace(regex, () => {});
+
 
 
 
