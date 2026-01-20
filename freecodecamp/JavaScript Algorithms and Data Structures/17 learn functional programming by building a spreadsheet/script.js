@@ -23,6 +23,7 @@ const charRange = (start, end) => range(start.charCodeAt(0), end.charCodeAt(0)).
 const evalFormula = (x, cells) => {
     const idToText = (id) => cells.find(cell => cell.id === id ).value;
     const rangeRegex = /([A-J])([1-9][0-9]?):([A-J])([1-9][0-9]?)/gi;
+    const rangeFromString = (num1, num2) => range(parseInt(num1), parseInt(num2));
 }
 
 window.onload =  () => {
@@ -533,6 +534,15 @@ const rangeRegex = /([A-J])([1-9][0-9]?):([A-J])([1-9][0-9]?)/;
 
 
 const rangeRegex = /([A-J])([1-9][0-9]?):([A-J])([1-9][0-9]?)/gi;
+
+
+
+
+Шаг 41 Объявите стрелочную функцию rangeFromString, которая принимает два параметра: num1 и num2. Функция должна неявно возвращать результат вызова функции range с аргументами num1 и num2. Для большей безопасности преобразуйте num1 и num2 в целые числа при передаче их в функцию range.
+
+
+const rangeFromString = (num1, num2) => range(parseInt(num1), parseInt(num2));
+
 
 
 
