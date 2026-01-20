@@ -5,7 +5,7 @@ const infixToFunction = {
     "/": (x, y) => x / y,
 };
 
-const infixEval = (str, regex) => str.replace(regex, (_match, arg1, operator, arg2) => {});
+const infixEval = (str, regex) => str.replace(regex, (_match, arg1, operator, arg2) => infixToFunction[operator]);
 
 const isEven = (num) => num % 2 === 0;
 const sum = (nums) => nums.reduce((acc, el) => acc + el);
@@ -867,6 +867,17 @@ const infixEval = (str, regex) => str.replace(regex, () => {});
 
 
 str.replace(regex, (_match, arg1, operator, arg2) => {});
+
+
+
+
+Шаг 70
+
+regex, которое вы будете передавать в функцию infixEval, будет соответствовать двум числам с оператором между ними. Первое число будет присвоено переменной arg1 в функции обратного вызова, второе — arg2, а operator — оператору. Ваша функция обратного вызова должна неявно возвращать свойство operator объекта infixToFunction. Помните, что operator — это переменная, которая хранит имя свойства, а не фактическое имя свойства.
+
+
+infixToFunction[operator])
+
 
 
 
