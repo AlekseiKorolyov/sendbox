@@ -25,7 +25,7 @@ const evalFormula = (x, cells) => {
     const rangeRegex = /([A-J])([1-9][0-9]?):([A-J])([1-9][0-9]?)/gi;
     const rangeFromString = (num1, num2) => range(parseInt(num1), parseInt(num2));
     const elemValue = num => character => idToText(character + num);
-    const addCharacters = character1 => character2 => num => charRange(character1, character2).map()
+    const addCharacters = character1 => character2 => num => charRange(character1, character2).map(elemValue);
 }
 
 window.onload =  () => {
@@ -652,6 +652,23 @@ const elemValue = num => character => idToText(character + num);
 
 
 const addCharacters = character1 => character2 => num => charRange(character1, character2).map()
+
+
+
+
+Шаг 51
+
+Вы можете передать ссылку на функцию в качестве параметра обратного вызова. Ссылка на функцию — это имя функции без скобок. Например:
+Пример кода
+
+const myFunc = (val) => `value: ${val}`;
+const array = [1, 2, 3];
+const newArray = array.map(myFunc);
+
+Метод .map() здесь вызовет функцию myFunc, передав те же аргументы, что и метод обратного вызова .map(). Первый аргумент — это значение массива на текущей итерации, поэтому newArray будет [value: 1, value: 2, value: 3]. Передайте ссылку на вашу функцию elemValue в качестве обратного вызова для вашего метода .map().
+
+
+const addCharacters = character1 => character2 => num => charRange(character1, character2).map(elemValue);
 
 
 
