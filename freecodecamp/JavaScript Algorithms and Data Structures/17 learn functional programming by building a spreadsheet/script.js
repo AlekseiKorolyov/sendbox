@@ -5,7 +5,7 @@ const infixToFunction = {
     "/": (x, y) => x / y,
 };
 
-const infixEval = (str, regex) => str.replace(regex, () => {});
+const infixEval = (str, regex) => str.replace(regex, (_match, arg1, operator, arg2) => {});
 
 const isEven = (num) => num % 2 === 0;
 const sum = (nums) => nums.reduce((acc, el) => acc + el);
@@ -857,6 +857,16 @@ const infixToFunction = {
 
 
 const infixEval = (str, regex) => str.replace(regex, () => {});
+
+
+
+
+Шаг 69
+
+Ваш функции обратного вызова необходимо четыре параметра: match, arg1, operator и arg2. Параметр match использовать не нужно, поэтому не забудьте добавить его в начало.
+
+
+str.replace(regex, (_match, arg1, operator, arg2) => {});
 
 
 
