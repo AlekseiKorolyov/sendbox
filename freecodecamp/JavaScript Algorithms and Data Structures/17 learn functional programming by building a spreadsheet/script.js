@@ -24,12 +24,7 @@ const evalFormula = (x, cells) => {
     const idToText = (id) => cells.find(cell => cell.id === id ).value;
     const rangeRegex = /([A-J])([1-9][0-9]?):([A-J])([1-9][0-9]?)/gi;
     const rangeFromString = (num1, num2) => range(parseInt(num1), parseInt(num2));
-    const elemValue = (num) => {
-        const inner = (character) => {
-            return idToText(character + num);
-        };
-        return inner;
-    };
+    const elemValue = num => character => idToText(character + num);
     const addCharacters = character1 => character2 => num => charRange(character1, character2);
 }
 
@@ -637,6 +632,16 @@ curry — это функция, которая принимает параме�
 
 
 const addCharacters = character1 => character2 => num => charRange(character1, character2);
+
+
+
+
+Шаг 49
+
+Используйте тот же синтаксис, что и для функции addCharacters, чтобы обновить функцию elemValue. Она больше не должна объявлять inner, а должна неявно возвращать функцию.
+
+
+const elemValue = num => character => idToText(character + num);
 
 
 
