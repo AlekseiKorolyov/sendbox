@@ -7,6 +7,8 @@ const infixToFunction = {
 
 const infixEval = (str, regex) => str.replace(regex, (_match, arg1, operator, arg2) => infixToFunction[operator](parseFloat(arg1), parseFloat(arg2)));
 
+const highPrecedence = str => {};
+
 const isEven = (num) => num % 2 === 0;
 const sum = (nums) => nums.reduce((acc, el) => acc + el);
 const average = (nums) => sum(nums) / nums.length;
@@ -898,6 +900,15 @@ infixToFunction[operator](arg1, arg2)
 
 infixToFunction[operator](parseFloat(arg1), parseFloat(arg2)))
 
+
+
+
+Шаг 73
+
+Теперь, когда вы умеете вычислять математические выражения, вам необходимо учитывать порядок выполнения операций. Объявите функцию highPrecedence, которая принимает параметр типа str.
+
+
+const highPrecedence = str => {};
 
 
 
