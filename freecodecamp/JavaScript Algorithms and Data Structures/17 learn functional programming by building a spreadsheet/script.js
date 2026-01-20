@@ -1,4 +1,6 @@
-const infixToFunction = {};
+const infixToFunction = {
+    "+" : (x, y) => x + y
+};
 
 const isEven = (num) => num % 2 === 0;
 const sum = (nums) => nums.reduce((acc, el) => acc + el);
@@ -807,6 +809,18 @@ const cellExpanded = rangeExpanded.replace(cellRegex, match => idToText(match.to
 
 
 const infixToFunction = {};
+
+
+
+
+Шаг 65
+
+Значения объекта не обязательно должны быть примитивными типами, такими как строка или число. Они также могут быть функциями. Добавьте к вашему объекту infixToFunction свойство +. Это свойство должно быть функцией, которая принимает параметры x и y и неявно возвращает сумму этих двух параметров. Поскольку + не является буквенно-цифровым символом, вам нужно будет заключить его в кавычки для вашего свойства.
+
+
+const infixToFunction = {
+  "+" : (x, y) => x + y
+};
 
 
 
