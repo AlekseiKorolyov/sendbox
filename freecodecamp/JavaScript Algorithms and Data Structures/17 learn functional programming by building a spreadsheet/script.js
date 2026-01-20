@@ -30,9 +30,7 @@ const evalFormula = (x, cells) => {
         };
         return inner;
     };
-    const addCharacters = character1 => character2 => {
-
-    };
+    const addCharacters = character1 => character2 => num => charRange(character1, character2);
 }
 
 window.onload =  () => {
@@ -629,6 +627,16 @@ curry — это функция, которая принимает параме�
   const addCharacters = character1 => character2 => num => {
 
   }
+
+
+
+
+Шаг 48
+
+Теперь обновите самую внутреннюю функцию в цепочке addCharacters, чтобы она неявно возвращала результат вызова charRange() с аргументами character1 и character2.
+
+
+const addCharacters = character1 => character2 => num => charRange(character1, character2);
 
 
 
