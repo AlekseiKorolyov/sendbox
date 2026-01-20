@@ -26,7 +26,7 @@ const evalFormula = (x, cells) => {
     const rangeFromString = (num1, num2) => range(parseInt(num1), parseInt(num2));
     const elemValue = num => character => idToText(character + num);
     const addCharacters = character1 => character2 => num => charRange(character1, character2).map(elemValue(num));
-    const rangeExpanded = x.replace(rangeRegex, (match, char1, num1, char2, num2) => {});
+    const rangeExpanded = x.replace(rangeRegex, (match, char1, num1, char2, num2) => rangeFromString(num1, num2));
 }
 
 window.onload =  () => {
@@ -708,6 +708,17 @@ const rangeExpanded = x.replace(rangeRegex, (match) => {});
 
 
 const rangeExpanded = x.replace(rangeRegex, (match, char1, num1, char2, num2) => {});
+
+
+
+
+Шаг 56
+
+Ваш коллбэк должен неявно возвращать результат вызова функции rangeFromString() с аргументами num1 и num2.
+
+
+const rangeExpanded = x.replace(rangeRegex, (match, char1, num1, char2, num2) => rangeFromString(num1, num2));
+
 
 
 
