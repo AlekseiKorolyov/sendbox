@@ -26,7 +26,7 @@ const evalFormula = (x, cells) => {
     const rangeFromString = (num1, num2) => range(parseInt(num1), parseInt(num2));
     const elemValue = num => character => idToText(character + num);
     const addCharacters = character1 => character2 => num => charRange(character1, character2).map(elemValue(num));
-    const rangeExpanded = x.replace(rangeRegex, (match, char1, num1, char2, num2) => rangeFromString(num1, num2).map(addCharacters(char1)));
+    const rangeExpanded = x.replace(rangeRegex, (match, char1, num1, char2, num2) => rangeFromString(num1, num2).map(addCharacters(char1)(char2)));
 }
 
 window.onload =  () => {
@@ -738,6 +738,21 @@ rangeFromString(num1, num2).map(addCharacters)
 
 
 addCharacters(char1)
+
+
+
+
+Шаг 59
+
+Ваш вызов addCharacters(char1) также возвращает функцию, которая возвращает другую функцию. Вам необходимо сделать еще один вызов функции, чтобы получить доступ к самой внутренней ссылке на функцию для обратного вызова .map(). JavaScript позволяет немедленно вызывать возвращаемые функции:
+Пример кода
+
+myFunc(1)("hi");
+
+Немедленно вызовите функцию, возвращаемую вашим вызовом addCharacters(char1), и передайте char2 в качестве аргумента.
+
+
+addCharacters(char1)(char2)
 
 
 
