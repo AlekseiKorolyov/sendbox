@@ -26,7 +26,7 @@ const evalFormula = (x, cells) => {
     const rangeFromString = (num1, num2) => range(parseInt(num1), parseInt(num2));
     const elemValue = num => character => idToText(character + num);
     const addCharacters = character1 => character2 => num => charRange(character1, character2).map(elemValue(num));
-    const rangeExpanded = x.replace(rangeRegex, (match) => {});
+    const rangeExpanded = x.replace(rangeRegex, (match, char1, num1, char2, num2) => {});
 }
 
 window.onload =  () => {
@@ -698,6 +698,16 @@ const rangeExpanded = x.replace(rangeRegex);
 
 
 const rangeExpanded = x.replace(rangeRegex, (match) => {});
+
+
+
+
+Шаг 55
+
+Функция обратного вызова должна иметь параметр для каждой группы захвата в регулярном выражении. В вашем случае rangeRegex имеет четыре группы захвата: первая буква, первые цифры, вторая буква и вторые цифры. Добавьте в функцию обратного вызова еще четыре параметра для сопоставления этих групп захвата: char1, num1, char2 и num2. char — это сокращение от character (символ).
+
+
+const rangeExpanded = x.replace(rangeRegex, (match, char1, num1, char2, num2) => {});
 
 
 
