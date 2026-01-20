@@ -25,7 +25,7 @@ const evalFormula = (x, cells) => {
     const rangeRegex = /([A-J])([1-9][0-9]?):([A-J])([1-9][0-9]?)/gi;
     const rangeFromString = (num1, num2) => range(parseInt(num1), parseInt(num2));
     const elemValue = num => character => idToText(character + num);
-    const addCharacters = character1 => character2 => num => charRange(character1, character2).map(elemValue);
+    const addCharacters = character1 => character2 => num => charRange(character1, character2).map(elemValue(num));
 }
 
 window.onload =  () => {
@@ -669,6 +669,16 @@ const newArray = array.map(myFunc);
 
 
 const addCharacters = character1 => character2 => num => charRange(character1, character2).map(elemValue);
+
+
+
+
+Шаг 52
+
+Поскольку elemValue возвращает функцию, ваша функция addCharacters в конечном итоге возвращает массив ссылок на функции. Вам нужно, чтобы метод .map() запускал внутреннюю функцию вашей функции elemValue, а это значит, что вам нужно вызывать elemValue, а не ссылаться на нее. Передайте num в качестве аргумента вашей функции elemValue.
+
+
+const addCharacters = character1 => character2 => num => charRange(character1, character2).map(elemValue(num));
 
 
 
