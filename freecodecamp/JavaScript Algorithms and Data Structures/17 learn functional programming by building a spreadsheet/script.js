@@ -1,3 +1,5 @@
+const infixToFunction = {};
+
 const isEven = (num) => num % 2 === 0;
 const sum = (nums) => nums.reduce((acc, el) => acc + el);
 const average = (nums) => sum(nums) / nums.length;
@@ -796,6 +798,15 @@ const cellExpanded = rangeExpanded.replace(cellRegex, (match) => {});
 
 const cellExpanded = rangeExpanded.replace(cellRegex, match => idToText(match.toUpperCase()));
 
+
+
+
+Шаг 64
+
+В математике инфикс — это математический оператор, который располагается между двумя своими операндами. Например, 1 + 2 — это инфиксное выражение. Для разбора этих выражений вам потребуется сопоставить символы с соответствующими функциями. Объявите переменную infixToFunction и присвойте ей пустой объект.
+
+
+const infixToFunction = {};
 
 
 
