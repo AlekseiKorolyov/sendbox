@@ -27,6 +27,7 @@ const evalFormula = (x, cells) => {
     const elemValue = num => character => idToText(character + num);
     const addCharacters = character1 => character2 => num => charRange(character1, character2).map(elemValue(num));
     const rangeExpanded = x.replace(rangeRegex, (_match, char1, num1, char2, num2) => rangeFromString(num1, num2).map(addCharacters(char1)(char2)));
+    const cellRegex = /[A-J][1-9][0-9]?/gi;
 }
 
 window.onload =  () => {
@@ -763,6 +764,16 @@ addCharacters(char1)(char2)
 
 
 rangeRegex, (_match, char1, num1, char2, num2)
+
+
+
+
+Шаг 61
+
+Объявите переменную cellRegex для сопоставления ссылок на ячейки. Она должна соответствовать букве от A до J, за которой следует цифра от 1 до 9 и необязательная цифра от 0 до 9. Сделайте регулярное выражение регистронечувствительным и глобальным.
+
+
+const cellRegex = /[A-J][1-9][0-9]?/gi;
 
 
 
