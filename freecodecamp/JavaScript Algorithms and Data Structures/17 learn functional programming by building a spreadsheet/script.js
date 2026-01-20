@@ -26,7 +26,7 @@ const evalFormula = (x, cells) => {
     const rangeFromString = (num1, num2) => range(parseInt(num1), parseInt(num2));
     const elemValue = (num) => {
         const inner = (character) => {
-
+            return idToText(character + num);
         };
         return inner;
     };
@@ -571,6 +571,16 @@ const elemValue = (num) => {};
 
     };
     return inner;
+
+
+
+
+Шаг 44
+
+В вашей внутренней функции верните результат вызова функции idToText с аргументом character + num.
+
+
+return idToText(character + num);
 
 
 
