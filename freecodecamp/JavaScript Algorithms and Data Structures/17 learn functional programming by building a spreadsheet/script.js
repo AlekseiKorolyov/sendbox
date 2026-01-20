@@ -26,6 +26,7 @@ const evalFormula = (x, cells) => {
     const rangeFromString = (num1, num2) => range(parseInt(num1), parseInt(num2));
     const elemValue = num => character => idToText(character + num);
     const addCharacters = character1 => character2 => num => charRange(character1, character2).map(elemValue(num));
+    const rangeExpanded = x.replace(rangeRegex);
 }
 
 window.onload =  () => {
@@ -679,6 +680,14 @@ const addCharacters = character1 => character2 => num => charRange(character1, c
 
 
 const addCharacters = character1 => character2 => num => charRange(character1, character2).map(elemValue(num));
+
+
+
+
+Шаг 53 Объявите переменную rangeExpanded и присвойте ей результат вызова метода .replace() вашего параметра x. Передайте переменную rangeRegex в качестве аргумента.
+
+
+const rangeExpanded = x.replace(rangeRegex);
 
 
 
