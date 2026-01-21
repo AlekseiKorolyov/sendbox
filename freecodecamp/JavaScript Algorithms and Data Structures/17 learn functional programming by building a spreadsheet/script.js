@@ -32,7 +32,9 @@ const spreadsheetFunctions = {
     median,
 };
 
-const applyFunction = str => {};
+const applyFunction = str => {
+    const noHigh = highPrecedence(str);
+};
 
 const range = (start, end) => Array(end - start + 1).fill(start).map((element, index) => element + index);
 const charRange = (start, end) => range(start.charCodeAt(0), end.charCodeAt(0)).map((code) => String.fromCharCode(code));
@@ -972,6 +974,15 @@ return str === str2 ? str : highPrecedence(str2);
 Теперь вы можете начать применять логику разбора функции к строке. Объявите функцию с именем applyFunction, которая принимает параметр типа str.
 
 const applyFunction = str => {};
+
+
+
+
+Шаг 80
+
+Сначала вам нужно обработать операторы с более высоким приоритетом. Объявите переменную noHigh и присвойте ей результат вызова функции highPrecedence() с аргументом str.
+
+const noHigh = highPrecedence(str);
 
 
 
