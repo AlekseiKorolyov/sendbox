@@ -10,6 +10,7 @@ const infixEval = (str, regex) => str.replace(regex, (_match, arg1, operator, ar
 const highPrecedence = str => {
     const regex = /^\d+[*\/\d+$]/;
     const str2 = infixEval(str, regex);
+    return str === str2 ? str : highPrecedence(str2);
 };
 
 const isEven = (num) => num % 2 === 0;
@@ -950,6 +951,16 @@ console.log(highPrecedence("5*3"));
 Теперь, когда у вас есть регулярное выражение для сопоставления умножения или деления, вы можете вычислить это выражение. Объявите переменную типа str2 и присвойте ей результат вызова функции infixEval с аргументами str и regex.
 
 const str2 = infixEval(str, regex);
+
+
+
+
+Шаг 78
+
+Ваша функция infixEval будет оценивать только первую операцию умножения или деления, поскольку регулярные выражения не являются глобальными. Это означает, что вам следует использовать рекурсивный подход для оценки всей строки. Если infixEval не найдет совпадений, она вернет значение str как есть. Используя тернарное выражение, проверьте, равно ли str2 значению str. Если да, верните str, в противном случае верните результат вызова highPrecedence() для str2.
+
+
+return str === str2 ? str : highPrecedence(str2);
 
 
 
