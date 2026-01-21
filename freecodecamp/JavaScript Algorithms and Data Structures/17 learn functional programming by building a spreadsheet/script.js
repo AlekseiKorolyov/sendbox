@@ -38,7 +38,7 @@ const applyFunction = str => {
     const str2 = infixEval(noHigh, infix);
     const functionCall = /([a-z0-9]*)\(([0-9., ]*)\)(?!.*\()/i;
     const toNumberList = args => args.split(",").map(parseFloat);
-    const apply = (fn, args) => spreadsheetFunctions[fn.toLowerCase()];
+    const apply = (fn, args) => spreadsheetFunctions[fn.toLowerCase()](toNumberList(args));
 };
 
 const range = (start, end) => Array(end - start + 1).fill(start).map((element, index) => element + index);
@@ -1042,6 +1042,15 @@ const apply = (fn, args) => {};
 Параметру fn будет передано имя функции, например, "SUM". Обновите apply, чтобы неявно возвращать функцию из объекта spreadsheetFunctions, используя переменную fn в качестве ключа для доступа к объекту. Помните, что fn может не содержать строку в нижнем регистре, поэтому вам потребуется преобразовать ее в строку в нижнем регистре.
 
 const apply = (fn, args) => spreadsheetFunctions[fn.toLowerCase()];
+
+
+
+
+Шаг 87
+
+Ваша функция apply возвращает функцию электронной таблицы, но фактически не применяет её. Обновите функцию apply, чтобы она вызывала эту функцию. Передайте результат вызова функции toNumberList с args в качестве аргумента.
+
+const apply = (fn, args) => spreadsheetFunctions[fn.toLowerCase()](toNumberList(args));
 
 
 
