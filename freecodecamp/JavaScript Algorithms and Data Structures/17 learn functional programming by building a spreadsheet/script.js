@@ -32,6 +32,8 @@ const spreadsheetFunctions = {
     median,
 };
 
+const applyFunction = str => {};
+
 const range = (start, end) => Array(end - start + 1).fill(start).map((element, index) => element + index);
 const charRange = (start, end) => range(start.charCodeAt(0), end.charCodeAt(0)).map((code) => String.fromCharCode(code));
 
@@ -961,6 +963,15 @@ const str2 = infixEval(str, regex);
 
 
 return str === str2 ? str : highPrecedence(str2);
+
+
+
+
+Шаг 79
+
+Теперь вы можете начать применять логику разбора функции к строке. Объявите функцию с именем applyFunction, которая принимает параметр типа str.
+
+const applyFunction = str => {};
 
 
 
