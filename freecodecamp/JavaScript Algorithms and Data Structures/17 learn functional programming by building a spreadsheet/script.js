@@ -39,6 +39,7 @@ const applyFunction = str => {
     const functionCall = /([a-z0-9]*)\(([0-9., ]*)\)(?!.*\()/i;
     const toNumberList = args => args.split(",").map(parseFloat);
     const apply = (fn, args) => spreadsheetFunctions[fn.toLowerCase()](toNumberList(args));
+    return str2.replace(functionCall, () => {});
 };
 
 const range = (start, end) => Array(end - start + 1).fill(start).map((element, index) => element + index);
@@ -1051,6 +1052,16 @@ const apply = (fn, args) => spreadsheetFunctions[fn.toLowerCase()];
 Ваша функция apply возвращает функцию электронной таблицы, но фактически не применяет её. Обновите функцию apply, чтобы она вызывала эту функцию. Передайте результат вызова функции toNumberList с args в качестве аргумента.
 
 const apply = (fn, args) => spreadsheetFunctions[fn.toLowerCase()](toNumberList(args));
+
+
+
+
+Шаг 88
+
+Теперь ваша функция applyFunction должна возвращать результат. Верните результат вызова метода .replace() для str2. Передайте ваше регулярное выражение functionCall и пустой коллбэк.
+
+return str2.replace(functionCall, () => {});
+
 
 
 
