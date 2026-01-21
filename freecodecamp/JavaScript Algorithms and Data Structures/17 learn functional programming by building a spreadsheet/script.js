@@ -38,7 +38,7 @@ const applyFunction = str => {
     const str2 = infixEval(noHigh, infix);
     const functionCall = /([a-z0-9]*)\(([0-9., ]*)\)(?!.*\()/i;
     const toNumberList = args => args.split(",").map(parseFloat);
-    const apply = (fn, args) => {};
+    const apply = (fn, args) => spreadsheetFunctions[fn.toLowerCase()];
 };
 
 const range = (start, end) => Array(end - start + 1).fill(start).map((element, index) => element + index);
@@ -1033,6 +1033,15 @@ const toNumberList = args => args.split(",").map(parseFloat);
 Объявите функцию apply, которая принимает параметры fn и args.
 
 const apply = (fn, args) => {};
+
+
+
+
+Шаг 86
+
+Параметру fn будет передано имя функции, например, "SUM". Обновите apply, чтобы неявно возвращать функцию из объекта spreadsheetFunctions, используя переменную fn в качестве ключа для доступа к объекту. Помните, что fn может не содержать строку в нижнем регистре, поэтому вам потребуется преобразовать ее в строку в нижнем регистре.
+
+const apply = (fn, args) => spreadsheetFunctions[fn.toLowerCase()];
 
 
 
