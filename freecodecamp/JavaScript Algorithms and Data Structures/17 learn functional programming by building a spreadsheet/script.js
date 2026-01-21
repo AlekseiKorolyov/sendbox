@@ -39,7 +39,7 @@ const applyFunction = str => {
     const functionCall = /([a-z0-9]*)\(([0-9., ]*)\)(?!.*\()/i;
     const toNumberList = args => args.split(",").map(parseFloat);
     const apply = (fn, args) => spreadsheetFunctions[fn.toLowerCase()](toNumberList(args));
-    return str2.replace(functionCall, () => {});
+    return str2.replace(functionCall, (match, fn, args) => spreadsheetFunctions.hasOwnProperty(fn.toLowerCase()));
 };
 
 const range = (start, end) => Array(end - start + 1).fill(start).map((element, index) => element + index);
@@ -1061,6 +1061,25 @@ const apply = (fn, args) => spreadsheetFunctions[fn.toLowerCase()](toNumberList(
 Теперь ваша функция applyFunction должна возвращать результат. Верните результат вызова метода .replace() для str2. Передайте ваше регулярное выражение functionCall и пустой коллбэк.
 
 return str2.replace(functionCall, () => {});
+
+
+
+
+Шаг 89
+
+Обновите функцию обратного вызова, чтобы она принимала в качестве параметров match, fn и args. Она должна неявно возвращать результат проверки наличия у spreadsheetFunctions собственного свойства fn. Не забудьте сделать fn строчными буквами. Чтобы проверить, существует ли свойство у данного объекта, можно использовать метод hasOwnProperty(). Метод hasOwnProperty() возвращает true или false в зависимости от того, найдено ли свойство у объекта или нет. Вот пример использования метода hasOwnProperty():
+Пример кода
+
+const developerObj = {
+ name: 'John',
+ age: 34,
+}
+
+developerObj.hasOwnProperty('name'); // true
+developerObj.hasOwnProperty('salary'); // false
+
+
+return str2.replace(functionCall, (match, fn, args) => spreadsheetFunctions.hasOwnProperty(fn.toLowerCase()));
 
 
 
