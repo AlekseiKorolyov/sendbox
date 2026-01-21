@@ -35,6 +35,7 @@ const spreadsheetFunctions = {
 const applyFunction = str => {
     const noHigh = highPrecedence(str);
     const infix = /([\d.]+)([+-])([\d.]+)/;
+    const str2 = infixEval(noHigh, infix);
 };
 
 const range = (start, end) => Array(end - start + 1).fill(start).map((element, index) => element + index);
@@ -993,6 +994,15 @@ const noHigh = highPrecedence(str);
 Теперь, когда вы проанализировали и оценили операторы умножения и деления, вам нужно сделать то же самое с операторами сложения и вычитания. Объявите инфиксную переменную и присвойте ей регулярное выражение, которое соответствует числу (включая десятичные числа), за которым следует оператор + или -, а затем другое число.
 
 const infix = /([\d.]+)([+-])([\d.]+)/;
+
+
+
+
+Шаг 82
+
+Объявите переменную типа str2 и присвойте ей результат вызова функции infixEval() с аргументами noHigh и infix.
+
+const str2 = infixEval(noHigh, infix);
 
 
 
