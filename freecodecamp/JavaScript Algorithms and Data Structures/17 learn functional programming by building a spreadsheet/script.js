@@ -36,6 +36,8 @@ const applyFunction = str => {
     const noHigh = highPrecedence(str);
     const infix = /([\d.]+)([+-])([\d.]+)/;
     const str2 = infixEval(noHigh, infix);
+    const functionCall = /([a-z0-9]*)\(([0-9., ]*)\)(?!.*\()/i;
+    const toNumberList = args => args.split(",").map(parseFloat);
 };
 
 const range = (start, end) => Array(end - start + 1).fill(start).map((element, index) => element + index);
@@ -1012,6 +1014,15 @@ const str2 = infixEval(noHigh, infix);
 Объявите переменную functionCall и присвойте ей следующее регулярное выражение: /([a-z0-9]*)\(([0-9., ]*)\)(?!.*\()/i Это выражение будет искать вызовы функций, подобные sum(1, 4).
 
 const functionCall = /([a-z0-9]*)\(([0-9., ]*)\)(?!.*\()/i;
+
+
+
+
+Шаг 84
+
+Объявите функцию toNumberList, которая принимает параметр args и неявно возвращает результат разделения args по запятым. Затем добавьте метод map к вашему методу split и передайте parseFloat в качестве аргумента методу map.
+
+const toNumberList = args => args.split(",").map(parseFloat);
 
 
 
