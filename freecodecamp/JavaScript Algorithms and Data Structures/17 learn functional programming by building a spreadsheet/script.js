@@ -7,7 +7,10 @@ const infixToFunction = {
 
 const infixEval = (str, regex) => str.replace(regex, (_match, arg1, operator, arg2) => infixToFunction[operator](parseFloat(arg1), parseFloat(arg2)));
 
-const highPrecedence = str => {};
+const highPrecedence = str => {
+    const regex = /^\d+[*\/\d+$]/;
+    return regex.test(str);
+};
 
 const isEven = (num) => num % 2 === 0;
 const sum = (nums) => nums.reduce((acc, el) => acc + el);
@@ -909,6 +912,19 @@ infixToFunction[operator](parseFloat(arg1), parseFloat(arg2)))
 
 
 const highPrecedence = str => {};
+
+
+
+
+Шаг 74
+
+В вашей функции highPrecedence объявите переменную с помощью const и присвойте ей регулярное выражение, которое проверяет, соответствует ли строка, переданная в качестве параметра str, шаблону: число, за которым следует оператор * или /, а затем еще одно число. Ваша функция должна возвращать логическое значение. Помните, что для этого можно использовать метод test().
+
+
+const highPrecedence = str => {
+  const regex = /^\d+[*\/\d+$]/;
+  return regex.test(str);
+}
 
 
 
