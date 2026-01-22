@@ -37,6 +37,7 @@ const spreadsheetFunctions = {
     increment: nums => nums.map(num => num + 1),
     someeven: nums => nums.some(num => num % 2 === 0),
     everyeven: nums => nums.every(num => num % 2 === 0),
+    random: nums =>  Math.floor(Math.random() * (nums[0] - nums[1] + 1) ) + nums[0],
 };
 
 const applyFunction = str => {
@@ -1213,6 +1214,17 @@ arr.every(letter => letter === letter.toUpperCase());
 
 
 everyeven: nums => nums.every(num => num % 2 === 0),
+
+
+
+
+Шаг 102
+
+Создайте свойство `random`. Это свойство должно использовать первые два числа из массива для генерации случайного целого числа. Диапазон значений этого числа начинается с первого числа (включительно) из двух и заканчивается непосредственно перед суммой этих двух чисел. Используйте методы `Math.floor()` и `Math.random()` для вычисления.
+
+
+random: nums =>  Math.floor(Math.random() * (nums[0] - nums[1] + 1) ) + nums[0],
+
 
 
 
