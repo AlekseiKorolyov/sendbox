@@ -34,9 +34,9 @@ const spreadsheetFunctions = {
     firsttwo: nums => nums.slice(0,2),
     lasttwo: nums => nums.slice(-2),
     has2: nums => nums.includes(2),
-    increment: nums => nums.map(x => x + 1),
     increment: nums => nums.map(num => num + 1),
     someeven: nums => nums.some(num => num % 2 === 0),
+    everyeven: nums => nums.every(num => num % 2 === 0),
 };
 
 const applyFunction = str => {
@@ -1196,8 +1196,23 @@ even: nums => nums.filter(isEven),
 Добавьте свойство someeven в ваши функции для работы с spreadsheetFunctions — используйте метод .some() для проверки того, является ли какой-либо элемент в массиве четным.
 
 
-  increment: nums => nums.map(num => num + 1),
   someeven: nums => nums.some(num => num % 2 === 0),
+
+
+
+
+Шаг 101
+
+Массивы имеют метод `.every()`. Как и метод `.some()`, `.every()` принимает функцию обратного вызова, которая должна принимать в качестве аргумента элемент массива. Метод `.every()` вернет `true`, если функция обратного вызова возвращает `true` для всех элементов массива. Вот пример вызова метода `.every()` для проверки того, являются ли все элементы массива заглавными буквами.
+Пример кода
+
+const arr = ["A", "b", "C"];
+arr.every(letter => letter === letter.toUpperCase());
+
+Добавьте свойство `everyeven` в ваши функции для работы с электронными таблицами — используйте метод `.every()` для проверки того, являются ли все элементы массива четными.
+
+
+everyeven: nums => nums.every(num => num % 2 === 0),
 
 
 
