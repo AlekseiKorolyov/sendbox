@@ -85,7 +85,7 @@ const update = (event) => {
     const element = event.target;
     const value = element.value.replace(/\s/g, "");
     if (!value.includes(element.id) && value.startsWith('=')) {
-        element.value = evalFormula(value.slice(1));
+        element.value = evalFormula(value.slice(1), document.getElementById("container").children);
     }
 };
 
@@ -1128,6 +1128,16 @@ element.value = evalFormula();
 Первым аргументом для вызова функции evalFormula должно быть содержимое ячейки (которое вы сохранили в переменной value). Однако содержимое начинается с символа "=", чтобы запустить функцию, поэтому вам нужно передать подстроку переменной value, начиная с индекса 1.
 
 element.value = evalFormula(value.slice(1));
+
+
+
+
+Шаг 95
+
+Вы можете быстро получить все ячейки со страницы, получив элемент #container по его id и обратившись к свойству children результата. Передайте его в качестве второго параметра в вызов evalFormula().
+
+
+element.value = evalFormula(value.slice(1), document.getElementById("container").children);
 
 
 
