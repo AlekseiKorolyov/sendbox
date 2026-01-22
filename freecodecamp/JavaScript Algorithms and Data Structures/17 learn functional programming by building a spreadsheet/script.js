@@ -55,6 +55,7 @@ const evalFormula = (x, cells) => {
     const cellRegex = /[A-J][1-9][0-9]?/gi;
     const cellExpanded = rangeExpanded.replace(cellRegex, match => idToText(match.toUpperCase()));
     const functionExpanded = applyFunction(cellExpanded);
+    return functionExpanded === x ? functionExpanded : evalFormula(functionExpanded, cells);
 }
 
 window.onload =  () => {
@@ -1100,6 +1101,15 @@ return str2.replace(functionCall, (match, fn, args) => spreadsheetFunctions.hasO
 
 
 const functionExpanded = applyFunction(cellExpanded);
+
+
+
+
+Шаг 92
+
+Как и в случае с функцией highPrecedence(), функция evalFormula() должна убедиться, что она оценила и заменила все данные. Используйте тернарный оператор для проверки, равно ли functionExpanded исходной строке x. Если да, верните functionExpanded, в противном случае верните результат повторного вызова evalFormula() с аргументами functionExpanded и cells.
+
+return functionExpanded === x ? functionExpanded : evalFormula(functionExpanded, cells);
 
 
 
