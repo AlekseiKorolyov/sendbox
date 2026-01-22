@@ -85,7 +85,7 @@ const update = (event) => {
     const element = event.target;
     const value = element.value.replace(/\s/g, "");
     if (!value.includes(element.id) && value.startsWith('=')) {
-        element.value = evalFormula();
+        element.value = evalFormula(value.slice(1));
     }
 };
 
@@ -1119,6 +1119,15 @@ return functionExpanded === x ? functionExpanded : evalFormula(functionExpanded,
 Теперь ваша функция update() может фактически вычислять формулы. Помните, что вы написали условие if для проверки того, что функция была вызвана. Внутри вашего оператора if установите value element равным результату вашей функции evalFormula(). Пока не передавайте никаких аргументов.
 
 element.value = evalFormula();
+
+
+
+
+Шаг 94
+
+Первым аргументом для вызова функции evalFormula должно быть содержимое ячейки (которое вы сохранили в переменной value). Однако содержимое начинается с символа "=", чтобы запустить функцию, поэтому вам нужно передать подстроку переменной value, начиная с индекса 1.
+
+element.value = evalFormula(value.slice(1));
 
 
 
