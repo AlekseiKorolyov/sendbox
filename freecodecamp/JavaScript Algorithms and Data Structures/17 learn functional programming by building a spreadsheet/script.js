@@ -33,6 +33,8 @@ const spreadsheetFunctions = {
     even: nums => nums.filter(isEven),
     firsttwo: nums => nums.slice(0,2),
     lasttwo: nums => nums.slice(-2),
+    has2: nums => nums.includes(2),
+    increment: nums => nums.map(x => x + 1),
 };
 
 const applyFunction = str => {
@@ -1172,6 +1174,17 @@ even: nums => nums.filter(isEven),
 
   firsttwo: nums => nums.slice(0,2),
   lasttwo: nums => nums.slice(-2),
+
+
+
+
+Шаг 99
+
+Добавьте свойство has2, которое возвращает значение, равное 2 в массиве nums, и свойство increment, которое возвращает массив nums, в котором каждое значение увеличивается на единицу.
+
+
+  has2: nums => nums.includes(2),
+  increment: nums => nums.map(x => x + 1),
 
 
 
