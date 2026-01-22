@@ -85,7 +85,7 @@ const update = (event) => {
     const element = event.target;
     const value = element.value.replace(/\s/g, "");
     if (!value.includes(element.id) && value.startsWith('=')) {
-
+        element.value = evalFormula();
     }
 };
 
@@ -1110,6 +1110,15 @@ const functionExpanded = applyFunction(cellExpanded);
 Как и в случае с функцией highPrecedence(), функция evalFormula() должна убедиться, что она оценила и заменила все данные. Используйте тернарный оператор для проверки, равно ли functionExpanded исходной строке x. Если да, верните functionExpanded, в противном случае верните результат повторного вызова evalFormula() с аргументами functionExpanded и cells.
 
 return functionExpanded === x ? functionExpanded : evalFormula(functionExpanded, cells);
+
+
+
+
+Шаг 93
+
+Теперь ваша функция update() может фактически вычислять формулы. Помните, что вы написали условие if для проверки того, что функция была вызвана. Внутри вашего оператора if установите value element равным результату вашей функции evalFormula(). Пока не передавайте никаких аргументов.
+
+element.value = evalFormula();
 
 
 
