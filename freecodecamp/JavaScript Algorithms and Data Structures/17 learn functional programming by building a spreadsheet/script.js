@@ -85,7 +85,7 @@ const update = (event) => {
     const element = event.target;
     const value = element.value.replace(/\s/g, "");
     if (!value.includes(element.id) && value.startsWith('=')) {
-        element.value = evalFormula(value.slice(1), document.getElementById("container").children);
+        element.value = evalFormula(value.slice(1), Array.from(document.getElementById("container").children));
     }
 };
 
@@ -1138,6 +1138,16 @@ element.value = evalFormula(value.slice(1));
 
 
 element.value = evalFormula(value.slice(1), document.getElementById("container").children);
+
+
+
+
+Шаг 96
+
+К сожалению, свойство children возвращает коллекцию элементов, которая похожа на массив, но не является массивом. Оберните второй аргумент в Array.from(), чтобы преобразовать его в массив.
+
+
+element.value = evalFormula(value.slice(1), Array.from(document.getElementById("container").children));
 
 
 
