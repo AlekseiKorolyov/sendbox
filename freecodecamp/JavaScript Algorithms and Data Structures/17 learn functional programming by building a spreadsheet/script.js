@@ -31,6 +31,8 @@ const spreadsheetFunctions = {
     average,
     median,
     even: nums => nums.filter(isEven),
+    firsttwo: nums => nums.slice(0,2),
+    lasttwo: nums => nums.slice(-2),
 };
 
 const applyFunction = str => {
@@ -1160,6 +1162,16 @@ element.value = evalFormula(value.slice(1), Array.from(document.getElementById("
 
 even: nums => nums.filter(isEven),
 
+
+
+
+Шаг 98
+
+Добавьте свойство firsttwo, которое принимает параметр nums и возвращает первые два элемента массива nums в порядке следования. Затем добавьте свойство lasttwo, которое возвращает последние два элемента массива nums в порядке следования.
+
+
+  firsttwo: nums => nums.slice(0,2),
+  lasttwo: nums => nums.slice(-2),
 
 
 
