@@ -30,6 +30,7 @@ const spreadsheetFunctions = {
     sum,
     average,
     median,
+    even: nums => nums.filter(isEven),
 };
 
 const applyFunction = str => {
@@ -1148,6 +1149,16 @@ element.value = evalFormula(value.slice(1), document.getElementById("container")
 
 
 element.value = evalFormula(value.slice(1), Array.from(document.getElementById("container").children));
+
+
+
+
+Шаг 97
+
+Ваша электронная таблица теперь работает. Однако она не поддерживает очень много формул. Добавьте свойство even в ваши функции spreadsheetFunctions. Оно должно принимать параметр nums и возвращать результат фильтрации массива nums, чтобы включить только четные числа. Используйте ссылку на вашу функцию isEven для подсказки.
+
+
+even: nums => nums.filter(isEven),
 
 
 
