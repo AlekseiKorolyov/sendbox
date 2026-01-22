@@ -54,6 +54,7 @@ const evalFormula = (x, cells) => {
     const rangeExpanded = x.replace(rangeRegex, (_match, char1, num1, char2, num2) => rangeFromString(num1, num2).map(addCharacters(char1)(char2)));
     const cellRegex = /[A-J][1-9][0-9]?/gi;
     const cellExpanded = rangeExpanded.replace(cellRegex, match => idToText(match.toUpperCase()));
+    const functionExpanded = applyFunction(cellExpanded);
 }
 
 window.onload =  () => {
@@ -1089,6 +1090,17 @@ return str2.replace(functionCall, (match, fn, args) => spreadsheetFunctions.hasO
 Используйте тернарный оператор, чтобы преобразовать вызов метода `.hasOwnProperty()` в условие. Если объект обладает свойством, верните результат вызова метода `apply` с аргументами `fn` и `args`. В противном случае верните `match`.
 
 return str2.replace(functionCall, (match, fn, args) => spreadsheetFunctions.hasOwnProperty(fn.toLowerCase()) ? apply(fn, args) : match);
+
+
+
+
+Шаг 91
+
+Теперь вы можете начать применять парсер функций к логике evalFormula. Объявите переменную functionExpanded и присвойте ей результат вызова applyFunction со строкой cellExpanded.
+
+
+const functionExpanded = applyFunction(cellExpanded);
+
 
 
 
