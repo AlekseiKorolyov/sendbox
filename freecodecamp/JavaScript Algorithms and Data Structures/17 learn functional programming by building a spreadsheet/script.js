@@ -37,7 +37,8 @@ const spreadsheetFunctions = {
     increment: nums => nums.map(num => num + 1),
     someeven: nums => nums.some(num => num % 2 === 0),
     everyeven: nums => nums.every(num => num % 2 === 0),
-    random: nums =>  Math.floor(Math.random() * (nums[0] - nums[1] + 1) ) + nums[0],
+    random: ([x, y]) => Math.floor(Math.random() * y + x),
+    range: nums => range(...nums),
 };
 
 const applyFunction = str => {
@@ -1224,6 +1225,20 @@ everyeven: nums => nums.every(num => num % 2 === 0),
 
 
 random: nums =>  Math.floor(Math.random() * (nums[0] - nums[1] + 1) ) + nums[0],
+
+***
+
+random: ([x, y]) => Math.floor(Math.random() * y + x),
+
+
+
+
+Шаг 103
+
+Добавьте свойство `range`, которое генерирует диапазон от первого числа в `nums` до второго числа в `nums`. Помните, что здесь можно повторно использовать функцию `range`.
+
+
+range: nums => range(...nums),
 
 
 
