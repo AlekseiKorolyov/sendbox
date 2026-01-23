@@ -39,6 +39,7 @@ const spreadsheetFunctions = {
     everyeven: nums => nums.every(num => num % 2 === 0),
     random: ([x, y]) => Math.floor(Math.random() * y + x),
     range: nums => range(...nums),
+    nodupes: nums => [... new Set(nums)],
 };
 
 const applyFunction = str => {
@@ -1239,6 +1240,16 @@ random: ([x, y]) => Math.floor(Math.random() * y + x),
 
 
 range: nums => range(...nums),
+
+
+
+
+Шаг 104
+
+Последняя функция имеет несколько подходов к реализации, и вы можете выбрать любой из них. Добавьте свойство nodupes, которое возвращает числа, из которых удалены все повторяющиеся значения. Например, [2, 1, 2, 5, 3, 2, 7] должно вернуть [2, 1, 5, 3, 7].
+
+
+nodupes: nums => [... new Set(nums)],
 
 
 
