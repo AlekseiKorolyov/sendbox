@@ -1,18 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./styles.css" />
-    <title>Telephone number validator</title>
-</head>
-<body>
-<container>
-    <input id="user-input" />
-    <button id="check-btn"><button/>
-        <button id="clear-btn"><button/>
-            <div id="results-div"></div>
-</container>
-<script src="./script.js"></script>
-</body>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="./styles.css" />
+        <title>Telephone number validator</title>
+    </head>
+    <body>
+        <h1>
+            Telephone Number <br />
+            Validator
+        </h1>
+        <div class="wrapper">
+            <div class="camera"></div>
+            <div class="input-container">
+                <h4>Enter a Phone Number:</h4>
+                <input class="user-input" id="user-input" />
+                <div class="results" id="results-div"></div>
+            </div>
+            <div class="container-btn">
+                <button class="btn" id="check-btn">Check</button>
+                <button class="btn" id="clear-btn">Clear</button>
+            </div>
+        </div>
+        <script src="./script.js"></script>
+    </body>
 </html>
