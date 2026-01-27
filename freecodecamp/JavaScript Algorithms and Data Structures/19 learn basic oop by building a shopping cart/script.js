@@ -93,11 +93,15 @@ products.forEach(
         <h2>${name}</h2>
         <p class="dessert-price">$${price}</p>
         <p class="product-category">Category: ${category}</p>
-        <button id="${id}" class="btn add-to-cart-btn">Add to cart</button>
+        <button 
+            id="${id}" 
+            class="btn add-to-cart-btn">Add to cart</button>
     </div>
     `;
     }
 );
+
+class ShoppingCart {};
 
 
 
@@ -256,6 +260,22 @@ dessertCards.innerHTML += `
 
 
 <button id="${id}" class="btn add-to-cart-btn">Add to cart</button>
+
+
+
+
+Шаг 14
+
+Вы уже знакомы с HTML-классами, но в JavaScript тоже есть классы. В JavaScript класс — это своего рода шаблон для создания объектов. Он позволяет определить набор свойств и методов, а также создавать новые объекты с этими свойствами и методами. Ключевое слово `class` используется для объявления класса. Вот пример объявления класса `Computer`:
+Пример кода
+
+class Computer {};
+
+Объявите класс `ShoppingCart`.
+
+
+class ShoppingCart {};
+
 
 
 
