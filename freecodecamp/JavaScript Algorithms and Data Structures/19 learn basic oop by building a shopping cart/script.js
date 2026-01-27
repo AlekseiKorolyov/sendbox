@@ -10,6 +10,8 @@ const cartTotal = document.getElementById("total");
 const showHideCartSpan = document.getElementById("show-hide-cart");
 let isCartShowing = false;
 
+const products = [];
+
 
 
 
@@ -61,6 +63,10 @@ let isCartShowing = false;
 
 
 
+
+Шаг 5
+
+Корзина покупок малополезна без товаров. Объявите переменную products и присвойте ей пустой массив. Использование массива позволит вам хранить несколько товаров.
 
 
 
