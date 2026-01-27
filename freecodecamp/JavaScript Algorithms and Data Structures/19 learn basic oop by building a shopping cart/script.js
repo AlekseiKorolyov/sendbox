@@ -86,6 +86,8 @@ const products = [
 
 ];
 
+products.forEach(() => {});
+
 
 
 
@@ -176,6 +178,17 @@ Butter Pecan Ice Cream	2.99	Ice Cream
 Rocky Road Ice Cream	2.99	Ice Cream
 Vanilla Macarons (5 Pack)	11.99	Macaron
 Lemon Cupcakes (4 Pack)	12.99	Cupcake
+
+
+
+
+Шаг 8
+
+Теперь, когда у вас есть список товаров, вы можете использовать JavaScript для их вставки в HTML. При таком подходе, если вы решите добавить больше товаров, HTML автоматически это отразит. Начните с вызова метода `.forEach` для вашего массива products. Используйте стрелочный синтаксис для создания пустой функции обратного вызова.
+
+
+products.forEach(() => {});
+
 
 
 
