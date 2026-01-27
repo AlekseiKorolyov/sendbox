@@ -10,7 +10,14 @@ const cartTotal = document.getElementById("total");
 const showHideCartSpan = document.getElementById("show-hide-cart");
 let isCartShowing = false;
 
-const products = [];
+const products = [
+    {
+        id: 1,
+        name: "Vanilla Cupcakes (6 Pack)",
+        price: 12.99,
+        category: "Cupcake",
+    }
+];
 
 
 
@@ -67,6 +74,22 @@ const products = [];
 Шаг 5
 
 Корзина покупок малополезна без товаров. Объявите переменную products и присвойте ей пустой массив. Использование массива позволит вам хранить несколько товаров.
+
+
+
+
+Шаг 6
+
+Теперь вам нужно начать добавлять товары. Прежде чем это сделать, необходимо продумать структуру данных о товарах. Каждому товару потребуется уникальный идентификатор, чтобы отличать его от других товаров, цена, чтобы люди знали, сколько он стоит, и название, чтобы люди знали, что они покупают. Также следует добавить категорию к каждому товару.
+Добавьте объект в массив products. Присвойте этому объекту свойство id, равное числу 1, свойство name, равное строке "Vanilla Cupcakes (6 Pack)", свойство price, равное числу 12.99, и свойство category, равное строке "Cupcake".
+
+
+  {
+    id: 1,
+    name: "Vanilla Cupcakes (6 Pack)",
+    price: 12.99,
+    category: "Cupcake",
+  }
 
 
 
