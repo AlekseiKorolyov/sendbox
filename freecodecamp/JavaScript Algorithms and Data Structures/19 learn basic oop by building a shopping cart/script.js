@@ -86,7 +86,9 @@ const products = [
 
 ];
 
-products.forEach(() => {});
+products.forEach(
+    ({name, id, price, category}) => {}
+);
 
 
 
@@ -188,6 +190,18 @@ Lemon Cupcakes (4 Pack)	12.99	Cupcake
 
 
 products.forEach(() => {});
+
+
+
+
+Шаг 9
+
+Помните, что вы можете использовать деструктуризацию для извлечения нескольких значений из массива или объекта в одном операторе. В качестве первого параметра вашей функции обратного вызова деструктурируйте свойства name, id, price и category из переданного объекта.
+
+
+products.forEach(
+  ({name, id, price, category}) => {}
+);
 
 
 
