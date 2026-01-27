@@ -101,7 +101,11 @@ products.forEach(
     }
 );
 
-class ShoppingCart {};
+class ShoppingCart {
+    constructor() {
+
+    }
+}
 
 
 
@@ -275,6 +279,26 @@ class Computer {};
 
 
 class ShoppingCart {};
+
+
+
+
+Шаг 15
+
+У классов есть специальный метод constructor, который вызывается при создании нового экземпляра класса. Метод constructor — отличное место для инициализации свойств класса. Вот пример класса с методом constructor:
+Пример кода
+
+class Computer {
+ constructor() {
+  }
+}
+
+Добавьте пустой метод constructor в класс ShoppingCart.
+
+
+  constructor() {
+
+  }
 
 
 
