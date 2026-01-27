@@ -87,7 +87,9 @@ const products = [
 ];
 
 products.forEach(
-    ({name, id, price, category}) => {}
+    ({name, id, price, category}) => {
+        dessertCards.innerHTML += ``;
+    }
 );
 
 
@@ -202,6 +204,16 @@ products.forEach(() => {});
 products.forEach(
   ({name, id, price, category}) => {}
 );
+
+
+
+
+Шаг 10
+
+Вам необходимо отобразить доступные товары в вашем HTML-коде. Начните с использования оператора присваивания сложения, чтобы добавить пустую строку шаблона в свойство innerHTML переменной dessertCards.
+
+
+dessertCards.innerHTML += ``;
 
 
 
