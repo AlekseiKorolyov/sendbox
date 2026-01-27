@@ -88,7 +88,11 @@ const products = [
 
 products.forEach(
     ({name, id, price, category}) => {
-        dessertCards.innerHTML += ``;
+        dessertCards.innerHTML += `
+    <div class="dessert-card">
+    <h2>${name}</h2>
+    </div>
+    `;
     }
 );
 
@@ -214,6 +218,21 @@ products.forEach(
 
 
 dessertCards.innerHTML += ``;
+
+
+
+
+Шаг 11
+
+В вашем шаблоне создайте элемент div с классом dessert-card. Внутри этого div создайте элемент h2 и задайте ему текст, соответствующий переменной name.
+
+
+dessertCards.innerHTML += `
+    <div class="dessert-card">
+    <h2>${name}</h2>
+    </div>
+    `;
+
 
 
 
