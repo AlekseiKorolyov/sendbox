@@ -90,7 +90,9 @@ products.forEach(
     ({name, id, price, category}) => {
         dessertCards.innerHTML += `
     <div class="dessert-card">
-    <h2>${name}</h2>
+      <h2>${name}</h2>
+      <p class="dessert-price">$${price}</p>
+      <p class="product-category">Category: ${category}</p>
     </div>
     `;
     }
@@ -232,6 +234,18 @@ dessertCards.innerHTML += `
     <h2>${name}</h2>
     </div>
     `;
+
+
+
+
+Шаг 12
+
+После элемента h2 создайте два элемента p. Первому присвойте класс dessert-price и установите текст в виде знака доллара "$", за которым следует значение переменной price. Второму присвойте класс product-category и текст "Category: ", за которым следует значение переменной category.
+
+
+        <p class="dessert-price">$${price}</p>
+        <p class="product-category">Category: ${category}</p>
+
 
 
 
