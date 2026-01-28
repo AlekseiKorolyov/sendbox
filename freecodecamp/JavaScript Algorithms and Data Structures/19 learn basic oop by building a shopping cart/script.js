@@ -114,7 +114,9 @@ class ShoppingCart {
         this.items.push(product);
 
         const totalCountPerProduct = {};
-        this.items.forEach((dessert) => {});
+        this.items.forEach(dessert => {
+            totalCountPerProduct[dessert.id] = totalCountPerProduct[dessert.id] || 0;
+        })
     }
 };
 
@@ -412,6 +414,28 @@ const {name, price} = product;
 
 this.items.forEach((dessert) => {});
 
+
+
+
+Шаг 23
+
+Вы на правильном пути! Однако давайте на мгновение остановимся на распространенной проблеме при работе с объектами в JavaScript. Когда вы пытаетесь получить доступ к свойству объекта, которого не существует, JavaScript возвращает undefined. Если затем вы попытаетесь выполнить арифметические операции над undefined, это может привести к неожиданным результатам, таким как NaN. Чтобы предотвратить это, вы можете использовать оператор || (логическое ИЛИ) для указания значения по умолчанию.
+Пример кода
+
+let scores = {};
+let players = ["Alice", "Bob", "Charlie"];
+
+players.forEach(player => {
+ scores[player] = scores[player] || 0;
+ });
+
+ Теперь давайте применим эту концепцию к вашему объекту totalCountPerProduct в коллбэке forEach. Убедитесь, что каждое свойство dessert.id инициализировано должным образом. Инициализируйте totalCountPerProduct[dessert.id] значением по умолчанию 0, используя оператор ||.
+
+
+     const totalCountPerProduct = {};
+    this.items.forEach(dessert => {
+      totalCountPerProduct[dessert.id] = totalCountPerProduct[dessert.id] || 0;
+    })
 
 
 
