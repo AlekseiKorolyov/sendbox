@@ -110,6 +110,7 @@ class ShoppingCart {
 
     addItem(id, products) {
         const product = products.find((item) => item.id === id);
+        const {name, price} = product;
     }
 };
 
@@ -368,6 +369,15 @@ class Computer {
     const product = products.find((item) => item.id === id);
   }
 
+
+
+
+Шаг 19
+
+Используйте константы и деструктуризацию для извлечения переменных name и price из product.
+
+
+const {name, price} = product;
 
 
 
