@@ -112,6 +112,8 @@ class ShoppingCart {
         const product = products.find((item) => item.id === id);
         const {name, price} = product;
     }
+
+    const totalCountPerProduct = { }
 };
 
 
@@ -378,6 +380,25 @@ class Computer {
 
 
 const {name, price} = product;
+
+
+
+
+Шаг 20
+
+Теперь вам нужно добавить товар в массив items корзины. Не забудьте использовать ключевое слово this.
+
+
+
+
+Шаг 21
+
+Теперь вам нужно общее количество каждого товара в корзине пользователя. Объявите переменную totalCountPerProduct и присвойте ей пустой объект.
+
+
+    const totalCountPerProduct = {
+
+    }
 
 
 
