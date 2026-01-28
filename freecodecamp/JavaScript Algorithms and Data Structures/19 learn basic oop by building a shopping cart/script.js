@@ -110,10 +110,12 @@ class ShoppingCart {
 
     addItem(id, products) {
         const product = products.find((item) => item.id === id);
-        const {name, price} = product;
-    }
+        const { name, price } = product;
+        this.items.push(product);
 
-    const totalCountPerProduct = { }
+        const totalCountPerProduct = {};
+        this.items.forEach((dessert) => {});
+    }
 };
 
 
@@ -400,6 +402,15 @@ const {name, price} = product;
 
     }
 
+
+
+
+Шаг 22
+
+Используйте метод `.forEach()` для перебора элементов items. Передайте пустую функцию обратного вызова, которая принимает один параметр — dessert.
+
+
+this.items.forEach((dessert) => {});
 
 
 
