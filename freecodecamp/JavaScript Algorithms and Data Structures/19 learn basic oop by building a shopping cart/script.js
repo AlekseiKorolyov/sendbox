@@ -115,7 +115,7 @@ class ShoppingCart {
 
         const totalCountPerProduct = {};
         this.items.forEach(dessert => {
-            totalCountPerProduct[dessert.id] = totalCountPerProduct[dessert.id] || 0;
+            totalCountPerProduct[dessert.id] = (totalCountPerProduct[dessert.id] || 0) + 1;
         })
     }
 };
@@ -437,6 +437,15 @@ players.forEach(player => {
       totalCountPerProduct[dessert.id] = totalCountPerProduct[dessert.id] || 0;
     })
 
+
+
+
+Шаг 24
+
+В функции обратного вызова forEach заключите присваивание в правой части кода totalCountPerProduct[dessert.id] || 0 в скобки (), чтобы обеспечить корректную оценку, а затем увеличьте значение на единицу.
+
+
+totalCountPerProduct[dessert.id] = (totalCountPerProduct[dessert.id] || 0) + 1;
 
 
 
