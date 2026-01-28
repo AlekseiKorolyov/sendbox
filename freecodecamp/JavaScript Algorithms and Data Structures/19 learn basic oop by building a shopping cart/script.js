@@ -117,6 +117,8 @@ class ShoppingCart {
         this.items.forEach(dessert => {
             totalCountPerProduct[dessert.id] = (totalCountPerProduct[dessert.id] || 0) + 1;
         })
+
+        const currentProductCount = totalCountPerProduct[product.id];
     }
 };
 
@@ -446,6 +448,16 @@ players.forEach(player => {
 
 
 totalCountPerProduct[dessert.id] = (totalCountPerProduct[dessert.id] || 0) + 1;
+
+
+
+
+Шаг 25
+
+Теперь вам нужно подготовиться к обновлению отображения с новым товаром, добавленным пользователем. Объявите переменную currentProductCount и присвойте ей значение свойства totalCountPerProduct, соответствующее идентификатору product.
+
+
+const currentProductCount = totalCountPerProduct[product.id];
 
 
 
