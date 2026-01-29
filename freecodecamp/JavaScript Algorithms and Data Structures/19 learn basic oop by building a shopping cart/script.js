@@ -119,6 +119,7 @@ class ShoppingCart {
         })
 
         const currentProductCount = totalCountPerProduct[product.id];
+        const currentProductCountSpan = document.getElementById(`product-count-for-id${product.id}`);
     }
 };
 
@@ -458,6 +459,16 @@ totalCountPerProduct[dessert.id] = (totalCountPerProduct[dessert.id] || 0) + 1;
 
 
 const currentProductCount = totalCountPerProduct[product.id];
+
+
+
+
+Шаг 26
+
+Вы еще не написали код для генерации HTML, но если товар уже добавлен в корзину пользователя, то будет найден соответствующий элемент, который вам понадобится. Используйте метод `.getElementById()`, чтобы получить соответствующий элемент — вы будете устанавливать значение `id` равным `product-count-for-id${product.id}`, поэтому используйте шаблонный литерал для запроса этого значения. Присвойте ваш запрос переменной `currentProductCountSpan`.
+
+
+const currentProductCountSpan = document.getElementById(`product-count-for-id${product.id}`);
 
 
 
