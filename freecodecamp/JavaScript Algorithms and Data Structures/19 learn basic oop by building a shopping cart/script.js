@@ -119,7 +119,11 @@ class ShoppingCart {
         })
 
         const currentProductCount = totalCountPerProduct[product.id];
-        const currentProductCountSpan = document.getElementById(`product-count-for-id${product.id}`);
+        const currentProductCountSpan = document.getElementById(`product-count-for-id${id}`);
+
+        currentProductCount > 1
+            ? currentProductCountSpan.textContent = `${currentProductCount}x`
+            : undefined;
     }
 };
 
@@ -479,6 +483,18 @@ const currentProductCountSpan = document.getElementById(`product-count-for-id${p
 
 
 currentProductCount > 1 ? undefined : undefined;
+
+
+
+
+Шаг 28
+
+Для вашего истинного выражения, удалив значение undefined, вам необходимо обновить textContent объекта currentProductCountSpan, заменив его значением currentProductCount, за которым следует x. Для этого используйте шаблонный литерал.
+
+
+currentProductCount > 1
+    ? currentProductCountSpan.textContent = `${currentProductCount}x`
+    : undefined;
 
 
 
