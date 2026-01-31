@@ -123,7 +123,11 @@ class ShoppingCart {
 
         currentProductCount > 1
             ? currentProductCountSpan.textContent = `${currentProductCount}x`
-            : undefined;
+            : productsContainer.innerHTML += `
+      <div class="product" id="dessert${id}">
+
+      </div>
+      `;
     }
 };
 
@@ -496,6 +500,21 @@ currentProductCount > 1
     ? currentProductCountSpan.textContent = `${currentProductCount}x`
     : undefined;
 
+
+
+
+Шаг 29
+
+Для выражения ложного значения вам потребуется добавить новый HTML-код в ваш productsContainer. Начните с удаления undefined, затем используйте оператор присваивания и синтаксис шаблонного литерала, чтобы добавить div с классом product и идентификатором dessert${id} в свойство innerHTML объекта productsContainer.
+
+
+    currentProductCount > 1
+      ? currentProductCountSpan.textContent = `${currentProductCount}x`
+      : productsContainer.innerHTML += `
+      <div class="product" id="dessert${id}">
+
+      </div>
+      `;
 
 
 
