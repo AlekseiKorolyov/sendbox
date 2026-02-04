@@ -140,7 +140,9 @@ const addToCartBtns = document.getElementsByClassName("add-to-cart-btn");
 
 [...addToCartBtns].forEach(
     (btn) => {
-        btn.addEventListener("click", (event) => {});
+        btn.addEventListener("click", (event) => {
+            cart.addItem(Number(event.target.id), products);
+        });
     }
 );
 
@@ -590,6 +592,14 @@ const addToCartBtns = document.getElementsByClassName("add-to-cart-btn");
 (btn) => {
   btn.addEventListener("click", (event) => {});
 }
+
+
+
+
+Шаг 36 В обработчике событий вызовите метод `.addItem()` объекта корзины и передайте в него `event.target.id`. Помните, что `id` здесь будет строкой, поэтому вам нужно преобразовать его в число. В качестве второго аргумента передайте массив товаров.
+
+
+cart.addItem(Number(event.target.id), products);
 
 
 
