@@ -135,6 +135,7 @@ class ShoppingCart {
     }
 };
 
+const cart = new ShoppingCart();
 
 
 
@@ -537,6 +538,20 @@ currentProductCount > 1
         <span class="product-count" id="product-count-for-id${id}"></span>
         ${name}
 
+
+
+
+Шаг 32
+
+Вашему классу ShoppingCart требуется еще некоторая функциональность, но сначала вам нужно протестировать написанный вами код. Вам потребуется создать новый объект ShoppingCart и присвоить его переменной. Вот пример создания экземпляра класса Computer из предыдущих примеров:
+Пример кода
+
+const myComputer = new Computer();
+
+Объявите переменную cart и присвойте ей новый объект ShoppingCart. Обратите внимание на использование ключевого слова new при создании экземпляра объекта.
+
+
+const cart = new ShoppingCart();
 
 
 
