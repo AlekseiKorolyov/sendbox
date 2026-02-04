@@ -136,6 +136,7 @@ class ShoppingCart {
 };
 
 const cart = new ShoppingCart();
+const addToCartBtns = document.getElementsByClassName("add-to-cart-btn");
 
 
 
@@ -552,6 +553,17 @@ const myComputer = new Computer();
 
 
 const cart = new ShoppingCart();
+
+
+
+
+Шаг 33
+
+Вам нужно получить все кнопки «Добавить в корзину», которые вы добавили в DOM ранее. Объявите переменную addToCartBtns и присвойте ей значение вызова метода getElementsByClassName() объекта документа, передав строку "add-to-cart-btn".
+
+
+const addToCartBtns = document.getElementsByClassName("add-to-cart-btn");
+
 
 
 
