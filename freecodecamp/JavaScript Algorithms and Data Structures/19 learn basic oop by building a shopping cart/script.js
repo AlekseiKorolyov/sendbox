@@ -125,7 +125,10 @@ class ShoppingCart {
             ? currentProductCountSpan.textContent = `${currentProductCount}x`
             : productsContainer.innerHTML += `
       <div class="product" id="dessert${id}">
+        <p>
 
+        </p>
+        <p>${price}</p>
       </div>
       `;
     }
@@ -515,6 +518,15 @@ currentProductCount > 1
 
       </div>
       `;
+
+
+
+Шаг 30
+
+Внутри вашего div добавьте два элемента p. Установите текст второго элемента p равным значению переменной price.
+
+
+
 
 
 
