@@ -138,6 +138,8 @@ class ShoppingCart {
 const cart = new ShoppingCart();
 const addToCartBtns = document.getElementsByClassName("add-to-cart-btn");
 
+[...addToCartBtns].forEach();
+
 
 
 
@@ -563,6 +565,17 @@ const cart = new ShoppingCart();
 
 
 const addToCartBtns = document.getElementsByClassName("add-to-cart-btn");
+
+
+
+
+Шаг 34
+
+Вам необходимо перебрать кнопки в переменной addToCartBtns. Однако метод .getElementsByClassName() возвращает коллекцию, у которой нет метода forEach. Используйте оператор расширения для переменной addToCartBtns, чтобы преобразовать её в массив. Затем используйте метод forEach для перебора элементов массива. Пока не передавайте функцию обратного вызова.
+
+
+[...addToCartBtns].forEach();
+
 
 
 
