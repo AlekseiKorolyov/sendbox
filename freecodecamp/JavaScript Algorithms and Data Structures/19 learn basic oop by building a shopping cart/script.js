@@ -146,6 +146,7 @@ const addToCartBtns = document.getElementsByClassName("add-to-cart-btn");
     }
 );
 
+cartBtn.addEventListener("click", () => {});
 
 
 
@@ -600,6 +601,17 @@ const addToCartBtns = document.getElementsByClassName("add-to-cart-btn");
 
 
 cart.addItem(Number(event.target.id), products);
+
+
+
+
+Шаг 37
+
+Ваша корзина в данный момент не отображается на веб-странице. Чтобы сделать ее видимой, начните с добавления обработчика событий к переменной cartBtn, отслеживающего событие клика. Функция обратного вызова не требует никаких параметров.
+
+
+cartBtn.addEventListener("click", () => {});
+
 
 
 
