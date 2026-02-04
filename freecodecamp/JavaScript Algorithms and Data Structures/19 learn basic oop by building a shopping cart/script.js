@@ -138,7 +138,11 @@ class ShoppingCart {
 const cart = new ShoppingCart();
 const addToCartBtns = document.getElementsByClassName("add-to-cart-btn");
 
-[...addToCartBtns].forEach();
+[...addToCartBtns].forEach(
+    (btn) => {
+        btn.addEventListener("click", (event) => {});
+    }
+);
 
 
 
@@ -578,7 +582,14 @@ const addToCartBtns = document.getElementsByClassName("add-to-cart-btn");
 
 
 
+Шаг 35
 
+Добавьте свою функцию обратного вызова в метод forEach. Она должна принимать параметр btn. Затем в функции обратного вызова добавьте обработчик событий к btn. Обработчик событий должен отслеживать событие клика и принимать еще одну функцию обратного вызова с параметром события. Вторая функция обратного вызова должна быть пустой.
+
+
+(btn) => {
+  btn.addEventListener("click", (event) => {});
+}
 
 
 
