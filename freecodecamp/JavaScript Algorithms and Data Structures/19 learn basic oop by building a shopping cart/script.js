@@ -126,7 +126,8 @@ class ShoppingCart {
             : productsContainer.innerHTML += `
       <div class="product" id="dessert${id}">
         <p>
-
+            <span class="product-count" id="product-count-for-id${id}"></span>
+            ${name}
         </p>
         <p>${price}</p>
       </div>
@@ -524,6 +525,17 @@ currentProductCount > 1
 Шаг 30
 
 Внутри вашего div добавьте два элемента p. Установите текст второго элемента p равным значению переменной price.
+
+
+
+
+Шаг 31
+
+В первый элемент <p> добавьте элемент <span>. Присвойте элементу <span> класс `product-count` и идентификатор `product-count-for-id${id}`. Затем, после элемента <span>, добавьте в элемент <p> текст переменной `name`.
+
+
+        <span class="product-count" id="product-count-for-id${id}"></span>
+        ${name}
 
 
 
