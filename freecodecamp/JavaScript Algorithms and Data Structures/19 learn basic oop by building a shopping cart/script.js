@@ -147,6 +147,8 @@ class ShoppingCart {
         const tax = this.calculateTaxes(subTotal);
         this.total = subTotal + tax;
         cartSubTotal.textContent = `$${subTotal.toFixed(2)}`;
+        cartTaxes.textContent = `$${tax.toFixed(2)}`;
+        cartTotal.textContent = `$${this.total.toFixed(2)}`;
     }
 };
 
@@ -758,6 +760,18 @@ this.total = subTotal + tax;
 
 
 cartSubTotal.textContent = `$${subTotal.toFixed(2)}`;
+
+
+
+
+Шаг 51
+
+Следуя тому же принципу, что и для cartSubTotal, обновите cartTaxes, чтобы отображалось значение налога, и cartTotal, чтобы отображалось значение общей суммы.
+
+
+    cartTaxes.textContent = `$${tax.toFixed(2)}`;
+    cartTotal.textContent = `$${this.total.toFixed(2)}`;
+
 
 
 
