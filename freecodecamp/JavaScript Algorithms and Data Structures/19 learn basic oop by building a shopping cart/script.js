@@ -145,6 +145,7 @@ const addToCartBtns = document.getElementsByClassName("add-to-cart-btn");
     (btn) => {
         btn.addEventListener("click", (event) => {
             cart.addItem(Number(event.target.id), products);
+            totalNumberOfItems.textContent = cart.getCounts();
         });
     }
 );
@@ -652,6 +653,16 @@ cartContainer.style.display = isCartShowing ? "block" : "none";
 getCounts () {
   return this.items.length;
 }
+
+
+
+
+Шаг 42
+
+Теперь вы можете обновить общее количество товаров на веб-странице. Присвойте значение метода .getCounts() вашего объекта cart значению textContent переменной totalNumberOfItems.
+
+
+totalNumberOfItems.textContent = cart.getCounts();
 
 
 
