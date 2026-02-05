@@ -149,6 +149,7 @@ const addToCartBtns = document.getElementsByClassName("add-to-cart-btn");
 cartBtn.addEventListener("click", () => {
     isCartShowing = !isCartShowing;
     showHideCartSpan.textContent = isCartShowing ? "Hide" : "Show";
+    cartContainer.style.display = isCartShowing ? "block" : "none";
 });
 
 
@@ -626,6 +627,17 @@ isCartShowing = !isCartShowing;
 
 
 showHideCartSpan.textContent = isCartShowing ? "Hide" : "Show";
+
+
+
+
+Шаг 40
+
+Наконец, обновите свойство display объекта style переменной cartContainer, заменив его на другой тернарный оператор, который проверяет, является ли isCartShowing истинным. Если да, установите свойство display в значение "block", в противном случае — в значение "none". Теперь вы должны видеть свою корзину и добавлять в нее товары.
+
+
+cartContainer.style.display = isCartShowing ? "block" : "none";
+
 
 
 
