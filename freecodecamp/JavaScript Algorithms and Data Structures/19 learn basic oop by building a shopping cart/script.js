@@ -133,6 +133,9 @@ class ShoppingCart {
       </div>
       `;
     }
+    getCounts () {
+        return this.items.length;
+    }
 };
 
 const cart = new ShoppingCart();
@@ -637,6 +640,19 @@ showHideCartSpan.textContent = isCartShowing ? "Hide" : "Show";
 
 
 cartContainer.style.display = isCartShowing ? "block" : "none";
+
+
+
+
+Шаг 41
+
+Вам нужен способ получить доступ к общему количеству товаров в корзине. Лучший способ сделать это — добавить еще один метод в ваш класс ShoppingCart, вместо прямого доступа к массиву items. Добавьте метод getCounts в класс ShoppingCart. Он должен возвращать количество товаров в массиве items.
+
+
+getCounts () {
+  return this.items.length;
+}
+
 
 
 
