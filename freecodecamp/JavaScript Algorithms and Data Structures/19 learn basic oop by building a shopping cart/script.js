@@ -667,5 +667,16 @@ totalNumberOfItems.textContent = cart.getCounts();
 
 
 
+Шаг 43
+
+Вам также необходимо обновлять общую стоимость корзины, когда пользователь добавляет товар. Создайте метод calculateTotal в классе ShoppingCart. В этом методе объявите переменную subTotal и используйте метод reduce для массива items, чтобы вычислить сумму свойства price каждого товара в массиве. Используйте total и item в качестве параметров для вашего коллбэка. Не забудьте установить начальное значение в методе reduce.
+
+
+const subTotal = this.items.reduce((total, item) => total + item.price, 0);
+
+
+
+
+
 
  */
