@@ -144,6 +144,7 @@ class ShoppingCart {
 
     calculateTotal() {
         const subTotal = this.items.reduce((total, item) => total + item.price, 0);
+        const tax = this.calculateTaxes(subTotal);
     }
 };
 
@@ -725,6 +726,16 @@ return (this.taxRate / 100) * amount;
 
 
 return parseFloat(((this.taxRate / 100) * amount).toFixed(2));
+
+
+
+
+Шаг 48
+
+Объявите переменную tax и присвойте ей значение, полученное при вызове вашего нового метода .calculateTaxes(), передав в качестве аргумента переменную subTotal.
+
+
+const tax = this.calculateTaxes(subTotal);
 
 
 
