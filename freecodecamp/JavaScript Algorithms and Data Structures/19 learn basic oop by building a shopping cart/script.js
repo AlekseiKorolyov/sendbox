@@ -148,6 +148,7 @@ const addToCartBtns = document.getElementsByClassName("add-to-cart-btn");
 
 cartBtn.addEventListener("click", () => {
     isCartShowing = !isCartShowing;
+    showHideCartSpan.textContent = isCartShowing ? "Hide" : "Show";
 });
 
 
@@ -615,6 +616,16 @@ cartBtn.addEventListener("click", () => {});
 
 
 isCartShowing = !isCartShowing;
+
+
+
+
+Шаг 39
+
+Теперь присвойте переменной showHideCartSpan значение textContent, полученное в результате тернарного выражения, проверяющего, истинно ли значение isCartShowing. Если да, установите textContent в значение "Скрыть" "Hide", в противном случае — в значение "Показать" "Show".
+
+
+showHideCartSpan.textContent = isCartShowing ? "Hide" : "Show";
 
 
 
