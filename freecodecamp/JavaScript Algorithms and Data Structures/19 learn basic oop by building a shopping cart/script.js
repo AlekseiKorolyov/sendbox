@@ -149,6 +149,7 @@ class ShoppingCart {
         cartSubTotal.textContent = `$${subTotal.toFixed(2)}`;
         cartTaxes.textContent = `$${tax.toFixed(2)}`;
         cartTotal.textContent = `$${this.total.toFixed(2)}`;
+        return this.total;
     }
 };
 
@@ -771,6 +772,16 @@ cartSubTotal.textContent = `$${subTotal.toFixed(2)}`;
 
     cartTaxes.textContent = `$${tax.toFixed(2)}`;
     cartTotal.textContent = `$${this.total.toFixed(2)}`;
+
+
+
+
+Шаг 52
+
+Наконец, верните значение всего свойства. Не забудьте ключевое слово this.
+
+
+return this.total;
 
 
 
