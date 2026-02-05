@@ -133,8 +133,17 @@ class ShoppingCart {
       </div>
       `;
     }
+
     getCounts () {
         return this.items.length;
+    }
+
+    calculateTaxes(amount) {
+
+    }
+
+    calculateTotal() {
+        const subTotal = this.items.reduce((total, item) => total + item.price, 0);
     }
 };
 
@@ -673,6 +682,19 @@ totalNumberOfItems.textContent = cart.getCounts();
 
 
 const subTotal = this.items.reduce((total, item) => total + item.price, 0);
+
+
+
+
+Шаг 44
+
+Часть общей стоимости будет включать налог, поэтому вам также необходимо его рассчитать. Создайте метод calculateTaxes в классе ShoppingCart. Этот метод должен принимать параметр amount.
+
+
+calculateTaxes(amount) {
+
+}
+
 
 
 
