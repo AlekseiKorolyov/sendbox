@@ -145,6 +145,7 @@ class ShoppingCart {
     calculateTotal() {
         const subTotal = this.items.reduce((total, item) => total + item.price, 0);
         const tax = this.calculateTaxes(subTotal);
+        this.total = subTotal + tax;
     }
 };
 
@@ -736,6 +737,16 @@ return parseFloat(((this.taxRate / 100) * amount).toFixed(2));
 
 
 const tax = this.calculateTaxes(subTotal);
+
+
+
+
+Шаг 49
+
+Обновите total, чтобы она равнялась subTotal и tax.
+
+
+this.total = subTotal + tax;
 
 
 
