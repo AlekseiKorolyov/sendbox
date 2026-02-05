@@ -139,7 +139,7 @@ class ShoppingCart {
     }
 
     calculateTaxes(amount) {
-
+        return (this.taxRate / 100) * amount;
     }
 
     calculateTotal() {
@@ -694,6 +694,16 @@ const subTotal = this.items.reduce((total, item) => total + item.price, 0);
 calculateTaxes(amount) {
 
 }
+
+
+
+
+Шаг 45
+
+Ваш метод calculateTaxes должен возвращать значение taxRate (разделенное на 100 для перевода в проценты), умноженное на параметр amount. Для большей ясности заключите вычисление taxRate / 100 в скобки.
+
+
+return (this.taxRate / 100) * amount;
 
 
 
