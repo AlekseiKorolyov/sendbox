@@ -146,6 +146,7 @@ class ShoppingCart {
         const subTotal = this.items.reduce((total, item) => total + item.price, 0);
         const tax = this.calculateTaxes(subTotal);
         this.total = subTotal + tax;
+        cartSubTotal.textContent = `$${subTotal.toFixed(2)}`;
     }
 };
 
@@ -747,6 +748,17 @@ const tax = this.calculateTaxes(subTotal);
 
 
 this.total = subTotal + tax;
+
+
+
+
+Шаг 50
+
+В этом методе вы также обновите HTML-код. Установите значение textContent элемента cartSubTotal равным значению subTotal с фиксированным количеством знаков после запятой (2 знака после запятой). Используйте синтаксис шаблонных литералов, чтобы добавить знак доллара в начало значения.
+
+
+cartSubTotal.textContent = `$${subTotal.toFixed(2)}`;
+
 
 
 
