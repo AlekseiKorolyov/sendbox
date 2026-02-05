@@ -146,15 +146,9 @@ const addToCartBtns = document.getElementsByClassName("add-to-cart-btn");
     }
 );
 
-cartBtn.addEventListener("click", () => {});
-
-
-
-
-
-
-
-
+cartBtn.addEventListener("click", () => {
+    isCartShowing = !isCartShowing;
+});
 
 
 
@@ -612,6 +606,15 @@ cart.addItem(Number(event.target.id), products);
 
 cartBtn.addEventListener("click", () => {});
 
+
+
+
+Шаг 38
+
+Начните с инвертирования значения isCartShowing. Помните, что для инвертирования значения логического значения можно использовать логический оператор отрицания !. Присвойте инвертированное значение переменной isCartShowing.
+
+
+isCartShowing = !isCartShowing;
 
 
 
