@@ -151,6 +151,7 @@ class ShoppingCart {
         if (isCartCleared) {
             this.items = [];
             this.total = 0;
+            productsContainer.innerHTML = "";
         }
     }
 
@@ -857,6 +858,16 @@ const isCartCleared = confirm("Are you sure you want to clear all items from you
       this.items = [];
       this.total = 0;
     }
+
+
+
+
+Шаг 58
+
+Вам также необходимо начать очищать HTML-код. Установите свойство innerHTML объекта productsContainer обратно в пустую строку.
+
+
+productsContainer.innerHTML = "";
 
 
 
