@@ -152,6 +152,10 @@ class ShoppingCart {
             this.items = [];
             this.total = 0;
             productsContainer.innerHTML = "";
+            totalNumberOfItems.textContent = 0;
+            cartSubTotal.textContent = 0;
+            cartTaxes.textContent = 0;
+            cartTotal.textContent = 0;
         }
     }
 
@@ -868,6 +872,19 @@ const isCartCleared = confirm("Are you sure you want to clear all items from you
 
 
 productsContainer.innerHTML = "";
+
+
+
+
+Шаг 59
+
+Установите значение textContent для элементов totalNumberOfItems, cartSubTotal, cartTaxes и cartTotal равным 0.
+
+
+      totalNumberOfItems.textContent = 0;
+      cartSubTotal.textContent = 0;
+      cartTaxes.textContent = 0;
+      cartTotal.textContent = 0;
 
 
 
