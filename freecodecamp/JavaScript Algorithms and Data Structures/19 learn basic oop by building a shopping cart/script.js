@@ -143,6 +143,8 @@ class ShoppingCart {
             alert("Your shopping cart is already empty");
             return;
         }
+
+        const isCartCleared = confirm("Are you sure you want to clear all items from your shopping cart?");
     }
 
     calculateTaxes(amount) {
@@ -825,6 +827,16 @@ clearCart() {
       alert("Your shopping cart is already empty");
       return;
     }
+
+
+
+
+Шаг 56
+
+В браузерах есть встроенная функция confirm(), которая отображает пользователю запрос на подтверждение. Функция confirm() принимает строку, которая представляет собой сообщение, отображаемое пользователю. Она возвращает true, если пользователь подтверждает, и false, если пользователь отменяет. Объявите переменную isCartCleared и присвойте ей значение вызова функции confirm() со строкой "Вы уверены, что хотите удалить все товары из вашей корзины?".
+
+
+const isCartCleared = confirm("Are you sure you want to clear all items from your shopping cart?");
 
 
 
