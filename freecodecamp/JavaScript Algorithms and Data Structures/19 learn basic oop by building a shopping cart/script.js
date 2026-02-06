@@ -138,6 +138,10 @@ class ShoppingCart {
         return this.items.length;
     }
 
+    clearCart() {
+
+    }
+
     calculateTaxes(amount) {
         return parseFloat(((this.taxRate / 100) * amount).toFixed(2));
     }
@@ -793,6 +797,19 @@ return this.total;
 
 
 cart.calculateTotal();
+
+
+
+
+Шаг 54
+
+Последняя функция — позволить пользователям очистить корзину. Добавьте метод clearCart() в класс ShoppingCart.
+
+
+clearCart() {
+
+}
+
 
 
 
