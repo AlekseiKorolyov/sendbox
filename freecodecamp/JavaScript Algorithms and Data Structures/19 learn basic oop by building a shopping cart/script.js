@@ -82,21 +82,21 @@ const products = [
         name: "Lemon Cupcakes (4 Pack)",
         price: 12.99,
         category: "Cupcake",
-    }
-
+    },
 ];
 
 products.forEach(
-    ({name, id, price, category}) => {
+    ({ name, id, price, category }) => {
         dessertCards.innerHTML += `
-    <div class="dessert-card">
+      <div class="dessert-card">
         <h2>${name}</h2>
         <p class="dessert-price">$${price}</p>
         <p class="product-category">Category: ${category}</p>
         <button 
-            id="${id}" 
-            class="btn add-to-cart-btn">Add to cart</button>
-    </div>
+          id="${id}" 
+          class="btn add-to-cart-btn">Add to cart
+        </button>
+      </div>
     `;
     }
 );
@@ -114,7 +114,7 @@ class ShoppingCart {
         this.items.push(product);
 
         const totalCountPerProduct = {};
-        this.items.forEach(dessert => {
+        this.items.forEach((dessert) => {
             totalCountPerProduct[dessert.id] = (totalCountPerProduct[dessert.id] || 0) + 1;
         })
 
@@ -124,17 +124,16 @@ class ShoppingCart {
         currentProductCount > 1
             ? currentProductCountSpan.textContent = `${currentProductCount}x`
             : productsContainer.innerHTML += `
-      <div class="product" id="dessert${id}">
+      <div id="dessert${id}" class="product">
         <p>
-            <span class="product-count" id="product-count-for-id${id}"></span>
-            ${name}
+          <span class="product-count" id="product-count-for-id${id}"></span>${name}
         </p>
         <p>${price}</p>
       </div>
       `;
     }
 
-    getCounts () {
+    getCounts() {
         return this.items.length;
     }
 
@@ -183,7 +182,7 @@ const addToCartBtns = document.getElementsByClassName("add-to-cart-btn");
             cart.addItem(Number(event.target.id), products);
             totalNumberOfItems.textContent = cart.getCounts();
             cart.calculateTotal();
-        });
+        })
     }
 );
 
@@ -193,6 +192,7 @@ cartBtn.addEventListener("click", () => {
     cartContainer.style.display = isCartShowing ? "block" : "none";
 });
 
+clearCartBtn.addEventListener("click", cart.clearCart.bind(cart));
 
 
 
@@ -886,6 +886,15 @@ productsContainer.innerHTML = "";
       cartTaxes.textContent = 0;
       cartTotal.textContent = 0;
 
+
+
+
+Шаг 60
+
+Ваш последний шаг — сделать кнопку очистки функциональной. Добавьте обработчик события клика к clearCartBtn. В качестве обратного вызова вы можете передать cart.clearCart напрямую. Однако это не сработает, поскольку контекстом будет элемент clearCartBtn. Вам необходимо привязать метод clearCart к объекту корзины. Вы можете сделать это, передав cart.clearCart.bind(cart) в качестве обратного вызова. И на этом ваш проект корзины покупок завершен!
+
+
+clearCartBtn.addEventListener("click", cart.clearCart.bind(cart));
 
 
 
