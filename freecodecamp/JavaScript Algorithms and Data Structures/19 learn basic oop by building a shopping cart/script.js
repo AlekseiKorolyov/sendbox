@@ -139,7 +139,10 @@ class ShoppingCart {
     }
 
     clearCart() {
-
+        if (!this.items.length) {
+            alert("Your shopping cart is already empty");
+            return;
+        }
     }
 
     calculateTaxes(amount) {
@@ -809,6 +812,19 @@ cart.calculateTotal();
 clearCart() {
 
 }
+
+
+
+
+Шаг 55
+
+Первое, что вам следует сделать, это проверить, пуст ли массив items. Если да, выведите пользователю сообщение с текстом «Ваша корзина уже пуста», затем вернитесь из функции. Помните, что 0 — это ложное значение, поэтому вы можете использовать оператор ! для проверки, пуст ли массив. После вывода сообщения вернитесь из функции, чтобы остановить выполнение.
+
+
+    if (!this.items.length) {
+      alert("Your shopping cart is already empty");
+      return;
+    }
 
 
 
