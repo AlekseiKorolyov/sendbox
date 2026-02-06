@@ -144,7 +144,14 @@ class ShoppingCart {
             return;
         }
 
-        const isCartCleared = confirm("Are you sure you want to clear all items from your shopping cart?");
+        const isCartCleared = confirm(
+            "Are you sure you want to clear all items from your shopping cart?"
+        );
+
+        if (isCartCleared) {
+            this.items = [];
+            this.total = 0;
+        }
     }
 
     calculateTaxes(amount) {
@@ -838,6 +845,18 @@ clearCart() {
 
 const isCartCleared = confirm("Are you sure you want to clear all items from your shopping cart?");
 
+
+
+
+Шаг 57
+
+Вы хотите очистить корзину только в том случае, если пользователь подтвердит запрос. Создайте оператор if, который проверяет, подтвердил ли пользователь запрос. В операторе if установите свойство items обратно в пустой массив, а затем установите свойство total равным 0.
+
+
+    if (isCartCleared) {
+      this.items = [];
+      this.total = 0;
+    }
 
 
 
