@@ -1,8 +1,9 @@
 const startBtn = document.getElementById("start-btn");
 const canvas = document.getElementById("canvas");
-
 const startScreen = document.querySelector(".start-screen");
 const checkpointScreen = document.querySelector(".checkpoint-screen");
+
+const checkpointMessage = document.querySelector(".checkpoint-screen > p");
 
 
 
@@ -33,6 +34,15 @@ const checkpointScreen = document.querySelector(".checkpoint-screen");
 
 Далее вам потребуется использовать document.querySelector, чтобы получить элементы .start-screen и .checkpoint-screen. Сохраните их в константных переменных с именами startScreen и checkpointScreen соответственно.
 
+
+
+
+Шаг 3
+
+Следующий шаг — выбрать элемент абзаца внутри элемента `.checkpoint-screen`. Используйте `document.querySelector` и комбинатор `>` для выбора элемента абзаца. Присвойте это значение константной переменной с именем `checkpointMessage`.
+
+
+const checkpointMessage = document.querySelector(".checkpoint-screen > p");
 
 
 
