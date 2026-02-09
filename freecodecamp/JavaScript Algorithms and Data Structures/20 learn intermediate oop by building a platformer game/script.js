@@ -9,6 +9,8 @@ canvas.height = innerHeight;
 const gravity = 0.5;
 let isCheckpointCollisionDetectionActive = true;
 
+const proportionalSize = (size) => {};
+
 
 
 
@@ -115,6 +117,18 @@ const gravity = 0.5;
 
 
 let isCheckpointCollisionDetectionActive = true;
+
+
+
+
+Шаг 10
+
+При разработке игры вам необходимо убедиться, что размеры элементов в игре адаптивны и подстраиваются под разные размеры экрана. Начните с создания стрелочной функции с именем proportionalSize, которая принимает в качестве параметра размер size.
+
+
+const proportionalSize = (size) => {};
+
+
 
 
 
