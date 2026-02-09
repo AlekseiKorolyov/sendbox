@@ -3,8 +3,9 @@ const canvas = document.getElementById("canvas");
 const startScreen = document.querySelector(".start-screen");
 const checkpointScreen = document.querySelector(".checkpoint-screen");
 const checkpointMessage = document.querySelector(".checkpoint-screen > p");
-
 const ctx = canvas.getContext("2d");
+
+canvas.width;
 
 
 
@@ -59,6 +60,21 @@ canvas.getContext("2d");
 
 
 const ctx = canvas.getContext("2d");
+
+
+
+
+Шаг 5
+
+Элемент canvas имеет свойство width, которое представляет собой положительное число, обозначающее ширину холста. Пример кода
+
+canvas.width
+
+Ниже объявлений констант добавьте свойство width к переменной canvas.
+
+
+canvas.width;
+
 
 
 
