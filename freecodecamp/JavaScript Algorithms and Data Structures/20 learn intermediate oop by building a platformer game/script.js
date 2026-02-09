@@ -9,7 +9,9 @@ canvas.height = innerHeight;
 const gravity = 0.5;
 let isCheckpointCollisionDetectionActive = true;
 
-const proportionalSize = (size) => {};
+const proportionalSize = (size) => {
+    return innerHeight < 500 ? Math.ceil((size / 500) * innerHeight) : size;
+};
 
 
 
@@ -127,6 +129,16 @@ let isCheckpointCollisionDetectionActive = true;
 
 
 const proportionalSize = (size) => {};
+
+
+
+
+Шаг 11
+
+Ширина и высота основного игрока, платформ и контрольных точек будут пропорционально зависеть от внутренней высоты экрана браузера. Цель состоит в том, чтобы сделать игру отзывчивой и визуально согласованной на экранах разных размеров. Внутри вашей функции proportionalSize вам нужно будет вернуть тернарный оператор, который проверяет, меньше ли внутренняя высота 500. Если да, верните Math.ceil((size / 500) * innerHeight), в противном случае верните size.
+
+
+return innerHeight < 500 ? Math.ceil((size / 500) * innerHeight) : size;
 
 
 
