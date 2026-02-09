@@ -19,6 +19,11 @@ class Player {
         this.position = {
             x: proportionalSize(10),
             y: proportionalSize(400),
+        };
+
+        this.velocity = {
+            x: 0,
+            y: 0,
         }
     }
 }
@@ -191,6 +196,16 @@ this.position = {};
       x: proportionalSize(10),
       y: proportionalSize(400),
     }
+
+
+
+
+Шаг 16 Ниже объекта позиционирования используйте ключевое слово `this`, чтобы присвоить свойству `velocity` значение объекта. Внутри этого нового объекта `velocity` создайте ключ с именем `x` со значением `0` и новый ключ с именем `y` со значением `0`. Свойство `velocity` будет использоваться для хранения скорости игрока в направлениях x и y.
+
+
+    this.velocity ={
+      x: 0,
+      y: 0,
 
 
 
