@@ -4,8 +4,9 @@ const startScreen = document.querySelector(".start-screen");
 const checkpointScreen = document.querySelector(".checkpoint-screen");
 const checkpointMessage = document.querySelector(".checkpoint-screen > p");
 const ctx = canvas.getContext("2d");
-
 canvas.width = innerWidth;
+canvas.height = innerHeight;
+const gravity = 0.5;
 
 
 
@@ -94,6 +95,17 @@ canvas.width = innerWidth;
 
 
 canvas.height = innerHeight;
+
+
+
+
+Шаг 8
+
+В вашей платформенной игре главному игроку нужно будет прыгать между различными платформами. После прыжка игрока нужно будет применить гравитацию, чтобы вернуть его на землю. Создайте новую константную переменную с именем gravity и присвойте ей число 0,5.
+
+
+const gravity = 0.5;
+
 
 
 
