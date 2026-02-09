@@ -34,6 +34,7 @@ class Player {
         this.draw();
         this.position.x += this.velocity.x;
         this.position.y += this.velocity.y;
+
         if ((this.velocity.y + this.height + this.position.y) <= canvas.height) {
             if (this.position.y < 0) {
                 this.position.y = 0;
@@ -43,8 +44,9 @@ class Player {
         } else {
             this.velocity.y = 0;
         }
-        if (this.position.x < this.width) {
 
+        if (this.position.x < this.width) {
+            this.position.x = this.width;
         }
     }
 }
@@ -401,6 +403,16 @@ this.velocity.y += gravity;
 if (this.position.x < this.width) {
 
 }
+
+
+
+
+Шаг 32
+
+Внутри оператора if присвойте ширину по оси X позиции игрока.
+
+
+this.position.x = this.width;
 
 
 
