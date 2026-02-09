@@ -50,12 +50,12 @@ class Player {
         }
 
         if (this.position.x >= canvas.width - this.width * 2) {
-            this.position.x >= canvas.width - this.width * 2
+            this.position.x = canvas.width - this.width * 2;
         }
     }
 }
 
-
+const player = new Player();
 
 
 
@@ -439,6 +439,16 @@ if (this.position.x >= canvas.width - this.width * 2) {
 
 
 this.position.x >= canvas.width - this.width * 2
+
+
+
+
+Шаг 35
+
+Следующий шаг — использовать ключевое слово `new` для создания нового экземпляра объекта `Player` и присвоить его новой константной переменной с именем `player`.
+
+
+const player = new Player();
 
 
 
