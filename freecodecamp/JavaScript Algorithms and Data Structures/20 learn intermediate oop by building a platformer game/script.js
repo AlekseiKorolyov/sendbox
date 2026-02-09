@@ -31,7 +31,7 @@ class Player {
         ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
     }
     update() {
-
+        this.draw();
     }
 }
 
@@ -274,6 +274,18 @@ ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
 
   update() {
 
+  }
+
+
+
+
+Шаг 22
+
+Внутри метода update() вызовите метод draw(), чтобы гарантировать, что игрок будет постоянно отображаться на экране по мере обновления игры. Не забудьте добавить ключевое слово this.
+
+
+  update() {
+    this.draw();
   }
 
 
