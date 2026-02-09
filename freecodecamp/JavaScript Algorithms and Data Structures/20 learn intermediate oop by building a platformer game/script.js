@@ -39,6 +39,7 @@ class Player {
                 this.position.y = 0;
                 this.velocity.y = gravity;
             }
+            this.velocity.y += gravity;
         }
     }
 }
@@ -361,6 +362,16 @@ this.position.y += this.velocity.y;
 
 
 this.velocity.y = gravity;
+
+
+
+
+Шаг 29
+
+Ниже внутреннего оператора if используйте оператор присваивания сложения, чтобы добавить силу тяжести к скорости по оси Y.
+
+
+this.velocity.y += gravity;
 
 
 
