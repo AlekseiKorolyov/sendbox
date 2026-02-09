@@ -7,7 +7,7 @@ const ctx = canvas.getContext("2d");
 canvas.width = innerWidth;
 canvas.height = innerHeight;
 const gravity = 0.5;
-
+let isCheckpointCollisionDetectionActive = true;
 
 
 
@@ -105,6 +105,16 @@ canvas.height = innerHeight;
 
 
 const gravity = 0.5;
+
+
+
+
+Шаг 9
+
+В игре игроку будет предоставлена возможность пересекать различные контрольные точки. Вам необходимо отслеживать статус обнаружения столкновений на контрольных точках. Используйте команду `let` для создания новой переменной с именем `isCheckpointCollisionDetectionActive` и присвойте ей значение `true`.
+
+
+let isCheckpointCollisionDetectionActive = true;
 
 
 
