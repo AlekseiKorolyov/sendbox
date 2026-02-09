@@ -27,7 +27,9 @@ class Player {
         this.height = proportionalSize(40);
     }
 
-    draw() {}
+    draw() {
+        ctx.fillStyle = "#99c9ff";
+    }
 }
 
 
@@ -230,6 +232,18 @@ this.position = {};
 
 
 draw() {}
+
+
+
+
+Шаг 19
+
+Теперь вам нужно задать цвет для вашего игрока. В методе draw() присвойте строку "#99c9ff" переменной ctx.fillStyle.
+
+
+  draw() {
+    ctx.fillStyle = "#99c9ff";
+  }
 
 
 
