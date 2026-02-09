@@ -16,7 +16,10 @@ const proportionalSize = (size) => {
 
 class Player {
     constructor() {
-        this.position = {};
+        this.position = {
+            x: proportionalSize(10),
+            y: proportionalSize(400),
+        }
     }
 }
 
@@ -175,6 +178,19 @@ class Player {};
 
 
 this.position = {};
+
+
+
+
+Шаг 15
+
+Внутри объекта position добавьте новый ключ с именем x и значением proportionalSize(10). После этого добавьте еще один ключ с именем y и значением proportionalSize(400). Здесь необходимо использовать функцию proportionalSize, чтобы гарантировать, что положение игрока всегда пропорционально размеру экрана. Это важно, поскольку вы хотите, чтобы игрок мог перемещаться по экрану независимо от его размера.
+
+
+    this.position = {
+      x: proportionalSize(10),
+      y: proportionalSize(400),
+    }
 
 
 
