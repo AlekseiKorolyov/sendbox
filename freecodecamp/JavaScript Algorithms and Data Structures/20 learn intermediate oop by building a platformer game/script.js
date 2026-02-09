@@ -13,7 +13,6 @@ const proportionalSize = (size) => {
     return innerHeight < 500 ? Math.ceil((size / 500) * innerHeight) : size;
 };
 
-
 class Player {
     constructor() {
         this.position = {
@@ -27,6 +26,8 @@ class Player {
         this.width = proportionalSize(40);
         this.height = proportionalSize(40);
     }
+
+    draw() {}
 }
 
 
@@ -219,6 +220,16 @@ this.position = {};
 
     this.width = proportionalSize(40);
     this.height = proportionalSize(40);
+
+
+
+
+Шаг 18
+
+Следующий шаг — создание метода draw(), который будет отвечать за определение ширины, высоты, положения и цвета заливки игрока. Ниже конструктора создайте пустой метод draw().
+
+
+draw() {}
 
 
 
