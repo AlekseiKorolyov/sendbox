@@ -50,7 +50,7 @@ class Player {
         }
 
         if (this.position.x >= canvas.width - this.width * 2) {
-
+            this.position.x >= canvas.width - this.width * 2
         }
     }
 }
@@ -429,6 +429,16 @@ this.position.x = this.width;
 if (this.position.x >= canvas.width - this.width * 2) {
 
 }
+
+
+
+
+Шаг 34
+
+Внутри оператора if присвойте переменной this.position.x значение canvas.width - this.width * 2. Это гарантирует, что позиция игрока по оси X никогда не выйдет за правый край холста.
+
+
+this.position.x >= canvas.width - this.width * 2
 
 
 
