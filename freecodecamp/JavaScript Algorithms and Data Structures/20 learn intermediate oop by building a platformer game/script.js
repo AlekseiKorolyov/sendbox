@@ -20,11 +20,12 @@ class Player {
             x: proportionalSize(10),
             y: proportionalSize(400),
         };
-
         this.velocity = {
             x: 0,
             y: 0,
         }
+        this.width = proportionalSize(40);
+        this.height = proportionalSize(40);
     }
 }
 
@@ -206,6 +207,18 @@ this.position = {};
     this.velocity ={
       x: 0,
       y: 0,
+    }
+
+
+
+
+Шаг 17
+
+Ниже объекта Velocity используйте ключевое слово this, чтобы установить свойство width равным proportionalSize(40). Ниже свойства width используйте ключевое слово this, чтобы установить свойство height равным proportionalSize(40). Здесь вы используете функцию proportionalSize() для установки свойств width и height вашего класса пропорционально высоте экрана.
+
+
+    this.width = proportionalSize(40);
+    this.height = proportionalSize(40);
 
 
 
