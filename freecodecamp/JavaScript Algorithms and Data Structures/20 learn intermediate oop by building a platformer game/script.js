@@ -16,7 +16,7 @@ const proportionalSize = (size) => {
 
 class Player {
     constructor() {
-
+        this.position = {};
     }
 }
 
@@ -166,6 +166,15 @@ class Player {};
 
   }
 
+
+
+
+Шаг 14
+
+Внутри конструктора используйте ключевое слово `this`, чтобы установить свойство `position` в пустой объект.
+
+
+this.position = {};
 
 
 
