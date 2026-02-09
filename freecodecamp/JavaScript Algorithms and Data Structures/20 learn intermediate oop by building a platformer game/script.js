@@ -29,6 +29,7 @@ class Player {
 
     draw() {
         ctx.fillStyle = "#99c9ff";
+        ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
     }
 }
 
@@ -245,6 +246,21 @@ draw() {}
     ctx.fillStyle = "#99c9ff";
   }
 
+
+
+
+Шаг 20
+
+Ниже метода `ctx.fillStyle` необходимо создать фигуру игрока, вызвав метод `fillRect()` на объекте `ctx`, который вы создали ранее.
+
+Пример кода
+
+fillRect(x, y, width, height)
+
+Внутри метода `fillRect()` добавьте значения `this.position.x`, `this.position.y`, `this.width` и `this.height`.
+
+
+ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
 
 
 
