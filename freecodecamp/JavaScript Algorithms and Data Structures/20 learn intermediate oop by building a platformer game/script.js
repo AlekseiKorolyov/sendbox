@@ -48,6 +48,10 @@ class Player {
         if (this.position.x < this.width) {
             this.position.x = this.width;
         }
+
+        if (this.position.x >= canvas.width - this.width * 2) {
+
+        }
     }
 }
 
@@ -413,6 +417,18 @@ if (this.position.x < this.width) {
 
 
 this.position.x = this.width;
+
+
+
+
+Шаг 33
+
+Для последнего условия вам нужно проверить, не вышла ли позиция по оси X игрока за правый край холста. Если да, вам нужно установить позицию по оси X игрока на максимальное значение, чтобы игрок случайно не вышел за пределы экрана справа. Внутри вашего метода обновления создайте оператор if, который проверяет, равно ли this.position.x >= canvas.width - this.width * 2.
+
+
+if (this.position.x >= canvas.width - this.width * 2) {
+
+}
 
 
 
