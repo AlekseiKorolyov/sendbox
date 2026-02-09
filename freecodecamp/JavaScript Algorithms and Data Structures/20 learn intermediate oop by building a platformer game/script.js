@@ -34,6 +34,9 @@ class Player {
         this.draw();
         this.position.x += this.velocity.x;
         this.position.y += this.velocity.y;
+        if ((this.velocity.y + this.height + this.position.y) <= canvas.height) {
+
+        };
     }
 }
 
@@ -309,6 +312,18 @@ this.position.x += this.velocity.x;
 
 
 this.position.y += this.velocity.y;
+
+
+
+
+Шаг 25
+
+Сейчас, когда игрок подпрыгивает, он может выйти за пределы высоты холста. Чтобы это исправить, вам нужно добавить условие, которое предотвратит падение игрока за пределы высоты холста. Создайте пустое условное выражение, которое проверяет, меньше ли или равна ли сумма координат игрока по оси Y, его высоты и скорости по оси Y высоте холста.
+
+
+    if ((this.velocity.y + this.height + this.position.y) <= canvas.height) {
+
+    };
 
 
 
