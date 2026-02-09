@@ -14,7 +14,11 @@ const proportionalSize = (size) => {
 };
 
 
+class Player {
+    constructor() {
 
+    }
+}
 
 
 
@@ -149,6 +153,19 @@ return innerHeight < 500 ? Math.ceil((size / 500) * innerHeight) : size;
 
 
 class Player {};
+
+
+
+
+Шаг 13
+
+В классе Player вам необходимо определить значения позиции, скорости, ширины и высоты игрока. Все эти значения будут определены в методе конструктора. Создайте пустой конструктор внутри класса Player.
+
+
+  constructor() {
+
+  }
+
 
 
 
