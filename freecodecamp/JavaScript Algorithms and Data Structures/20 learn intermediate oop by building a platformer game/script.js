@@ -2,8 +2,9 @@ const startBtn = document.getElementById("start-btn");
 const canvas = document.getElementById("canvas");
 const startScreen = document.querySelector(".start-screen");
 const checkpointScreen = document.querySelector(".checkpoint-screen");
-
 const checkpointMessage = document.querySelector(".checkpoint-screen > p");
+
+const ctx = canvas.getContext("2d");
 
 
 
@@ -43,6 +44,22 @@ const checkpointMessage = document.querySelector(".checkpoint-screen > p");
 
 
 const checkpointMessage = document.querySelector(".checkpoint-screen > p");
+
+
+
+
+Шаг 4
+
+Прежде чем приступить к разработке функциональности игры, необходимо настроить возможность добавления 2D-графики. API Canvas можно использовать для создания графики в играх с помощью JavaScript и элемента HTML canvas. Вам потребуется использовать метод getContext, который предоставит контекст для отображения графики.
+Пример кода:
+
+canvas.getContext("2d");
+
+Присвойте этот метод getContext константной переменной с именем ctx.
+
+
+const ctx = canvas.getContext("2d");
+
 
 
 
