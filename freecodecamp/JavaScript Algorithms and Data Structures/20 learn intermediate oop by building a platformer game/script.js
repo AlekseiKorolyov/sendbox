@@ -33,6 +33,7 @@ class Player {
     update() {
         this.draw();
         this.position.x += this.velocity.x;
+        this.position.y += this.velocity.y;
     }
 }
 
@@ -298,6 +299,16 @@ ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
 
 
 this.position.x += this.velocity.x;
+
+
+
+
+Шаг 24
+
+Когда игрок подпрыгивает, вам нужно добавить логику для корректировки его скорости. Используйте оператор присваивания сложения, чтобы добавить координату Y скорости к координате Y игрока. Не забудьте добавить ключевое слово this для скорости и положения.
+
+
+this.position.y += this.velocity.y;
 
 
 
