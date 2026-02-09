@@ -5,7 +5,7 @@ const checkpointScreen = document.querySelector(".checkpoint-screen");
 const checkpointMessage = document.querySelector(".checkpoint-screen > p");
 const ctx = canvas.getContext("2d");
 
-canvas.width;
+canvas.width = innerWidth;
 
 
 
@@ -74,6 +74,16 @@ canvas.width
 
 
 canvas.width;
+
+
+
+
+Шаг 6
+
+Свойство innerWidth — это число, представляющее внутреннюю ширину окна браузера. Присвойте значение innerWidth свойству canvas.width.
+
+
+canvas.width = innerWidth;
 
 
 
