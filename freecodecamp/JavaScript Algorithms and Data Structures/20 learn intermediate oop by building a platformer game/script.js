@@ -32,6 +32,7 @@ class Player {
     }
     update() {
         this.draw();
+        this.position.x += this.velocity.x;
     }
 }
 
@@ -287,6 +288,16 @@ ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
   update() {
     this.draw();
   }
+
+
+
+
+Шаг 23
+
+Когда игрок движется вправо, вам потребуется скорректировать его скорость. Используйте оператор присваивания сложения, чтобы сложить координату x скорости с координатой x игрока. Не забудьте добавить ключевое слово this для скорости и положения.
+
+
+this.position.x += this.velocity.x;
 
 
 
