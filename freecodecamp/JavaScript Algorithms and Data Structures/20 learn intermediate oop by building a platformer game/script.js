@@ -88,6 +88,17 @@ canvas.width = innerWidth;
 
 
 
+Шаг 7
+
+Свойство innerHeight — это число, представляющее внутреннюю высоту окна браузера. Ниже свойства canvas.width добавьте свойство height к переменной canvas и присвойте ей значение innerHeight.
+
+
+canvas.height = innerHeight;
+
+
+
+
+
 
 
 
