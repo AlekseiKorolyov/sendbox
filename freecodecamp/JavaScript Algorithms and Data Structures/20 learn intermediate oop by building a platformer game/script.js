@@ -40,6 +40,8 @@ class Player {
                 this.velocity.y = gravity;
             }
             this.velocity.y += gravity;
+        } else {
+            this.velocity.y = 0;
         }
     }
 }
@@ -372,6 +374,19 @@ this.velocity.y = gravity;
 
 
 this.velocity.y += gravity;
+
+
+
+
+Шаг 30
+
+Добавьте условие else, которое присваивает значение 0 переменной this.velocity.y.
+
+
+    } else {
+      this.velocity.y = 0;
+    }
+
 
 
 
