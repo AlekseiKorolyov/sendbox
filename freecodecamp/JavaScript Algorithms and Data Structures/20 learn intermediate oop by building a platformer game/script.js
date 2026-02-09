@@ -35,8 +35,10 @@ class Player {
         this.position.x += this.velocity.x;
         this.position.y += this.velocity.y;
         if ((this.velocity.y + this.height + this.position.y) <= canvas.height) {
+            if (this.position.y < 0) {
 
-        };
+            }
+        }
     }
 }
 
@@ -325,6 +327,17 @@ this.position.y += this.velocity.y;
 
     };
 
+
+
+
+Шаг 26
+
+В операторе if добавьте еще один оператор if для проверки, меньше ли позиция игрока по оси Y, чем 0.
+
+
+      if (this.position.y < 0) {
+
+      }
 
 
 
