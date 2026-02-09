@@ -37,6 +37,7 @@ class Player {
         if ((this.velocity.y + this.height + this.position.y) <= canvas.height) {
             if (this.position.y < 0) {
                 this.position.y = 0;
+                this.velocity.y = gravity;
             }
         }
     }
@@ -351,6 +352,15 @@ this.position.y += this.velocity.y;
         this.position.y = 0;
       }
 
+
+
+
+Шаг 28
+
+Ниже this.position.y = 0 присвойте gravity   Y координате скорости.
+
+
+this.velocity.y = gravity;
 
 
 
