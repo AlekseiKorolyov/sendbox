@@ -79,6 +79,10 @@ const keys = {
     },
 };
 
+const movePlayer = (key, xVelocity, isPressed) => {
+
+};
+
 const startGame = () => {
     canvas.style.display = "block";
     startScreen.style.display = "none";
@@ -634,6 +638,17 @@ else {
     player.velocity.x = 0;
   }
 
+
+
+
+Шаг 50
+
+Следующий шаг — добавить функциональность, отвечающую за перемещение игрока по экрану. Создайте новую стрелочную функцию с именем movePlayer, которая имеет три параметра: key, xVelocity и isPressed.
+
+
+const movePlayer = (key, xVelocity, isPressed) => {
+
+};
 
 
 
