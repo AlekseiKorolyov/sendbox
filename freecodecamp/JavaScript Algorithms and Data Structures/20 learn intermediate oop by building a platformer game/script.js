@@ -57,6 +57,10 @@ class Player {
 
 const player = new Player();
 
+const animate = () => {
+
+};
+
 const startGame = () => {
     canvas.style.display = "block";
     startScreen.style.display = "none";
@@ -498,6 +502,18 @@ player.draw();
 
 
 startBtn.addEventListener("click", startGame);
+
+
+
+
+Шаг 40
+
+Теперь, когда вы видите плеер на экране, пора начать добавлять функциональность для перемещения плеера по экрану. Создайте новую пустую функцию стрелки с именем animate.
+
+
+const animate = () => {
+
+};
 
 
 
