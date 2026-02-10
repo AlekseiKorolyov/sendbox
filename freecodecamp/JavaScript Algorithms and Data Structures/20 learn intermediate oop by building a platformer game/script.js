@@ -58,7 +58,7 @@ class Player {
 const player = new Player();
 
 const animate = () => {
-
+    requestAnimationFrame(animate);
 };
 
 const startGame = () => {
@@ -514,6 +514,16 @@ startBtn.addEventListener("click", startGame);
 const animate = () => {
 
 };
+
+
+
+
+Шаг 41
+
+Веб-API requestAnimationFrame() принимает функцию обратного вызова и используется для обновления анимации на экране. Функция animate отвечает за обновление положения игрока и его непрерывную отрисовку на холсте. Внутри функции animate вызовите API requestAnimationFrame() и передайте в качестве аргумента функцию animate.
+
+
+requestAnimationFrame(animate);
 
 
 
