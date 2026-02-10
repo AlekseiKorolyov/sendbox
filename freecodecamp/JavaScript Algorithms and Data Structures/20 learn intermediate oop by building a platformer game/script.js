@@ -60,6 +60,7 @@ const player = new Player();
 const startGame = () => {
     canvas.style.display = "block";
     startScreen.style.display = "none";
+    player.draw();
 };
 
 
@@ -477,6 +478,16 @@ const startGame = () => {
 
   canvas.style.display = "block";
   startScreen.style.display = "none";
+
+
+
+
+Шаг 38
+
+Чтобы визуализировать игрока на экране, необходимо нарисовать его на холсте. Внутри функции startGame вызовите метод .draw() вашего объекта player.
+
+
+player.draw();
 
 
 
