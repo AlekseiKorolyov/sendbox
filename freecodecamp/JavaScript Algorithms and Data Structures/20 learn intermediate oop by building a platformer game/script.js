@@ -85,6 +85,7 @@ const movePlayer = (key, xVelocity, isPressed) => {
         player.velocity.y = 0;
         return;
     }
+    switch (key) {};
 };
 
 const startGame = () => {
@@ -678,6 +679,15 @@ const movePlayer = (key, xVelocity, isPressed) => {
     player.velocity.y = 0;
     return
 
+
+
+
+Шаг 53
+
+Ниже оператора if создайте оператор switch со значением key.
+
+
+switch (key) {};
 
 
 
