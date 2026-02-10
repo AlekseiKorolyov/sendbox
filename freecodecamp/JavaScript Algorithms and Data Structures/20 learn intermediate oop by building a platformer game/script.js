@@ -63,7 +63,7 @@ const startGame = () => {
     player.draw();
 };
 
-
+startBtn.addEventListener("click", startGame);
 
 
 
@@ -488,6 +488,16 @@ const startGame = () => {
 
 
 player.draw();
+
+
+
+
+Шаг 39
+
+Теперь пришло время добавить функциональность для кнопки «Начать игру». Добавьте обработчик события addEventListener к startBtn и передайте в него событие клика и ссылку на функцию startGame. Нажмите на кнопку «Начать игру», и вы увидите на экране светло-голубой квадрат, представляющий основного игрока.
+
+
+startBtn.addEventListener("click", startGame);
 
 
 
