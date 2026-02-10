@@ -65,6 +65,8 @@ const animate = () => {
         player.velocity.x = 5;
     }  else if (keys.leftKey.pressed && player.position.x > proportionalSize(100)) {
         player.velocity.x = -5;
+    } else {
+        player.velocity.x = 0;
     }
 };
 
@@ -620,6 +622,17 @@ player.velocity.x = 5;
     player.velocity.x = -5;
   }
 
+
+
+
+Шаг 49
+
+Добавьте блок else, который присваивает число 0 скорости игрока по оси x.
+
+
+else {
+    player.velocity.x = 0;
+  }
 
 
 
