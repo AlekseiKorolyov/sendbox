@@ -58,7 +58,8 @@ class Player {
 const player = new Player();
 
 const startGame = () => {
-
+    canvas.style.display = "block";
+    startScreen.style.display = "none";
 };
 
 
@@ -465,6 +466,17 @@ const player = new Player();
 const startGame = () => {
 
 };
+
+
+
+
+Шаг 37
+
+Внутри функции startGame вам нужно отобразить элемент canvas и скрыть контейнер startScreen. Используйте canvas.style.display, чтобы изменить значение display на "block". Ниже используйте startScreen.style.display, чтобы изменить значение display на "none".
+
+
+  canvas.style.display = "block";
+  startScreen.style.display = "none";
 
 
 
