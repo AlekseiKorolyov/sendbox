@@ -87,6 +87,10 @@ const movePlayer = (key, xVelocity, isPressed) => {
     }
     switch (key) {
         case "ArrowLeft":
+            keys.leftKey.pressed = isPressed;
+            if (xVelocity === 0) {
+                player.velocity.x = xVelocity;
+            }
     }
 };
 
@@ -703,6 +707,21 @@ switch (key) {}
     case "ArrowLeft":
   }
 
+
+
+
+Шаг 55
+
+Внутри блока case присвойте переменной isPressed значение keys.leftKey.pressed. Ниже добавьте оператор if, который проверяет, равно ли xVelocity нулю. Если да, присвойте значение xVelocity переменной player.velocity.x.
+
+
+  switch (key) {
+    case "ArrowLeft":
+    keys.leftKey.pressed = isPressed;
+    if (xVelocity === 0) {
+      player.velocity.x = xVelocity;
+    }
+  }
 
 
 
