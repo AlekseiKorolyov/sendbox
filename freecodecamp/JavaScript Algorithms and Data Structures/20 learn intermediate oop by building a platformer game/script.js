@@ -57,6 +57,10 @@ class Player {
 
 const player = new Player();
 
+const startGame = () => {
+
+};
+
 
 
 
@@ -449,6 +453,18 @@ this.position.x >= canvas.width - this.width * 2
 
 
 const player = new Player();
+
+
+
+
+Шаг 36
+
+Теперь пришло время увидеть вашего нового игрока, нарисованного на экране. Начните с создания пустой стрелочной функции с именем startGame.
+
+
+const startGame = () => {
+
+};
 
 
 
