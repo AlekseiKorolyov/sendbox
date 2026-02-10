@@ -81,7 +81,9 @@ const keys = {
 
 const movePlayer = (key, xVelocity, isPressed) => {
     if (!isCheckpointCollisionDetectionActive) {
-
+        player.velocity.x = 0;
+        player.velocity.y = 0;
+        return;
     }
 };
 
@@ -664,6 +666,17 @@ const movePlayer = (key, xVelocity, isPressed) => {
 
   }
 
+
+
+
+Шаг 52
+
+Внутри оператора if установите скорость игрока по оси x равной 0, а скорость игрока по оси y равной 0. Ниже добавьте оператор return.
+
+
+    player.velocity.x = 0;
+    player.velocity.y = 0;
+    return
 
 
 
