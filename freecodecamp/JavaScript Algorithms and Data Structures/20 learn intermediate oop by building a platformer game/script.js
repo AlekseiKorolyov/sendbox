@@ -61,6 +61,9 @@ const animate = () => {
     requestAnimationFrame(animate);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     player.update();
+    if (keys.rightKey.pressed && player.position.x < proportionalSize(400)) {
+
+    }
 };
 
 const keys = {
@@ -580,6 +583,18 @@ const keys = {
     pressed: false,
   },
 };
+
+
+
+
+Шаг 46
+
+Следующий шаг — добавить логику для увеличения или уменьшения скорости игрока в зависимости от того, движется ли он влево или вправо от экрана. Внутри функции animate создайте оператор if, в котором проверяется, была ли нажата правая клавиша и меньше ли позиция игрока по оси X, чем proportionalSize(400). Здесь необходимо использовать функцию proportionalSize, чтобы гарантировать, что позиция игрока по оси X всегда пропорциональна размеру экрана.
+
+
+  if (keys.rightKey.pressed && player.position.x < proportionalSize(400)) {
+
+  }
 
 
 
