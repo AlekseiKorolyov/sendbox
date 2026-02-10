@@ -85,7 +85,9 @@ const movePlayer = (key, xVelocity, isPressed) => {
         player.velocity.y = 0;
         return;
     }
-    switch (key) {};
+    switch (key) {
+        case "ArrowLeft":
+    }
 };
 
 const startGame = () => {
@@ -687,7 +689,19 @@ const movePlayer = (key, xVelocity, isPressed) => {
 Ниже оператора if создайте оператор switch со значением key.
 
 
-switch (key) {};
+switch (key) {}
+
+
+
+
+Шаг 54
+
+Первый случай, который вам нужно добавить, — это когда нажата клавиша со стрелкой влево. Внутри оператора switch добавьте новый случай с именем "ArrowLeft".
+
+
+  switch (key) {
+    case "ArrowLeft":
+  }
 
 
 
