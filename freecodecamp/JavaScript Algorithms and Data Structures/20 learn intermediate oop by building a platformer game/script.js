@@ -80,7 +80,9 @@ const keys = {
 };
 
 const movePlayer = (key, xVelocity, isPressed) => {
+    if (!isCheckpointCollisionDetectionActive) {
 
+    }
 };
 
 const startGame = () => {
@@ -650,6 +652,17 @@ const movePlayer = (key, xVelocity, isPressed) => {
 
 };
 
+
+
+
+Шаг 51
+
+В игре игрок будет взаимодействовать с различными контрольными точками. Если isCheckpointCollisionDetectionActive равно false, вам нужно будет остановить движение игрока по осям x и y. Начните с создания оператора if, в котором условие проверяет, равно ли isCheckpointCollisionDetectionActive false. Помните, что вы можете использовать оператор ! для проверки того, является ли переменная false.
+
+
+  if (!isCheckpointCollisionDetectionActive) {
+
+  }
 
 
 
