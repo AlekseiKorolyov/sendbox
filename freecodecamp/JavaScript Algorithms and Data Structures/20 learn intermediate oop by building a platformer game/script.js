@@ -63,6 +63,8 @@ const animate = () => {
     player.update();
     if (keys.rightKey.pressed && player.position.x < proportionalSize(400)) {
         player.velocity.x = 5;
+    }  else if (keys.leftKey.pressed && player.position.x > proportionalSize(100)) {
+        player.velocity.x = -5;
     }
 };
 
@@ -605,6 +607,18 @@ const keys = {
 
 
 player.velocity.x = 5;
+
+
+
+
+Шаг 48
+
+Добавьте оператор else if, в котором условие проверяет, была ли нажата левая клавиша и превышает ли позиция по оси X игрока значение proportionalSize(100). Здесь необходимо использовать функцию proportionalSize, чтобы гарантировать, что позиция по оси X игрока всегда пропорциональна размеру экрана. Внутри оператора else if присвойте число -5 скорости игрока по оси X.
+
+
+ else if (keys.leftKey.pressed && player.position.x > proportionalSize(100)) {
+    player.velocity.x = -5;
+  }
 
 
 
