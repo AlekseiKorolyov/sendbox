@@ -62,7 +62,7 @@ const animate = () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     player.update();
     if (keys.rightKey.pressed && player.position.x < proportionalSize(400)) {
-
+        player.velocity.x = 5;
     }
 };
 
@@ -595,6 +595,16 @@ const keys = {
   if (keys.rightKey.pressed && player.position.x < proportionalSize(400)) {
 
   }
+
+
+
+
+Шаг 47
+
+Внутри оператора if присвойте число 5 скорости игрока по оси x.
+
+
+player.velocity.x = 5;
 
 
 
