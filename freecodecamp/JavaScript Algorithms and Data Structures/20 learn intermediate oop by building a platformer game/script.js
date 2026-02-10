@@ -60,6 +60,7 @@ const player = new Player();
 const animate = () => {
     requestAnimationFrame(animate);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    player.update();
 };
 
 const startGame = () => {
@@ -532,6 +533,20 @@ requestAnimationFrame(animate);
 Шаг 42
 
 По мере продвижения игрока по игре вам потребуется очистить холст перед рендерингом следующего кадра анимации. Для этого можно использовать веб-API clearRect(). Он принимает аргументы x, y, width и height. Внизу вашего requestAnimationFrame вызовите метод clearRect() для переменной ctx и передайте в качестве аргументов 0, 0, canvas.width, canvas.height.
+
+
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+
+
+
+Шаг 43
+
+Следующий шаг — обновление позиции игрока по мере его перемещения в игре. Внизу вызова метода `ctx.clearRect()` вызовите метод `update()` для игрока.
+
+
+player.update();
+
 
 
 
