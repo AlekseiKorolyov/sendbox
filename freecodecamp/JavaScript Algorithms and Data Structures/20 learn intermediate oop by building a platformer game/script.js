@@ -91,6 +91,8 @@ const movePlayer = (key, xVelocity, isPressed) => {
             if (xVelocity === 0) {
                 player.velocity.x = xVelocity;
             }
+            player.velocity.x -= xVelocity;
+            break;
     }
 };
 
@@ -723,6 +725,16 @@ switch (key) {}
     }
   }
 
+
+
+
+Шаг 56
+
+Ниже оператора if используйте оператор присваивания вычитания, чтобы вычесть xVelocity из player.velocity.x. Чтобы закрыть этот случай, обязательно добавьте оператор break.
+
+
+      player.velocity.x -= xVelocity;
+      break;
 
 
 
