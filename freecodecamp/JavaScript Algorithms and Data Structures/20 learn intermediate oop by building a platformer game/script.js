@@ -64,7 +64,8 @@ class Platform {
         this.height = proportionalSize(40);
     }
     draw() {
-
+        ctx.fillStyle = "#acd157";
+        ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
     }
 }
 
@@ -924,5 +925,19 @@ obj = {
   draw() {
 
   }
+
+
+
+
+Шаг 70
+
+Внутри метода draw присвойте свойству ctx.fillStyle значение "#acd157". Ниже этого вызовите метод ctx.fillRect и передайте в него координаты x и y, а также свойства width и height. Не забудьте добавить это перед каждым свойством.
+
+
+  draw() {
+    ctx.fillStyle = "#acd157";
+    ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
+  }
+
 
 */
