@@ -115,6 +115,8 @@ const startGame = () => {
 
 startBtn.addEventListener("click", startGame);
 
+window.addEventListener("keydown", ({key}) => {});
+
 
 
 
@@ -776,6 +778,20 @@ switch (key) {}
       }
       player.velocity.x += xVelocity;
 
+
+
+
+Шаг 59
+
+Теперь пришло время добавить обработчики событий, которые будут отвечать за вызов функции movePlayer. Начните с добавления обработчика события addEventListener к глобальному объекту window. В качестве аргументов передайте событие keydown и стрелочную функцию, которая использует деструктурирующее присваивание для получения свойства key из объекта события в параметре обработчика события. Вот синтаксис использования деструктурирующего присваивания в списке параметров стрелочной функции:
+Пример кода
+
+btn.addEventListener('click', ({ target }) => {
+ console.log(target);
+});
+
+
+window.addEventListener("keydown", ({key}) => {});
 
 
 */
