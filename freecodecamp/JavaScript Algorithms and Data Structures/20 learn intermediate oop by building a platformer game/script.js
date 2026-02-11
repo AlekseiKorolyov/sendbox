@@ -55,6 +55,8 @@ class Player {
     }
 }
 
+class Platform {}
+
 const player = new Player();
 
 const animate = () => {
@@ -838,6 +840,16 @@ movePlayer(key, 0, false);
 
 
 animate();
+
+
+
+
+Шаг 64
+
+Следующий шаг — создание платформ и логики платформы. Начните с создания нового класса Platform.
+
+
+class Platform {}
 
 
 */
