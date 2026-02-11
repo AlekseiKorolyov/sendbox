@@ -86,7 +86,9 @@ const platformPositions = [
     { x: 4700, y: proportionalSize(150) }
 ];
 
-const platforms = platformPositions.map();
+const platforms = platformPositions.map(
+    (platform) => new Platform (platform.x, platform.y)
+);
 
 const animate = () => {
     requestAnimationFrame(animate);
@@ -1019,6 +1021,18 @@ x=4700 y=proportionalSize(150)
 Шаг 75
 
 Следующий шаг — создание списка новых экземпляров платформы с использованием класса Platform. Позже вы будете ссылаться на этот список для отрисовки платформ на холсте. Начните с создания новой константной переменной с именем platforms и присвойте ей значение platformPositions.map().
+
+
+
+
+Шаг 76
+
+В функции обратного вызова map передайте platform в качестве параметра и неявно верните создание нового экземпляра Platform со значениями platform.x и platform.y, переданными в качестве аргументов.
+
+
+const platforms = platformPositions.map(
+  (platform) => new Platform (platform.x, platform.y)
+);
 
 
 
