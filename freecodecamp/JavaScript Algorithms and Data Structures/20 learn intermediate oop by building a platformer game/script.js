@@ -119,7 +119,9 @@ window.addEventListener("keydown", ({key}) => {
     movePlayer(key, 8, true);
 });
 
-window.addEventListener("keyup", ({ key }) => {});
+window.addEventListener("keyup", ({ key }) => {
+    movePlayer(key, 0, false);
+});
 
 
 
@@ -816,6 +818,16 @@ movePlayer(key, 8, true);
 
 
 window.addEventListener("keyup", ({ key }) => {});
+
+
+
+
+Шаг 62
+
+Внутри функции обратного вызова вызовите функцию movePlayer и передайте в качестве аргументов key, 0 и false.
+
+
+movePlayer(key, 0, false);
 
 
 */
