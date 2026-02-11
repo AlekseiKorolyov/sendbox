@@ -55,7 +55,9 @@ class Player {
     }
 }
 
-class Platform {}
+class Platform {
+    constructor (x, y) {}
+}
 
 const player = new Player();
 
@@ -850,6 +852,16 @@ animate();
 
 
 class Platform {}
+
+
+
+
+Шаг 65 Внутри класса Platform создайте конструктор, который принимает координаты x и y.
+
+
+class Platform {
+  constructor (x, y) {}
+}
 
 
 */
