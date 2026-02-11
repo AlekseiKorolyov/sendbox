@@ -72,10 +72,8 @@ class Platform {
 const player = new Player();
 
 const platformPositions = [
-    {
-        x: 500,
-        y: proportionalSize(450)
-    }
+    { x: 500, y: proportionalSize(450) },
+    { x: 700, y: proportionalSize(400) }
 ];
 
 const animate = () => {
@@ -969,6 +967,19 @@ const platformPositions = [
     x: 500,
     y: proportionalSize(450)
   }
+];
+
+
+
+
+Шаг 73
+
+Ниже добавьте еще один объект со свойством x со значением 700 и свойством y со значением proportionalSize(400).
+
+
+const platformPositions = [
+  { x: 500, y: proportionalSize(450) },
+  { x: 700, y: proportionalSize(400) }
 ];
 
 
