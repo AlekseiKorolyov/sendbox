@@ -93,6 +93,11 @@ const movePlayer = (key, xVelocity, isPressed) => {
             }
             player.velocity.x -= xVelocity;
             break;
+        case "ArrowUp":
+        case " ":
+        case "Spacebar":
+            player.velocity.y -= 8;
+            break;
     }
 };
 
@@ -735,6 +740,20 @@ switch (key) {}
 
       player.velocity.x -= xVelocity;
       break;
+
+
+
+
+Шаг 57
+
+Игрок может подпрыгнуть, используя клавишу стрелки вверх или пробел. Добавьте три новых случая для "Стрелка вверх", "" и "Пробел". Помните, что вы можете группировать случаи вместе, если они используют одну и ту же операцию. Внутри этих случаев используйте оператор присваивания вычитания, чтобы вычесть 8 из player.velocity.y. Чтобы закрыть эти случаи, обязательно добавьте оператор break.
+
+
+    case "ArrowUp":
+    case " ":
+    case "Spacebar":
+    player.velocity.y -= 8;
+    break;
 
 
 
