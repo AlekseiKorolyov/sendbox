@@ -110,7 +110,7 @@ const movePlayer = (key, xVelocity, isPressed) => {
 const startGame = () => {
     canvas.style.display = "block";
     startScreen.style.display = "none";
-    player.draw();
+    animate();
 };
 
 startBtn.addEventListener("click", startGame);
@@ -828,6 +828,16 @@ window.addEventListener("keyup", ({ key }) => {});
 
 
 movePlayer(key, 0, false);
+
+
+
+
+Шаг 63
+
+Прежде чем начать перемещать игрока по экрану, вам потребуется использовать функцию animate. Внутри функции startGame удалите player.draw() и вызовите функцию animate. Нажмите кнопку «Начать игру» и используйте клавиши со стрелками влево и вправо, чтобы перемещать игрока по экрану. Вы также можете использовать пробел или клавишу со стрелкой вверх, чтобы подпрыгнуть.
+
+
+animate();
 
 
 */
