@@ -71,6 +71,8 @@ class Platform {
 
 const player = new Player();
 
+const platformPositions = [];
+
 const animate = () => {
     requestAnimationFrame(animate);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -938,6 +940,16 @@ obj = {
     ctx.fillStyle = "#acd157";
     ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
   }
+
+
+
+
+Шаг 71
+
+Следующим шагом будет создание списка позиций для платформ. Начните с создания новой константной переменной с именем platformPositions и присвойте ей пустой массив.
+
+
+const platformPositions = [];
 
 
 */
