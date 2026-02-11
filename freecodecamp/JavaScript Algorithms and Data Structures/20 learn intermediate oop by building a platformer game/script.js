@@ -115,7 +115,9 @@ const startGame = () => {
 
 startBtn.addEventListener("click", startGame);
 
-window.addEventListener("keydown", ({key}) => {});
+window.addEventListener("keydown", ({key}) => {
+    movePlayer(key, 8, true);
+});
 
 
 
@@ -792,6 +794,16 @@ btn.addEventListener('click', ({ target }) => {
 
 
 window.addEventListener("keydown", ({key}) => {});
+
+
+
+
+Шаг 60
+
+Внутри стрелочной функции вызовите функцию movePlayer и передайте в качестве аргументов key, 8 и true.
+
+
+movePlayer(key, 8, true);
 
 
 */
