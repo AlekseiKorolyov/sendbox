@@ -71,7 +71,12 @@ class Platform {
 
 const player = new Player();
 
-const platformPositions = [];
+const platformPositions = [
+    {
+        x: 500,
+        y: proportionalSize(450)
+    }
+];
 
 const animate = () => {
     requestAnimationFrame(animate);
@@ -950,6 +955,22 @@ obj = {
 
 
 const platformPositions = [];
+
+
+
+
+Шаг 72
+
+Внутри platformPositions вам нужно добавить список позиций для платформ. Добавьте новый объект, имеющий свойство x со значением 500 и свойство y со значением proportionalSize(450).
+
+
+const platformPositions = [
+  {
+    x: 500,
+    y: proportionalSize(450)
+  }
+];
+
 
 
 */
