@@ -98,6 +98,12 @@ const movePlayer = (key, xVelocity, isPressed) => {
         case "Spacebar":
             player.velocity.y -= 8;
             break;
+        case "ArrowRight":
+            keys.rightKey.pressed = isPressed;
+            if (xVelocity === 0) {
+                player.velocity.x = xVelocity;
+            }
+            player.velocity.x += xVelocity;
     }
 };
 
@@ -755,6 +761,20 @@ switch (key) {}
     player.velocity.y -= 8;
     break;
 
+
+
+
+Шаг 58
+
+Последний случай, который вам нужно добавить, будет для "ArrowRight". Внутри этого случая присвойте isPressed значение keys.rightKey.pressed. Добавьте оператор if, который проверяет, равно ли xVelocity нулю. Если да, присвойте xVelocity значение player.velocity.x. Ниже этого оператора if используйте оператор присваивания сложения, чтобы присвоить xVelocity значение player.velocity.x.
+
+
+    case "ArrowRight":
+      keys.rightKey.pressed = isPressed;
+      if (xVelocity === 0) {
+        player.velocity.x = xVelocity;
+      }
+      player.velocity.x += xVelocity;
 
 
 
