@@ -119,6 +119,8 @@ window.addEventListener("keydown", ({key}) => {
     movePlayer(key, 8, true);
 });
 
+window.addEventListener("keyup", ({ key }) => {});
+
 
 
 
@@ -804,6 +806,16 @@ window.addEventListener("keydown", ({key}) => {});
 
 
 movePlayer(key, 8, true);
+
+
+
+
+Шаг 61
+
+Добавьте еще один addEventListener к глобальному объекту window, передайте в него событие keyup и используйте деструктуризацию для передачи свойства key из события.
+
+
+window.addEventListener("keyup", ({ key }) => {});
 
 
 */
