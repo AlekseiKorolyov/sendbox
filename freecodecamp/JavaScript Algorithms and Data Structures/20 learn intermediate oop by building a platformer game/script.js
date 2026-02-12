@@ -154,6 +154,10 @@ const animate = () => {
             platforms.forEach((platform) => {
                 platform.position.x += 5;
             });
+
+            checkpoints.forEach((checkpoint) => {
+                checkpoint.position.x += 5;
+            });
         }
     }
 
@@ -1429,6 +1433,19 @@ checkpoints.forEach(checkpoint => checkpoint.draw());
 checkpoints.forEach((checkpoint) => {
   checkpoint.position.x -= 5;
 });
+
+
+
+
+Шаг 104
+
+Внутри оператора else if добавьте цикл forEach для перебора массива контрольных точек. Используйте checkpoint в качестве имени параметра для функции обратного вызова. Внутри функции обратного вызова forEach используйте оператор присваивания сложения, чтобы добавить 5 к позиции x контрольной точки.
+
+
+checkpoints.forEach((checkpoint) => {
+        checkpoint.position.x += 5;
+      });
+
 
 
 
