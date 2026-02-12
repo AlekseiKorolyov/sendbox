@@ -131,7 +131,9 @@ const animate = () => {
             return;
         }
 
-        const platformDetectionRules = [];
+        const platformDetectionRules = [
+            player.position.x >= platform.position.x - player.width / 2
+        ];
     });
 };
 
@@ -1187,6 +1189,18 @@ if (collisionDetectionRules.every((rule) => rule)) {
 
 
 const platformDetectionRules = [];
+
+
+
+
+Шаг 88
+
+Внутри этого массива добавьте логическое выражение, которое проверяет, больше ли или равно x-координата игрока x-координате платформы минус половина ширины игрока. Используйте оператор деления (/) для вычисления половины ширины игрока.
+
+
+    const platformDetectionRules = [
+      player.position.x >= platform.position.x - player.width / 2
+    ];
 
 
 
