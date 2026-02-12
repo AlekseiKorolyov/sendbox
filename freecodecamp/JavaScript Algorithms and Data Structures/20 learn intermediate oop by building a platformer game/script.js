@@ -11,7 +11,7 @@ let isCheckpointCollisionDetectionActive = true;
 
 const proportionalSize = (size) => {
     return innerHeight < 500 ? Math.ceil((size / 500) * innerHeight) : size;
-};
+}
 
 class Player {
     constructor() {
@@ -22,7 +22,7 @@ class Player {
         this.velocity = {
             x: 0,
             y: 0,
-        }
+        };
         this.width = proportionalSize(40);
         this.height = proportionalSize(40);
     }
@@ -30,12 +30,13 @@ class Player {
         ctx.fillStyle = "#99c9ff";
         ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
     }
+
     update() {
         this.draw();
         this.position.x += this.velocity.x;
         this.position.y += this.velocity.y;
 
-        if ((this.velocity.y + this.height + this.position.y) <= canvas.height) {
+        if (this.position.y + this.height + this.velocity.y <= canvas.height) {
             if (this.position.y < 0) {
                 this.position.y = 0;
                 this.velocity.y = gravity;
@@ -56,9 +57,10 @@ class Player {
 }
 
 class Platform {
-    constructor (x, y) {
+    constructor(x, y) {
         this.position = {
-            x, y
+            x,
+            y,
         };
         this.width = 200;
         this.height = proportionalSize(40);
@@ -73,12 +75,13 @@ class CheckPoint {
     constructor(x, y, z) {
         this.position = {
             x,
-            y
+            y,
         };
         this.width = proportionalSize(40);
         this.height = proportionalSize(70);
         this.claimed = false;
     };
+
     draw() {
         ctx.fillStyle = "#f1be32";
         ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
@@ -89,7 +92,7 @@ class CheckPoint {
         this.position.y = Infinity;
         this.claimed = true;
     }
-}
+};
 
 const player = new Player();
 
@@ -105,11 +108,11 @@ const platformPositions = [
     { x: 3900, y: proportionalSize(450) },
     { x: 4200, y: proportionalSize(400) },
     { x: 4400, y: proportionalSize(200) },
-    { x: 4700, y: proportionalSize(150) }
+    { x: 4700, y: proportionalSize(150) },
 ];
 
 const platforms = platformPositions.map(
-    (platform) => new Platform (platform.x, platform.y)
+    (platform) => new Platform(platform.x, platform.y)
 );
 
 const checkpointPositions = [
@@ -127,16 +130,18 @@ const animate = () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     platforms.forEach((platform) => {
-        platform.draw()
+        platform.draw();
     });
 
-    checkpoints.forEach(checkpoint => checkpoint.draw());
+    checkpoints.forEach(checkpoint => {
+        checkpoint.draw();
+    });
 
     player.update();
 
     if (keys.rightKey.pressed && player.position.x < proportionalSize(400)) {
         player.velocity.x = 5;
-    }  else if (keys.leftKey.pressed && player.position.x > proportionalSize(100)) {
+    } else if (keys.leftKey.pressed && player.position.x > proportionalSize(100)) {
         player.velocity.x = -5;
     } else {
         player.velocity.x = 0;
@@ -166,7 +171,8 @@ const animate = () => {
             player.position.y + player.height <= platform.position.y,
             player.position.y + player.height + player.velocity.y >= platform.position.y,
             player.position.x >= platform.position.x - player.width / 2,
-            player.position.x <= platform.position.x + platform.width - player.width / 3
+            player.position.x <=
+            platform.position.x + platform.width - player.width / 3,
         ];
 
         if (collisionDetectionRules.every((rule) => rule)) {
@@ -176,9 +182,10 @@ const animate = () => {
 
         const platformDetectionRules = [
             player.position.x >= platform.position.x - player.width / 2,
-            player.position.x <= platform.position.x + platform.width - player.width / 3,
+            player.position.x <=
+            platform.position.x + platform.width - player.width / 3,
             player.position.y + player.height >= platform.position.y,
-            player.position.y <= platform.position.y + platform.height
+            player.position.y <= platform.position.y + platform.height,
         ];
 
         if (platformDetectionRules.every(rule => rule)) {
@@ -186,36 +193,44 @@ const animate = () => {
             player.velocity.y = gravity;
         };
     });
-};
 
-checkpoints.forEach((checkpoint, index, checkpoints) => {
-    const checkpointDetectionRules =[
-        player.position.x >= checkpoint.position.x,
-        player.position.y >= checkpoint.position.y,
-        player.position.y + player.height <= checkpoint.position.y + checkpoint.height,
-        isCheckpointCollisionDetectionActive,
-        player.position.x - player.width <= checkpoint.position.x - checkpoint.width + player.width * 0.9,
-        index === 0 || checkpoints[index - 1].claimed === true,
-    ];
+    checkpoints.forEach((checkpoint, index, checkpoints) => {
+        const checkpointDetectionRules = [
+            player.position.x >= checkpoint.position.x,
+            player.position.y >= checkpoint.position.y,
+            player.position.y + player.height <=
+            checkpoint.position.y + checkpoint.height,
+            isCheckpointCollisionDetectionActive,
+            player.position.x - player.width <=
+            checkpoint.position.x - checkpoint.width + player.width * 0.9,
+            index === 0 || checkpoints[index - 1].claimed === true,
+        ];
 
-    if (checkpointDetectionRules.every(rule => rule)) {
-        checkpoint.claim();
+        if (checkpointDetectionRules.every((rule) => rule)) {
+            checkpoint.claim();
 
-        if (index === checkpoints.length - 1) {
-            isCheckpointCollisionDetectionActive = false;
-            showCheckpointScreen("You reached the final checkpoint!");
-            movePlayer("ArrowRight", 0, false);
-        }
-    }
-});
+
+            if (index === checkpoints.length - 1) {
+                isCheckpointCollisionDetectionActive = false;
+                showCheckpointScreen("You reached the final checkpoint!");
+                movePlayer("ArrowRight", 0, false);
+            } else if (player.position.x >= checkpoint.position.x && player.position.x <= checkpoint.position.x + 40) {
+                showCheckpointScreen("You reached a checkpoint!");
+            }
+
+
+        };
+    });
+}
+
 
 const keys = {
     rightKey: {
-        pressed: false,
+        pressed: false
     },
     leftKey: {
-        pressed: false,
-    },
+        pressed: false
+    }
 };
 
 const movePlayer = (key, xVelocity, isPressed) => {
@@ -224,6 +239,7 @@ const movePlayer = (key, xVelocity, isPressed) => {
         player.velocity.y = 0;
         return;
     }
+
     switch (key) {
         case "ArrowLeft":
             keys.leftKey.pressed = isPressed;
@@ -244,26 +260,25 @@ const movePlayer = (key, xVelocity, isPressed) => {
             }
             player.velocity.x += xVelocity;
     }
-};
+}
 
 const startGame = () => {
     canvas.style.display = "block";
     startScreen.style.display = "none";
     animate();
-};
+}
 
 const showCheckpointScreen = (msg) => {
     checkpointScreen.style.display = "block";
     checkpointMessage.textContent = msg;
-
     if (isCheckpointCollisionDetectionActive) {
-        setTimeout(() => checkpointScreen.style.display ="none", 2000);
+        setTimeout(() => (checkpointScreen.style.display = "none"), 2000);
     }
-}
+};
 
 startBtn.addEventListener("click", startGame);
 
-window.addEventListener("keydown", ({key}) => {
+window.addEventListener("keydown", ({ key }) => {
     movePlayer(key, 8, true);
 });
 
@@ -1617,5 +1632,17 @@ if (index === checkpoints.length - 1) {
         showCheckpointScreen("You reached the final checkpoint!");
         movePlayer("ArrowRight", 0, false);
       };
+
+
+
+
+Шаг 117
+
+Последнее, что вам нужно сделать, это добавить оператор else if. Ваше условие должно проверять, больше ли или равно значение x позиции игрока значению x контрольной точки и меньше или равно значению x контрольной точки плюс 40. В теле оператора else if вам нужно вызвать функцию showCheckpointScreen и передать в качестве аргумента строку "Вы достигли контрольной точки!". Поздравляем! Вы завершили проект платформера!
+
+
+ else if (player.position.x >= checkpoint.position.x && player.position.x <= checkpoint.position.x + 40) {
+        showCheckpointScreen("You reached a checkpoint!");
+      }
 
 */
