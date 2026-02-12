@@ -125,6 +125,11 @@ const animate = () => {
             player.position.x >= platform.position.x - player.width / 2,
             player.position.x <= platform.position.x + platform.width - player.width / 3
         ];
+
+        if (collisionDetectionRules.every((rule) => rule)) {
+            player.velocity.y = 0;
+            return;
+        }
     });
 };
 
@@ -1157,6 +1162,19 @@ player.position.x >= platform.position.x - player.width / 2
 
 
 player.position.x <= platform.position.x + platform.width - player.width / 3
+
+
+
+
+Шаг 86
+
+Далее добавьте оператор if, который проверяет, является ли каждое правило в массиве collisionDetectionRules истинным. Обязательно используйте для этого метод every. В теле оператора if присвойте число 0 скорости игрока по оси Y, после чего введите return.
+
+
+if (collisionDetectionRules.every((rule) => rule)) {
+  player.velocity.y = 0;
+  return;
+}
 
 
 
