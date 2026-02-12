@@ -112,6 +112,12 @@ const platforms = platformPositions.map(
     (platform) => new Platform (platform.x, platform.y)
 );
 
+const checkpointPositions = [
+    { x: 1170, y: proportionalSize(80), z: 1 },
+    { x: 2900, y: proportionalSize(330), z: 2 },
+    { x: 4800, y: proportionalSize(80), z: 3 },
+];
+
 const animate = () => {
     requestAnimationFrame(animate);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -1360,6 +1366,24 @@ this.claimed = false;
     this.claimed = true;
   }
 
+
+
+
+Шаг 100
+
+Используйте ключевое слово `const` для создания нового массива с именем `checkpointPositions`. Внутрь этого массива добавьте объект для каждой из следующих позиций:
+Пример кода
+
+x: 1170, y: proportionalSize(80), z: 1
+x: 2900, y: proportionalSize(330), z: 2
+x: 4800, y: proportionalSize(80), z: 3
+
+
+const checkpointPositions = [
+  { x: 1170, y: proportionalSize(80), z: 1 },
+  { x: 2900, y: proportionalSize(330), z: 2 },
+  { x: 4800, y: proportionalSize(80), z: 3 },
+];
 
 
 */
