@@ -199,7 +199,7 @@ checkpoints.forEach((checkpoint, index, checkpoints) => {
     ];
 
     if (checkpointDetectionRules.every(rule => rule)) {
-
+        checkpoint.claim();
     }
 });
 
@@ -1575,5 +1575,15 @@ checkpoints.forEach((checkpoint, index, checkpoints) => {
     if (checkpointDetectionRules.every(rule => rule)) {
 
     }
+
+
+
+
+Шаг 114
+
+Внутри оператора if вызовите метод claim объекта checkpoint.
+
+
+checkpoint.claim();
 
 */
