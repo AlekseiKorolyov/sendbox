@@ -138,7 +138,10 @@ const animate = () => {
             player.position.y <= platform.position.y + platform.height
         ];
 
-        if (platformDetectionRules.every(rule => rule)) {}
+        if (platformDetectionRules.every(rule => rule)) {
+            player.position.y = platform.position.y + player.height;
+            player.velocity.y = gravity;
+        };
     });
 };
 
@@ -1237,6 +1240,19 @@ player.position.x <= platform.position.x + platform.width - player.width / 3
 
 
 if (platformDetectionRules.every(rule => rule)) {}
+
+
+
+
+Шаг 92
+
+Внутри оператора if присвойте platform.position.y + player.height координату игрока по оси Y. Затем присвойте гравитацию скорости игрока по оси Y. Теперь, когда вы начнете игру, вы сможете прыгать под платформу и сталкиваться с ней.
+
+
+    if (platformDetectionRules.every(rule => rule)) {
+      player.position.y = platform.position.y + player.height;
+      player.velocity.y = gravity;
+    };
 
 
 
