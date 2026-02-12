@@ -93,7 +93,13 @@ const platforms = platformPositions.map(
 const animate = () => {
     requestAnimationFrame(animate);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    platforms.forEach((platform) => {
+        platform.draw()
+    });
+
     player.update();
+
     if (keys.rightKey.pressed && player.position.x < proportionalSize(400)) {
         player.velocity.x = 5;
     }  else if (keys.leftKey.pressed && player.position.x > proportionalSize(100)) {
@@ -1033,6 +1039,17 @@ x=4700 y=proportionalSize(150)
 const platforms = platformPositions.map(
   (platform) => new Platform (platform.x, platform.y)
 );
+
+
+
+Шаг 77
+
+Внутри функции `animate` вам нужно будет нарисовать каждую из платформ на холсте. Добавьте цикл `forEach`, который будет перебирать массив платформ. Внутри функции обратного вызова добавьте параметр `platform` и в теле функции вызовите метод `draw` для каждой platform.
+
+
+platforms.forEach((platform) => {
+platform.draw()
+});
 
 
 
