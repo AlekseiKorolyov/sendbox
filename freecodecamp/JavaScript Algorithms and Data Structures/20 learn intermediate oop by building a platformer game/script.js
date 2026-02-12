@@ -77,6 +77,7 @@ class CheckPoint {
         };
         this.width = proportionalSize(40);
         this.height = proportionalSize(70);
+        this.claimed = false;
     };
 
 };
@@ -1312,6 +1313,15 @@ class CheckPoint {
     this.width = proportionalSize(40);
     this.height = proportionalSize(70);
 
+
+
+
+Шаг 97
+
+Ниже свойств ширины и высоты контрольной точки используйте ключевое слово this, чтобы добавить новое свойство claimed и присвоить ему значение false. Это свойство будет использоваться для проверки того, достиг ли игрок контрольной точки.
+
+
+this.claimed = false;
 
 
 
