@@ -70,7 +70,13 @@ class Platform {
 }
 
 class CheckPoint {
-    constructor(x, y, z) {}
+    constructor(x, y, z) {
+        this.position = {
+            x,
+            y
+        }
+    }
+
 };
 
 const player = new Player();
@@ -1279,6 +1285,19 @@ class CheckPoint {}
 class CheckPoint {
   constructor(x, y, z) {}
 };
+
+
+
+
+Шаг 95
+
+В конструкторе создайте объект с параметрами x и y и присвойте его позиции. Не забудьте использовать ключевое слово this для доступа к свойствам.
+
+
+    this.position = {
+      x,
+      y
+    }
 
 
 
