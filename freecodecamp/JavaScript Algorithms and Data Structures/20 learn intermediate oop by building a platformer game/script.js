@@ -118,6 +118,10 @@ const checkpointPositions = [
     { x: 4800, y: proportionalSize(80), z: 3 },
 ];
 
+const checkpoints = checkpointPositions.map(
+    (checkpoint) => new CheckPoint(checkpoint.x, checkpoint.y, checkpoint.z)
+);
+
 const animate = () => {
     requestAnimationFrame(animate);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -1384,6 +1388,19 @@ const checkpointPositions = [
   { x: 2900, y: proportionalSize(330), z: 2 },
   { x: 4800, y: proportionalSize(80), z: 3 },
 ];
+
+
+
+
+Шаг 101
+
+Следующий шаг — создание списка новых экземпляров контрольных точек с помощью класса CheckPoint. Начните с создания новой константной переменной с именем checkpoints и присвойте ей значение checkpointPositions.map(). В функцию обратного вызова map передайте значение checkpoint в качестве параметра и неявно верните создание нового экземпляра CheckPoint со значениями checkpoint.x, checkpoint.y и checkpoint.z, переданными в качестве аргументов.
+
+
+const checkpoints = checkpointPositions.map(
+  (checkpoint) => new CheckPoint(checkpoint.x, checkpoint.y, checkpoint.z)
+);
+
 
 
 */
