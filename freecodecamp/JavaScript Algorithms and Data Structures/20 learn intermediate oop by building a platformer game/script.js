@@ -130,6 +130,8 @@ const animate = () => {
         platform.draw()
     });
 
+    checkpoints.forEach(checkpoint => checkpoint.draw());
+
     player.update();
 
     if (keys.rightKey.pressed && player.position.x < proportionalSize(400)) {
@@ -1400,6 +1402,16 @@ const checkpointPositions = [
 const checkpoints = checkpointPositions.map(
   (checkpoint) => new CheckPoint(checkpoint.x, checkpoint.y, checkpoint.z)
 );
+
+
+
+
+Шаг 102
+
+Внутри функции `animate` вам нужно будет нарисовать каждую из контрольных точек на холсте. Добавьте цикл `forEach`, который будет перебирать массив контрольных точек. Внутри функции обратного вызова добавьте параметр `checkpoint` и в теле функции вызовите метод `draw` для каждой checkpoint.
+
+
+checkpoints.forEach(checkpoint => checkpoint.draw());
 
 
 
