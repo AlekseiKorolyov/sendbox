@@ -202,7 +202,9 @@ checkpoints.forEach((checkpoint, index, checkpoints) => {
         checkpoint.claim();
 
         if (index === checkpoints.length - 1) {
-
+            isCheckpointCollisionDetectionActive = false;
+            showCheckpointScreen("You reached the final checkpoint!");
+            movePlayer("ArrowRight", 0, false);
         }
     }
 });
@@ -1601,5 +1603,19 @@ checkpoint.claim();
 if (index === checkpoints.length - 1) {
 
 }
+
+
+
+
+Шаг 116
+
+Внутри условия сначала необходимо установить isCheckpointCollisionDetectionActive в значение false. Затем нужно вызвать функцию showCheckpointScreen и передать в качестве аргумента строку "You reached the final checkpoint!". Наконец, нужно вызвать функцию movePlayer и передать в качестве первого аргумента строку "ArrowRight", в качестве второго аргумента число 0, а в качестве третьего аргумента логическое значение false.
+
+
+      if (index === checkpoints.length - 1) {
+        isCheckpointCollisionDetectionActive = false;
+        showCheckpointScreen("You reached the final checkpoint!");
+        movePlayer("ArrowRight", 0, false);
+      };
 
 */
