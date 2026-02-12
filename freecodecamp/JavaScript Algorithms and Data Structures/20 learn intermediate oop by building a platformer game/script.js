@@ -188,6 +188,8 @@ const animate = () => {
     });
 };
 
+checkpoints.forEach((checkpoint, index, checkpoints) => {});
+
 const keys = {
     rightKey: {
         pressed: false,
@@ -1499,6 +1501,15 @@ checkpointMessage.textContent = msg;
     setTimeout(() => checkpointScreen.style.display ="none", 2000);
   }
 
+
+
+
+Шаг 109
+
+Последние несколько шагов включают обновление функции animate для отображения экрана контрольной точки, когда игрок достигает контрольной точки. Начните с добавления цикла forEach к массиву checkpoints. В качестве параметров функции обратного вызова используйте checkpoint, index и checkpoints.
+
+
+checkpoints.forEach((checkpoint, index, checkpoints) => {});
 
 
 */
