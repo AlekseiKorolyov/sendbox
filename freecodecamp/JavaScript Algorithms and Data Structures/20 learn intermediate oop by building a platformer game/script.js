@@ -231,6 +231,10 @@ const startGame = () => {
     animate();
 };
 
+const showCheckpointScreen = (msg) => {
+
+}
+
 startBtn.addEventListener("click", startGame);
 
 window.addEventListener("keydown", ({key}) => {
@@ -1446,6 +1450,17 @@ checkpoints.forEach((checkpoint) => {
         checkpoint.position.x += 5;
       });
 
+
+
+
+Шаг 105
+
+Следующий шаг — создать функцию, которая будет отображать сообщение о контрольной точке, когда игрок достигнет контрольной точки. Создайте новую стрелочную функцию с именем showCheckpointScreen, которая принимает в качестве параметра сообщение (msg).
+
+
+const showCheckpointScreen = (msg) => {
+
+}
 
 
 
