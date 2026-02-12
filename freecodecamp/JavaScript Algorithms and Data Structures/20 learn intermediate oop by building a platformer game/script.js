@@ -69,7 +69,9 @@ class Platform {
     }
 }
 
-class CheckPoint {}
+class CheckPoint {
+    constructor(x, y, z) {}
+};
 
 const player = new Player();
 
@@ -1265,6 +1267,18 @@ if (platformDetectionRules.every(rule => rule)) {}
 
 
 class CheckPoint {}
+
+
+
+
+Шаг 94
+
+Внутри класса CheckPoint добавьте конструктор с параметрами x, y и z.
+
+
+class CheckPoint {
+  constructor(x, y, z) {}
+};
 
 
 
