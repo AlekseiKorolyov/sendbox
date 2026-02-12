@@ -111,6 +111,10 @@ const animate = () => {
             platforms.forEach((platform) => {
                 platform.position.x -= 5;
             });
+        } else if (keys.leftKey.pressed && isCheckpointCollisionDetectionActive) {
+            platforms.forEach((platform) => {
+                platform.position.x += 5;
+            });
         }
     }
 };
@@ -1080,6 +1084,18 @@ if (keys.rightKey.pressed && isCheckpointCollisionDetectionActive) {
         platform.position.x -= 5;
       });
 
+
+
+
+Шаг 80
+
+Далее добавьте оператор else if для проверки нажатия левой клавиши и условия isCheckpointCollisionDetectionActive. Внутри этого условия добавьте цикл forEach для перебора массива platforms. Внутри цикла используйте оператор присваивания сложения, чтобы добавить 5 к позиции x платформы.
+
+
+ else if (keys.leftKey.pressed && isCheckpointCollisionDetectionActive) {
+      platforms.forEach((platform) => {
+        platform.position.x += 5;
+      });
 
 
 */
