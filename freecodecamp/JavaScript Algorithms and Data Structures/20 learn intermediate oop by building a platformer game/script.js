@@ -232,7 +232,7 @@ const startGame = () => {
 };
 
 const showCheckpointScreen = (msg) => {
-
+    checkpointScreen.style.display = "block";
 }
 
 startBtn.addEventListener("click", startGame);
@@ -1461,6 +1461,16 @@ checkpoints.forEach((checkpoint) => {
 const showCheckpointScreen = (msg) => {
 
 }
+
+
+
+
+Шаг 106
+
+Внутри функции showCheckpointScreen установите свойство style.display объекта checkpointScreen в значение "block".
+
+
+checkpointScreen.style.display = "block";
 
 
 
