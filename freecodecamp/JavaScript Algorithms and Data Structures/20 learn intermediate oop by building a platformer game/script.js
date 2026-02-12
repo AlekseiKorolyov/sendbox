@@ -121,7 +121,8 @@ const animate = () => {
     platforms.forEach((platform) => {
         const collisionDetectionRules = [
             player.position.y + player.height <= platform.position.y,
-            player.position.y + player.height + player.velocity.y >= platform.position.y
+            player.position.y + player.height + player.velocity.y >= platform.position.y,
+            player.position.x >= platform.position.x - player.width / 2
         ];
     });
 };
@@ -1135,6 +1136,16 @@ platforms.forEach((platform) => {});
 
 
 player.position.y + player.height + player.velocity.y >= platform.position.y
+
+
+
+
+Шаг 84
+
+Ниже этого логического выражения добавьте еще одно логическое выражение, которое проверяет, больше ли или равно ли положение игрока по оси X положению платформы по оси X минус половина ширины игрока. Используйте оператор деления (/) для вычисления половины ширины игрока.
+
+
+player.position.x >= platform.position.x - player.width / 2
 
 
 
