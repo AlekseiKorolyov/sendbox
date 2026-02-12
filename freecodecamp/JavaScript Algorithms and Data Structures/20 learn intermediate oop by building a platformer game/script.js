@@ -145,6 +145,11 @@ const animate = () => {
             platforms.forEach((platform) => {
                 platform.position.x -= 5;
             });
+
+            checkpoints.forEach((checkpoint) => {
+                checkpoint.position.x -= 5;
+            });
+
         } else if (keys.leftKey.pressed && isCheckpointCollisionDetectionActive) {
             platforms.forEach((platform) => {
                 platform.position.x += 5;
@@ -1412,6 +1417,18 @@ const checkpoints = checkpointPositions.map(
 
 
 checkpoints.forEach(checkpoint => checkpoint.draw());
+
+
+
+
+Шаг 103
+
+Внутри условия добавьте цикл forEach для перебора массива checkpoints. Используйте checkpoint в качестве имени параметра для функции обратного вызова. Внутри функции обратного вызова forEach используйте оператор присваивания вычитания, чтобы вычесть 5 из позиции x контрольной точки.
+
+
+checkpoints.forEach((checkpoint) => {
+  checkpoint.position.x -= 5;
+});
 
 
 
