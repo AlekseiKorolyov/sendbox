@@ -79,6 +79,10 @@ class CheckPoint {
         this.height = proportionalSize(70);
         this.claimed = false;
     };
+    draw() {
+        ctx.fillStyle = "#f1be32";
+        ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
+    }
 
 };
 
@@ -1322,6 +1326,19 @@ class CheckPoint {
 
 
 this.claimed = false;
+
+
+
+
+Шаг 98
+
+Теперь вам нужно создать метод отрисовки для класса CheckPoint. Внутри метода отрисовки присвойте свойству fillStyle объекта ctx шестнадцатеричный цвет "#f1be32". Ниже свойства fillStyle используйте метод fillRect объекта ctx и передайте в качестве аргументов свойства x, y, width и height.
+
+
+  draw() {
+    ctx.fillStyle = "#f1be32";
+    ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
+  }
 
 
 
