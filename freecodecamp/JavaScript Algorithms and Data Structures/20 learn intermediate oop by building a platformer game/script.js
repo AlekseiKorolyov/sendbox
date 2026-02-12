@@ -137,6 +137,8 @@ const animate = () => {
             player.position.y + player.height >= platform.position.y,
             player.position.y <= platform.position.y + platform.height
         ];
+
+        if (platformDetectionRules.every(rule => rule)) {}
     });
 };
 
@@ -1225,6 +1227,16 @@ player.position.x <= platform.position.x + platform.width - player.width / 3
 
       player.position.y + player.height >= platform.position.y,
       player.position.y <= platform.position.y + platform.height
+
+
+
+
+Шаг 91
+
+Добавьте оператор if, который проверяет, истинно ли каждое правило определения платформы. Обязательно используйте для этого метод every.
+
+
+if (platformDetectionRules.every(rule => rule)) {}
 
 
 
