@@ -122,7 +122,8 @@ const animate = () => {
         const collisionDetectionRules = [
             player.position.y + player.height <= platform.position.y,
             player.position.y + player.height + player.velocity.y >= platform.position.y,
-            player.position.x >= platform.position.x - player.width / 2
+            player.position.x >= platform.position.x - player.width / 2,
+            player.position.x <= platform.position.x + platform.width - player.width / 3
         ];
     });
 };
@@ -1146,6 +1147,16 @@ player.position.y + player.height + player.velocity.y >= platform.position.y
 
 
 player.position.x >= platform.position.x - player.width / 2
+
+
+
+
+Шаг 85
+
+Добавьте последнее логическое выражение, которое проверяет, меньше ли или равно ли x-координата игрока сумме x-координат платформы плюс ширина платформы минус одна треть ширины игрока. Используйте оператор деления (/) для вычисления одной трети ширины игрока.
+
+
+player.position.x <= platform.position.x + platform.width - player.width / 3
 
 
 
