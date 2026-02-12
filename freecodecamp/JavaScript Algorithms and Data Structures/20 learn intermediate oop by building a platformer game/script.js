@@ -189,8 +189,11 @@ const animate = () => {
 };
 
 checkpoints.forEach((checkpoint, index, checkpoints) => {
-    const checkpointDetectionRules = [
+    const checkpointDetectionRules =[
         player.position.x >= checkpoint.position.x,
+        player.position.y >= checkpoint.position.y,
+        player.position.y + player.height <= checkpoint.position.y + checkpoint.height,
+        isCheckpointCollisionDetectionActive,
     ];
 });
 
@@ -1527,5 +1530,21 @@ checkpoints.forEach((checkpoint, index, checkpoints) => {});
       player.position.x >= checkpoint.position.x,
     ];
 
+
+
+
+Шаг 111
+
+Добавьте еще одно логическое выражение, которое проверяет, больше ли или равно значение position.y игрока значение position.y контрольной точки. Ниже этого выражения добавьте еще одно логическое выражение, которое проверяет, меньше ли или равно значение position.y игрока плюс высота игрока значению position.y контрольной точки плюс высота контрольной точки. Ниже этого выражения добавьте переменную isCheckpointCollisionDetectionActive.
+
+
+checkpoints.forEach((checkpoint, index, checkpoints) => {
+    const checkpointDetectionRules =[
+      player.position.x >= checkpoint.position.x,
+      player.position.y >= checkpoint.position.y,
+      player.position.y + player.height <= checkpoint.position.y + checkpoint.height,
+      isCheckpointCollisionDetectionActive,
+    ];
+  });
 
 */
