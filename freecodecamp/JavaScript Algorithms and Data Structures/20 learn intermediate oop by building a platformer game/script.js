@@ -132,7 +132,8 @@ const animate = () => {
         }
 
         const platformDetectionRules = [
-            player.position.x >= platform.position.x - player.width / 2
+            player.position.x >= platform.position.x - player.width / 2,
+            player.position.x <= platform.position.x + platform.width - player.width / 3
         ];
     });
 };
@@ -1202,6 +1203,15 @@ const platformDetectionRules = [];
       player.position.x >= platform.position.x - player.width / 2
     ];
 
+
+
+
+Шаг 89
+
+Ниже этого логического выражения добавьте еще одно логическое выражение, которое проверяет, меньше ли или равно ли x-координата игрока сумме x-координаты платформы плюс ширина платформы минус одна треть ширины игрока. Используйте оператор деления (/) для вычисления одной трети ширины игрока.
+
+
+player.position.x <= platform.position.x + platform.width - player.width / 3
 
 
 
