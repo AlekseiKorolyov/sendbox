@@ -108,6 +108,9 @@ const animate = () => {
         player.velocity.x = 0;
 
         if (keys.rightKey.pressed && isCheckpointCollisionDetectionActive) {
+            platforms.forEach((platform) => {
+                platform.position.x -= 5;
+            });
         }
     }
 };
@@ -1064,6 +1067,18 @@ platform.draw()
 
 if (keys.rightKey.pressed && isCheckpointCollisionDetectionActive) {
 }
+
+
+
+
+Шаг 79
+
+Внутри условия добавьте цикл forEach для перебора массива platforms. Внутри функции обратного вызова используйте platform в качестве параметра. Внутри цикла используйте оператор присваивания вычитания, чтобы вычесть 5 из x-позиции платформы.
+
+
+      platforms.forEach((platform) => {
+        platform.position.x -= 5;
+      });
 
 
 
