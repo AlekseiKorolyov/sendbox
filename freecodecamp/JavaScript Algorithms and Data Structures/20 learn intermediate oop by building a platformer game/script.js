@@ -130,6 +130,8 @@ const animate = () => {
             player.velocity.y = 0;
             return;
         }
+
+        const platformDetectionRules = [];
     });
 };
 
@@ -1175,6 +1177,16 @@ if (collisionDetectionRules.every((rule) => rule)) {
   player.velocity.y = 0;
   return;
 }
+
+
+
+
+Шаг 87
+
+Создайте новую константную переменную с именем platformDetectionRules и присвойте ей пустой массив.
+
+
+const platformDetectionRules = [];
 
 
 
