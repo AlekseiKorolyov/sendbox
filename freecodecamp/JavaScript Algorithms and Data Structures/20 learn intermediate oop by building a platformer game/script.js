@@ -188,7 +188,11 @@ const animate = () => {
     });
 };
 
-checkpoints.forEach((checkpoint, index, checkpoints) => {});
+checkpoints.forEach((checkpoint, index, checkpoints) => {
+    const checkpointDetectionRules = [
+        player.position.x >= checkpoint.position.x,
+    ];
+});
 
 const keys = {
     rightKey: {
@@ -1510,6 +1514,18 @@ checkpointMessage.textContent = msg;
 
 
 checkpoints.forEach((checkpoint, index, checkpoints) => {});
+
+
+
+
+Шаг 110
+
+Создайте новую константную переменную с именем checkpointDetectionRules и присвойте ей пустой массив. Внутри этого массива добавьте логическое выражение, которое проверяет, больше ли или равно значение position.x игрока значению position.x контрольной точки.
+
+
+    const checkpointDetectionRules = [
+      player.position.x >= checkpoint.position.x,
+    ];
 
 
 */
