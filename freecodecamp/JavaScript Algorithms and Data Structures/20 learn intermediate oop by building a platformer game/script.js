@@ -200,6 +200,10 @@ checkpoints.forEach((checkpoint, index, checkpoints) => {
 
     if (checkpointDetectionRules.every(rule => rule)) {
         checkpoint.claim();
+
+        if (index === checkpoints.length - 1) {
+
+        }
     }
 });
 
@@ -1585,5 +1589,17 @@ checkpoints.forEach((checkpoint, index, checkpoints) => {
 
 
 checkpoint.claim();
+
+
+
+
+Шаг 115
+
+Следующий шаг — написать условие, проверяющее, достиг ли игрок последней контрольной точки. Начните с добавления оператора if, который проверяет, равен ли index length checkpoint массива контрольных точек минус один.
+
+
+if (index === checkpoints.length - 1) {
+
+}
 
 */
