@@ -83,8 +83,13 @@ class CheckPoint {
         ctx.fillStyle = "#f1be32";
         ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
     }
-
-};
+    claim() {
+        this.width = 0;
+        this.height = 0;
+        this.position.y = Infinity;
+        this.claimed = true;
+    }
+}
 
 const player = new Player();
 
@@ -1340,6 +1345,20 @@ this.claimed = false;
     ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
   }
 
+
+
+
+Шаг 99
+
+Последний метод, который вам нужно добавить в класс CheckPoint, — это метод claim. Внутри метода claim присвойте значения 0 свойствам width и height экземпляра CheckPoint. Ниже этих свойств присвойте значение Infinity для позиции по оси Y. Наконец, присвойте значение true свойству claim.
+
+
+  claim() {
+    this.width = 0;
+    this.height = 0;
+    this.position.y = Infinity;
+    this.claimed = true;
+  }
 
 
 
