@@ -194,6 +194,8 @@ checkpoints.forEach((checkpoint, index, checkpoints) => {
         player.position.y >= checkpoint.position.y,
         player.position.y + player.height <= checkpoint.position.y + checkpoint.height,
         isCheckpointCollisionDetectionActive,
+        player.position.x - player.width <= checkpoint.position.x - checkpoint.width + player.width * 0.9,
+        index === 0 || checkpoints[index - 1].claimed === true,
     ];
 });
 
@@ -1546,5 +1548,16 @@ checkpoints.forEach((checkpoint, index, checkpoints) => {
       isCheckpointCollisionDetectionActive,
     ];
   });
+
+
+
+
+Шаг 112
+
+Вам потребуется добавить еще два правила обнаружения контрольных точек в массив checkpointDetectionRules. Первое правило должно проверять, меньше ли или равно ли значение x-позиции игрока минус ширина игрока значению x-позиции контрольной точки минус ширина контрольной точки плюс ширина игрока, умноженному на 0,9. Это гарантирует, что игрок находится достаточно близко к контрольной точке, чтобы ее забрать. Второе правило должно проверять, равен ли индекс строго 0 или истинно ли условие previous checkpoint(checkpoints[index - 1].claimed). Это гарантирует, что игрок сможет забрать только первую контрольную точку или контрольную точку, которая уже была занята.
+
+
+      player.position.x - player.width <= checkpoint.position.x - checkpoint.width + player.width * 0.9,
+      index === 0 || checkpoints[index - 1].claimed === true,
 
 */
