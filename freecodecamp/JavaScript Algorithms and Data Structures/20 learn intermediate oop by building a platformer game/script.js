@@ -74,8 +74,10 @@ class CheckPoint {
         this.position = {
             x,
             y
-        }
-    }
+        };
+        this.width = proportionalSize(40);
+        this.height = proportionalSize(70);
+    };
 
 };
 
@@ -1299,6 +1301,16 @@ class CheckPoint {
       y
     }
 
+
+
+
+Шаг 96
+
+Следующий шаг — добавить ширину и высоту в класс CheckPoint. Ширина и высота должны быть равны proportionalSize(40) и proportionalSize(70) соответственно.
+
+
+    this.width = proportionalSize(40);
+    this.height = proportionalSize(70);
 
 
 
