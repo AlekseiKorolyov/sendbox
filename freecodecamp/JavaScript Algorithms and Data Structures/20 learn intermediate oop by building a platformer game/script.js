@@ -106,6 +106,9 @@ const animate = () => {
         player.velocity.x = -5;
     } else {
         player.velocity.x = 0;
+
+        if (keys.rightKey.pressed && isCheckpointCollisionDetectionActive) {
+        }
     }
 };
 
@@ -1050,6 +1053,17 @@ const platforms = platformPositions.map(
 platforms.forEach((platform) => {
 platform.draw()
 });
+
+
+
+
+Шаг 78
+
+Если вы попытаетесь запустить игру, вы заметите, что платформы отображаются на экране. Но по мере движения игрока вправо платформа не движется вместе с ним. Чтобы исправить эту проблему, вам нужно будет обновлять координату x платформы по мере перемещения игрока по экрану. Внутри функции animate добавьте условие для проверки нажатия правой клавиши и если isCheckpointCollisionDetectionActive имеет значение true.
+
+
+if (keys.rightKey.pressed && isCheckpointCollisionDetectionActive) {
+}
 
 
 
