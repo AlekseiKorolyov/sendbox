@@ -234,6 +234,10 @@ const startGame = () => {
 const showCheckpointScreen = (msg) => {
     checkpointScreen.style.display = "block";
     checkpointMessage.textContent = msg;
+
+    if (isCheckpointCollisionDetectionActive) {
+        setTimeout(() => checkpointScreen.style.display ="none", 2000);
+    }
 }
 
 startBtn.addEventListener("click", startGame);
@@ -1482,6 +1486,18 @@ checkpointScreen.style.display = "block";
 
 
 checkpointMessage.textContent = msg;
+
+
+
+
+Шаг 108
+
+Создайте оператор if, который проверяет, истинно ли значение isCheckpointCollisionDetectionActive. Внутри оператора if добавьте setTimeout(), который принимает функцию обратного вызова и задержку в 2000 миллисекунд. Для функции обратного вызова необходимо установить свойство style.display экрана контрольной точки в значение "none".
+
+
+  if (isCheckpointCollisionDetectionActive) {
+    setTimeout(() => checkpointScreen.style.display ="none", 2000);
+  }
 
 
 
