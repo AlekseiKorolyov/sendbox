@@ -197,6 +197,10 @@ checkpoints.forEach((checkpoint, index, checkpoints) => {
         player.position.x - player.width <= checkpoint.position.x - checkpoint.width + player.width * 0.9,
         index === 0 || checkpoints[index - 1].claimed === true,
     ];
+
+    if (checkpointDetectionRules.every(rule => rule)) {
+
+    }
 });
 
 const keys = {
@@ -1559,5 +1563,17 @@ checkpoints.forEach((checkpoint, index, checkpoints) => {
 
       player.position.x - player.width <= checkpoint.position.x - checkpoint.width + player.width * 0.9,
       index === 0 || checkpoints[index - 1].claimed === true,
+
+
+
+
+Шаг 113
+
+Далее добавьте оператор if, который проверяет, истинно ли каждое правило в массиве checkpointDetectionRules. Убедитесь, что для этого используется метод every.
+
+
+    if (checkpointDetectionRules.every(rule => rule)) {
+
+    }
 
 */
