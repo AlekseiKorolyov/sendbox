@@ -69,6 +69,8 @@ class Platform {
     }
 }
 
+class CheckPoint {}
+
 const player = new Player();
 
 const platformPositions = [
@@ -1254,6 +1256,15 @@ if (platformDetectionRules.every(rule => rule)) {}
       player.velocity.y = gravity;
     };
 
+
+
+
+Шаг 93
+
+Последняя часть проекта — добавление логики для контрольных точек. При столкновении игрока с контрольной точкой должен появиться экран с информацией о контрольной точке. Начните с создания нового класса под названием CheckPoint.
+
+
+class CheckPoint {}
 
 
 
