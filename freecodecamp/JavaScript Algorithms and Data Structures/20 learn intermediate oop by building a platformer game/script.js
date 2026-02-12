@@ -121,6 +121,7 @@ const animate = () => {
     platforms.forEach((platform) => {
         const collisionDetectionRules = [
             player.position.y + player.height <= platform.position.y,
+            player.position.y + player.height + player.velocity.y >= platform.position.y
         ];
     });
 };
@@ -1124,5 +1125,22 @@ platforms.forEach((platform) => {});
     const collisionDetectionRules = [
       player.position.y + player.height <= platform.position.y,
     ];
+
+
+
+
+Шаг 83
+
+Добавьте еще одно логическое выражение, которое проверяет, больше ли или равна сумма координат игрока по оси Y, его высоты и скорости по оси Y координате платформы.
+
+
+player.position.y + player.height + player.velocity.y >= platform.position.y
+
+
+
+
+
+
+
 
 */
