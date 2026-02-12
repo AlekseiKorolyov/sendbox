@@ -118,7 +118,11 @@ const animate = () => {
         }
     }
 
-    platforms.forEach((platform) => {});
+    platforms.forEach((platform) => {
+        const collisionDetectionRules = [
+            player.position.y + player.height <= platform.position.y,
+        ];
+    });
 };
 
 const keys = {
@@ -1108,5 +1112,17 @@ if (keys.rightKey.pressed && isCheckpointCollisionDetectionActive) {
 
 
 platforms.forEach((platform) => {});
+
+
+
+
+Шаг 82
+
+Внутри функции обратного вызова создайте новую константную переменную с именем collisionDetectionRules и присвойте ей пустой массив. В этот массив добавьте логическое выражение, которое проверяет, меньше ли или равно значение Y-позиции игрока плюс высота игрока значению Y-позиции платформы.
+
+
+    const collisionDetectionRules = [
+      player.position.y + player.height <= platform.position.y,
+    ];
 
 */
