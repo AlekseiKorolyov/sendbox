@@ -133,7 +133,9 @@ const animate = () => {
 
         const platformDetectionRules = [
             player.position.x >= platform.position.x - player.width / 2,
-            player.position.x <= platform.position.x + platform.width - player.width / 3
+            player.position.x <= platform.position.x + platform.width - player.width / 3,
+            player.position.y + player.height >= platform.position.y,
+            player.position.y <= platform.position.y + platform.height
         ];
     });
 };
@@ -1212,6 +1214,17 @@ const platformDetectionRules = [];
 
 
 player.position.x <= platform.position.x + platform.width - player.width / 3
+
+
+
+
+Шаг 90
+
+Добавьте еще одно логическое выражение, которое проверяет, больше ли или равно значение Y-координаты игрока плюс высота игрока значению Y-координаты платформы. Ниже добавьте еще одно логическое выражение, которое проверяет, меньше ли или равно значение Y-координаты игрока сумме Y-координат платформы плюс высота платформы.
+
+
+      player.position.y + player.height >= platform.position.y,
+      player.position.y <= platform.position.y + platform.height
 
 
 
