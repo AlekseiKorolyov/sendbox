@@ -7,25 +7,40 @@ const totalScoreElement = document.getElementById("total-score");
 const scoreHistory = document.getElementById("score-history");
 const rollDiceBtn = document.getElementById("roll-dice-btn");
 const keepScoreBtn = document.getElementById("keep-score-btn");
-const rulesBtn = document.getElementById("rules-btn");
 const rulesContainer = document.querySelector(".rules-container");
+const rulesBtn = document.getElementById("rules-btn");
 
-let isModalShowing = false;
 let diceValuesArr = [];
-let rolls = 0;
+let isModalShowing = false;
 let score = 0;
 let round = 1;
+let rolls = 0;
+
+
+
+
+rollDiceBtn.addEventListener("click", () => {
+    diceValuesArr.length = 0;
+    for (let i = 0; i < 5; i++) {
+        diceValuesArr.push(Math.floor(Math.random() * 5 + 1));
+    }
+    listOfAllDice.forEach((el, index) => {
+        el.textContent = diceValuesArr[index];
+    })
+});
 
 rulesBtn.addEventListener("click", () => {
     isModalShowing = !isModalShowing;
+
     if (isModalShowing) {
-        rulesContainer.style.display = "block";
         rulesBtn.textContent = "Hide rules";
+        rulesContainer.style.display = "block";
     } else {
-        rulesContainer.style.display = "none";
         rulesBtn.textContent = "Show rules";
+        rulesContainer.style.display = "none";
     }
 });
+
 
 
 
@@ -55,6 +70,37 @@ rulesBtn.addEventListener("click", () => {
 Шаг 2
 
 Когда пользователь нажимает кнопку Show rule, правила игры должны отобразиться на экране. При повторном нажатии кнопки правила должны быть скрыты. Используйте обработчик событий, чтобы инвертировать значение переменной isModalShowing, переключать видимость rulesContainer и изменять текст кнопки rulesBtn на Show rules или Hide rules.
+
+
+rulesBtn.addEventListener("click", () => {
+  isModalShowing = !isModalShowing;
+
+  if (isModalShowing) {
+    rulesBtn.textContent = "Hide rules";
+    rulesContainer.style.display = "block";
+  } else {
+    rulesBtn.textContent = "Show rules";
+    rulesContainer.style.display = "none";
+  }
+});
+
+
+
+
+Шаг 3
+
+Когда пользователь нажимает кнопку «Бросить кубик», на экране должны быть сгенерированы и отображены пять случайных чисел, полученных с кубика. Разработайте логику таким образом, чтобы нажатие на кнопку rollDiceBtn генерировало пять случайных чисел от 1 до 6 включительно, устанавливало в поле diceValuesArr только эти пять чисел и отображало числа в порядке их следования в элементах listOfAllDice.
+
+
+rollDiceBtn.addEventListener("click", () => {
+  diceValuesArr.length = 0;
+  for (let i = 0; i < 5; i++) {
+    diceValuesArr.push(Math.floor(Math.random() * 5 + 1));
+  }
+  listOfAllDice.forEach((el, index) => {
+    el.textContent = diceValuesArr[index];
+  })
+});
 
 
 
