@@ -16,17 +16,26 @@ let score = 0;
 let round = 1;
 let rolls = 0;
 
+const rollDice = () => {
+    diceValuesArr = [];
 
+    for (let i = 0; i < 5; i++) {
+        const randomDice = Math.floor(Math.random() * 6) + 1;
+        diceValuesArr.push(randomDice);
+    };
 
+    listOfAllDice.forEach((dice, index) => {
+        dice.textContent = diceValuesArr[index];
+    });
+};
 
 rollDiceBtn.addEventListener("click", () => {
-    diceValuesArr.length = 0;
-    for (let i = 0; i < 5; i++) {
-        diceValuesArr.push(Math.floor(Math.random() * 5 + 1));
+    if (rolls === 3) {
+        alert("You have made three rolls this round. Please select a score.");
+    } else {
+        rollDice();
+        rolls ++;
     }
-    listOfAllDice.forEach((el, index) => {
-        el.textContent = diceValuesArr[index];
-    })
 });
 
 rulesBtn.addEventListener("click", () => {
@@ -101,6 +110,21 @@ rollDiceBtn.addEventListener("click", () => {
     el.textContent = diceValuesArr[index];
   })
 });
+
+
+
+
+Шаг 4
+
+В каждом раунде игры пользователям разрешается бросать кубики максимум три раза. Если пользователь нажимает кнопку rollDiceBtn, но уже сделал три броска, браузер должен показать alert(), указывающий на необходимость выбора результата; в противном случае, он должен бросить кубики, как это происходит сейчас, и увеличить значение переменной rolls.
+
+
+if (rolls === 3) {
+    alert("You have made three rolls this round. Please select a score.");
+  } else {
+    rollDice();
+    rolls ++;
+  }
 
 
 
