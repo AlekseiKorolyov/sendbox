@@ -29,12 +29,18 @@ const rollDice = () => {
     });
 };
 
+const updateStats = () => {
+    rollsElement.textContent = rolls;
+    roundElement.textContent = round;
+}
+
 rollDiceBtn.addEventListener("click", () => {
     if (rolls === 3) {
         alert("You have made three rolls this round. Please select a score.");
     } else {
+        rolls++;
         rollDice();
-        rolls ++;
+        updateStats()
     }
 });
 
@@ -49,7 +55,6 @@ rulesBtn.addEventListener("click", () => {
         rulesContainer.style.display = "none";
     }
 });
-
 
 
 
@@ -126,6 +131,28 @@ if (rolls === 3) {
     rolls ++;
   }
 
+
+
+
+Шаг 5
+
+Вам потребуется возможность обновлять rolls и round. Создайте функцию `updateStats` для обновления текста этих двух элементов соответствующими значениями. Затем вызывайте эту функцию при нажатии на кнопку `rollDiceBtn` и броске кубиков.
+
+
+    const updateStats = () => {
+      rollsElement.textContent = rolls;
+      roundElement.textContent = round;
+    }
+
+rollDiceBtn.addEventListener("click", () => {
+  if (rolls === 3) {
+    alert("You have made three rolls this round. Please select a score.");
+  } else {
+    rolls++;
+    rollDice();
+    updateStats()
+  }
+});
 
 
 
