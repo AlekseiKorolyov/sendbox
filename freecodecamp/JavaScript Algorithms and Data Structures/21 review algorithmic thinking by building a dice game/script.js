@@ -34,6 +34,12 @@ const updateStats = () => {
     roundElement.textContent = round;
 }
 
+const updateRadioOption = (index, score) => {
+    scoreInputs[index].disabled = false;
+    scoreInputs[index].value = score;
+    scoreSpans[index].textContent = `, score = ${score}`;
+};
+
 rollDiceBtn.addEventListener("click", () => {
     if (rolls === 3) {
         alert("You have made three rolls this round. Please select a score.");
@@ -154,6 +160,17 @@ rollDiceBtn.addEventListener("click", () => {
   }
 });
 
+
+
+
+Шаг 6 Каждый раз, когда вы бросаете кубик, вы можете получить три одинаковых числа, четыре одинаковых числа, фулл-хаус, стрит или случайную комбинацию чисел. В зависимости от результата вы можете сделать выбор и добавить очки к своему счету. Начните с создания функции с именем updateRadioOption, которая принимает в качестве аргументов индекс и значение счета. Она должна включить входные данные scoreInputs по этому индексу, установить значение этого входного параметра равным счету и отобразить score = ${score} в соответствующем элементе scoreSpans.
+
+
+const updateRadioOption = (index, score) => {
+  scoreInputs[index].disabled = false;
+  scoreInputs[index].value = score;
+  scoreSpans[index].textContent = `, score = ${score}`;
+};
 
 
 
