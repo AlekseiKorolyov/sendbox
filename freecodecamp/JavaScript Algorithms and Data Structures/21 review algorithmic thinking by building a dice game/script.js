@@ -32,12 +32,38 @@ const rollDice = () => {
 const updateStats = () => {
     rollsElement.textContent = rolls;
     roundElement.textContent = round;
-}
+};
 
 const updateRadioOption = (index, score) => {
     scoreInputs[index].disabled = false;
     scoreInputs[index].value = score;
     scoreSpans[index].textContent = `, score = ${score}`;
+};
+
+const getHighestDuplicates = (array) => {
+    const counts = {};
+
+    array.forEach((num) => {
+        counts[num] = (counts[num] || 0) + 1;
+    });
+
+    const totalSumm = array.reduce((aac, curr) => aac + curr, 0);
+
+    let maxFrequency = 0;
+    for (const num in counts) {
+        if (counts[num] > maxFrequency) {
+            maxFrequency = counts[num];
+        }
+    }
+
+    if (maxFrequency >= 4) {
+        updateRadioOption(1, totalSumm);
+        updateRadioOption(0, totalSumm);
+    } else if (maxFrequency === 3) {
+        updateRadioOption(0, totalSumm);
+    }
+
+    updateRadioOption(5, 0);
 };
 
 rollDiceBtn.addEventListener("click", () => {
@@ -46,7 +72,8 @@ rollDiceBtn.addEventListener("click", () => {
     } else {
         rolls++;
         rollDice();
-        updateStats()
+        updateStats();
+        getHighestDuplicates(diceValuesArr);
     }
 });
 
@@ -171,6 +198,51 @@ const updateRadioOption = (index, score) => {
   scoreInputs[index].value = score;
   scoreSpans[index].textContent = `, score = ${score}`;
 };
+
+
+
+
+Шаг 7
+
+Если при броске кубиков выпадет три одинаковых числа или четыре одинаковых числа, вы получите счет, равный сумме значений всех пяти кубиков. Для этого создайте функцию getHighestDuplicates, которая принимает массив чисел. Функция должна подсчитать, сколько раз каждое число встречается в массиве. Если число встречается четыре или более раз, вам нужно обновить параметр «Четверка одинаковых чисел» с помощью функции updateRadioOption. Если число встречается три или более раз, вам нужно обновить параметр «Три одинаковых числа». В обоих случаях значение счета должно быть равно сумме значений всех пяти кубиков. Независимо от результата, окончательный параметр должен быть обновлен значением 0. Обязательно вызовите функцию getHighestDuplicates при броске кубиков.
+
+
+const getHighestDuplicates = (array) => {
+  const counts = {};
+
+  array.forEach((num) => {
+    counts[num] = (counts[num] || 0) + 1;
+  });
+
+  const totalSumm = array.reduce((aac, curr) => aac + curr, 0);
+
+  let maxFrequency = 0;
+  for (const num in counts) {
+    if (counts[num] > maxFrequency) {
+      maxFrequency = counts[num];
+    }
+  }
+
+  if (maxFrequency >= 4) {
+    updateRadioOption(1, totalSumm);
+    updateRadioOption(0, totalSumm);
+  } else if (maxFrequency === 3) {
+    updateRadioOption(0, totalSumm);
+  }
+
+  updateRadioOption(5, 0);
+};
+
+rollDiceBtn.addEventListener("click", () => {
+  if (rolls === 3) {
+    alert("You have made three rolls this round. Please select a score.");
+  } else {
+    rolls++;
+    rollDice();
+    updateStats();
+    getHighestDuplicates(diceValuesArr);
+  }
+});
 
 
 
