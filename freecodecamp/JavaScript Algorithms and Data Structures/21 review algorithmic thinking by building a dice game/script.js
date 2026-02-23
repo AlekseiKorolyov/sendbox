@@ -66,6 +66,17 @@ const getHighestDuplicates = (array) => {
     updateRadioOption(5, 0);
 };
 
+const resetRadioOptions = () => {
+    scoreInputs.forEach((input) => {
+        input.disabled = true;
+        input.checked = false;
+    });
+
+    scoreSpans.forEach((span) => {
+        span.textContent = "";
+    });
+};
+
 rollDiceBtn.addEventListener("click", () => {
     if (rolls === 3) {
         alert("You have made three rolls this round. Please select a score.");
@@ -243,6 +254,25 @@ rollDiceBtn.addEventListener("click", () => {
     getHighestDuplicates(diceValuesArr);
   }
 });
+
+
+
+
+Шаг 8
+
+Перед каждым броском кубика вам необходимо сбросить значения полей ввода и диапазонов счета, чтобы отобразилось новое значение. Создайте функцию resetRadioOptions. Ваша функция должна перебирать поля ввода счета, чтобы отключить их и удалить атрибут checked. Ваша функция также должна удалить текст из каждого диапазона счета. Наконец, вызовите эту функцию перед броском кубика.
+
+
+const resetRadioOptions = () => {
+  scoreInputs.forEach((input) => {
+    input.disabled = true;
+    input.checked = false;
+  });
+
+  scoreSpans.forEach((span) => {
+    span.textContent = "";
+  });
+};
 
 
 
