@@ -94,6 +94,15 @@ const resetRadioOptions = () => {
     });
 };
 
+const resetGame = () => {
+    listOfAllDice.forEach((dice) => {
+        dice.textContent = 0;
+        score = 0;
+        rolls = 0;
+        round = 1;
+    });
+};
+
 rollDiceBtn.addEventListener("click", () => {
     if (rolls === 3) {
         alert("You have made three rolls this round. Please select a score.");
@@ -139,6 +148,7 @@ keepScoreBtn.addEventListener("click", () => {
         if (round > 6) {
             setTimeout(() => {
                 alert(`Game Over! Your total score is ${score}`);
+                resetGame();
             }, 500);
         }
     } else {
@@ -378,6 +388,22 @@ keepScoreBtn.addEventListener("click", () => {
         }, 500);
     }
 
+
+
+
+Шаг 12
+
+Если вы пройдете шесть раундов игры, должно появиться всплывающее окно с вашим окончательным счетом. Но если вы закроете это окно, вы сможете продолжить игру после первых шести раундов. Чтобы это исправить, вам нужно будет перезапустить игру. Объявите функцию resetGame для этого. Сбросьте все элементы listOfAllDice до значения 0, обновите значение счета и бросков до 0, обновите значение раунда до 1, установите текст totalScoreElement равным общему счету пользователя, очистите историю счета, установив ее в пустую строку, установите текст rollsElement равным количеству бросков и установите текст roundElement равным текущему раунду. Наконец, верните все переключатели в исходное состояние. Вызовите эту функцию после отображения всплывающего окна с окончательным счетом.
+
+
+const resetGame = () => {
+    listOfAllDice.forEach((dice) => {
+    dice.textContent = 0;
+    score = 0;
+    rolls = 0;
+    round = 1;
+  });
+};
 
 
 
