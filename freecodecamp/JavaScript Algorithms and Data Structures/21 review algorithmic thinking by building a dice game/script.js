@@ -40,6 +40,12 @@ const updateRadioOption = (index, score) => {
     scoreSpans[index].textContent = `, score = ${score}`;
 };
 
+const updateScore = (selectedValue, achivied) => {
+    score += parseInt(selectedValue);
+    totalScoreElement.textContent = score;
+    scoreHistory.innerHTML += `<li>${achivied} : ${selectedValue}`
+};
+
 const getHighestDuplicates = (array) => {
     const counts = {};
 
@@ -272,6 +278,20 @@ const resetRadioOptions = () => {
   scoreSpans.forEach((span) => {
     span.textContent = "";
   });
+};
+
+
+
+
+Шаг 9
+
+Когда вы бросаете кубик и выбираете значение, вы не можете сохранить выбранный вами результат и перейти к следующему раунду. Создайте функцию `updateScore`, чтобы добавить эту функциональность. Вашей функции потребуются два параметра для выбора пользователем результата. Первый параметр будет передавать значение переключателя (помните, это строка), а второй параметр будет передавать значение идентификатора переключателя, то есть тип полученного результата. Функция должна добавлять выбранное пользователем значение к результату, обновлять текст общего результата на странице и добавлять новый элемент `<li>` в элемент `<ul>` истории результатов, используя формат `${achieved} : ${selectedValue}` для содержимого элемента `<li>`.
+
+
+const updateScore = (selectedValue, achivied) => {
+  score += parseInt(selectedValue);
+  totalScoreElement.textContent = score;
+  scoreHistory.innerHTML += `<li>${achivied} : ${selectedValue}`
 };
 
 
