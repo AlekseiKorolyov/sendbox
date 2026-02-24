@@ -40,33 +40,44 @@ const updateRadioOption = (index, score) => {
     scoreSpans[index].textContent = `, score = ${score}`;
 };
 
-const updateScore = (selectedValue, achivied) => {
+const updateScore = (selectedValue, achieved) => {
     score += parseInt(selectedValue);
     totalScoreElement.textContent = score;
-    scoreHistory.innerHTML += `<li>${achivied} : ${selectedValue}`
+
+    scoreHistory.innerHTML += `<li>${achieved} : ${selectedValue}</li>`;
 };
 
-const getHighestDuplicates = (array) => {
+const getHighestDuplicates = (arr) => {
     const counts = {};
 
-    array.forEach((num) => {
-        counts[num] = (counts[num] || 0) + 1;
-    });
-
-    const totalSumm = array.reduce((aac, curr) => aac + curr, 0);
-
-    let maxFrequency = 0;
-    for (const num in counts) {
-        if (counts[num] > maxFrequency) {
-            maxFrequency = counts[num];
+    for (const num of arr) {
+        if (counts[num]) {
+            counts[num]++;
+        } else {
+            counts[num] = 1;
         }
     }
 
-    if (maxFrequency >= 4) {
-        updateRadioOption(1, totalSumm);
-        updateRadioOption(0, totalSumm);
-    } else if (maxFrequency === 3) {
-        updateRadioOption(0, totalSumm);
+    let highestCount = 0;
+
+    for (const num of arr) {
+        const count = counts[num];
+        if (count >= 3 && count > highestCount) {
+            highestCount = count;
+        }
+        if (count >= 4 && count > highestCount) {
+            highestCount = count;
+        }
+    }
+
+    const sumOfAllDice = arr.reduce((a, b) => a + b, 0);
+
+    if (highestCount >= 4) {
+        updateRadioOption(1, sumOfAllDice);
+    }
+
+    if (highestCount >= 3) {
+        updateRadioOption(0, sumOfAllDice);
     }
 
     updateRadioOption(5, 0);
@@ -88,6 +99,7 @@ rollDiceBtn.addEventListener("click", () => {
         alert("You have made three rolls this round. Please select a score.");
     } else {
         rolls++;
+        resetRadioOptions();
         rollDice();
         updateStats();
         getHighestDuplicates(diceValuesArr);
@@ -109,6 +121,7 @@ rulesBtn.addEventListener("click", () => {
 keepScoreBtn.addEventListener("click", () => {
     let selectedValue;
     let achieved;
+
     for (const radioButton of scoreInputs) {
         if (radioButton.checked) {
             selectedValue = radioButton.value;
@@ -119,10 +132,15 @@ keepScoreBtn.addEventListener("click", () => {
 
     if (selectedValue) {
         rolls = 0;
-        round ++;
+        round++;
         updateStats();
         resetRadioOptions();
         updateScore(selectedValue, achieved);
+        if (round > 6) {
+            setTimeout(() => {
+                alert(`Game Over! Your total score is ${score}`);
+            }, 500);
+        }
     } else {
         alert("Please select an option or roll the dice");
     }
@@ -345,6 +363,20 @@ keepScoreBtn.addEventListener("click", () => {
     alert("Please select an option or roll the dice");
   }
 });
+
+
+
+
+Шаг 11
+
+На этом этапе игры вы можете бросить кубики, сделать выбор и сыграть несколько раундов. Однако следует отметить, что у игры нет конца, и раундов бесконечное количество. Согласно правилам, должно быть в общей сложности шесть раундов, после чего игра заканчивается итоговым счетом. После выполнения вашей логики, когда пользователь выбирает счет, вы должны проверить, было ли сыграно 6 раундов. Если да, то через 500 миллисекунд отобразите сообщение с итоговым счетом пользователя.
+
+
+    if (round > 6) {
+      setTimeout(() => {
+        alert(`Game Over! Your total score is ${score}`);
+        }, 500);
+    }
 
 
 
