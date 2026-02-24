@@ -106,6 +106,28 @@ rulesBtn.addEventListener("click", () => {
     }
 });
 
+keepScoreBtn.addEventListener("click", () => {
+    let selectedValue;
+    let achieved;
+    for (const radioButton of scoreInputs) {
+        if (radioButton.checked) {
+            selectedValue = radioButton.value;
+            achieved = radioButton.id;
+            break;
+        }
+    }
+
+    if (selectedValue) {
+        rolls = 0;
+        round ++;
+        updateStats();
+        resetRadioOptions();
+        updateScore(selectedValue, achieved);
+    } else {
+        alert("Please select an option or roll the dice");
+    }
+});
+
 
 
 
@@ -293,6 +315,36 @@ const updateScore = (selectedValue, achivied) => {
   totalScoreElement.textContent = score;
   scoreHistory.innerHTML += `<li>${achivied} : ${selectedValue}`
 };
+
+
+
+
+Шаг 10
+
+После того, как пользователь сделает выбор, он должен иметь возможность сохранить этот результат и перейти к следующему раунду, нажав кнопку keepScoreBtn. При нажатии этой кнопки необходимо определить, какой вариант радиокнопки выбран, и получить его значение и идентификатор. Если пользователь выбрал вариант, вызовите свои функции для обновления результата, сброса радиокнопок и добавления значения и идентификатора в историю результатов. Если пользователь не выбрал вариант, отобразите предупреждение, информирующее его о необходимости сделать это.
+
+
+keepScoreBtn.addEventListener("click", () => {
+  let selectedValue;
+  let achieved;
+  for (const radioButton of scoreInputs) {
+    if (radioButton.checked) {
+      selectedValue = radioButton.value;
+      achieved = radioButton.id;
+      break;
+    }
+  }
+
+  if (selectedValue) {
+    rolls = 0;
+    round ++;
+    updateStats();
+    resetRadioOptions();
+    updateScore(selectedValue, achieved);
+  } else {
+    alert("Please select an option or roll the dice");
+  }
+});
 
 
 
