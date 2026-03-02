@@ -83,6 +83,23 @@ const getHighestDuplicates = (arr) => {
     updateRadioOption(5, 0);
 };
 
+const detectFullHouse = (arr) => {
+    const counts = {};
+
+    for (const num of arr) {
+        counts[num] = counts[num] ? counts[num] + 1 : 1;
+    }
+
+    const hasThreeOfAKind = Object.values(counts).includes(3);
+    const hasPair = Object.values(counts).includes(2);
+
+    if (hasThreeOfAKind && hasPair) {
+        updateRadioOption(2, 25);
+    } else {
+        updateRadioOption(5, 0);
+    }
+};
+
 const resetRadioOptions = () => {
     scoreInputs.forEach((input) => {
         input.disabled = true;
@@ -95,12 +112,22 @@ const resetRadioOptions = () => {
 };
 
 const resetGame = () => {
-    listOfAllDice.forEach((dice) => {
-        dice.textContent = 0;
-        score = 0;
-        rolls = 0;
-        round = 1;
+    diceValuesArr = [0, 0, 0, 0, 0];
+    score = 0;
+    round = 1;
+    rolls = 0;
+
+    listOfAllDice.forEach((dice, index) => {
+        dice.textContent = diceValuesArr[index];
     });
+
+    totalScoreElement.textContent = score;
+    scoreHistory.innerHTML = "";
+
+    rollsElement.textContent = rolls;
+    roundElement.textContent = round;
+
+    resetRadioOptions();
 };
 
 rollDiceBtn.addEventListener("click", () => {
@@ -112,6 +139,7 @@ rollDiceBtn.addEventListener("click", () => {
         rollDice();
         updateStats();
         getHighestDuplicates(diceValuesArr);
+        detectFullHouse(diceValuesArr);
     }
 });
 
@@ -155,7 +183,6 @@ keepScoreBtn.addEventListener("click", () => {
         alert("Please select an option or roll the dice");
     }
 });
-
 
 
 
@@ -403,6 +430,31 @@ const resetGame = () => {
     rolls = 0;
     round = 1;
   });
+};
+
+
+
+
+Шаг 13
+
+Если пользователь выбросил три одинаковых числа и два одинаковых, это называется «фулл-хаус». Объявите функцию detectFullHouse, которая принимает один аргумент. При вызове функции будет передан массив diceValuesArr. Ваша функция detectFullHouse должна проверять, выбросил ли пользователь три одинаковых числа и два одинаковых. Если да, то она должна обновить третью радиокнопку, отобразив счет 25 с правильными атрибутами. В любом случае, она всегда должна обновлять последнюю радиокнопку, отображая счет 0 с правильными атрибутами. Не забудьте вызвать вашу новую функцию после броска кубиков.
+
+
+const detectFullHouse = (arr) => {
+  const counts = {};
+
+  for (const num of arr) {
+    counts[num] = counts[num] ? counts[num] + 1 : 1;
+  }
+
+  const hasThreeOfAKind = Object.values(counts).includes(3);
+  const hasPair = Object.values(counts).includes(2);
+
+  if (hasThreeOfAKind && hasPair) {
+    updateRadioOption(2, 25);
+  } else {
+    updateRadioOption(5, 0);
+  }
 };
 
 
