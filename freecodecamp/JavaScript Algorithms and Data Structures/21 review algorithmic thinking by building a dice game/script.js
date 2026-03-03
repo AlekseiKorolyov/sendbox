@@ -95,9 +95,9 @@ const detectFullHouse = (arr) => {
 
     if (hasThreeOfAKind && hasPair) {
         updateRadioOption(2, 25);
-    } else {
-        updateRadioOption(5, 0);
     }
+
+    updateRadioOption(5, 0);
 };
 
 const resetRadioOptions = () => {
@@ -130,6 +130,25 @@ const resetGame = () => {
     resetRadioOptions();
 };
 
+const checkForStraights = (arr) => {
+    const sortedNumbersArr = arr.sort((a, b) => a - b);
+    const uniqueNumbersArr = [...new Set(sortedNumbersArr)];
+    const uniqueNumbersStr = uniqueNumbersArr.join("");
+
+    const smallStraightsArr = ["1234", "2345", "3456"];
+    const largeStraightsArr = ["12345", "23456"];
+
+    if (smallStraightsArr.some(straight => uniqueNumbersStr.includes(straight))) {
+        updateRadioOption(3, 30);
+    }
+
+    if (largeStraightsArr.includes(uniqueNumbersStr)) {
+        updateRadioOption(4, 40);
+    }
+
+    updateRadioOption(5, 0);
+};
+
 rollDiceBtn.addEventListener("click", () => {
     if (rolls === 3) {
         alert("You have made three rolls this round. Please select a score.");
@@ -140,6 +159,7 @@ rollDiceBtn.addEventListener("click", () => {
         updateStats();
         getHighestDuplicates(diceValuesArr);
         detectFullHouse(diceValuesArr);
+        checkForStraights(diceValuesArr);
     }
 });
 
@@ -455,6 +475,33 @@ const detectFullHouse = (arr) => {
   } else {
     updateRadioOption(5, 0);
   }
+};
+
+
+
+
+Шаг 14
+
+Для заключительной части игры вам потребуется создать алгоритм, проверяющий наличие стрита. Малый стрит — это когда четыре кубика дают последовательные значения в любом порядке (например, при броске 41423 у нас 1234), что дает 30 очков. Большой стрит — это когда все пять кубиков дают последовательные значения в любом порядке (например, при броске 35124 у нас 12345), что дает 40 очков. Объявите функцию checkForStraights, которая принимает массив чисел. Если пользователь получает большой стрит, обновите пятый переключатель на 40 очков. Если пользователь получает малый стрит, обновите четвертый переключатель на 30 очков. В любом случае, последний переключатель всегда должен обновляться на 0 очков с правильными атрибутами. Вызывайте функцию checkForStraights при нажатии кнопки rollDiceBtn, чтобы завершить игру в кости!
+
+
+const checkForStraights = (arr) => {
+  const sortedNumbersArr = arr.sort((a, b) => a - b);
+  const uniqueNumbersArr = [...new Set(sortedNumbersArr)];
+  const uniqueNumbersStr = uniqueNumbersArr.join("");
+
+  const smallStraightsArr = ["1234", "2345", "3456"];
+  const largeStraightsArr = ["12345", "23456"];
+
+  if (smallStraightsArr.some(straight => uniqueNumbersStr.includes(straight))) {
+    updateRadioOption(3, 30);
+  }
+
+  if (largeStraightsArr.includes(uniqueNumbersStr)) {
+    updateRadioOption(4, 40);
+  }
+
+  updateRadioOption(5, 0);
 };
 
 
