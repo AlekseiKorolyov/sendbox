@@ -14,7 +14,7 @@ fetch("https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json")
     .catch((err) => console.error(`There was an error: ${err}`));
 
 const displayAuthors = (authors) => {
-    authors.forEach();
+    authors.forEach(({author, image, url, bio}, index) => {});
 };
 
 
@@ -130,6 +130,16 @@ const displayAuthors = (authors) => {
 
 
 authors.forEach();
+
+
+
+
+Шаг 10
+
+Передайте пустую функцию обратного вызова методу `.forEach()`. В качестве первого параметра функции обратного вызова деструктурируйте элементы `author`, `image`, `url` и `bio`. В качестве второго параметра передайте index. Он будет представлять позицию каждого автора и пригодится для пагинации в дальнейшем.
+
+
+authors.forEach(({author, image, url, bio}, index) => {});
 
 
 
