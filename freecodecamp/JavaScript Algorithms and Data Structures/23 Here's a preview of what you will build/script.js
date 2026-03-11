@@ -20,7 +20,8 @@ const fetchMoreAuthors = () => {
     endingIndex += 8;
     displayAuthors(authorDataArr.slice(startingIndex, endingIndex));
     if (authorDataArr.length <= endingIndex) {
-
+        loadMoreBtn.disabled = true;
+        loadMoreBtn.textContent = "No more data to load";
     }
 };
 
@@ -310,6 +311,18 @@ loadMoreBtn.addEventListener("click", fetchMoreAuthors);
   if (authorDataArr.length <= endingIndex) {
 
   }
+
+
+
+
+Шаг 25
+
+Если это условие выполнено, отключите кнопку, установив для ее свойства disabled значение true. Также установите для свойства textContent кнопки значение "Больше данных для загрузки нет".
+
+
+    loadMoreBtn.disabled = true;
+    loadMoreBtn.textContent = "No more data to load";
+
 
 
 
