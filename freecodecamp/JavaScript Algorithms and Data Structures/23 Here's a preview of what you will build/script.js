@@ -34,6 +34,8 @@ const displayAuthors = (authors) => {
     });
 };
 
+loadMoreBtn.addEventListener("click", fetchMoreAuthors);
+
 
 
 
@@ -283,6 +285,16 @@ endingIndex += 8;
 
 
 displayAuthors(authorDataArr.slice(startingIndex, endingIndex));
+
+
+
+
+Шаг 23
+
+Помните, что на шаге 1 вы выбрали кнопку «Загрузить больше авторов» и назначили её функции loadMoreBtn. Используйте addEventListener, чтобы добавить обработчик события «click» для функции loadMoreBtn. Также передайте ссылку на функцию fetchMoreAuthors, которая будет запускаться при каждом нажатии кнопки. После этого при нажатии кнопки вы должны увидеть ещё 8 авторов.
+
+
+loadMoreBtn.addEventListener("click", fetchMoreAuthors);
 
 
 
