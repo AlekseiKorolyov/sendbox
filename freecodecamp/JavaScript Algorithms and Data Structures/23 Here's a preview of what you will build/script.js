@@ -14,7 +14,9 @@ fetch("https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json")
     .catch((err) => console.error(`There was an error: ${err}`));
 
 const displayAuthors = (authors) => {
-    authors.forEach(({author, image, url, bio}, index) => {});
+    authors.forEach(({author, image, url, bio}, index) => {
+        authorContainer.innerHTML += ``;
+    });
 };
 
 
@@ -140,6 +142,16 @@ authors.forEach();
 
 
 authors.forEach(({author, image, url, bio}, index) => {});
+
+
+
+
+Шаг 11
+
+Теперь пришло время начать создавать HTML-код страницы с использованием деструктурированных данных. Это можно сделать с помощью комбинации оператора составного присваивания (+=) и свойства innerHTML. Внутри вашей функции обратного вызова используйте оператор составного присваивания, чтобы добавить пустой шаблонный литерал к свойству innerHTML объекта authorContainer.
+
+
+authorContainer.innerHTML += ``;
 
 
 
