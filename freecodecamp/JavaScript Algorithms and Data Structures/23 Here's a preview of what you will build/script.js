@@ -19,6 +19,9 @@ const fetchMoreAuthors = () => {
     startingIndex += 8;
     endingIndex += 8;
     displayAuthors(authorDataArr.slice(startingIndex, endingIndex));
+    if (authorDataArr.length <= endingIndex) {
+
+    }
 };
 
 const displayAuthors = (authors) => {
@@ -295,6 +298,18 @@ displayAuthors(authorDataArr.slice(startingIndex, endingIndex));
 
 
 loadMoreBtn.addEventListener("click", fetchMoreAuthors);
+
+
+
+
+Шаг 24
+
+Ваша страница авторов fCC готова. Но вы можете улучшить несколько моментов. Во-первых, если вы несколько раз нажмете кнопку «Загрузить больше авторов», вы увидите, что на страницу не добавятся новые авторы. Это потому, что список авторов закончился. Для лучшего пользовательского опыта следует четко указывать, когда больше нет данных для отображения, отключив кнопку и изменив ее текст. Оператор if идеально подходит для этого. Внутри функции fetchMoreAuthors напишите оператор if и установите условие authorDataArr.length <= endingIndex – это означает, что больше нет данных для загрузки.
+
+
+  if (authorDataArr.length <= endingIndex) {
+
+  }
 
 
 
