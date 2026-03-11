@@ -15,7 +15,7 @@ fetch("https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json")
 
 const displayAuthors = (authors) => {
     authors.forEach(({author, image, url, bio}, index) => {
-        authorContainer.innerHTML += ``;
+        authorContainer.innerHTML += `<div class="user-card" id="${index}"></div>`;
     });
 };
 
@@ -152,6 +152,16 @@ authors.forEach(({author, image, url, bio}, index) => {});
 
 
 authorContainer.innerHTML += ``;
+
+
+
+
+Шаг 12
+
+Внутри шаблонного литерала создайте элемент div с id, равным id из метода массива .forEach(). Не забудьте использовать интерполяцию строк для этого. Также добавьте class "user-card" к этому элементу div.
+
+
+<div class="user-card" id="${index}"></div>
 
 
 
