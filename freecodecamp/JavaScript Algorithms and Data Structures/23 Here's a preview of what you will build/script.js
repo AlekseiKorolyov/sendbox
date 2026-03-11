@@ -2,9 +2,11 @@ const authorContainer = document.getElementById("author-container");
 const loadMoreBtn = document.getElementById("load-more-btn");
 
 fetch("https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json")
-    .then((res) => res.json()).then((data) => {
+    .then((res) => res.json())
+    .then((data) => {
     console.log(data);
-})
+    })
+    .catch((err) => console.error(`There was an error: ${err}`));
 
 
 
@@ -76,6 +78,15 @@ fetch("sample-url-goes-here")
       console.log(data);
       })
 
+
+
+
+Шаг 6
+
+Метод `.catch()` — ещё один асинхронный метод JavaScript, который можно использовать для обработки ошибок. Это полезно в случае отклонения промиса. Привяжите `.catch()` к последнему `.then()`. Передайте функцию обратного вызова с параметром `err`. Внутри функции обратного вызова используйте `console.error()` для вывода возможных ошибок в консоль с текстом «Произошла ошибка: ${err}». Поскольку вы используете `err` в тексте, не забудьте использовать шаблонную строку с обратными кавычками (``) вместо одинарных или двойных кавычек. Примечание: `catch` — последний вызов в цепочке `fetch`, поэтому вы можете завершить свой код точкой с запятой.
+
+
+  .catch((err) => console.error(`There was an error: ${err}`));
 
 
 
