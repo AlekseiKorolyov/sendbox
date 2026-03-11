@@ -12,7 +12,7 @@ fetch('https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json')
         displayAuthors(authorDataArr.slice(startingIndex, endingIndex));
     })
     .catch((err) => {
-        console.error(`There was an error: ${err}`);
+        authorContainer.innerHTML = `<p class="error-msg">There was an error loading the authors</p>`;
     });
 
 const fetchMoreAuthors = () => {
@@ -343,6 +343,16 @@ loadMoreBtn.addEventListener("click", fetchMoreAuthors);
 
 
 <p class="bio">${bio.length > 50 ? bio.slice(0, 50) + '...' : bio}</p>
+
+
+
+
+Шаг 28
+
+Наконец, что делать, если произошла ошибка и данные об авторах не загрузились? Тогда нам нужно отобразить сообщение об ошибке в пользовательском интерфейсе. Именно для этого и предназначен метод `.catch()` — для обработки ошибок. Внутри метода `.catch()` удалите `console.error()` и установите `innerHTML` элемента `authorContainer` на элемент `<p>` с классом `error-msg` и текстом `"Произошла ошибка при загрузке авторов".
+
+
+authorContainer.innerHTML = `<p class="error-msg">There was an error loading the authors</p>`;
 
 
 
