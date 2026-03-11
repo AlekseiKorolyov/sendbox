@@ -1,5 +1,7 @@
 const forumLatest = "https://cdn.freecodecamp.org/curriculum/forum-latest/latest.json";
 const forumTopicUrl = "https://forum.freecodecamp.org/t/";
+const forumCategoryUrl = "https://forum.freecodecamp.org/c/";
+const avatarUrl = "https://sea1.discourse-cdn.com/freecodecamp";
 
 
 
@@ -26,6 +28,17 @@ const forumTopicUrl = "https://forum.freecodecamp.org/t/";
 
 const forumLatest = "https://cdn.freecodecamp.org/curriculum/forum-latest/latest.json";
 const forumTopicUrl = "https://forum.freecodecamp.org/t/";
+
+
+
+
+Шаг 2
+
+Далее создайте константную переменную с именем forumCategoryUrl и присвойте ей строку "https://forum.freecodecamp.org/c/". Ниже создайте еще одну константную переменную с именем avatarUrl и присвойте ей строку "https://sea1.discourse-cdn.com/freecodecamp".
+
+
+const forumCategoryUrl = "https://forum.freecodecamp.org/c/";
+const avatarUrl = "https://sea1.discourse-cdn.com/freecodecamp";
 
 
 
