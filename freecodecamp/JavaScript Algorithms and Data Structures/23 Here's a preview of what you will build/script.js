@@ -20,6 +20,7 @@ const displayAuthors = (authors) => {
                 <h2 class="author-name">${author}</h2>
                 <img class="user-img" src="${image}" alt="${author} avatar">
                 <p class="bio">${bio}</p>
+                <a class="author-link" href="${url}" target="_blank">${author}'s author page</a>
             </div>
         `;
     });
@@ -229,6 +230,16 @@ displayAuthors(authorDataArr.slice(startingIndex, endingIndex));
 
 
 <p class="bio">${bio}</p>
+
+
+
+
+Шаг 19
+
+Далее добавьте ссылку на страницу автора на freeCodeCamp News. Добавьте элемент привязки с классом "author-link", в качестве значения атрибута href используйте "url", а в качестве значения атрибута target установите "_blank". В качестве текста элемента привязки используйте "author", а затем текст "'s author page". Например, "Quincy Larson's author page".
+
+
+<a class="author-link" href="${url}" target="_blank">${author}'s author page</a>
 
 
 
