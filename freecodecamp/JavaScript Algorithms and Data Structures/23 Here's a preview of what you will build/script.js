@@ -8,7 +8,7 @@ let authorDataArr = [];
 fetch("https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json")
     .then((res) => res.json())
     .then((data) => {
-    console.log(data);
+        authorDataArr = data;
         displayAuthors();
     })
     .catch((err) => console.error(`There was an error: ${err}`));
@@ -175,6 +175,17 @@ authorContainer.innerHTML += ``;
 
 
 <h2 class="author-name">${author}</h2>
+
+
+
+
+Шаг 14
+
+Чтобы увидеть имена авторов на странице, необходимо вызвать функцию displayAuthors внутри второго метода .then(). Но перед этим нужно присвоить данные об авторах пустому массиву authorDataArr. Сначала удалите оператор console.log(). Затем присвойте data переменной authorDataArr.
+
+
+    authorDataArr = data;
+    displayAuthors();
 
 
 
