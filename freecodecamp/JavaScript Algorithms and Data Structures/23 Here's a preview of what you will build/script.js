@@ -9,7 +9,7 @@ fetch("https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json")
     .then((res) => res.json())
     .then((data) => {
         authorDataArr = data;
-        console.log("Author Data Array:", authorDataArr);
+        displayAuthors(authorDataArr.slice(startingIndex, endingIndex));
     })
     .catch((err) => console.error(`There was an error: ${err}`));
 
@@ -196,6 +196,16 @@ authorContainer.innerHTML += ``;
 
 
 console.log("Author Data Array:", authorDataArr);
+
+
+
+
+Шаг 16
+
+Теперь пришло время вызвать функцию displayAuthors. Но опять же, вам не нужно заполнять страницу всеми авторами сразу. Вместо этого вы можете извлечь часть авторов, используя переменные startingIndex и endingIndex. Лучший способ сделать это — использовать метод массива .slice(). Сначала удалите сообщение в консоль, отображающее authorDataArr. Затем вызовите функцию displayAuthors с массивом authorDataArr и вызовите метод .slice(). Используйте переменную startingIndex для начальной точки и переменную endingIndex для конечной точки.
+
+
+displayAuthors(authorDataArr.slice(startingIndex, endingIndex));
 
 
 
