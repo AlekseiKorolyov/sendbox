@@ -9,8 +9,13 @@ fetch("https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json")
     .then((res) => res.json())
     .then((data) => {
     console.log(data);
+        displayAuthors();
     })
     .catch((err) => console.error(`There was an error: ${err}`));
+
+const displayAuthors = (authors) => {
+
+};
 
 
 
@@ -103,6 +108,18 @@ fetch("sample-url-goes-here")
 let startingIndex = 0;
 let endingIndex = 8;
 let authorDataArr = [];
+
+
+
+
+Шаг 8
+
+Теперь создайте функцию для заполнения пользовательского интерфейса данными об авторах. Вызовите эту функцию внутри второго метода `.then()`. Создайте пустую стрелочную функцию с именем `displayAuthors`, которая принимает в качестве параметра `authors`.
+
+
+const displayAuthors = (authors) => {
+
+};
 
 
 
