@@ -32,7 +32,7 @@ const displayAuthors = (authors) => {
       <h2 class="author-name">${author}</h2>
       <img class="user-img" src="${image}" alt="${author} avatar" />
       <div class="purple-divider"></div>
-      <p class="bio">${bio}</p>
+      <p class="bio">${bio.length > 50 ? bio.slice(0, 50) + '...' : bio}</p>
       <a class="author-link" href="${url}" target="_blank">${author}'s author page</a>
     </div>
   `;
@@ -333,6 +333,16 @@ loadMoreBtn.addEventListener("click", fetchMoreAuthors);
 
 
 <div class="purple-divider"></div>
+
+
+
+
+Шаг 27
+
+Некоторые биографии авторов значительно длиннее других. Чтобы карточки выглядели единообразно, вы можете извлечь первые 50 символов каждой биографии и заменить остальное многоточием ("..."). В противном случае можно отобразить всю биографию целиком. В элементе абзаца замените bio тернарным оператором. В условии проверьте, превышает ли длина bio 50 символов. Если да, используйте метод .slice() для извлечения первых 50 символов bio и добавьте многоточие в конце. В противном случае отобразите полную биографию.
+
+
+<p class="bio">${bio.length > 50 ? bio.slice(0, 50) + '...' : bio}</p>
 
 
 
