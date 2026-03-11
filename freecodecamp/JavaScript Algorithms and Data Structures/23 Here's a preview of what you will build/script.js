@@ -18,6 +18,7 @@ fetch('https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json')
 const fetchMoreAuthors = () => {
     startingIndex += 8;
     endingIndex += 8;
+    displayAuthors(authorDataArr.slice(startingIndex, endingIndex));
 };
 
 const displayAuthors = (authors) => {
@@ -272,6 +273,16 @@ const fetchMoreAuthors = () => {
 startingIndex += 8;
 endingIndex += 8;
 };
+
+
+
+
+Шаг 22
+
+Теперь вызовите функцию displayAuthors с частью данных об авторах, как вы делали это раньше. Если вы нажмете кнопку «Загрузить больше авторов» после вызова функции, это не сработает. Это потому, что вам еще нужно добавить обработчик события клика к кнопке. Вы сделаете это далее.
+
+
+displayAuthors(authorDataArr.slice(startingIndex, endingIndex));
 
 
 
