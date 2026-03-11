@@ -31,6 +31,7 @@ const displayAuthors = (authors) => {
     <div id="${index}" class="user-card">
       <h2 class="author-name">${author}</h2>
       <img class="user-img" src="${image}" alt="${author} avatar" />
+      <div class="purple-divider"></div>
       <p class="bio">${bio}</p>
       <a class="author-link" href="${url}" target="_blank">${author}'s author page</a>
     </div>
@@ -323,6 +324,15 @@ loadMoreBtn.addEventListener("click", fetchMoreAuthors);
     loadMoreBtn.disabled = true;
     loadMoreBtn.textContent = "No more data to load";
 
+
+
+
+Шаг 26
+
+Далее, между именем и изображением каждого автора и остальной информацией на карточке практически нет разделения. Разделитель обеспечит четкую визуальную иерархию карточек авторов. Добавьте элемент div над биографией автора и присвойте ему класс "purple-divider".
+
+
+<div class="purple-divider"></div>
 
 
 
