@@ -2,7 +2,7 @@ const authorContainer = document.getElementById("author-container");
 const loadMoreBtn = document.getElementById("load-more-btn");
 
 fetch("https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json")
-    .then((res) => console.log(res))
+    .then((res) => res.json())
 
 
 
@@ -51,6 +51,16 @@ fetch("sample-url-goes-here")
 
 
 .then((res) => console.log(res))
+
+
+
+
+Шаг 4
+
+Данные, полученные в результате GET-запроса, изначально непригодны для использования. Чтобы сделать данные пригодными, вы можете использовать метод `.json()` объекта `Response` для преобразования их в формат JSON. Если вы развернете прототип объекта `Response` в консоли браузера, вы увидите там метод `.json()`. Удалите `console.log(res)` и вместо этого неявно возвращайте `res.json()`.
+
+
+.then((res) => res.json())
 
 
 
