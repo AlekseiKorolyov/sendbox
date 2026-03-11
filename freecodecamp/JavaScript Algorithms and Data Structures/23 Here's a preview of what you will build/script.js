@@ -9,7 +9,7 @@ fetch("https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json")
     .then((res) => res.json())
     .then((data) => {
         authorDataArr = data;
-        displayAuthors();
+        console.log("Author Data Array:", authorDataArr);
     })
     .catch((err) => console.error(`There was an error: ${err}`));
 
@@ -187,6 +187,15 @@ authorContainer.innerHTML += ``;
     authorDataArr = data;
     displayAuthors();
 
+
+
+
+Шаг 15
+
+Теперь authorDataArr совпадает с данными, которые вы вывели в консоль некоторое время назад. Выведите authorDataArr в консоль, чтобы подтвердить это. В операторе console.log() добавьте текст "Author Data Array:" в качестве первого аргумента и authorDataArr в качестве второго аргумента. Разделяйте текст и authorDataArr запятой.
+
+
+console.log("Author Data Array:", authorDataArr);
 
 
 
