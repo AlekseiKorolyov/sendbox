@@ -1,6 +1,10 @@
 const authorContainer = document.getElementById("author-container");
 const loadMoreBtn = document.getElementById("load-more-btn");
 
+let startingIndex = 0;
+let endingIndex = 8;
+let authorDataArr = [];
+
 fetch("https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json")
     .then((res) => res.json())
     .then((data) => {
@@ -88,6 +92,17 @@ fetch("sample-url-goes-here")
 
   .catch((err) => console.error(`There was an error: ${err}`));
 
+
+
+
+Шаг 7
+
+Теперь, когда у вас есть нужные данные, вы можете использовать их для заполнения пользовательского интерфейса. Но полученные данные содержат массив из 26 авторов, и если вы добавите их всех на страницу одновременно, это может привести к снижению производительности. Вместо этого следует добавлять по 8 авторов за раз и иметь кнопку для добавления еще 8 авторов, пока не закончатся данные для отображения. Используйте let для создания двух переменных с именами startingIndex и endingIndex и присвойте им числовые значения 0 и 8 соответственно. Также создайте переменную authorDataArr с помощью let и присвойте ей пустой массив.
+
+
+let startingIndex = 0;
+let endingIndex = 8;
+let authorDataArr = [];
 
 
 
