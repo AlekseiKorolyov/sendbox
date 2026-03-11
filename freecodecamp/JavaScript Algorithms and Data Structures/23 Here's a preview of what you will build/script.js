@@ -2,7 +2,9 @@ const authorContainer = document.getElementById("author-container");
 const loadMoreBtn = document.getElementById("load-more-btn");
 
 fetch("https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json")
-    .then((res) => res.json())
+    .then((res) => res.json()).then((data) => {
+    console.log(data);
+})
 
 
 
@@ -61,6 +63,18 @@ fetch("sample-url-goes-here")
 
 
 .then((res) => res.json())
+
+
+
+
+Шаг 5
+
+Для начала работы с данными вам потребуется использовать еще один метод `.then()`. Добавьте еще один метод `.then()` к существующему методу `.then()`. На этот раз передайте data в качестве параметра для функции обратного вызова. Для функции обратного вызова используйте фигурные скобки, поскольку у вас будет более одного выражения. Внутри функции обратного вызова выведите data в консоль, чтобы увидеть, как они выглядят.
+
+
+    .then((res) => res.json()).then((data) => {
+      console.log(data);
+      })
 
 
 
