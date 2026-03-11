@@ -14,7 +14,7 @@ fetch("https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json")
     .catch((err) => console.error(`There was an error: ${err}`));
 
 const displayAuthors = (authors) => {
-
+    authors.forEach();
 };
 
 
@@ -120,6 +120,17 @@ let authorDataArr = [];
 const displayAuthors = (authors) => {
 
 };
+
+
+
+
+Шаг 9
+
+Внутри функции displayAuthors добавьте в цепочку вызовы метода .forEach() для обращения к authors.
+
+
+authors.forEach();
+
 
 
 
