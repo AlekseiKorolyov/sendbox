@@ -19,7 +19,9 @@ const displayAuthors = (authors) => {
             <div class="user-card" id="${index}">
                 <h2 class="author-name">${author}</h2>
                 <img class="user-img" src="${image}" alt="${author} avatar">
-            </div>`;
+                <p class="bio">${bio}</p>
+            </div>
+        `;
     });
 };
 
@@ -217,6 +219,16 @@ displayAuthors(authorDataArr.slice(startingIndex, endingIndex));
 
 
 <img class="user-img" src="${image}" alt="${author} avatar">
+
+
+
+
+Шаг 18
+
+Далее вы отобразите биографические данные об авторе. Это можно сделать с помощью элемента `bio`, который вы деструктурировали ранее. Добавьте элемент `paragraph` с классом `bio`, затем вставьте `bio` внутрь элемента `paragraph`.
+
+
+<p class="bio">${bio}</p>
 
 
 
