@@ -16,9 +16,10 @@ fetch("https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json")
 const displayAuthors = (authors) => {
     authors.forEach(({author, image, url, bio}, index) => {
         authorContainer.innerHTML += `
-<div class="user-card" id="${index}">
-<h2 class="author-name">${author}</h2>
-</div>`;
+            <div class="user-card" id="${index}">
+                <h2 class="author-name">${author}</h2>
+                <img class="user-img" src="${image}" alt="${author} avatar">
+            </div>`;
     });
 };
 
@@ -207,6 +208,15 @@ console.log("Author Data Array:", authorDataArr);
 
 displayAuthors(authorDataArr.slice(startingIndex, endingIndex));
 
+
+
+
+Шаг 17
+
+Теперь создайте тег изображения и присвойте ему класс "user-img". Используйте интерполяцию строк, чтобы установить атрибут src на изображение, которое вы деструктурировали ранее. Установите атрибут alt на author, за которым следует текст "avatar". Убедитесь, что между переменной author и словом "avatar" есть пробел, например, "Quincy Larson avatar".
+
+
+<img class="user-img" src="${image}" alt="${author} avatar">
 
 
 
