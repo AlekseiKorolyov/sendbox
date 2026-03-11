@@ -12,16 +12,18 @@ fetch('https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json')
         displayAuthors(authorDataArr.slice(startingIndex, endingIndex));
     })
     .catch((err) => {
-        authorContainer.innerHTML = `<p class="error-msg">There was an error loading the authors</p>`;
+        authorContainer.innerHTML = '<p class="error-msg">There was an error loading the authors</p>';
     });
 
 const fetchMoreAuthors = () => {
     startingIndex += 8;
     endingIndex += 8;
+
     displayAuthors(authorDataArr.slice(startingIndex, endingIndex));
     if (authorDataArr.length <= endingIndex) {
         loadMoreBtn.disabled = true;
-        loadMoreBtn.textContent = "No more data to load";
+        loadMoreBtn.style.cursor = "not-allowed";
+        loadMoreBtn.textContent = 'No more data to load';
     }
 };
 
@@ -30,17 +32,16 @@ const displayAuthors = (authors) => {
         authorContainer.innerHTML += `
     <div id="${index}" class="user-card">
       <h2 class="author-name">${author}</h2>
-      <img class="user-img" src="${image}" alt="${author} avatar" />
+      <img class="user-img" src="${image}" alt="${author} avatar">
       <div class="purple-divider"></div>
       <p class="bio">${bio.length > 50 ? bio.slice(0, 50) + '...' : bio}</p>
-      <a class="author-link" href="${url}" target="_blank">${author}'s author page</a>
+      <a class="author-link" href="${url}" target="_blank">${author} author page</a>
     </div>
   `;
     });
 };
 
-loadMoreBtn.addEventListener("click", fetchMoreAuthors);
-
+loadMoreBtn.addEventListener('click', fetchMoreAuthors);
 
 
 
@@ -357,6 +358,10 @@ authorContainer.innerHTML = `<p class="error-msg">There was an error loading the
 
 
 
+Шаг 29
+
+Ещё один момент. Если вы продолжаете нажимать кнопку «Загрузить больше авторов», пока не закончатся данные для загрузки и текст не изменится на «Данные для загрузки больше не нужны», значение курсора всё ещё будет «указатель». Почему бы не изменить значение курсора на «недопустимо»? Перейдите в свойство стиля кнопки «Загрузить больше авторов» и установите значение курсора на «недопустимо». На этом ваша страница автора готова!
 
 
+    loadMoreBtn.style.cursor = "not-allowed";
  */
