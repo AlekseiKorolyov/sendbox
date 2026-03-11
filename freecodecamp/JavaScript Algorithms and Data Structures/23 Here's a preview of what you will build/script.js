@@ -16,7 +16,8 @@ fetch('https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json')
     });
 
 const fetchMoreAuthors = () => {
-
+    startingIndex += 8;
+    endingIndex += 8;
 };
 
 const displayAuthors = (authors) => {
@@ -257,6 +258,19 @@ displayAuthors(authorDataArr.slice(startingIndex, endingIndex));
 
 const fetchMoreAuthors = () => {
 
+};
+
+
+
+
+Шаг 21
+
+Внутри функции fetchMoreAuthors установите переменные startingIndex и endingIndex равными += 8 каждая.
+
+
+const fetchMoreAuthors = () => {
+startingIndex += 8;
+endingIndex += 8;
 };
 
 
