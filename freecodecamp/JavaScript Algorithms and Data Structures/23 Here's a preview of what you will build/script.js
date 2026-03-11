@@ -15,7 +15,10 @@ fetch("https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json")
 
 const displayAuthors = (authors) => {
     authors.forEach(({author, image, url, bio}, index) => {
-        authorContainer.innerHTML += `<div class="user-card" id="${index}"></div>`;
+        authorContainer.innerHTML += `
+<div class="user-card" id="${index}">
+<h2 class="author-name">${author}</h2>
+</div>`;
     });
 };
 
@@ -162,6 +165,16 @@ authorContainer.innerHTML += ``;
 
 
 <div class="user-card" id="${index}"></div>
+
+
+
+
+Шаг 13
+
+Теперь вам нужно отобразить некоторую информацию об авторе. Сначала покажите имя автора. Создайте тег h2 с классом "author-name". Затем вставьте слово "author" внутрь тега h2. Это и будет имя автора.
+
+
+<h2 class="author-name">${author}</h2>
 
 
 
