@@ -8,10 +8,13 @@ const fetchData = async () => {
     try {
         const res = await fetch(forumLatest);
         const data = await res.json();
+        console.log(data);
     } catch (err) {
 
     }
-}
+};
+
+fetchData();
 
 
 
@@ -123,6 +126,13 @@ const res = await fetch(forumLatest);
 
 
 const data = await res.json();
+
+
+
+
+Шаг 8
+
+Чтобы просмотреть результаты данных, выведите значение переменной `data` в консоль внутри блока `try`. Ниже определения функции `fetchData` вызовите функцию и откройте консоль, чтобы увидеть результаты.
 
 
 
