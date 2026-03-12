@@ -15,6 +15,10 @@ const fetchData = async () => {
 
 fetchData();
 
+const showLatestPosts = (data) => {
+
+};
+
 
 
 
@@ -139,6 +143,18 @@ const data = await res.json();
 Шаг 9
 
 Если при вызове функции fetch возникает ошибка, блок catch обработает её. Внутри блока catch добавьте console.log для вывода параметра err. Также удалите console.log(data); из блока try, теперь, когда вы понимаете, что возвращается при вызове функции fetch.
+
+
+
+
+Шаг 10
+
+Теперь пришло время отобразить данные на странице. Начните с создания стрелочной функции с именем showLatestPosts, которая принимает один параметр data.
+
+
+const showLatestPosts = (data) => {
+
+};
 
 
 
