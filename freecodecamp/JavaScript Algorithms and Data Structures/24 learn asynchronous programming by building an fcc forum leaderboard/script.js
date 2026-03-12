@@ -19,7 +19,9 @@ fetchData();
 const showLatestPosts = (data) => {
     const {topic_list, users} = data;
     const { topics } = topic_list;
-    postsContainer.innerHTML =  topics.map((item) => {});
+    postsContainer.innerHTML =  topics.map((item) => {
+        const { id, title, views, posts_count, slug, posters, category_id, bumped_at } = item;
+    });
 };
 
 
@@ -197,6 +199,23 @@ const { topics } = topic_list;
 postsContainer.innerHTML =  topics.map((item) => {});
 
 
+
+
+Шаг 15
+
+Внутри метода map деструктурируйте следующие свойства из объекта item.
+
+id
+title
+views
+posts_count
+slug
+posters
+category_id
+bumped_at
+
+
+const { id, title, views, posts_count, slug, posters, category_id, bumped_at } = item;
 
 
 
