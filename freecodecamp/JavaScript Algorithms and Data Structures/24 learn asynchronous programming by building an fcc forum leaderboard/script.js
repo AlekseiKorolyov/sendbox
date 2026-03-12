@@ -32,7 +32,9 @@ const showLatestPosts = (data) => {
         } = item;
         return `
             <tr>
-              <td></td>
+              <td>
+              <p class="post-title">${title}</p>
+              </td>
               <td></td>
               <td></td>
               <td></td>
@@ -258,6 +260,16 @@ const { id, title, views, posts_count, slug, posters, category_id, bumped_at } =
 Шаг 18
 
 Внутри элемента `tr` добавьте пять пустых элементов `td`.
+
+
+
+
+Шаг 19
+
+Чтобы отобразить заголовок темы, добавьте элемент `<p>` внутри первого элемента `<td>`. Между тегами абзаца добавьте встроенное выражение, содержащее переменную title. Затем добавьте класс `post-title` внутри открывающего тега абзаца.
+
+
+<p class="post-title">${title}</p>
 
 
 
