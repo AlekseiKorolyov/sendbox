@@ -19,6 +19,7 @@ fetchData();
 const showLatestPosts = (data) => {
     const {topic_list, users} = data;
     const { topics } = topic_list;
+    postsContainer.innerHTML =  topics.map((item) => {});
 };
 
 
@@ -184,6 +185,16 @@ const {topic_list, users} = data;
 
 
 const { topics } = topic_list;
+
+
+
+
+Шаг 14
+
+Теперь пришло время начать заполнять данные внутри postsContainer. Начните с вызова метода map() для вашего массива topics. В качестве функции обратного вызова используйте пустую стрелочную функцию, которая принимает item в качестве параметра. Затем присвойте результат метода map() переменной postsContainer.innerHTML
+
+
+postsContainer.innerHTML =  topics.map((item) => {});
 
 
 
