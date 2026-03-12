@@ -7,6 +7,7 @@ const postsContainer = document.getElementById("posts-container");
 const fetchData = async () => {
     try {
         const res = await fetch(forumLatest);
+        const data = await res.json();
     } catch (err) {
 
     }
@@ -113,6 +114,15 @@ const example = async () => {
 
 const res = await fetch(forumLatest);
 
+
+
+
+Шаг 7
+
+Вам нужно получить тело ответа в виде объекта JSON. Метод `.json()` вашей переменной `res` возвращает промис, а это значит, что вам нужно будет его ожидать. Создайте константу с именем `data` и присвойте ей значение `await res.json()`.
+
+
+const data = await res.json();
 
 
 
