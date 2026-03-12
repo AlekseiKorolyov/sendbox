@@ -20,7 +20,17 @@ const showLatestPosts = (data) => {
     const {topic_list, users} = data;
     const { topics } = topic_list;
     postsContainer.innerHTML =  topics.map((item) => {
-        const { id, title, views, posts_count, slug, posters, category_id, bumped_at } = item;
+        const {
+            id,
+            title,
+            views,
+            posts_count,
+            slug,
+            posters,
+            category_id,
+            bumped_at
+        } = item;
+        return `<tr></tr>`;
     });
 };
 
@@ -216,6 +226,16 @@ bumped_at
 
 
 const { id, title, views, posts_count, slug, posters, category_id, bumped_at } = item;
+
+
+
+
+Шаг 16
+
+Следующий шаг — создание таблицы, которая будет отображать данные форума. Ниже вашего задания по деструктуризации добавьте ключевое слово `return`, за которым следует набор шаблонных литералов. Внутри этих шаблонных литералов добавьте элемент `tr` для строки таблицы.
+
+
+    return `<tr></tr>`;
 
 
 
