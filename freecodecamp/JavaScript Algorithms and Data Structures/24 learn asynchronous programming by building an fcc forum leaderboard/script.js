@@ -8,9 +8,8 @@ const fetchData = async () => {
     try {
         const res = await fetch(forumLatest);
         const data = await res.json();
-        console.log(data);
     } catch (err) {
-
+        console.log(err);
     }
 };
 
@@ -133,6 +132,13 @@ const data = await res.json();
 Шаг 8
 
 Чтобы просмотреть результаты данных, выведите значение переменной `data` в консоль внутри блока `try`. Ниже определения функции `fetchData` вызовите функцию и откройте консоль, чтобы увидеть результаты.
+
+
+
+
+Шаг 9
+
+Если при вызове функции fetch возникает ошибка, блок catch обработает её. Внутри блока catch добавьте console.log для вывода параметра err. Также удалите console.log(data); из блока try, теперь, когда вы понимаете, что возвращается при вызове функции fetch.
 
 
 
