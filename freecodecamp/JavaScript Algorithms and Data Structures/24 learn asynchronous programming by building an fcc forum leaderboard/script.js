@@ -5,6 +5,11 @@ const avatarUrl = "https://sea1.discourse-cdn.com/freecodecamp";
 
 const postsContainer = document.getElementById("posts-container");
 
+const timeAgo = (time) => {
+    const currentTime = new Date();
+    const lastPost = new Date(time);
+};
+
 const fetchData = async () => {
     try {
         const res = await fetch(forumLatest);
@@ -287,6 +292,19 @@ const { id, title, views, posts_count, slug, posters, category_id, bumped_at } =
 Шаг 21
 
 В четвертом элементе td добавьте встроенное выражение, содержащее переменную views. Это отобразит количество просмотров записи.
+
+
+
+
+Шаг 22
+
+Для отображения данных в столбце Activity необходимо использовать свойство bumped_at каждой темы, представляющее собой метку времени в формате ISO 8601. Эти данные необходимо обработать, прежде чем можно будет показать, сколько времени прошло с момента последней активности в теме. Создайте новую функцию timeAgo с параметром time. Внутри функции timeAgo создайте две переменные с именами currentTime и lastPost и присвойте им значения new Date() и new Date(time) соответственно. lastPost будет представлять дату последней активности в теме, а currentTime — текущую дату и время.
+
+
+const timeAgo = (time) => {
+  const currentTime = new Date();
+  const lastPost = new Date(time);
+};
 
 
 
