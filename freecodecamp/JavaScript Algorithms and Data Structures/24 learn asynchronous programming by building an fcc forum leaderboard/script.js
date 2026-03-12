@@ -18,6 +18,7 @@ fetchData();
 
 const showLatestPosts = (data) => {
     const {topic_list, users} = data;
+    const { topics } = topic_list;
 };
 
 
@@ -173,6 +174,16 @@ const showLatestPosts = (data) => {
 
 
 const {topic_list, users} = data;
+
+
+
+
+Шаг 13
+
+Объект topic_list содержит массив topics, в котором собраны последние темы, опубликованные на форуме. Извлеките структуру массива topics из объекта topic_list.
+
+
+const { topics } = topic_list;
 
 
 
