@@ -4,7 +4,13 @@ const forumCategoryUrl = "https://forum.freecodecamp.org/c/";
 const avatarUrl = "https://sea1.discourse-cdn.com/freecodecamp";
 
 const postsContainer = document.getElementById("posts-container");
-const fetchData = async () => {};
+const fetchData = async () => {
+    try {
+
+    } catch (err) {
+
+    }
+}
 
 
 
@@ -62,6 +68,32 @@ const postsContainer = document.getElementById("posts-container");
 
 
 const fetchData = async () => {};
+
+
+
+
+Шаг 5
+
+В прошлом проекте вы использовали метод `.catch()` для обработки ошибок. Здесь вы будете использовать вместо него блок `try...catch`. Блок `try` предназначен для обработки потенциальных ошибок, и код внутри блока `catch` будет выполнен в случае возникновения ошибки.
+Пример кода:
+
+try {
+ const name = "freeCodeCamp";
+ name = "fCC";
+} catch (err) {
+ console.log(err); // TypeError: Присваивание константной переменной.
+}
+
+Внутри вашей функции `fetchData` добавьте блок `try...catch`. Блок `catch` должен иметь параметр ошибки с именем `err`.
+
+
+const fetchData = async () => {
+  try {
+
+  } catch (err) {
+
+  }
+}
 
 
 
