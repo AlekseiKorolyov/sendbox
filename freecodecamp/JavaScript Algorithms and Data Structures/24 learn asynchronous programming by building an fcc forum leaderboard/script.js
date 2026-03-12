@@ -17,7 +17,7 @@ const fetchData = async () => {
 fetchData();
 
 const showLatestPosts = (data) => {
-
+    const {topic_list, users} = data;
 };
 
 
@@ -163,6 +163,16 @@ const showLatestPosts = (data) => {
 Шаг 11
 
 По мере создания функции showLatestPosts() вам потребуется вызывать её, чтобы увидеть изменения. Вызовите функцию showLatestPosts() в конце блока try и передайте data в качестве аргумента.
+
+
+
+
+Шаг 12
+
+В функции showLatestPosts() используйте деструктуризацию, чтобы получить свойства topic_list и users из объекта данных.
+
+
+const {topic_list, users} = data;
 
 
 
