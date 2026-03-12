@@ -6,7 +6,7 @@ const avatarUrl = "https://sea1.discourse-cdn.com/freecodecamp";
 const postsContainer = document.getElementById("posts-container");
 const fetchData = async () => {
     try {
-
+        const res = await fetch(forumLatest);
     } catch (err) {
 
     }
@@ -94,6 +94,24 @@ const fetchData = async () => {
 
   }
 }
+
+
+
+
+Шаг 6
+
+В предыдущем проекте вы использовали метод `fetch()` с `.then()` для выполнения логики после разрешения промиса. Теперь вы будете использовать ключевое слово `await` для обработки асинхронной природы метода `fetch()`. Ключевое слово `await` ожидает разрешения промиса и возвращает результат.
+Пример кода
+
+const example = async () => {
+ const data = await fetch("https://example.com/api");
+ console.log(data);
+}
+
+Внутри блока `try` создайте константу с именем `res` и присвойте ей `await fetch()`. Для вызова `fetch` передайте переменную `forumLatest`.
+
+
+const res = await fetch(forumLatest);
 
 
 
