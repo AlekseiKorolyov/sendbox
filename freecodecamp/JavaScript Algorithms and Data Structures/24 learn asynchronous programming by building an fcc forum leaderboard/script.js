@@ -36,7 +36,9 @@ const showLatestPosts = (data) => {
               <p class="post-title">${title}</p>
               </td>
               <td></td>
-              <td></td>
+              <td>
+              ${posts_count - 1}
+              </td>
               <td></td>
               <td></td>
             </tr>
@@ -270,6 +272,13 @@ const { id, title, views, posts_count, slug, posters, category_id, bumped_at } =
 
 
 <p class="post-title">${title}</p>
+
+
+
+
+Шаг 20
+
+Оставьте второй элемент td пустым, так как вы добавите в него контент позже. В третий элемент td добавьте следующее встроенное выражение: ${posts_count - 1}. Это отобразит количество ответов на тему.
 
 
 
