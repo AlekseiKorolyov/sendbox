@@ -30,7 +30,15 @@ const showLatestPosts = (data) => {
             category_id,
             bumped_at
         } = item;
-        return `<tr></tr>`;
+        return `
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+        `;
     }).join("");
 };
 
@@ -243,6 +251,13 @@ const { id, title, views, posts_count, slug, posters, category_id, bumped_at } =
 Шаг 17
 
 В окне предварительного просмотра вы должны увидеть столбец запятых. Чтобы это исправить, вам следует связать метод join с вашим методом map. В качестве разделителя передайте пустую строку.
+
+
+
+
+Шаг 18
+
+Внутри элемента `tr` добавьте пять пустых элементов `td`.
 
 
 
