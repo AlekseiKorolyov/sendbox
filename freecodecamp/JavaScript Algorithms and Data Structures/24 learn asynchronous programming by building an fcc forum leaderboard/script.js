@@ -4,6 +4,7 @@ const forumCategoryUrl = "https://forum.freecodecamp.org/c/";
 const avatarUrl = "https://sea1.discourse-cdn.com/freecodecamp";
 
 const postsContainer = document.getElementById("posts-container");
+
 const fetchData = async () => {
     try {
         const res = await fetch(forumLatest);
@@ -17,9 +18,10 @@ const fetchData = async () => {
 fetchData();
 
 const showLatestPosts = (data) => {
-    const {topic_list, users} = data;
+    const { topic_list, users } = data;
     const { topics } = topic_list;
-    postsContainer.innerHTML =  topics.map((item) => {
+
+    postsContainer.innerHTML = topics.map((item) => {
         const {
             id,
             title,
@@ -28,24 +30,23 @@ const showLatestPosts = (data) => {
             slug,
             posters,
             category_id,
-            bumped_at
+            bumped_at,
         } = item;
+
         return `
-            <tr>
-              <td>
-              <p class="post-title">${title}</p>
-              </td>
-              <td></td>
-              <td>
-              ${posts_count - 1}
-              </td>
-              <td></td>
-              <td></td>
-            </tr>
-        `;
+    <tr>
+      <td>
+        <p class="post-title">${title}</p>
+      </td>
+      <td></td>
+      <td>${posts_count - 1}</td>
+      <td>
+      ${views}
+      </td>
+      <td></td>
+    </tr>`;
     }).join("");
 };
-
 
 
 
@@ -279,6 +280,13 @@ const { id, title, views, posts_count, slug, posters, category_id, bumped_at } =
 Шаг 20
 
 Оставьте второй элемент td пустым, так как вы добавите в него контент позже. В третий элемент td добавьте следующее встроенное выражение: ${posts_count - 1}. Это отобразит количество ответов на тему.
+
+
+
+
+Шаг 21
+
+В четвертом элементе td добавьте встроенное выражение, содержащее переменную views. Это отобразит количество просмотров записи.
 
 
 
