@@ -8,6 +8,7 @@ const fetchData = async () => {
     try {
         const res = await fetch(forumLatest);
         const data = await res.json();
+        showLatestPosts(data);
     } catch (err) {
         console.log(err);
     }
@@ -155,6 +156,13 @@ const data = await res.json();
 const showLatestPosts = (data) => {
 
 };
+
+
+
+
+Шаг 11
+
+По мере создания функции showLatestPosts() вам потребуется вызывать её, чтобы увидеть изменения. Вызовите функцию showLatestPosts() в конце блока try и передайте data в качестве аргумента.
 
 
 
