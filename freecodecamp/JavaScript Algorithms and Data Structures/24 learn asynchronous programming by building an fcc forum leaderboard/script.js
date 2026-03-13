@@ -4,7 +4,12 @@ const forumCategoryUrl = "https://forum.freecodecamp.org/c/";
 const avatarUrl = "https://sea1.discourse-cdn.com/freecodecamp";
 
 const postsContainer = document.getElementById("posts-container");
-const allCategories = {};
+const allCategories = {
+    299: {
+        category: "Career Advice",
+        className: "career"
+    }
+};
 
 const timeAgo = (time) => {
     const currentTime = new Date();
@@ -399,6 +404,21 @@ const viewCount = (views) => {
 
 
 const allCategories = {};
+
+
+
+
+Шаг 28
+
+Внутри объекта allCategories добавьте новый ключ для числа 299 со значением пустого объекта. Внутри этого объекта добавьте свойство с ключом category и строковым значением "Career Advice". Ниже этого свойства добавьте еще один ключ с именем className и строковым значением "career".
+
+
+const allCategories = {
+  299: {
+    category: "Career Advice",
+    className: "career"
+  }
+};
 
 
 
