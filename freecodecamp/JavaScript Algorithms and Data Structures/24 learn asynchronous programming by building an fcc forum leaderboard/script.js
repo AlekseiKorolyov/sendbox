@@ -17,7 +17,7 @@ const allCategories = {
 };
 
 const forumCategory = (id) => {
-
+    let selectedCategory = {}
 };
 
 const timeAgo = (time) => {
@@ -460,6 +460,16 @@ const allCategories = {
 const forumCategory = (id) => {
 
 };
+
+
+
+
+Шаг 32
+
+Внутри функции forumCategory создайте новую переменную let с именем selectedCategory и присвойте ей пустой объект. Она будет использоваться для хранения названия категории и имени класса для каждой категории.
+
+
+let selectedCategory = {}
 
 
 
