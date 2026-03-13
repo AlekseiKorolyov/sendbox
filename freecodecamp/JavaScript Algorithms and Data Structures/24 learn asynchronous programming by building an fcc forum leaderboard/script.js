@@ -21,6 +21,8 @@ const forumCategory = (id) => {
 
     if (allCategories.hasOwnProperty(id)) {
         const { className, category } = allCategories[id];
+        selectedCategory.className = className;
+        selectedCategory.category = category;
     }
 };
 
@@ -496,6 +498,17 @@ let selectedCategory = {}
 
 
 const { className, category } = allCategories[id];
+
+
+
+
+Шаг 35
+
+Теперь вам необходимо добавить свойства className и category к вашему объекту selectedCategory. Начните с присвоения переменной className значения selectedCategory.className. Затем присвойте переменной category значение selectedCategory.category.
+
+
+    selectedCategory.className = className;
+    selectedCategory.category = category;
 
 
  */
