@@ -6,7 +6,8 @@ const avatarUrl = "https://sea1.discourse-cdn.com/freecodecamp";
 const postsContainer = document.getElementById("posts-container");
 const allCategories = {
     299: { category: "Career Advice", className: "career" },
-    409: { category: "Project Feedback", className: "feedback" }
+    409: { category: "Project Feedback", className: "feedback" },
+    417: { category: "freeCodeCamp Support", className: "support"}
 };
 
 const timeAgo = (time) => {
@@ -427,6 +428,16 @@ const allCategories = {
 
 
   409: { category: "Project Feedback", className: "feedback" }
+
+
+
+
+Шаг 30
+
+Добавьте новый ключ для числа 417 со значением пустого объекта. Внутри этого объекта добавьте свойство с ключом category и строковым значением "freeCodeCamp Support". Ниже этого свойства добавьте еще один ключ с именем className и строковым значением "support".
+
+
+417: { category: "freeCodeCamp Support", className: "support"}
 
 
 
