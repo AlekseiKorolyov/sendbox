@@ -18,8 +18,9 @@ const allCategories = {
 
 const forumCategory = (id) => {
     let selectedCategory = {};
-    if (allCategories.hasOwnProperty(id)) {
 
+    if (allCategories.hasOwnProperty(id)) {
+        const { className, category } = allCategories[id];
     }
 };
 
@@ -486,6 +487,15 @@ let selectedCategory = {}
 
   }
 
+
+
+
+Шаг 34
+
+Внутри оператора if деструктурируйте классы className и category из объекта allCategories[id].
+
+
+const { className, category } = allCategories[id];
 
 
  */
