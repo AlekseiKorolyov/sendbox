@@ -8,6 +8,18 @@ const postsContainer = document.getElementById("posts-container");
 const timeAgo = (time) => {
     const currentTime = new Date();
     const lastPost = new Date(time);
+    const differenceTime = currentTime - lastPost;
+    const minutesAgo = Math.floor(differenceTime / 60000);
+    const hoursAgo = Math.floor(minutesAgo / 60);
+    const daysAgo = Math.floor(hoursAgo / 24);
+
+    if (minutesAgo < 60) {
+        return `${minutesAgo}m ago`;
+    } else if (hoursAgo < 24) {
+        return `${hoursAgo}h ago`;
+    } else {
+        return `${daysAgo}d ago`;
+    }
 };
 
 const fetchData = async () => {
@@ -305,6 +317,31 @@ const timeAgo = (time) => {
   const currentTime = new Date();
   const lastPost = new Date(time);
 };
+
+
+
+
+Шаг 23
+
+Для функции timeAgo вам нужно будет вычислить разницу между текущим временем и временем последней активности по теме. Это позволит вам отобразить, сколько времени прошло с момента последней активности по теме. Завершите функцию timeAgo, которая соответствует следующим требованиям: Если количество прошедших минут меньше 60, верните строку "xm ago". x будет представлять минуты. Если количество прошедших часов меньше 24, верните строку "xh ago". x будет представлять часы. В противном случае верните строку "xd ago". x будет представлять дни. Вот несколько уравнений, которые помогут вам вычислить разницу во времени:
+
+minutes = Math.floor((currentTime - lastPost) / 60000);
+hours = Math.floor((currentTime - lastPost) / 3600000);
+days = Math.floor((currentTime - lastPost) / 86400000);
+
+
+  const differenceTime = currentTime - lastPost;
+  const minutesAgo = Math.floor(differenceTime / 60000);
+  const hoursAgo = Math.floor(minutesAgo / 60);
+  const daysAgo = Math.floor(hoursAgo / 24);
+
+  if (minutesAgo < 60) {
+    return `${minutesAgo}m ago`;
+  } else if (hoursAgo < 24) {
+    return `${hoursAgo}h ago`;
+  } else {
+    return `${daysAgo}d ago`;
+  }
 
 
 
