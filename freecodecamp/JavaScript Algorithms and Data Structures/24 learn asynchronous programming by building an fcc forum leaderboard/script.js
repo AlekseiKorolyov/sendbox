@@ -17,7 +17,10 @@ const allCategories = {
 };
 
 const forumCategory = (id) => {
-    let selectedCategory = {}
+    let selectedCategory = {};
+    if (allCategories.hasOwnProperty(id)) {
+
+    }
 };
 
 const timeAgo = (time) => {
@@ -470,6 +473,18 @@ const forumCategory = (id) => {
 
 
 let selectedCategory = {}
+
+
+
+
+Шаг 33
+
+Создайте оператор if для проверки наличия у объекта allCategories свойства с идентификатором. Помните, что для этого можно использовать метод hasOwnProperty().
+
+
+  if (allCategories.hasOwnProperty(id)) {
+
+  }
 
 
 
