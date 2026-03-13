@@ -22,6 +22,14 @@ const timeAgo = (time) => {
     }
 };
 
+const viewCount = (views) => {
+    if (views >= 1000) {
+        return `${Math.floor(views / 1000)}k`;
+    } else if (views < 1000) {
+        return views;
+    }
+};
+
 const fetchData = async () => {
     try {
         const res = await fetch(forumLatest);
@@ -354,6 +362,22 @@ days = Math.floor((currentTime - lastPost) / 86400000);
 
 
 ${timeAgo(bumped_at)}
+
+
+
+
+Шаг 25
+
+Вам нужна функция для преобразования количества просмотров в более читаемый формат. Например, если количество просмотров равно 1000, оно должно отображаться как 1k, а если 100 000, то как 100k. Создайте функцию viewCount с параметром views. Если views больше или равно 1000, верните строку, содержащую значение views, разделенное на 1000, и добавленную букву k. Убедитесь, что views / 1000 округляется до ближайшего целого числа в меньшую сторону. В противном случае верните значение views. Например, если views равно 1000, возвращаемое значение должно быть строкой "1k".
+
+
+const viewCount = (views) => {
+  if (views >= 1000) {
+    return `${Math.floor(views / 1000)}k`;
+  } else if (views < 1000) {
+    return views;
+  }
+};
 
 
 
