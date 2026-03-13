@@ -4,6 +4,7 @@ const forumCategoryUrl = "https://forum.freecodecamp.org/c/";
 const avatarUrl = "https://sea1.discourse-cdn.com/freecodecamp";
 
 const postsContainer = document.getElementById("posts-container");
+const allCategories = {};
 
 const timeAgo = (time) => {
     const currentTime = new Date();
@@ -388,6 +389,16 @@ const viewCount = (views) => {
 
 
 <td>${viewCount(views)}</td>
+
+
+
+
+Шаг 27
+
+Каждая тема форума включает категорию, например, Python или JavaScript. На следующих нескольких шагах вы создадите объект категории, который будет содержать все категории форума и имена классов для стилизации. Начните с создания новой константы с именем allCategories и присвойте ей значение пустого объекта.
+
+
+const allCategories = {};
 
 
 
