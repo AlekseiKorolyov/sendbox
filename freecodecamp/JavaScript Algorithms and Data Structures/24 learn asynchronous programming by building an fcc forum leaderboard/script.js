@@ -66,7 +66,7 @@ const showLatestPosts = (data) => {
       <td></td>
       <td>${posts_count - 1}</td>
       <td>
-      ${views}
+      <td>${viewCount(views)}</td>
       </td>
       <td>
       ${timeAgo(bumped_at)}
@@ -378,6 +378,16 @@ const viewCount = (views) => {
     return views;
   }
 };
+
+
+
+
+Шаг 26
+
+Внутри четвертого элемента td обновите текущее значение, чтобы вместо этого вызвать функцию viewCount, передав в качестве аргумента переменную views.
+
+
+<td>${viewCount(views)}</td>
 
 
 
