@@ -5,10 +5,8 @@ const avatarUrl = "https://sea1.discourse-cdn.com/freecodecamp";
 
 const postsContainer = document.getElementById("posts-container");
 const allCategories = {
-    299: {
-        category: "Career Advice",
-        className: "career"
-    }
+    299: { category: "Career Advice", className: "career" },
+    409: { category: "Project Feedback", className: "feedback" }
 };
 
 const timeAgo = (time) => {
@@ -419,6 +417,16 @@ const allCategories = {
     className: "career"
   }
 };
+
+
+
+
+Шаг 29
+
+Добавьте новый ключ для числа 409 со значением пустого объекта. Внутри этого объекта добавьте свойство с ключом category и строковым значением "Обратная связь по проекту". Ниже этого свойства добавьте еще один ключ с именем className и строковым значением "обратная связь".
+
+
+  409: { category: "Project Feedback", className: "feedback" }
 
 
 
