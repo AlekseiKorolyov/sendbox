@@ -71,7 +71,9 @@ const viewCount = (views) => {
 };
 
 const avatars = (posters, users) => {
-    return posters.map((poster) => {});
+    return posters.map((poster) => {
+        const user = users.find(user => user.id === poster.user_id);
+    });
 };
 
 const fetchData = async () => {
@@ -628,4 +630,14 @@ const avatars = (posters, users) => {};
 
 
 return posters.map((poster) => {});
+
+
+
+
+Шаг 46
+
+Следующий шаг — найти нужного пользователя в массиве users. Начните с создания константы с именем user и присвойте ей значение users.find(). Метод find должен иметь функцию обратного вызова с параметром user. Внутри функции обратного вызова метода find неявно верните результат проверки того, строго ли user.id равен poster.user_id.
+
+
+const user = users.find(user => user.id === poster.user_id);
  */
