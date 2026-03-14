@@ -23,6 +23,10 @@ const forumCategory = (id) => {
         const { className, category } = allCategories[id];
         selectedCategory.className = className;
         selectedCategory.category = category;
+    } else {
+        selectedCategory.className = "general";
+        selectedCategory.category = "General";
+        selectedCategory.id = 1;
     }
 };
 
@@ -510,5 +514,25 @@ const { className, category } = allCategories[id];
     selectedCategory.className = className;
     selectedCategory.category = category;
 
+
+
+
+Шаг 36
+
+Если id отсутствует в объекте allCategories, вам потребуется отобразить категорию General. После оператора if добавьте блок else.
+
+
+
+
+Шаг 37
+
+Внутри блока else присвойте строку "general" переменной selectedCategory.className. Ниже присвойте строку "General" переменной selectedCategory.category. Наконец, присвойте число 1 переменной selectedCategory.id.
+
+
+ else {
+    selectedCategory.className = "general";
+    selectedCategory.category = "General";
+    selectedCategory.id = 1;
+  }
 
  */
