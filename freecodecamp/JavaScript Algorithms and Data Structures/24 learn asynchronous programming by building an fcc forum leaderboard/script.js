@@ -29,6 +29,7 @@ const forumCategory = (id) => {
         selectedCategory.id = 1;
     }
     const url = `${forumCategoryUrl}${selectedCategory.className}/${id}`;
+    const linkText = selectedCategory.category;
 };
 
 const timeAgo = (time) => {
@@ -545,4 +546,14 @@ const { className, category } = allCategories[id];
 
 
 const url = `${forumCategoryUrl}${selectedCategory.className}/${id}`;
+
+
+
+
+Шаг 39
+
+Создайте константу с именем linkText и присвойте ей значение selectedCategory.category. Это позволит отображать название категории в элементе привязки.
+
+
+const linkText = selectedCategory.category;
  */
