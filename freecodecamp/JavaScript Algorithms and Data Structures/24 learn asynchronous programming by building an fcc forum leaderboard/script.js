@@ -28,6 +28,7 @@ const forumCategory = (id) => {
         selectedCategory.category = "General";
         selectedCategory.id = 1;
     }
+    const url = `${forumCategoryUrl}${selectedCategory.className}/${id}`;
 };
 
 const timeAgo = (time) => {
@@ -535,4 +536,13 @@ const { className, category } = allCategories[id];
     selectedCategory.id = 1;
   }
 
+
+
+
+Шаг 38
+
+Каждая категория будет иметь URL-адрес, указывающий на эту категорию на форуме freeCodeCamp. Создайте константу с именем url и назначьте ей шаблонный литерал. Внутри этого шаблонного литерала поместите значение ${forumCategoryUrl}${selectedCategory.className}/${id}.
+
+
+const url = `${forumCategoryUrl}${selectedCategory.className}/${id}`;
  */
