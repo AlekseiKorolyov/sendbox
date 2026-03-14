@@ -21,6 +21,7 @@ const forumCategory = (id) => {
 
     if (allCategories.hasOwnProperty(id)) {
         const { className, category } = allCategories[id];
+
         selectedCategory.className = className;
         selectedCategory.category = category;
     } else {
@@ -31,33 +32,45 @@ const forumCategory = (id) => {
     const url = `${forumCategoryUrl}${selectedCategory.className}/${id}`;
     const linkText = selectedCategory.category;
     const linkClass = `category ${selectedCategory.className}`;
-    return `<a href="${url}" class="${linkClass}" target="_blank">${linkText}</a>`;
+
+    return `<a href="${url}" class="${linkClass}" target="_blank">
+    ${linkText}
+  </a>`;
 };
 
 const timeAgo = (time) => {
     const currentTime = new Date();
     const lastPost = new Date(time);
-    const differenceTime = currentTime - lastPost;
-    const minutesAgo = Math.floor(differenceTime / 60000);
+
+    const timeDifference = currentTime - lastPost;
+    const msPerMinute = 1000 * 60;
+
+    const minutesAgo = Math.floor(timeDifference / msPerMinute);
     const hoursAgo = Math.floor(minutesAgo / 60);
     const daysAgo = Math.floor(hoursAgo / 24);
 
     if (minutesAgo < 60) {
         return `${minutesAgo}m ago`;
-    } else if (hoursAgo < 24) {
-        return `${hoursAgo}h ago`;
-    } else {
-        return `${daysAgo}d ago`;
     }
+
+    if (hoursAgo < 24) {
+        return `${hoursAgo}h ago`;
+    }
+
+    return `${daysAgo}d ago`;
 };
 
 const viewCount = (views) => {
+    const thousands = Math.floor(views / 1000);
+
     if (views >= 1000) {
-        return `${Math.floor(views / 1000)}k`;
-    } else if (views < 1000) {
-        return views;
+        return `${thousands}k`;
     }
+
+    return views;
 };
+
+const avatars = (posters, users) => {};
 
 const fetchData = async () => {
     try {
@@ -95,12 +108,8 @@ const showLatestPosts = (data) => {
       </td>
       <td></td>
       <td>${posts_count - 1}</td>
-      <td>
       <td>${viewCount(views)}</td>
-      </td>
-      <td>
-      ${timeAgo(bumped_at)}
-      </td>
+      <td>${timeAgo(bumped_at)}</td>
     </tr>`;
     }).join("");
 };
@@ -599,4 +608,14 @@ return `<a href="${url}" class="${linkClass}" target="_blank">${linkText}</a>`;
 
 
 ${forumCategory(category_id)}
+
+
+
+
+Шаг 44
+
+Каждое сообщение на форуме будет содержать список изображений аватаров пользователей, представляющих всех пользователей, участвующих в обсуждении данной темы. Начните с создания стрелочной функции с именем avatars и двумя параметрами: posters и users.
+
+
+const avatars = (posters, users) => {};
  */
