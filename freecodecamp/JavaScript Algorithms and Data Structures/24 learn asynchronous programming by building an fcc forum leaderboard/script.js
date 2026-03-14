@@ -73,6 +73,7 @@ const viewCount = (views) => {
 const avatars = (posters, users) => {
     return posters.map((poster) => {
         const user = users.find(user => user.id === poster.user_id);
+        if (user) {}
     });
 };
 
@@ -640,4 +641,14 @@ return posters.map((poster) => {});
 
 
 const user = users.find(user => user.id === poster.user_id);
+
+
+
+
+Шаг 47
+
+Далее проверьте, существует ли пользователь. Добавьте оператор if с указанием user в качестве условия.
+
+
+if (user) {}
  */
