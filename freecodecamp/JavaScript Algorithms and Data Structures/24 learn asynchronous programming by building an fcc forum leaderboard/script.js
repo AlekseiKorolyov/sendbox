@@ -30,6 +30,8 @@ const forumCategory = (id) => {
     }
     const url = `${forumCategoryUrl}${selectedCategory.className}/${id}`;
     const linkText = selectedCategory.category;
+    const linkClass = `category ${selectedCategory.className}`;
+    return `<a href="${url}"></a>`;
 };
 
 const timeAgo = (time) => {
@@ -566,4 +568,14 @@ const linkText = selectedCategory.category;
 
 
 const linkClass = `category ${selectedCategory.className}`;
+
+
+
+
+Шаг 41
+
+Далее верните элемент привязки внутри шаблонных литералов. Для атрибута href присвойте значение константы url.
+
+
+return `<a href="${url}"></a>`;
  */
