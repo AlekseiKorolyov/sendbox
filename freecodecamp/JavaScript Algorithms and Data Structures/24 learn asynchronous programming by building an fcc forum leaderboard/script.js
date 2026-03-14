@@ -31,7 +31,7 @@ const forumCategory = (id) => {
     const url = `${forumCategoryUrl}${selectedCategory.className}/${id}`;
     const linkText = selectedCategory.category;
     const linkClass = `category ${selectedCategory.className}`;
-    return `<a href="${url}"></a>`;
+    return `<a href="${url}" class="${linkClass}" target="_blank">${linkText}</a>`;
 };
 
 const timeAgo = (time) => {
@@ -578,4 +578,14 @@ const linkClass = `category ${selectedCategory.className}`;
 
 
 return `<a href="${url}"></a>`;
+
+
+
+
+Шаг 42
+
+После атрибута href установите атрибут class равным константе linkClass. После атрибута class установите атрибут target равным "_blank". Наконец, поместите константу linkText между тегами привязки, чтобы отобразить текст ссылки.
+
+
+return `<a href="${url}" class="${linkClass}" target="_blank">${linkText}</a>`;
  */
