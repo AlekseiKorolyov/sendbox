@@ -70,7 +70,9 @@ const viewCount = (views) => {
     return views;
 };
 
-const avatars = (posters, users) => {};
+const avatars = (posters, users) => {
+    return posters.map((poster) => {});
+};
 
 const fetchData = async () => {
     try {
@@ -618,4 +620,12 @@ ${forumCategory(category_id)}
 
 
 const avatars = (posters, users) => {};
+
+
+
+
+Шаг 45 Следующий шаг — пройтись по массиву posters, чтобы получить все их аватары. Начните с добавления ключевого слова return, за которым следует posters.map(). В функцию обратного вызова добавьте параметр с именем poster.
+
+
+return posters.map((poster) => {});
  */
