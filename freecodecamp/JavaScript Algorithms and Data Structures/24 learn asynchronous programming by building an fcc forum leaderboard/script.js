@@ -91,6 +91,7 @@ const showLatestPosts = (data) => {
     <tr>
       <td>
         <p class="post-title">${title}</p>
+        ${forumCategory(category_id)}
       </td>
       <td></td>
       <td>${posts_count - 1}</td>
@@ -588,4 +589,14 @@ return `<a href="${url}"></a>`;
 
 
 return `<a href="${url}" class="${linkClass}" target="_blank">${linkText}</a>`;
+
+
+
+
+Шаг 43
+
+Внутри первого элемента td добавьте встроенное выражение ${}. Внутри этого выражения вызовите функцию forumCategory с аргументом category_id. Теперь под каждой темой сообщения должна отображаться категория.
+
+
+${forumCategory(category_id)}
  */
