@@ -556,4 +556,14 @@ const url = `${forumCategoryUrl}${selectedCategory.className}/${id}`;
 
 
 const linkText = selectedCategory.category;
+
+
+
+
+Шаг 40
+
+Создайте константу с именем linkClass и назначьте ей шаблонный литерал. Внутри этого шаблонного литерала добавьте значение category ${selectedCategory.className}. Эти имена классов будут использоваться для применения стилей к элементу привязки.
+
+
+const linkClass = `category ${selectedCategory.className}`;
  */
