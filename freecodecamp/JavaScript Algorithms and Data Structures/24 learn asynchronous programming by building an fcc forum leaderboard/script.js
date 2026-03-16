@@ -71,16 +71,17 @@ const viewCount = (views) => {
 };
 
 const avatars = (posters, users) => {
-    return posters.map((poster) => {
-        const user = users.find(user => user.id === poster.user_id);
-        if (user) {
-            const avatar = user.avatar_template.replace(/{size}/, 30);
-            const userAvatarUrl = avatar.startsWith("/user_avatar/")
-                ? avatarUrl.concat(avatar)
-                : avatar;
-            return `<img src="${userAvatarUrl}" alt="${user.name}" />`;
-        }
-    })
+    return posters
+        .map((poster) => {
+            const user = users.find((user) => user.id === poster.user_id);
+            if (user) {
+                const avatar = user.avatar_template.replace(/{size}/, 30);
+                const userAvatarUrl = avatar.startsWith("/user_avatar/")
+                    ? avatarUrl.concat(avatar)
+                    : avatar;
+                return `<img src="${userAvatarUrl}" alt="${user.name}" />`;
+            }
+        })
         .join("");
 };
 
@@ -115,7 +116,8 @@ const showLatestPosts = (data) => {
         return `
     <tr>
       <td>
-        <a class="post-title">${title}</a>
+        <a href="${forumTopicUrl}${slug}/${id}" class="post-title" target="_blank" >${title}</a>
+
         ${forumCategory(category_id)}
       </td>
       <td>
@@ -129,7 +131,6 @@ const showLatestPosts = (data) => {
     </tr>`;
     }).join("");
 };
-
 
 
 
@@ -726,5 +727,12 @@ ${avatars(posters, users)}
 Шаг 54
 
 Ваш проект почти завершен. Осталось только добавить последний элемент. Пользователи должны иметь возможность кликнуть по любому заголовку сообщения и перейти к самому сообщению на форуме freeCodeCamp. Начните с изменения существующего элемента абзаца внутри первого элемента td на элемент привязки.
+
+
+
+
+Шаг 55
+
+Для открывающего тега установите атрибут target в значение "_blank". Затем установите атрибут href в значение ${forumTopicUrl}${slug}/${id}. И с этими изменениями ваш проект таблицы лидеров форума freeCodeCamp завершен!
 
  */
