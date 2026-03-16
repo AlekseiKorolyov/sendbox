@@ -115,7 +115,7 @@ const showLatestPosts = (data) => {
         return `
     <tr>
       <td>
-        <p class="post-title">${title}</p>
+        <a class="post-title">${title}</a>
         ${forumCategory(category_id)}
       </td>
       <td>
@@ -719,5 +719,12 @@ return `<img src="${userAvatarUrl}" alt="${user.name}" />`;
 
 
 ${avatars(posters, users)}
+
+
+
+
+Шаг 54
+
+Ваш проект почти завершен. Осталось только добавить последний элемент. Пользователи должны иметь возможность кликнуть по любому заголовку сообщения и перейти к самому сообщению на форуме freeCodeCamp. Начните с изменения существующего элемента абзаца внутри первого элемента td на элемент привязки.
 
  */
