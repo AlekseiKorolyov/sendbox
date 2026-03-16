@@ -80,7 +80,8 @@ const avatars = (posters, users) => {
                 : avatar;
             return `<img src="${userAvatarUrl}" alt="${user.name}" />`;
         }
-    });
+    })
+        .join("");
 };
 
 const fetchData = async () => {
@@ -687,4 +688,12 @@ const userAvatarUrl = avatar.startsWith("/user_avatar/") ? avatarUrl.concat(avat
 
 
 return `<img src="${userAvatarUrl}" alt="${user.name}" />`;
+
+
+
+
+Шаг 51
+
+В конце метода map вызовите метод join(). В качестве разделителя передайте пустую строку.
+
  */
