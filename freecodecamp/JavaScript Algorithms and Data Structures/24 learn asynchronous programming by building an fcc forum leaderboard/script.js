@@ -75,7 +75,10 @@ const avatars = (posters, users) => {
         const user = users.find(user => user.id === poster.user_id);
         if (user) {
             const avatar = user.avatar_template.replace(/{size}/, 30);
-            const userAvatarUrl = avatar.startsWith("/user_avatar/") ? avatarUrl.concat(avatar) : avatar;
+            const userAvatarUrl = avatar.startsWith("/user_avatar/")
+                ? avatarUrl.concat(avatar)
+                : avatar;
+            return `<img src="${userAvatarUrl}" alt="${user.name}" />`;
         }
     });
 };
@@ -674,4 +677,14 @@ const avatar = user.avatar_template.replace(/{size}/, 30);
 
 
 const userAvatarUrl = avatar.startsWith("/user_avatar/") ? avatarUrl.concat(avatar) : avatar;
+
+
+
+
+Шаг 50
+
+Наконец, вам нужно будет вернуть изображение для аватара пользователя. Начните с добавления оператора return, за которым следует набор шаблонных литералов. Внутри шаблонных литералов добавьте элемент img. Внутри тега img добавьте атрибут src со значением ${userAvatarUrl}. Для атрибута alt добавьте значение ${user.name}.
+
+
+return `<img src="${userAvatarUrl}" alt="${user.name}" />`;
  */
