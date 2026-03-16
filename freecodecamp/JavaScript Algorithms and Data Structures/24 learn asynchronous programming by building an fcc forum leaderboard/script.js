@@ -119,7 +119,9 @@ const showLatestPosts = (data) => {
         ${forumCategory(category_id)}
       </td>
       <td>
-        <div class="avatar-container"></div>
+        <div class="avatar-container">
+          ${avatars(posters, users)}
+        </div>
       </td>
       <td>${posts_count - 1}</td>
       <td>${viewCount(views)}</td>
@@ -707,5 +709,15 @@ return `<img src="${userAvatarUrl}" alt="${user.name}" />`;
 
 
 <div class="avatar-container"></div>
+
+
+
+
+Шаг 53
+
+Внутри элемента div вызовите функцию avatars и передайте в нее аргументы posters и users. Теперь вы должны увидеть аватары, отображаемые на странице.
+
+
+${avatars(posters, users)}
 
  */
