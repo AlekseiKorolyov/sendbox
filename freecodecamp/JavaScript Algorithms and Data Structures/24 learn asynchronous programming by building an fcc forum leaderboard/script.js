@@ -118,7 +118,9 @@ const showLatestPosts = (data) => {
         <p class="post-title">${title}</p>
         ${forumCategory(category_id)}
       </td>
-      <td></td>
+      <td>
+        <div class="avatar-container"></div>
+      </td>
       <td>${posts_count - 1}</td>
       <td>${viewCount(views)}</td>
       <td>${timeAgo(bumped_at)}</td>
@@ -695,5 +697,15 @@ return `<img src="${userAvatarUrl}" alt="${user.name}" />`;
 Шаг 51
 
 В конце метода map вызовите метод join(). В качестве разделителя передайте пустую строку.
+
+
+
+
+Шаг 52
+
+На следующих шагах вам нужно будет добавить функциональность для отображения аватаров пользователей. Внутри второго элемента td добавьте элемент div с классом "avatar-container".
+
+
+<div class="avatar-container"></div>
 
  */
