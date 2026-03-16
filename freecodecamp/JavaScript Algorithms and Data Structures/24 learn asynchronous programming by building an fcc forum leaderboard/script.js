@@ -75,6 +75,7 @@ const avatars = (posters, users) => {
         const user = users.find(user => user.id === poster.user_id);
         if (user) {
             const avatar = user.avatar_template.replace(/{size}/, 30);
+            const userAvatarUrl = avatar.startsWith("/user_avatar/") ? avatarUrl.concat(avatar) : avatar;
         }
     });
 };
@@ -663,4 +664,14 @@ if (user) {}
 
 
 const avatar = user.avatar_template.replace(/{size}/, 30);
+
+
+
+
+Шаг 49
+
+Далее вы создадите объект userAvatarUrl. Начните с создания константы с именем userAvatarUrl. Затем используйте тернарный оператор, чтобы проверить, начинается ли аватар с "/user_avatar/". Если да, используйте метод concat для объединения avatar и avatarUrl. В противном случае верните avatar. Это гарантирует правильное формирование URL-адреса аватара независимо от того, является ли он относительным или абсолютным.
+
+
+const userAvatarUrl = avatar.startsWith("/user_avatar/") ? avatarUrl.concat(avatar) : avatar;
  */
