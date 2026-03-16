@@ -73,7 +73,9 @@ const viewCount = (views) => {
 const avatars = (posters, users) => {
     return posters.map((poster) => {
         const user = users.find(user => user.id === poster.user_id);
-        if (user) {}
+        if (user) {
+            const avatar = user.avatar_template.replace(/{size}/, 30);
+        }
     });
 };
 
@@ -651,4 +653,14 @@ const user = users.find(user => user.id === poster.user_id);
 
 
 if (user) {}
+
+
+
+
+Шаг 48
+
+Чтобы настроить размер аватара, вы можете установить его значение равным 30. Начните с создания константы с именем avatar. Затем присвойте ей результат использования метода replace для user.avatar_template. Для метода replace используйте /{size}/ в качестве первого аргумента и число 30 в качестве второго аргумента.
+
+
+const avatar = user.avatar_template.replace(/{size}/, 30);
  */
