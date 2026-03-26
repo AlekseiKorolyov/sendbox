@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>25 Build an rpg creature search app</title>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<h1>RPG Creature Search App</h1>
+<div class="container">
+    <div class="search-block">
+        <label for="search-input">Search for Creature Name or ID:</label>
+        <div class="input-block">
+            <input class="search-input" id="search-input" required />
+            <button class="search-button" id="search-button">Search</button>
+        </div>
+    </div>
+    <div class="info-block">
+        <p id="creature-name"></p>
+        <p id="creature-id"></p>
+        <p id="weight"></p>
+        <p id="height"></p>
+        <div id="types"></div>
+    </div>
+    <div class="properties-block">
+        <table>
+            <thead>
+            <tr>
+                <th class="title-name">Base</th>
+                <th class="parameters">Stats</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="title-name">HP:</td>
+                <td class="parameters" id="hp"></td>
+            </tr>
+            <tr>
+                <td class="title-name">Attack:</td>
+                <td class="parameters" id="attack"></td>
+            </tr>
+            <tr>
+                <td class="title-name">Defense:</td>
+                <td class="parameters" id="defense"></td>
+            </tr>
+            <tr>
+                <td class="title-name">Sp. Attack:</td>
+                <td class="parameters" id="special-attack"></td>
+            </tr>
+            <tr>
+                <td class="title-name">Sp. Defense:</td>
+                <td class="parameters" id="special-defense"></td>
+            </tr>
+            <tr>
+                <td class="title-name">Speed:</td>
+                <td class="parameters" id="speed"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="./script.js"></script>
+</body>
+</html>

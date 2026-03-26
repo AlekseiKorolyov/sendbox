@@ -1,0 +1,57 @@
+body, .search-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.search-block, label {
+    margin: 10px;
+}
+
+body {
+    background-color: #1B1B32;
+    color: #ffffff;
+}
+
+.container {
+    width: 350px;
+    height: 600px;
+    background-color: #F0F1F7;
+    color: #0A0A29;
+    border-radius: 10px;
+    box-shadow: 10px 10px #ADABB1 ;
+}
+
+button, th, td {
+    background-color: #7F21AB;
+}
+
+button {
+    border-radius: 10px;
+}
+
+.info-block {
+    width: 330px;
+    height: 200px;
+    margin: 10px;
+}
+
+table {
+    margin: 10px;
+}
+
+.title-name {
+    width: 200px;
+    height: 35px;
+}
+
+.parameters {
+    width: 120px;
+    height: 35px;
+}
+
+td {
+    text-align: center;
+}
