@@ -11,7 +11,7 @@ The input string will only consist of lower case letters and/or spaces.
 // solution
 
 function getCount(str) {
-    return str.replace(/[^aeiou]/gi, "").split("").length;
+    return str.replace(/[^aeiou]/gi, "").length;
 }
 
 // sample tests
